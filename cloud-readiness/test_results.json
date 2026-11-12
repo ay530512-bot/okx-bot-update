@@ -1,0 +1,22 @@
+[
+  {
+    "file": "test_recovery.py",
+    "exit_code": 0,
+    "output": "........\n----------------------------------------------------------------------\nRan 8 tests in 0.028s\n\nOK\n"
+  },
+  {
+    "file": "test_update_guard.py",
+    "exit_code": 0,
+    "output": "....\n----------------------------------------------------------------------\nRan 4 tests in 0.002s\n\nOK\n"
+  },
+  {
+    "file": "test_transport_state.py",
+    "exit_code": 0,
+    "output": "...\n----------------------------------------------------------------------\nRan 3 tests in 0.002s\n\nOK\n"
+  },
+  {
+    "file": "test_scanner.py",
+    "exit_code": 0,
+    "output": "48-symbol simulation: 24 workers; 144 cold calls; 0 repeats; 48 tail calls x 4 rows; 299-bar history retained\n....\n----------------------------------------------------------------------\nRan 4 tests in 0.263s\n\nOK\n"
+  }
+]

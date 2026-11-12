@@ -1,0 +1,22 @@
+OKX Q2V cloud readiness audit, 2026-11-12 KST
+This is NOT a program installation update. No live changes.
+
+Tests use the exact Q2V source distribution (hashes in source_hashes.json).
+Unpack release-input/OKX_PROGRAM_UPDATE.zip into chart_update/ in a temporary test workspace.
+Run from that workspace root:
+ python cloud-readiness/test_recovery.py
+ python cloud-readiness/test_update_guard.py
+ python cloud-readiness/test_transport_state.py
+ python cloud-readiness/test_scanner.py
+
+Read-only target server check (no API credentials required):
+ python cloud-readiness/preflight.py --network --output target_preflight.json
+
+workspace_www_probe.json used www.okx.com as a comparison endpoint.
+workspace_openapi_probe.json used openapi.okx.com, the current engine endpoint.
+Both were run in the assistant workspace, NOT a purchased VPS. Network failures
+here do not prove a cloud provider is unsuitable. No private requests or orders.
+
+Do not copy .env, bot_state.json or account data into the public GitHub repo.
+Do not treat mock recovery tests as proof of actual account recovery or as
+permission to run the home PC and server concurrently.
