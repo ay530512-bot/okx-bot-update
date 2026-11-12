@@ -1,0 +1,8 @@
+{
+  "test_command": "python -m unittest discover -s android -v",
+  "tests_passed": 8,
+  "actual_phone_test": "pending",
+  "public_network_test": "pending_on_phone",
+  "source_sha256": "7f5d637fb7d6696f3da5dad1f4d6fc2fd4f9cbcf11ac74363009d8050882328c",
+  "scope": "Public API and short heartbeat diagnostics only; no desktop release changes."
+}
