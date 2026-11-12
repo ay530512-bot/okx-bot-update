@@ -1,0 +1,67 @@
+name: Build Android phone transport
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'android/build_tailscale_native.py'
+      - '.github/workflows/build-phone-transport.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: phone-native-transport-r1
+  cancel-in-progress: false
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          persist-credentials: false
+      - name: Build pinned upstream for Android arm64
+        run: python3 android/build_tailscale_native.py /tmp/okx-android-native
+      - name: Publish separate phone component prerelease
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          COMMIT_SHA: ${{ github.sha }}
+        run: |
+          python3 - <<'PY'
+          import hashlib,json,os,pathlib,subprocess
+          def gh(*args):
+              return subprocess.check_output(['gh',*args],text=True).strip()
+          repo=os.environ['GH_REPO']; tag='phone-tailscale-1.104.6-android-arm64-r1'
+          out=pathlib.Path('/tmp/okx-android-native/out')
+          manifest=json.loads((out/'native_manifest.json').read_text())
+          names=[manifest['archive'],'native_manifest.json','tailscale-buildinfo.txt','tailscaled-buildinfo.txt']
+          latest_before=json.loads(gh('api',f'repos/{repo}/releases/latest'))['tag_name']
+          releases=json.loads(gh('api',f'repos/{repo}/releases?per_page=100'))
+          release=next((r for r in releases if r['tag_name']==tag),None)
+          if release is None:
+              notes=('Android arm64 transport component built from unmodified Tailscale 1.104.6 source. '
+                     'GOOS=android, PIE, CGO disabled; built-in self-update omitted. '
+                     'Project build, not an official upstream binary. Not an OKX desktop update. '
+                     'No account settings or credentials. Actual phone runtime validation pending.')
+              release=json.loads(gh('api','--method','POST',f'repos/{repo}/releases',
+                  '-f','tag_name='+tag,'-f','target_commitish='+os.environ['COMMIT_SHA'],
+                  '-f','name=Android phone transport 1.104.6 r1','-f','body='+notes,
+                  '-F','draft=true','-F','prerelease=true','-f','make_latest=false'))
+          present={a['name']:a for a in release['assets']}
+          assert set(present)<=set(names)
+          for name in names:
+              if name not in present:
+                  assert release['draft'], 'Refusing to modify a published release'
+                  gh('release','upload',tag,str(out/name))
+          release=json.loads(gh('api',f"repos/{repo}/releases/{release['id']}"))
+          assert {a['name'] for a in release['assets']}==set(names)
+          for asset in release['assets']:
+              expected=hashlib.sha256((out/asset['name']).read_bytes()).hexdigest()
+              assert asset.get('digest')=='sha256:'+expected, 'Asset digest mismatch'
+          if release['draft']:
+              gh('api','--method','PATCH',f"repos/{repo}/releases/{release['id']}",
+                 '-F','draft=false','-F','prerelease=true','-f','make_latest=false')
+          assert json.loads(gh('api',f'repos/{repo}/releases/latest'))['tag_name']==latest_before
+          with open(os.environ['GITHUB_STEP_SUMMARY'],'a') as f:
+              f.write('Published separate Android native component; desktop latest unchanged.\n')
+          PY
