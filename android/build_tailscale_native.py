@@ -63,7 +63,7 @@ def build(work):
         path = bins/name
         print('Building native Android', name, flush=True)
         subprocess.run([go, 'build', '-mod=readonly', '-trimpath', '-buildvcs=false', '-buildmode=pie',
-                        '-tags=ts_omit_clientupdate,ts_omit_systray', '-ldflags='+ldflags,
+                        '-tags=ts_omit_clientupdate,ts_omit_systray,ts_omit_ssh', '-ldflags='+ldflags,
                         '-o', str(path), './cmd/'+name], cwd=source, env=env, check=True)
         info = subprocess.check_output([go, 'version', '-m', str(path)], env=env, text=True)
         for setting in ('GOOS=android', 'GOARCH=arm64', 'CGO_ENABLED=0', '-buildmode=pie', 'ts_omit_clientupdate', 'ts_omit_systray'):
