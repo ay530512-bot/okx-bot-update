@@ -62,6 +62,10 @@ python -B ~/okx-phone/host-v2/phone_service.py --handover
 
 확인일: 2026-11-13 KST.
 
+### 2026-11-13 기기 로그인 후 EOF 조사
+
+사용자 기기에서 브라우저 `Login successful`과 CLI `unexpected EOF` 반복이 확인되었습니다. 기존 실행기 2는 `tailscale up`의 모든 실패를 승인 대기로 표시하므로 이 문구만으로 미로그인이라고 판정하면 안 됩니다. 실기기 원인은 아직 미확정입니다. 로그인·설치 반복이나 상태 파일 삭제 대신 별도 `phone_remote_check.py`로 로컬 서비스 상태와 가린 오류 기록을 확인합니다. 이 진단기는 로그인/중지/재시작/OKX 접속을 하지 않고 원본 설정을 쓰지 않습니다. 수정 완료판으로 간주하지 않습니다.
+
 - [공식 정적 패키지](https://pkgs.tailscale.com/stable/)
 - [1.104.6 Android/Termux 지원 원문](https://github.com/tailscale/tailscale/blob/v1.104.6/feature/androidbin/androidbin.go)
 - [Tailscale Serve](https://tailscale.com/docs/reference/tailscale-cli/serve)
