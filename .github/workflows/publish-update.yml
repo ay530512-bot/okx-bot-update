@@ -1,0 +1,109 @@
+name: Publish OKX update
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'release-input/**'
+      - '.github/workflows/publish-update.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: okx-release
+  cancel-in-progress: false
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          persist-credentials: false
+      - name: Validate and publish
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          COMMIT_SHA: ${{ github.sha }}
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import hashlib, json, os, pathlib, re, subprocess, tempfile, zipfile
+          def gh(*args):
+              return subprocess.check_output(["gh", *args], text=True).strip()
+          repo = os.environ["GH_REPO"]
+          latest = json.loads(gh("api", f"repos/{repo}/releases/latest"))
+          names = ["OKX_PROGRAM_UPDATE.zip", "update_manifest.json"]
+          payload = pathlib.Path("release-input")
+          publish = all((payload / n).is_file() for n in names)
+          if payload.exists() and not publish:
+              raise RuntimeError("Incomplete release-input: both update files required")
+          if not publish:
+              payload = pathlib.Path(tempfile.mkdtemp())
+              gh("release", "download", latest["tag_name"], "--dir", str(payload),
+                 "--pattern", names[0], "--pattern", names[1])
+          manifest = json.loads((payload / names[1]).read_text())
+          assert manifest["schema"] == 1
+          assert manifest["product"] == "okx-732-desktop"
+          version = manifest["version"]
+          assert re.fullmatch(r"[A-Za-z0-9.-]{1,40}", version)
+          sequence = manifest["sequence"]
+          assert isinstance(sequence, int) and sequence > 0
+          archive = payload / names[0]
+          assert archive.stat().st_size <= 80 * 1024 * 1024
+          digest = hashlib.sha256(archive.read_bytes()).hexdigest()
+          assert digest == manifest["sha256"], "ZIP hash mismatch"
+          denied = {".env", "bot_state.json", "strategy_config.json",
+                    "mobile_access.json", "update_settings.json"}
+          required = {"okx_bot.py", "okx_update732.py",
+                      "okx_mobile_assets718.py", "release_info.json"}
+          with zipfile.ZipFile(archive) as z:
+              entries = [i for i in z.infolist() if not i.is_dir()]
+              assert len(entries) <= 500
+              assert sum(i.file_size for i in entries) <= 250 * 1024 * 1024
+              paths = [i.filename for i in entries]
+              assert len(set(paths)) == len(paths), "Duplicate ZIP paths"
+              assert required <= set(paths), "Required application files missing"
+              assert set(paths) == set(manifest["files"]), "File manifest mismatch"
+              for i in entries:
+                  p = pathlib.PurePosixPath(i.filename)
+                  assert not p.is_absolute() and ".." not in p.parts
+                  assert "\\" not in i.filename and ":" not in i.filename
+                  assert p.name.lower() not in denied
+                  assert not p.name.lower().startswith(".env")
+                  assert (i.external_attr >> 16) & 0o170000 != 0o120000
+                  data = z.read(i)
+                  assert hashlib.sha256(data).hexdigest() == manifest["files"][i.filename]
+                  if p.suffix == ".py":
+                      compile(data, i.filename, "exec")
+              info = json.loads(z.read("release_info.json"))
+              for k in ("product", "version", "sequence"):
+                  assert info[k] == manifest[k], f"release_info mismatch: {k}"
+          if not publish:
+              message = f"Existing release {latest['tag_name']} validated. No release or program changed."
+          else:
+              old_dir = pathlib.Path(tempfile.mkdtemp())
+              gh("release", "download", latest["tag_name"], "--dir", str(old_dir),
+                 "--pattern", names[1])
+              previous = json.loads((old_dir / names[1]).read_text())
+              tag = "v" + version
+              if sequence == previous["sequence"] and version == previous["version"]:
+                  assert digest == previous["sha256"], "Same version has different content"
+                  message = f"{tag} already published with the same ZIP; no change."
+              else:
+                  assert sequence > previous["sequence"], "Sequence must increase"
+                  notes = f"Validated OKX update {version}. ZIP SHA256: {digest}"
+                  gh("release", "create", tag, "--draft", "--target",
+                     os.environ["COMMIT_SHA"], "--title", version,
+                     "--notes", notes)
+                  gh("release", "upload", tag, *(str(payload / n) for n in names))
+                  release = json.loads(gh("api", f"repos/{repo}/releases/tags/{tag}"))
+                  assert {a["name"] for a in release["assets"]} == set(names)
+                  for asset in release["assets"]:
+                      expected = hashlib.sha256((payload / asset["name"]).read_bytes()).hexdigest()
+                      assert asset.get("digest") == "sha256:" + expected, "Uploaded hash mismatch"
+                  gh("release", "edit", tag, "--draft=false", "--latest")
+                  message = f"Published {tag}; both uploaded asset hashes verified."
+          print(message)
+          with open(os.environ["GITHUB_STEP_SUMMARY"], "a") as f:
+              f.write(message + "\n")
+          PY
