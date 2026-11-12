@@ -95,10 +95,9 @@ jobs:
                   releases = json.loads(gh("api", f"repos/{repo}/releases?per_page=100"))
                   release = next((r for r in releases if r["tag_name"] == tag), None)
                   if release is None:
-                      gh("release", "create", tag, "--draft", "--target",
-                         os.environ["COMMIT_SHA"], "--title", version, "--notes", notes)
-                      releases = json.loads(gh("api", f"repos/{repo}/releases?per_page=100"))
-                      release = next(r for r in releases if r["tag_name"] == tag)
+                      release = json.loads(gh("api", "--method", "POST", f"repos/{repo}/releases",
+                          "-f", "tag_name="+tag, "-f", "target_commitish="+os.environ["COMMIT_SHA"],
+                          "-f", "name="+version, "-f", "body="+notes, "-F", "draft=true"))
                   assert release["draft"], "Refusing to overwrite a published release"
                   present = {a["name"] for a in release["assets"]}
                   assert present <= set(names), "Unexpected draft assets"
