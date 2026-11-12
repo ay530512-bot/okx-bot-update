@@ -1,8 +1,9 @@
-"""Loopback-only presentation adapter for the SHA-pinned Q2X dashboard.
+"""Loopback dashboard, optionally reached through private Tailscale HTTPS Serve.
 
 Strategy/engine modules are never patched. Desktop updater is unavailable here.
 """
 import types
+from phone_remote import valid_host
 
 
 def mover_groups(rows):
@@ -26,7 +27,7 @@ def mobile_module(source):
     module = types.ModuleType('phone_q2x_mobile')
     exec(compile(text, str(source / 'okx_mobile.py'), 'exec'), module.__dict__)
     module.valid_config = lambda c: (
-        c.get('https_host') == '' and
+        (c.get('https_host') == '' or valid_host(c.get('https_host'))) and
         bool(module.re.fullmatch('[0-9a-f]{32}', c.get('salt', ''))) and
         bool(module.re.fullmatch('[0-9a-f]{128}', c.get('password_hash', ''))))
     original_asset = module.asset
@@ -36,7 +37,7 @@ def mobile_module(source):
         data = data.replace('PC', '폰').replace('집 폰', '이 폰')
         data = data.replace('폰와 프로그램 및 Tailscale 연결을 유지하세요.', 'Termux와 인터넷 연결을 유지하세요.')
         if name == 'index.html':
-            data = data.replace('<main>', '<main><p class="phone-host-notice">폴드3 실행기 · Q2X 원본 규칙 · 이 폰에서만 접속 가능</p>', 1)
+            data = data.replace('<main>', '<main><p class="phone-host-notice">집 폰 실행기 · Q2X 원본 규칙 · 아이폰 원격 접속 지원</p>', 1)
         if name == 'style.css':
             data += '\n#programUpdate,#globalUpdateNotice{display:none!important}.phone-host-notice{padding:12px;border:1px solid #444;border-radius:16px;color:#d0ff61}\n'
         return data.encode('utf-8')
@@ -46,6 +47,16 @@ def mobile_module(source):
         def __init__(self, *args, **kwargs):
             super().__init__(*args, **kwargs)
             self.hosts = {f'127.0.0.1:{self.port}', f'localhost:{self.port}'}
+            self.set_remote(self.config.get('https_host', ''))
+
+        def set_remote(self, host):
+            if host and not valid_host(host):
+                raise ValueError('허용되지 않은 원격 주소')
+            with self.lock:
+                self.config['https_host'] = host
+                self.hosts = {f'127.0.0.1:{self.port}', f'localhost:{self.port}'}
+                if host:
+                    self.hosts.add(host)
 
         def enqueue_control(self, op, *args, **kwargs):
             if op not in {'prepare', 'confirm', 'pause', 'entry', 'close_one', 'close_all'}:
@@ -58,7 +69,7 @@ def mobile_module(source):
             super().capture(view)
             with self.lock:
                 self.snapshot['phone_host'] = True
-                self.snapshot['external_access'] = False
+                self.snapshot['external_access'] = bool(self.config.get('https_host'))
 
     module.PhoneMobile = PhoneMobile
     return module

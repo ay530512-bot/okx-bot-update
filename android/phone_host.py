@@ -23,7 +23,7 @@ from pathlib import Path
 
 from phone_account import atomic_private, save_json, validate_keys, readonly_client, validate_config, finite
 
-VERSION = 'phone-host-1'
+VERSION = 'phone-host-2'
 PORT = 8768
 ACK = 'PC 종료 완료'
 KST = timezone(timedelta(hours=9))
@@ -117,6 +117,7 @@ def take_ownership(root, runtime, api, pins, ack, wait=time.sleep):
         raise ValueError('전환 조회 중 계정 변경')
     record = dict(version=VERSION, **pins, account_sha256=first,
                   operator_confirmed_pc_stopped=True, pc_remotely_verified=False,
+                  first_start_pending=True,
                   created_at=datetime.now(KST).isoformat())
     save_json(marker, record)
     return record
@@ -142,6 +143,33 @@ def verify_restart_journal(runtime, snapshot):
         raise ValueError('폰 주문 기록의 계정이 다릅니다.')
     if any(p.is_symlink() for p in runtime.rglob('*')):
         raise ValueError('폰 실행 폴더의 파일 링크를 확인하세요.')
+
+
+def verify_service_start(root, runtime, api, pins):
+    """A fresh handover may precede first engine construction; never reset old data."""
+    snap = api.snapshot()
+    owner = verify_owner(root, pins, snap)
+    if (runtime/'bot_state.json').exists():
+        verify_restart_journal(runtime, snap)
+        return
+    if not owner.get('first_start_pending'):
+        raise ValueError('폰 운용 기록이 없습니다. 새 기록으로 덮어쓰지 않습니다.')
+    if any(p.name != 'strategy_config.json' for p in runtime.iterdir()):
+        raise ValueError('최초 기동 전 기존 실행 기록을 확인해야 합니다. 삭제하지 마세요.')
+    if checkpoint(api) != owner['account_sha256']:
+        raise ValueError('최초 기동 계정 불일치')
+
+
+def remote_host(root):
+    path = root/'phone_remote.json'
+    if not path.exists():
+        return ''
+    from phone_remote import valid_host
+    value = read_json(path)
+    name = value.get('https_host', '')
+    if not valid_host(name) or value.get('public_access') is not False or value.get('transport') != 'private-tailscale-serve':
+        raise ValueError('폰 원격 주소 설정 오류')
+    return name
 
 
 def auth_config(root, module):
@@ -273,13 +301,19 @@ def serve(root, runtime, source, settings, access, run_engine):
     cfg = read_json(runtime / 'strategy_config.json')
     events = queue.Queue()
     view = View(cfg, watch=not run_engine)
-    mobile = module.PhoneMobile(runtime, settings, dict(access, controls_enabled=run_engine), port=PORT)
+    mobile = module.PhoneMobile(runtime, settings, dict(access, https_host=remote_host(root), controls_enabled=run_engine), port=PORT)
     engine = None
     api = None
     # Read-only watch never constructs a RuleEngine or private WS.
     if run_engine:
         from okx_v5 import RuleEngine
         engine = RuleEngine(runtime, settings, events)
+        owner = read_json(root/'phone_owner.json')
+        if owner.get('first_start_pending'):
+            if not (runtime/'bot_state.json').is_file():
+                raise ValueError('최초 운용 기록 저장을 확인하지 못했습니다.')
+            owner['first_start_pending'] = False
+            save_json(root/'phone_owner.json', owner)
     else:
         api = readonly_client({k: settings[k] for k in ('OKX_API_KEY', 'OKX_SECRET_KEY', 'OKX_PASSPHRASE')})
     market = MarketFeed(settings, events)
@@ -294,10 +328,17 @@ def serve(root, runtime, source, settings, access, run_engine):
     if not settings.get('TELEGRAM_BOT_TOKEN'):
         view.add('폰 Telegram 알림 미설정 · Termux --telegram에서 설정할 수 있습니다(최초 전환 전).')
     next_check = 0
+    next_remote = 0
     quitting = False
     done = False
     try:
         while not done:
+            if time.monotonic() >= next_remote:
+                next_remote = time.monotonic() + 5
+                try:
+                    mobile.set_remote(remote_host(root))
+                except Exception:
+                    mobile.set_remote('')
             if stop_requested.is_set():
                 stop_requested.clear()
                 if engine:
@@ -400,9 +441,7 @@ def main():
                     print('PC 원격 종료 여부는 자동 확인할 수 없습니다. 두 기기를 동시에 운용하지 마세요.', flush=True)
                     take_ownership(root, runtime, api, pins, input(f'완료했다면 "{ACK}" 입력: ').strip())
                 else:
-                    snap = api.snapshot()
-                    verify_owner(root, pins, snap)
-                    verify_restart_journal(runtime, snap)
+                    verify_service_start(root, runtime, api, pins)
                 # No stale handover snapshot: recheck identity before starting worker.
                 verify_owner(root, pins, api.snapshot())
             finally:

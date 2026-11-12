@@ -1,0 +1,54 @@
+{
+  "recorded_at_utc": "2026-11-12T22:32:19.795226+00:00",
+  "version": "phone-host-2",
+  "q2x_source_files_unchanged": 148,
+  "strategy_changed": false,
+  "private_config_preserved": true,
+  "live_orders_sent": 0,
+  "tests": {
+    "android_suite_passed": 83,
+    "q2x_regression_passed": 38,
+    "total_passed": 121
+  },
+  "transport": {
+    "provider": "official Tailscale",
+    "version": "1.104.6",
+    "arm64_archive_sha256": "d0e4f297da3c428d02162c6235b9948e4ddc245c64502b7b05647da9b96a0971",
+    "amd64_archive_sha256": "82a85429f733e52fd1a95dedb2c8dd8cd46d6603504e566a56b1779c9a7a4809",
+    "both_archives_downloaded_and_verified": true,
+    "amd64_version_and_help_executed": true,
+    "real_daemon_smoke": "blocked by executor network policy: NETLINK and AF_UNIX operation not permitted; not passed",
+    "android_support_source": "https://github.com/tailscale/tailscale/blob/v1.104.6/feature/androidbin/androidbin.go"
+  },
+  "verified_offline": [
+    "HTTPS Host/Origin matching, Secure session cookie, authenticated queued controls",
+    "private Serve exact loopback target; rejects public Funnel or extra service mappings",
+    "supervisor real child-process mock tests: crash/backoff/restart, duplicate lock, clean stop",
+    "protected-position stub refuses graceful shutdown, no forced kill or duplicate restart",
+    "fresh takeover rechecks flat account, prior state cannot be reset through pending start",
+    "original actual Q2X engine construction with transport blocked and byte-identical user config",
+    "generic installer idempotence and config/credential preservation"
+  ],
+  "not_verified": [
+    "phone Tailscale binary execution/login",
+    "iPhone end-to-end HTTPS connection",
+    "Fold3 24 hour screen-off stability and thermal behavior",
+    "Termux:Boot installation/opening and real reboot recovery",
+    "real phone trades, SL registration/amendments/partial fills and live recovery",
+    "PC shutdown and prevention of later PC restart",
+    "phone Telegram delivery"
+  ],
+  "boot_requirement": "same-source Termux:Boot app must be installed and opened once; hook alone is insufficient",
+  "publication_scope": "android only, no desktop release trigger, no account secrets or private config",
+  "files": {
+    "phone_host.py": "2283ce4c7d8ef65b65efe4f2f2655854bdd13af63aebf78ee7e4432250abbb6e",
+    "phone_mobile.py": "fc57f57fd9ef289a1e25133192cd8b8444691a8c2b9c08fe7230ef342eea7502",
+    "phone_remote.py": "2a4cb7d7566113dbfbb8f8ef34a403ad09553b9d792897766142d9830011c29d",
+    "phone_service.py": "bfe70ee0bbc488e6614aedf0d96062fd8e19a14ff35e920675d5ba83e53c0e1b",
+    "build_phone_host_bundle.py": "39b1ff415e98a7f3688ceeef1f9d6a3ddac282574c1586469d133947f2abd2a3",
+    "phone_home_setup.py": "82550a7f0cf3bfb07efabeb9018f7a8dc4b209f41325058cd0b4c7bf5372a170",
+    "test_phone_home.py": "83cc524e6f8ece6a84f7440c6ea9dd1f2dc4258f153c2c4d6c5b691eb769e109",
+    "PHONE_HOME_KO.md": "c480a12c279caa4b27e950d6d00b9f09a10947e9803fc1aa8bf75139086cbcd3",
+    "README.md": "cd6ec69162a5409d38848f601df3ff9e95cc89299def3ba22a388cb426f99ba8"
+  }
+}
