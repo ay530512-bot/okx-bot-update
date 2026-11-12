@@ -71,3 +71,5 @@ python -B ~/okx-phone/host-v2/phone_service.py --handover
 - [Tailscale Serve](https://tailscale.com/docs/reference/tailscale-cli/serve)
 - [Userspace networking](https://tailscale.com/docs/concepts/userspace-networking)
 - [Termux:Boot 공식 안내](https://github.com/termux/termux-boot)
+
+진단 1의 실기기 결과: 조회 프로세스 재시작 0회, 원격 프로세스 재시작 3회, `NeedsLogin`, 상태 파일 119바이트. UDP 버퍼 경고는 기본값으로 동작한다는 메시지이며 이를 종료 원인으로 확정하지 않습니다. 진단 1은 마지막 8개 오류 문구만 보여 종료 직전 원문이 누락될 수 있었습니다. 진단 2는 재시작 직전 기록 및 패닉/종료 신호를 우선 보존하고 시각과 IPv6 주소를 구분합니다. 읽기 전용이고 로그인 재시도·설정 삭제·설치 파일 교체를 하지 않습니다. 상태 파일 크기만으로 손상을 판정하지 않습니다. 기기 원인 및 복구는 계속 미확정입니다. 단위 검사 11개 통과.

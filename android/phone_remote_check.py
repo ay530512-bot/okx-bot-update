@@ -7,6 +7,7 @@ Raw CLI status (including AuthURL/User/Peer) is discarded, never printed/saved.
 """
 import argparse
 import hashlib
+import ipaddress
 import json
 import os
 from pathlib import Path
@@ -14,7 +15,7 @@ import re
 import subprocess
 import time
 
-VERSION = 'phone-remote-check-1'
+VERSION = 'phone-remote-check-2'
 BIN_HASHES = {
     'arm64': '2e547c5e8acb4e9dc7c3ae576c302346044bd2f30958515cca5b7a91fb5cd636',
     'amd64': 'a781895a86932424dce380c8b445c77b8568dd2248a7fed20ba77ce3cb221185',
@@ -23,9 +24,14 @@ STATES = {'NoState', 'InUseOtherUser', 'NeedsLogin', 'NeedsMachineAuth', 'Stoppe
 LOG_MARKERS = ('panic:', 'fatal error:', 'fatal:', 'operation not permitted', 'permission denied',
                'unexpected eof', 'signal: killed', 'out of memory', 'failed', 'error:',
                'no space left', 'read-only file system', 'no such file', 'segmentation', 'sigsys')
+CRITICAL_MARKERS = ('panic:', 'fatal error:', 'fatal:', 'sigsys:', 'sigsegv:',
+                    'sigabrt:', 'signal: killed', 'out of memory',
+                    'exiting process with status', 'must be enabled',
+                    'logging is required', 'log upload is required',
+                    'no space left', 'read-only file system')
 
 
-def tail(path, limit=96*1024):
+def tail(path, limit=512*1024):
     if path.is_symlink() or not path.is_file():
         return ''
     with path.open('rb') as stream:
@@ -40,10 +46,21 @@ def mask(text, root=None):
     text = re.sub(r'https?://\S+', '[URL]', text, flags=re.I)
     text = re.sub(r'\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b', '[EMAIL]', text, flags=re.I)
     text = re.sub(r'\b(?:\d{1,3}\.){3}\d{1,3}(?::\d+)?\b', '[IP]', text)
-    text = re.sub(r'(?<!\w)(?:[0-9a-f]{0,4}:){2,}[0-9a-f:%]{0,20}', '[IP6]', text, flags=re.I)
+    # Validate candidates: a clock such as 08:04:21 is NOT an IPv6 address.
+    def hide_ip6(match):
+        try:
+            ipaddress.IPv6Address(match.group())
+            return '[IP6]'
+        except ValueError:
+            return match.group()
+    text = re.sub(r'(?<![\w:])(?:[0-9a-f]{0,4}:){2,}[0-9a-f]{0,4}(?:%[\w.-]+)?',
+                  hide_ip6, text, flags=re.I)
     text = re.sub(r'\b[\w.-]+\.ts\.net(?::\d+)?', '[TAILNET]', text, flags=re.I)
     text = re.sub(r'\b(?:tskey-[\w-]+|(?:privkey|nodekey|machinekey|authkey):\S+)', '[KEY]', text, flags=re.I)
     text = re.sub(r'((?:token|secret|password|authorization|api.?key)\s*[=:]\s*)\S+', r'\1[HIDDEN]', text, flags=re.I)
+    text = re.sub(r'\b((?:o?node|machine|ts2021|legacy)=)\[[^\]]*\]', r'\1[ID]', text)
+    text = re.sub(r'("(?:DisplayName|LoginName|UserName|HostName|DNSName)"\s*:\s*)"[^"]*"',
+                  r'\1"[HIDDEN]"', text, flags=re.I)
     text = re.sub(r'\b[\w+/=-]{24,}\b', '[ID]', text)
     # Strip terminal escape/control characters before showing any log-derived text.
     text = re.sub(r'\x1b\[[0-?]*[ -/]*[@-~]', '', text)
@@ -108,7 +125,7 @@ def signals(log):
     flags = []
     for label, needles in (
         ('프로세스 패닉', ('panic:', 'fatal error:')),
-        ('권한 거부', ('operation not permitted', 'permission denied')),
+        ('권한 관련 기록(종료 원인 확정 아님)', ('operation not permitted', 'permission denied')),
         ('메모리/강제 종료 기록', ('out of memory', 'signal: killed')),
         ('저장 오류', ('no space left', 'read-only file system')),
         ('연결 중단 기록', ('unexpected eof',)),
@@ -120,14 +137,42 @@ def signals(log):
     return flags
 
 
+def exit_context(log, root):
+    """Keep crash evidence even when a new startup appends routine warnings.
+
+    A log boundary is not proof of a crash: the supervisor's actual exit code
+    was not recorded by host-v2. Never label ordinary fallback warnings fatal.
+    """
+    lines = log.splitlines()
+    starts = [i for i, line in enumerate(lines) if 'Program starting:' in line]
+    critical = [i for i, line in enumerate(lines)
+                if any(word in line.lower() for word in CRITICAL_MARKERS)]
+    selected = []
+    if critical:
+        # The last actual fatal/signal header survives a long Go stack dump.
+        index = critical[-1]
+        selected.extend(lines[max(0, index-2):index+6])
+    if len(starts) >= 2:
+        index = starts[-1]
+        # No error-word filter: log.Fatal/normal exit may have neither 'error'
+        # nor 'fatal'. Preserve the end of the previous daemon instance.
+        previous = [line for line in lines[starts[-2]:index]
+                    if line.strip() and 'logtail started' not in line
+                    and 'You have disabled logging.' not in line]
+        selected.extend(previous[-12:])
+    elif not critical:
+        selected.extend([line for line in lines if line.strip()][-12:])
+    clean = list(dict.fromkeys(mask(line, root)[:320] for line in selected))
+    return dict(starts_in_log_tail=len(starts), critical_header_found=bool(critical),
+                before_restart=clean[:20])
+
+
 def diagnostic(root, pause=time.sleep, status=local_status):
     first = metadata(root)
     state1 = status(root)
     pause(3)
     second = metadata(root)
     state2 = status(root)
-    # Preserve the first panic plus its package/function names, even if later
-    # reconnect attempts append less specific errors. Paths/keys are masked.
     log = tail(root/'remote.log')
     lines = log.splitlines()
     selected = []
@@ -146,7 +191,7 @@ def diagnostic(root, pause=time.sleep, status=local_status):
     return dict(version=VERSION, service_before=first, service_after=second,
                 tailscale_before=state1, tailscale_after=state2,
                 state_file_exists=state_size is not None, state_file_bytes=state_size,
-                log_signals=signals(log), log_hints=hints)
+                log_signals=signals(log), log_hints=hints, exit_context=exit_context(log, root))
 
 
 def display(data):
@@ -158,8 +203,13 @@ def display(data):
     print('Tailscale 상태:', data['tailscale_before']['state'], '→', data['tailscale_after']['state'])
     print('로그인 저장파일:', '있음' if data['state_file_exists'] else '없음', '/ 크기:', data['state_file_bytes'])
     print('로그 신호:', ', '.join(data['log_signals']) or '분류된 오류 없음')
-    for i, text in enumerate(data['log_hints'], 1):
+    context = data['exit_context']
+    print('로그 내 시작 횟수:', context['starts_in_log_tail'], '/ 종료코드: 기존 실행기에 기록 없음')
+    print('--- 종료 직전 기록 (민감정보 가림) ---')
+    for i, text in enumerate(context['before_restart'], 1):
         print(f'{i}. {text}')
+    if not context['before_restart']:
+        print('종료 직전 기록을 확보하지 못했습니다. 원인 미확정입니다.')
     print('=== 끝 · API/주문/설정/로그인 변경 없음 ===')
 
 

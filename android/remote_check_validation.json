@@ -1,27 +1,58 @@
 {
-  "recorded_at": "2026-11-12T22:55:16.895433+00:00",
-  "version": "phone-remote-check-1",
+  "recorded_at": "2026-11-12T23:11:09.919931+00:00",
+  "version": "phone-remote-check-2",
   "device_observed": [
-    "browser Login successful for okx-fold-home",
-    "two CLI setup attempts ended unexpected EOF"
+    "browser Login successful but CLI unexpected EOF (earlier screenshots)",
+    "host-v2 status running/watch, host restarts 0, remote restarts 3",
+    "Tailscale NeedsLogin twice; state file exists, 119 bytes",
+    "UDP buffer warnings explicitly use kernel defaults; netlink monitor falls back to polling"
   ],
-  "root_cause": "not yet identified; local status and bounded sanitized daemon logs required",
-  "changes": "standalone read-only diagnostic only; installed host-v2 and trading engine unchanged",
-  "test_count": 6,
-  "tests_passed": 6,
+  "root_cause": "unknown; daemon termination reason/exit code not present in submitted diagnostic",
+  "changes": "read-only diagnostic retains pre-restart lines and critical headers; preserves timestamps; no installed service or trading code changes",
+  "test_count": 11,
+  "tests_passed": 11,
   "verified": [
-    "executes pinned CLI status --json only",
-    "discards AuthURL, peer and user objects",
-    "does not open API credentials, strategy, trading journal or Tailscale state contents",
-    "masks URLs, emails, addresses, key-like tokens and terminal controls",
-    "bounded log reads, symlink and modified binary rejection"
+    "existing sensitive-file non-access and status-only checks pass",
+    "fatal/signal header retained despite long stack/new startup warnings",
+    "pre-restart lines without error keywords retained",
+    "addresses/auth URLs/user names/node IDs redacted; timestamps preserved",
+    "permission fallback warnings not classified as proven cause"
   ],
   "not_verified": [
-    "actual phone diagnosis output",
-    "remote connectivity restored"
+    "phone execution of diagnostic v2",
+    "actual daemon exit cause",
+    "remote connection restoration",
+    "PC-to-phone trading handover"
   ],
+  "previous_diagnostic": {
+    "recorded_at": "2026-11-12T22:55:16.895433+00:00",
+    "version": "phone-remote-check-1",
+    "device_observed": [
+      "browser Login successful for okx-fold-home",
+      "two CLI setup attempts ended unexpected EOF"
+    ],
+    "root_cause": "not yet identified; local status and bounded sanitized daemon logs required",
+    "changes": "standalone read-only diagnostic only; installed host-v2 and trading engine unchanged",
+    "test_count": 6,
+    "tests_passed": 6,
+    "verified": [
+      "executes pinned CLI status --json only",
+      "discards AuthURL, peer and user objects",
+      "does not open API credentials, strategy, trading journal or Tailscale state contents",
+      "masks URLs, emails, addresses, key-like tokens and terminal controls",
+      "bounded log reads, symlink and modified binary rejection"
+    ],
+    "not_verified": [
+      "actual phone diagnosis output",
+      "remote connectivity restored"
+    ],
+    "files": {
+      "phone_remote_check.py": "562b926759f317ca9d2d80d4770e44061c71461abb0cd9e1d76b5c160e9c87e9",
+      "test_phone_remote_check.py": "82013865fedd0c304957deda62c37491678c071f567aa70fc40403c77511a88d"
+    }
+  },
   "files": {
-    "phone_remote_check.py": "562b926759f317ca9d2d80d4770e44061c71461abb0cd9e1d76b5c160e9c87e9",
-    "test_phone_remote_check.py": "82013865fedd0c304957deda62c37491678c071f567aa70fc40403c77511a88d"
+    "phone_remote_check.py": "3289086318704e92b05a08502d55be32e892ba7dfdaeadff703abfdc2ef4cd30",
+    "test_phone_remote_check.py": "54bbf45dc29e6bdf5b7ef8b575d2760e861552c28616bb1c81a45ae2fc9155c6"
   }
 }

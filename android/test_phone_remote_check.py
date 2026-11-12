@@ -72,6 +72,48 @@ class SafeDiagnostics(unittest.TestCase):
             self.assertEqual(check.local_status(root, run)['state'], 'binary_not_verified')
             run.assert_not_called()
 
+    def test_clock_is_preserved_but_real_ipv6_is_hidden(self):
+        value = check.mask('2026/11/13 08:04:21 [2001:db8::1]:443 ::1 fe80::abcd%wlan0')
+        self.assertIn('2026/11/13 08:04:21', value)
+        self.assertNotIn('2001:db8', value)
+        self.assertNotIn('::1', value)
+        self.assertNotIn('fe80', value)
+
+    def test_exit_without_error_word_survives_later_startup_warnings(self):
+        log = ('Program starting: v1.104.6\n'
+               '2026/11/13 07:51:01 RegisterReq: machineAuthorized=true\n'
+               '2026/11/13 07:51:02 exiting process with status 1 per controlplane\n'
+               'logtail started\nProgram starting: v1.104.6\n'
+               + 'warning: operation not permitted; using kernel default values\n' * 40)
+        result = check.exit_context(log, Path('/phone'))
+        self.assertEqual(result['starts_in_log_tail'], 2)
+        self.assertTrue(result['critical_header_found'])
+        text = '\n'.join(result['before_restart'])
+        self.assertIn('07:51:02 exiting process with status 1', text)
+
+    def test_panic_header_survives_long_stack_and_restart(self):
+        log = ('Program starting: v1.104.6\npanic: fixture failure\n'
+               + 'goroutine stack fixture\n' * 200
+               + 'Program starting: v1.104.6\nwarning: operation not permitted\n')
+        result = check.exit_context(log, Path('/phone'))
+        self.assertIn('panic: fixture failure', '\n'.join(result['before_restart']))
+        self.assertLessEqual(len(result['before_restart']), 20)
+
+    def test_restart_context_masks_login_and_peer_identity(self):
+        log = ('Program starting: v1.104.6\n'
+               'Login: https://login.tailscale.com/a/private-token user@example.com\n'
+               'node=[abcde] machine=[fghij] {"DisplayName":"Private Person"}\n'
+               'Program starting: v1.104.6\n')
+        value = json.dumps(check.exit_context(log, Path('/phone')))
+        for private in ('private-token', 'user@example.com', 'abcde', 'fghij', 'Private Person'):
+            self.assertNotIn(private, value)
+
+    def test_permission_fallback_is_not_a_fatal_diagnosis(self):
+        result = check.exit_context('Program starting: v1.104.6\n'
+            'failed to force-set UDP buffer: operation not permitted; using kernel default values', Path('/phone'))
+        self.assertFalse(result['critical_header_found'])
+        self.assertIn('종료 원인 확정 아님', check.signals('operation not permitted')[0])
+
 
 if __name__ == '__main__':
     unittest.main()
