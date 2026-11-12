@@ -22,8 +22,9 @@ TS_VERSION = '1.104.6'
 MODULE_SUM = 'h1:VjIuSsyFQ2Bp+HOtgbZCCJ7ZFTL+fULop5gmUF2bBIA='
 MOD_SUM = 'h1:RROMXOJKiSHdVBeNtruULbCtqamzizsDgqQRYlCHclM='
 SOURCE_COMMIT = 'c54807352ae196919497b3f8fddc3cedf88368b9'
-PREFIX = 'tailscale_1.104.6_android_arm64_r1'
-TAG = 'phone-tailscale-1.104.6-android-arm64-r1'
+PREFIX = 'tailscale_1.104.6_android_arm64_r2'
+TAG = 'phone-tailscale-1.104.6-android-arm64-r2'
+BUILD_TAGS = 'ts_omit_clientupdate,ts_omit_systray,ts_omit_ssh,ts_omit_taildrop'
 
 
 def digest(path):
@@ -55,18 +56,32 @@ def build(work):
     env.update(GOOS='android', GOARCH='arm64', CGO_ENABLED='0')
     output = work/'out'; output.mkdir(exist_ok=True)
     bins = work/'bin'; bins.mkdir(exist_ok=True)
-    ldflags = ('-s -w -X tailscale.com/version.longStamp=1.104.6-phone-android-r1 '
+    ldflags = ('-s -w -X tailscale.com/version.longStamp=1.104.6-phone-android-r2 '
                '-X tailscale.com/version.shortStamp=1.104.6 '
                '-X tailscale.com/version.gitCommitStamp='+SOURCE_COMMIT)
     files = {}
+    # Taildrop's Android GUI file provider is absent in standalone Termux.
+    # Confirm the crashing package is absent, not merely disabled in prefs.
+    deps = subprocess.check_output([go, 'list', '-mod=readonly', '-tags='+BUILD_TAGS,
+            '-deps', './cmd/tailscaled'], cwd=source, env=env, text=True).splitlines()
+    assert 'tailscale.com/feature/taildrop' not in deps, 'Taildrop unexpectedly linked'
+    for required in ('tailscale.com/feature/androidbin', 'tailscale.com/feature/androiddns',
+                     'tailscale.com/feature/acme', 'tailscale.com/wgengine/netstack'):
+        assert required in deps, 'Required remote feature missing: '+required
+    selected = json.loads(subprocess.check_output([go, 'list', '-mod=readonly', '-tags='+BUILD_TAGS,
+            '-json', 'tailscale.com/ipn/ipnlocal'], cwd=source, env=env, text=True))
+    assert 'serve.go' in selected['GoFiles'] and 'serve_disabled.go' not in selected['GoFiles']
+    (output/'feature-check.json').write_text(json.dumps(dict(taildrop_linked=False,
+        serve_enabled=True, android_dns_and_netmon=True, certificate_automation=True,
+        netstack=True, build_tags=BUILD_TAGS.split(',')), indent=2)+'\n')
     for name in ('tailscale', 'tailscaled'):
         path = bins/name
         print('Building native Android', name, flush=True)
         subprocess.run([go, 'build', '-mod=readonly', '-trimpath', '-buildvcs=false', '-buildmode=pie',
-                        '-tags=ts_omit_clientupdate,ts_omit_systray,ts_omit_ssh', '-ldflags='+ldflags,
+                        '-tags='+BUILD_TAGS, '-ldflags='+ldflags,
                         '-o', str(path), './cmd/'+name], cwd=source, env=env, check=True)
         info = subprocess.check_output([go, 'version', '-m', str(path)], env=env, text=True)
-        for setting in ('GOOS=android', 'GOARCH=arm64', 'CGO_ENABLED=0', '-buildmode=pie', 'ts_omit_clientupdate', 'ts_omit_systray'):
+        for setting in ('GOOS=android', 'GOARCH=arm64', 'CGO_ENABLED=0', '-buildmode=pie', *BUILD_TAGS.split(',')):
             assert setting in info, setting
         raw = path.read_bytes()
         assert raw[:6] == b'\x7fELF\x02\x01'
@@ -86,6 +101,7 @@ def build(work):
     manifest = dict(schema=1, product='okx-phone-tailscale-native', upstream_version=TS_VERSION,
                     source_commit=SOURCE_COMMIT, module_sum=MODULE_SUM, go_version=GO_VERSION,
                     goos='android', goarch='arm64', cgo_enabled=False, self_update=False,
+                    taildrop=False, build_tags=BUILD_TAGS.split(','),
                     archive=package.name, sha256=digest(package), files=files,
                     device_validation='pending; cross-compilation is not an Android runtime test')
     (output/'native_manifest.json').write_text(json.dumps(manifest, indent=2)+'\n')

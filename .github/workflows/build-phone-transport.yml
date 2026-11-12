@@ -9,7 +9,7 @@ on:
 permissions:
   contents: write
 concurrency:
-  group: phone-native-transport-r1
+  group: phone-native-transport-r2
   cancel-in-progress: false
 jobs:
   build:
@@ -31,21 +31,22 @@ jobs:
           import hashlib,json,os,pathlib,subprocess
           def gh(*args):
               return subprocess.check_output(['gh',*args],text=True).strip()
-          repo=os.environ['GH_REPO']; tag='phone-tailscale-1.104.6-android-arm64-r1'
+          repo=os.environ['GH_REPO']; tag='phone-tailscale-1.104.6-android-arm64-r2'
           out=pathlib.Path('/tmp/okx-android-native/out')
           manifest=json.loads((out/'native_manifest.json').read_text())
-          names=[manifest['archive'],'native_manifest.json','tailscale-buildinfo.txt','tailscaled-buildinfo.txt']
+          names=[manifest['archive'],'native_manifest.json','feature-check.json','tailscale-buildinfo.txt','tailscaled-buildinfo.txt']
           latest_before=json.loads(gh('api',f'repos/{repo}/releases/latest'))['tag_name']
           releases=json.loads(gh('api',f'repos/{repo}/releases?per_page=100'))
           release=next((r for r in releases if r['tag_name']==tag),None)
           if release is None:
               notes=('Android arm64 transport component built from unmodified Tailscale 1.104.6 source. '
-                     'GOOS=android, PIE, CGO disabled; built-in self-update omitted. '
+                     'GOOS=android, PIE, CGO disabled; built-in self-update and Taildrop omitted. '
+                     'Fixes standalone Android Taildrop profile-change panic; Serve retained. '
                      'Project build, not an official upstream binary. Not an OKX desktop update. '
                      'No account settings or credentials. Actual phone runtime validation pending.')
               release=json.loads(gh('api','--method','POST',f'repos/{repo}/releases',
                   '-f','tag_name='+tag,'-f','target_commitish='+os.environ['COMMIT_SHA'],
-                  '-f','name=Android phone transport 1.104.6 r1','-f','body='+notes,
+                  '-f','name=Android phone transport 1.104.6 r2','-f','body='+notes,
                   '-F','draft=true','-F','prerelease=true','-f','make_latest=false'))
           present={a['name']:a for a in release['assets']}
           assert set(present)<=set(names)
