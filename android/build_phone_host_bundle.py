@@ -7,7 +7,8 @@ from pathlib import Path
 import zipfile
 
 FILES = ('phone_host.py', 'phone_mobile.py', 'phone_account.py', 'phone_sources.json',
-         'phone_remote.py', 'phone_service.py', 'phone_migrate.py', 'phone_migration_sources.json')
+         'phone_remote.py', 'phone_service.py', 'phone_migrate.py', 'phone_migration_sources.json',
+         'phone_remote_check.py')
 BOOTSTRAP = r'''#!/usr/bin/env python3
 """Generic phone host setup. Uses the already configured private phone directory."""
 import base64, hashlib, io, os, shutil, subprocess, sys, tempfile, zipfile
@@ -31,7 +32,7 @@ def install(root=None):
         if set(z.namelist())!=set(FILES) or len(z.namelist())!=len(FILES):
             raise ValueError('실행기 구성 오류')
         parts={name:z.read(name) for name in FILES}
-    target=root/'host-v3'
+    target=root/'host-v4'
     if target.is_symlink(): raise ValueError('기존 실행기 링크는 사용할 수 없습니다.')
     if target.exists():
         for name,data in parts.items():

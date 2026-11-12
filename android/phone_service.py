@@ -22,9 +22,10 @@ from phone_account import save_json, atomic_private
 import phone_remote as remote
 
 HERE = Path(__file__).resolve().parent
-VERSION = 'phone-service-3'
-MARKER = '# OKX phone service v3 managed boot hook'
+VERSION = 'phone-service-4'
+MARKER = '# OKX phone service v4 managed boot hook'
 LEGACY_MARKER = '# OKX phone service v2 managed boot hook'
+LEGACY_MARKERS = (LEGACY_MARKER, '# OKX phone service v3 managed boot hook')
 
 
 @contextmanager
@@ -76,7 +77,7 @@ def boot_script(root, home=None):
         raise ValueError('자동 시작 폴더 링크 오류')
     directory.mkdir(mode=0o700, parents=True, exist_ok=True)
     path = directory/'40-okx-home'
-    if path.is_symlink() or (path.exists() and not any(m in path.read_text() for m in (MARKER, LEGACY_MARKER))):
+    if path.is_symlink() or (path.exists() and not any(m in path.read_text() for m in (MARKER, *LEGACY_MARKERS))):
         raise ValueError('동일 이름의 기존 자동 시작 파일은 변경하지 않았습니다.')
     shell = shutil.which('sh') or '/bin/sh'
     wake = shutil.which('termux-wake-lock')
@@ -273,7 +274,7 @@ def setup(root):
     source, _ = verified_installation(root)
     auth_config(root, mobile_module(source))
     remote.install(root)
-    # Downloads/verification finish before stopping the known watch-only v2.
+    # Downloads/verification finish before stopping the known watch-only host.
     from phone_migrate import prepare_watch_upgrade
     prepare_watch_upgrade(root)
     path = root/'phone_service.json'
@@ -368,7 +369,16 @@ def main():
     elif args.status:
         show_status(root)
     else:
-        setup(root)
+        try:
+            setup(root)
+        except Exception:
+            print('\n설정이 끝나지 않아 읽기 전용 종료 기록을 함께 표시합니다.', flush=True)
+            try:
+                from phone_remote_check import display, diagnostic
+                display(diagnostic(root))
+            except Exception as diagnostic_error:
+                print('종료 기록 확인 실패:', type(diagnostic_error).__name__, flush=True)
+            raise
 
 
 if __name__ == '__main__':

@@ -75,14 +75,14 @@ class SafeDiagnostics(unittest.TestCase):
     def test_native_binary_preferred_over_legacy_and_exit_signal_retained(self):
         with tempfile.TemporaryDirectory() as tmp:
             root=Path(tmp)
-            for arch in ('android-arm64-r1','arm64'):
+            for arch in ('android-arm64-r2','arm64'):
                 p=root/f'tailscale-1.104.6-{arch}'/'tailscale'; p.parent.mkdir(); p.write_bytes(b'fixture')
             response=SimpleNamespace(returncode=0,stdout='{"BackendState":"Running"}',stderr='')
             run=Mock(return_value=response)
             digest=hashlib.sha256(b'fixture').hexdigest()
-            with patch.dict(check.BIN_HASHES, {'android-arm64-r1':digest,'arm64':digest}):
+            with patch.dict(check.BIN_HASHES, {'android-arm64-r2':digest,'arm64':digest}):
                 self.assertEqual(check.local_status(root,run)['state'],'Running')
-            self.assertIn('android-arm64-r1',run.call_args.args[0][0])
+            self.assertIn('android-arm64-r2',run.call_args.args[0][0])
             (root/'phone_service_status.json').write_text(json.dumps(dict(service_version='phone-service-3',remote_last_exit_code=-31)))
             self.assertEqual(check.metadata(root)['remote_last_exit_code'],-31)
 

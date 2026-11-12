@@ -22,15 +22,15 @@ import test_phone_home as home_tests
 class NativePreflight(unittest.TestCase):
     def test_native_folder_keeps_old_binary_and_state_paths(self):
         self.assertEqual(remote.binary_folder(Path('/phone'), 'arm64').name,
-                         'tailscale-1.104.6-android-arm64-r1')
+                         'tailscale-1.104.6-android-arm64-r2')
         with tempfile.TemporaryDirectory() as tmp, patch.object(remote, 'architecture', return_value='arm64'), patch.object(remote, 'verify_binaries'):
             args = remote.daemon_command(Path(tmp))
             self.assertIn('--state='+tmp+'/remote-private/tailscaled.state', args)
-            self.assertIn('android-arm64-r1/tailscaled', args[0])
+            self.assertIn('android-arm64-r2/tailscaled', args[0])
 
     def test_native_preflight_accepts_only_expected_version(self):
         good = [SimpleNamespace(returncode=0, stdout='{"short":"1.104.6"}'),
-                SimpleNamespace(returncode=0, stdout='1.104.6-phone-android-r1\n')]
+                SimpleNamespace(returncode=0, stdout='1.104.6-phone-android-r2\n')]
         with patch.object(remote.subprocess, 'run', side_effect=good) as run:
             remote.verify_native_runtime(Path('/fixture'), 'arm64')
         self.assertEqual(run.call_count, 2)
@@ -107,14 +107,22 @@ class UpgradeGuards(unittest.TestCase):
             self.assertIn(service.MARKER, hook.read_text())
             self.assertNotIn('--handover', hook.read_text())
 
-    def test_real_watch_supervisor_and_children_stop_before_upgrade(self):
+    def test_real_v2_watch_upgrade(self):
+        self.check_real_watch_upgrade("host-v2")
+
+    def test_real_v3_watch_upgrade(self):
+        self.check_real_watch_upgrade("host-v3")
+
+    def check_real_watch_upgrade(self, version):
         # Real subprocess locks, /proc identity, normal-stop request and child
         # lifetime; only the transport/account workers are local inert stubs.
         with tempfile.TemporaryDirectory() as tmp:
-            root=Path(tmp); old=root/'host-v2'; old.mkdir()
+            root=Path(tmp); old=root/version; old.mkdir()
             home_tests.SupervisorProcess().prepare(old)
             script=old/'phone_service.py'
-            script.write_text(script.read_text().replace('service_version=VERSION,', ''))
+            code=script.read_text()
+            code=code.replace('service_version=VERSION,', '') if version=='host-v2' else code.replace("VERSION = 'phone-service-4'", "VERSION = 'phone-service-3'")
+            script.write_text(code)
             save_json(root/'phone_service.json', dict(mode='watch', enabled=True))
             (root/'remote-private').mkdir()
             sentinels={name:('fixture-'+name).encode() for name in ('phone_credentials.json', 'strategy_config.json', 'remote-private/tailscaled.state')}
@@ -134,7 +142,9 @@ class UpgradeGuards(unittest.TestCase):
                 self.assertFalse(service.running(root))
                 self.assertFalse(service.running(root, 'phone_host.lock'))
                 self.assertFalse(json.loads((root/'phone_service.json').read_text())['enabled'])
-                self.assertTrue((root/'phone_transport_migration.json').exists())
+                receipt=json.loads((root/'phone_transport_migration.json').read_text())
+                self.assertEqual(receipt['from_version'],version)
+                self.assertEqual(receipt['to_version'],'host-v4')
                 for name,data in sentinels.items(): self.assertEqual((root/name).read_bytes(), data)
                 for name,data in old_bytes.items(): self.assertEqual((old/name).read_bytes(), data)
             finally:
@@ -152,7 +162,7 @@ class GenericBundle(unittest.TestCase):
             for name in names: (root/name).write_bytes(b'private-fixture-'+name.encode())
             before={name:(root/name).read_bytes() for name in names}
             target=mod.install(root)
-            self.assertEqual(target.parent.name,'host-v3')
+            self.assertEqual(target.parent.name,'host-v4')
             self.assertEqual(mod.install(root),target)
             for name,data in before.items(): self.assertEqual((root/name).read_bytes(),data)
             (root/'phone_owner.json').write_text('{}')

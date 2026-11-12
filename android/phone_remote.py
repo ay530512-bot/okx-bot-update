@@ -14,12 +14,12 @@ from pathlib import Path
 VERSION = '1.104.6'
 PACKAGES = {
     'arm64': {
-        'archive': '228b6c3a12192434ab1a7f55049222d84360a52c39f34a5eb73725fde140adfb',
-        'tailscale': 'ca27b5c24dfa6bbe63385ff58049bdadea74364dc01b4d4b2873bd16f3256d06',
-        'tailscaled': '1176e405d33d93f45fc2848bf0367017c3c86b6754e755677923f30777c13831',
-        'folder': 'tailscale-1.104.6-android-arm64-r1',
-        'prefix': 'tailscale_1.104.6_android_arm64_r1/',
-        'url': 'https://github.com/ay530512-bot/okx-bot-update/releases/download/phone-tailscale-1.104.6-android-arm64-r1/tailscale_1.104.6_android_arm64_r1.tar.gz'},
+        'archive': 'fc34e46149e5b15044b6c2e96b7a59c328d88529e3be01d947e6af66f2c77c54',
+        'tailscale': '46b5c67134de87c4378c6a1460f721a2838d4c241504485fd8ddf9f23517c498',
+        'tailscaled': 'fd27ef3e722bef9d316ffe8e83b90ee0040f4ce0cd0ce26510239ea67a784aee',
+        'folder': 'tailscale-1.104.6-android-arm64-r2',
+        'prefix': 'tailscale_1.104.6_android_arm64_r2/',
+        'url': 'https://github.com/ay530512-bot/okx-bot-update/releases/download/phone-tailscale-1.104.6-android-arm64-r2/tailscale_1.104.6_android_arm64_r2.tar.gz'},
     'amd64': {
         'archive': '82a85429f733e52fd1a95dedb2c8dd8cd46d6603504e566a56b1779c9a7a4809',
         'tailscale': 'a781895a86932424dce380c8b445c77b8568dd2248a7fed20ba77ce3cb221185',
@@ -81,7 +81,7 @@ def verify_native_runtime(folder, arch):
             raise ValueError()
         result = subprocess.run([str(folder/'tailscaled'), '--version'],
                                 capture_output=True, text=True, timeout=15, check=False)
-        if result.returncode or '1.104.6-phone-android-r1' not in result.stdout:
+        if result.returncode or '1.104.6-phone-android-r2' not in result.stdout:
             raise ValueError()
     except (OSError, ValueError, subprocess.TimeoutExpired):
         raise ValueError('Android용 연결 파일의 실행 확인에 실패했습니다. 기존 조회 실행기는 유지합니다.') from None

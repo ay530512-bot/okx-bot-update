@@ -1,4 +1,4 @@
-"""Guarded migration of the known watch-only host-v2. Never migrate live trading."""
+"""Guarded migration of known watch-only hosts. Never migrate live trading."""
 import hashlib
 import json
 import errno
@@ -41,9 +41,12 @@ def child_pids(pid):
         return result
 
 
-def verify_legacy(root):
-    manifest = json.loads((Path(__file__).parent/'phone_migration_sources.json').read_text())['host-v2']
-    folder = root/'host-v2'
+def verify_legacy(root, version='host-v2'):
+    manifests = json.loads((Path(__file__).parent/'phone_migration_sources.json').read_text())
+    if version not in manifests:
+        raise ValueError('알 수 없는 기존 실행기 버전입니다. 자동 교체하지 않습니다.')
+    manifest = manifests[version]
+    folder = root/version
     if folder.is_symlink():
         raise ValueError('기존 실행기 폴더 링크 오류')
     for name, expected in manifest.items():
@@ -79,13 +82,14 @@ def prepare_watch_upgrade(root):
         return
     row = read_json(root/'phone_service_status.json')
     if row.get('service_version') == service.VERSION:
-        return  # Idempotent setup resumes the already installed v3.
+        return  # Idempotent setup resumes the already installed current host.
     cfg = service.config(root)
     if cfg.get('mode') != 'watch' or row.get('mode') != 'watch' or row.get('state') != 'running':
         raise ValueError('조회 모드 실행기만 교체할 수 있습니다.')
     if not isinstance(row.get('observed_at'), (int, float)) or not 0 <= time.time()-row['observed_at'] < 30:
         raise ValueError('기존 실행기 상태가 오래되었습니다. 자동 교체하지 않았습니다.')
-    folder = verify_legacy(root)
+    version = {None: 'host-v2', 'phone-service-3': 'host-v3'}.get(row.get('service_version'))
+    folder = verify_legacy(root, version)
     pid = row.get('pid')
     if type(pid) is not int or pid < 2:
         raise ValueError('기존 실행기 프로세스 확인 실패')
@@ -103,5 +107,5 @@ def prepare_watch_upgrade(root):
         if time.monotonic() >= deadline:
             raise ValueError('이전 연결 프로세스 종료를 기다리는 중입니다. 강제 종료하거나 상태 파일을 지우지 마세요.')
         time.sleep(.25)
-    save_json(root/'phone_transport_migration.json', dict(from_version='host-v2', to_version='host-v3',
+    save_json(root/'phone_transport_migration.json', dict(from_version=version, to_version='host-v4',
               previous_mode='watch', state_files_preserved=True, completed_at=time.time()))

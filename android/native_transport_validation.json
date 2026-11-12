@@ -1,16 +1,27 @@
 {
-  "recorded_at_utc": "2026-11-12T23:34:10.719287+00:00",
-  "version": "phone-host-3",
-  "scope": "Android remote transport repair and guarded watch-only migration; no live handover",
+  "recorded_at_utc": "2026-11-12T23:44:43.174557+00:00",
+  "version": "phone-host-4",
+  "scope": "Android Taildrop crash repair and watch-only v2/v3 migration; no live handover",
   "device_evidence": {
-    "browser_login": "successful per user screenshot",
-    "old_cli": "unexpected EOF",
-    "old_remote_restarts": 3,
-    "fatal_signal": "SIGSYS",
-    "syscall_hex": "0x1b7",
-    "arm64_syscall_name": "faccessat2",
-    "native_fix_device_result": "not yet run by user"
+    "r1_result": "failed after login; observed on user device",
+    "service_mode": "watch",
+    "host_restarts": 0,
+    "remote_restarts": 2,
+    "remote_last_exit_code": 2,
+    "backend_state": "NeedsLogin",
+    "latest_panic": "nil pointer dereference in tailscale.com/feature/taildrop.(*Extension).onChangeProfile",
+    "source_location": "feature/taildrop/ext.go:181",
+    "r2_device_result": "pending"
   },
+  "root_cause": {
+    "source": "unmodified tailscale.com v1.104.6",
+    "function_variable": "newFileOps",
+    "standalone_android_provider_missing": true,
+    "initializer_file_constraint": "feature/taildrop/fileops_fs.go: !android",
+    "observed_stack_matches_source": true,
+    "change": "compile with ts_omit_taildrop; retain Serve and Android runtime support"
+  },
+  "previous_record": "native_transport_validation_r1.json",
   "transport": {
     "schema": 1,
     "product": "okx-phone-tailscale-native",
@@ -22,67 +33,80 @@
     "goarch": "arm64",
     "cgo_enabled": false,
     "self_update": false,
-    "archive": "tailscale_1.104.6_android_arm64_r1.tar.gz",
-    "sha256": "228b6c3a12192434ab1a7f55049222d84360a52c39f34a5eb73725fde140adfb",
+    "taildrop": false,
+    "build_tags": [
+      "ts_omit_clientupdate",
+      "ts_omit_systray",
+      "ts_omit_ssh",
+      "ts_omit_taildrop"
+    ],
+    "archive": "tailscale_1.104.6_android_arm64_r2.tar.gz",
+    "sha256": "fc34e46149e5b15044b6c2e96b7a59c328d88529e3be01d947e6af66f2c77c54",
     "files": {
-      "tailscale": "ca27b5c24dfa6bbe63385ff58049bdadea74364dc01b4d4b2873bd16f3256d06",
-      "tailscaled": "1176e405d33d93f45fc2848bf0367017c3c86b6754e755677923f30777c13831"
+      "tailscale": "46b5c67134de87c4378c6a1460f721a2838d4c241504485fd8ddf9f23517c498",
+      "tailscaled": "fd27ef3e722bef9d316ffe8e83b90ee0040f4ce0cd0ce26510239ea67a784aee"
     },
     "device_validation": "pending; cross-compilation is not an Android runtime test"
   },
+  "feature_check": {
+    "taildrop_linked": false,
+    "serve_enabled": true,
+    "android_dns_and_netmon": true,
+    "certificate_automation": true,
+    "netstack": true,
+    "build_tags": [
+      "ts_omit_clientupdate",
+      "ts_omit_systray",
+      "ts_omit_ssh",
+      "ts_omit_taildrop"
+    ]
+  },
   "publication": {
-    "tag": "phone-tailscale-1.104.6-android-arm64-r1",
+    "tag": "phone-tailscale-1.104.6-android-arm64-r2",
     "prerelease": true,
     "make_latest": false,
-    "workflow_run": 43328837508,
+    "workflow_run": 43330959057,
     "workflow_result": "success",
     "local_and_actions_archive_identical": true,
-    "published_download_verified": true,
-    "both_executable_hashes_verified_after_extract": true
+    "published_archive_manifest_feature_check_download_verified": true
   },
   "tests": {
-    "android_suite_passed": 106,
-    "new_upgrade_tests_passed": 11,
+    "android_suite_passed": 107,
+    "upgrade_tests_passed": 12,
     "diagnostic_tests_passed": 12,
-    "supervisor_migration": "real local subprocess, locks, /proc identity and graceful stop; inert account/transport stubs; AF_UNIX probe mocked because executor blocks it",
-    "native_version_preflight": "failure and success mocked; actual Android execution will happen before old watcher stops",
-    "original_q2x_files_sha256_unchanged": 148,
-    "original_strategy_config_bytes_preserved": true,
-    "live_orders_sent": 0,
-    "q2x_previous_regression_passed": 38,
-    "q2x_regression_repeated_this_transport_fix": false
+    "supervisor_migration": "v2 and v3 real subprocess/locks/proc and graceful stop; inert account/transport workers; local Unix socket probe mocked because executor forbids AF_UNIX",
+    "native_runtime_preflight": "mocked offline; two executable version checks run on phone before old watcher stops",
+    "original_q2x_files_unchanged": 148,
+    "original_private_config_unchanged": true,
+    "published_v3_source_fingerprints_verified": 8,
+    "live_orders_sent": 0
   },
-  "initial_test_failures_resolved": [
-    "unsupported Android SSH server build omitted via upstream build tag; first Actions build failed and published no assets",
-    "executor AF_UNIX denied: test now explicitly mocks local socket probe, no live Unix socket success claimed",
-    "optional /proc task children file absent: added parent-PID fallback and exercised it with real child processes"
-  ],
   "preservation": [
-    "Tailscale private state path retained",
-    "API credentials and dashboard password retained",
-    "old host-v2 immutable folder retained",
-    "live ownership marker prevents automatic migration",
-    "only recognized watch-only supervisor stopped gracefully",
-    "new binary integrity and version preflight precede old watcher stop"
+    "same private login state path",
+    "API credentials, dashboard password, strategy config and journals retained",
+    "immutable host-v2 and host-v3 retained",
+    "only watch-mode recognized versions migrated",
+    "no takeover or live trade start",
+    "no desktop release update"
   ],
   "not_verified": [
-    "actual Fold3 native binary execution and post-login daemon stability",
+    "native r2 execution after login on Fold3",
     "iPhone end-to-end HTTPS",
-    "screen-off long-duration operation",
+    "screen-off long-duration stability",
     "Termux:Boot real reboot recovery",
     "PC handover and live order/SL recovery"
   ],
   "files": {
-    "phone_remote.py": "1af9a9e4d869d299dacae98fe851376b444f8dac13e5c8d660a7297b1cc02fa2",
-    "phone_service.py": "caa46bb331d1d5e702fd602080594035253cde0e5109cb59170b977e7f96740d",
-    "phone_migrate.py": "b593ff9a938b0d7c4c1ea8eb3c1b1b8d02c33b3d665a838989887631e969d4f2",
-    "phone_migration_sources.json": "5f2773e64be7b1f5e19590c727d2cee0a3409f71d0f336355c142aa18e4d0032",
-    "phone_remote_check.py": "ea5d4eb9a94f496dc10f5dda39bb8bfac88145cae654ccd77b59632cfafb707c",
-    "test_phone_native_upgrade.py": "3bb61efc9a21630cba405adbd760bc5728b1bbe674ec405b1cb3fe496885a40b",
-    "test_phone_remote_check.py": "fc9c9d3bed77893d1a5a54ecd21660bd1dde66d878eaa05c8350d88ac1467a3b",
-    "build_phone_host_bundle.py": "55ecfd5f04933cd0b8650ff40358de2fbed60c36efa1f6a55e27a992fcc19d3f",
-    "phone_home_setup.py": "06d61b217417bd2e7ada1c444ade40ff778f21009400d7f906fc596c5c39dfc0",
-    "PHONE_HOME_KO.md": "daff3c19fb54945b8b67f483dfbeb0e1b2252e0454f99971e37206ebb90b7e37",
-    "README.md": "686a8b1cbe2b6a477b3d5598a79e22cba90ac1d2e8bd22b45870088158001618"
+    "phone_remote.py": "f891e8cc8c8e822eb7f75ccd22d441b4b451162de0bf87a134b3c925e9073e97",
+    "phone_service.py": "4d0aeebfa91576947c53553c44b1be59810d6059d174b0d939b27064b1dc1ef1",
+    "phone_migrate.py": "aafbe024259d3f4dffc81b9b4ec7c9e9307a3487efeb969b1feed257f66399fb",
+    "phone_migration_sources.json": "214293c5bf0d7fd79838b1037ab9499a2a5428c91758fe3df7c439d790e3691d",
+    "phone_remote_check.py": "7d20cb6dcbbd2d784dab6c9fd8131722175d2f684b2202c3499fc13e8fd194d1",
+    "test_phone_native_upgrade.py": "ebe7107e80604a2b6933c4de5a1c67e11f0fc9c9e34360e3476e709ff487c6c7",
+    "test_phone_remote_check.py": "25e2414779cda460b50551376de9a8ec161d6474c3a8cec09394536ff20be7f6",
+    "build_phone_host_bundle.py": "47fb08416da21c18ec729d045941553fa80ef7e6cb744720435c9925f34183c4",
+    "phone_home_setup.py": "6ffb42900b679c64214f09efd3d5a1ad52a750986d73953c2c51410852ac1304",
+    "PHONE_HOME_KO.md": "38806d1388bda0bb83bb0c94d9dd7e67451eeafa085b7093a74784f7bda0e657",
+    "README.md": "8e8c127ef01d1d197ef659f3c8f9b209c38243be9a42c6b8502be6bba8d2bc77"
   }
 }

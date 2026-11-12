@@ -15,8 +15,9 @@ import re
 import subprocess
 import time
 
-VERSION = 'phone-remote-check-3'
+VERSION = 'phone-remote-check-4'
 BIN_HASHES = {
+    'android-arm64-r2': '46b5c67134de87c4378c6a1460f721a2838d4c241504485fd8ddf9f23517c498',
     'android-arm64-r1': 'ca27b5c24dfa6bbe63385ff58049bdadea74364dc01b4d4b2873bd16f3256d06',
     'arm64': '2e547c5e8acb4e9dc7c3ae576c302346044bd2f30958515cca5b7a91fb5cd636',
     'amd64': 'a781895a86932424dce380c8b445c77b8568dd2248a7fed20ba77ce3cb221185',
@@ -84,7 +85,7 @@ def metadata(root):
         result['mode'] = row.get('mode') if row.get('mode') in ('watch', 'run') else 'unknown'
         value = row.get('remote_last_exit_code')
         result['remote_last_exit_code'] = value if type(value) is int else None
-        result['service_version'] = row.get('service_version') if row.get('service_version') == 'phone-service-3' else 'legacy'
+        result['service_version'] = row.get('service_version') if row.get('service_version') in ('phone-service-3', 'phone-service-4') else 'legacy'
         value = row.get('observed_at')
         result['age_seconds'] = max(0, round(time.time()-value)) if type(value) in (int, float) else None
         return result
@@ -202,7 +203,7 @@ def diagnostic(root, pause=time.sleep, status=local_status):
 def display(data):
     s = data['service_after']
     print('=== 폰 원격 연결 진단 (읽기만) ===')
-    print('실행기:', s.get('state'), '/ 모드:', s.get('mode'), '/ 기록 경과:', s.get('age_seconds'), '초')
+    print('실행기:', s.get('service_version'), s.get('state'), '/ 모드:', s.get('mode'), '/ 기록 경과:', s.get('age_seconds'), '초')
     print('조회 실행:', s.get('host_process_running'), '/ 원격 실행:', s.get('remote_process_running'))
     print('재시작 횟수(조회/원격):', s.get('host_restarts'), '/', s.get('remote_restarts'))
     print('Tailscale 상태:', data['tailscale_before']['state'], '→', data['tailscale_after']['state'])
