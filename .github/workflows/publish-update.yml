@@ -92,16 +92,25 @@ jobs:
               else:
                   assert sequence > previous["sequence"], "Sequence must increase"
                   notes = f"Validated OKX update {version}. ZIP SHA256: {digest}"
-                  gh("release", "create", tag, "--draft", "--target",
-                     os.environ["COMMIT_SHA"], "--title", version,
-                     "--notes", notes)
-                  gh("release", "upload", tag, *(str(payload / n) for n in names))
-                  release = json.loads(gh("api", f"repos/{repo}/releases/tags/{tag}"))
+                  releases = json.loads(gh("api", f"repos/{repo}/releases?per_page=100"))
+                  release = next((r for r in releases if r["tag_name"] == tag), None)
+                  if release is None:
+                      gh("release", "create", tag, "--draft", "--target",
+                         os.environ["COMMIT_SHA"], "--title", version, "--notes", notes)
+                      releases = json.loads(gh("api", f"repos/{repo}/releases?per_page=100"))
+                      release = next(r for r in releases if r["tag_name"] == tag)
+                  assert release["draft"], "Refusing to overwrite a published release"
+                  present = {a["name"] for a in release["assets"]}
+                  assert present <= set(names), "Unexpected draft assets"
+                  for name in names:
+                      if name not in present:
+                          gh("release", "upload", tag, str(payload / name))
+                  release = json.loads(gh("api", f"repos/{repo}/releases/{release['id']}"))
                   assert {a["name"] for a in release["assets"]} == set(names)
                   for asset in release["assets"]:
                       expected = hashlib.sha256((payload / asset["name"]).read_bytes()).hexdigest()
                       assert asset.get("digest") == "sha256:" + expected, "Uploaded hash mismatch"
-                  gh("release", "edit", tag, "--draft=false", "--latest")
+                  gh("api", "--method", "PATCH", f"repos/{repo}/releases/{release['id']}", "-F", "draft=false", "-f", "make_latest=true")
                   message = f"Published {tag}; both uploaded asset hashes verified."
           print(message)
           with open(os.environ["GITHUB_STEP_SUMMARY"], "a") as f:
