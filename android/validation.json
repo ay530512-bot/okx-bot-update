@@ -1,8 +1,31 @@
 {
-  "test_command": "python -m unittest discover -s android -v",
-  "tests_passed": 8,
-  "actual_phone_test": "pending",
-  "public_network_test": "pending_on_phone",
-  "source_sha256": "7f5d637fb7d6696f3da5dad1f4d6fc2fd4f9cbcf11ac74363009d8050882328c",
-  "scope": "Public API and short heartbeat diagnostics only; no desktop release changes."
+  "date_kst": "2026-11-13",
+  "test_command": "android_test_env/bin/python -m unittest discover -s android -v",
+  "offline_tests_passed": 19,
+  "q2x_archive_sha256": "6b2a0a90f02cca914ffc5cc0996555e8c1435b7a61618575ee94ee2ebdc2dad1",
+  "real_archive_staged_and_reverified_files": 148,
+  "imports_with_tk_and_network_blocked": [
+    "okx_v5",
+    "okx_stream",
+    "okx_mobile"
+  ],
+  "tested_python": "3.12 on Linux x86_64",
+  "script_hashes": {
+    "phone_check.py": "7f5d637fb7d6696f3da5dad1f4d6fc2fd4f9cbcf11ac74363009d8050882328c",
+    "phone_prepare.py": "f68f35ef4634ef9744e927acfdc21e1e52f1de703b80366434974e8634dbd5b4"
+  },
+  "actual_device_preflight_evidence": {
+    "source": "user screenshot; 2026-11-13 KST",
+    "public_api": "normal",
+    "elapsed_seconds": 180.172,
+    "max_gap_seconds": 1.024,
+    "server_clock_offset_seconds": 0.062,
+    "round_trip_seconds": 0.134,
+    "screen_off_independently_verified": false
+  },
+  "actual_device_source_import_and_websocket": "pending",
+  "live_migration": "not performed",
+  "desktop_release_changed": false,
+  "credentials_accessed": false,
+  "orders_sent": false
 }
