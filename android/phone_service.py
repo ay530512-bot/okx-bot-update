@@ -22,7 +22,9 @@ from phone_account import save_json, atomic_private
 import phone_remote as remote
 
 HERE = Path(__file__).resolve().parent
-MARKER = '# OKX phone service v2 managed boot hook'
+VERSION = 'phone-service-3'
+MARKER = '# OKX phone service v3 managed boot hook'
+LEGACY_MARKER = '# OKX phone service v2 managed boot hook'
 
 
 @contextmanager
@@ -74,7 +76,7 @@ def boot_script(root, home=None):
         raise ValueError('자동 시작 폴더 링크 오류')
     directory.mkdir(mode=0o700, parents=True, exist_ok=True)
     path = directory/'40-okx-home'
-    if path.is_symlink() or (path.exists() and MARKER not in path.read_text()):
+    if path.is_symlink() or (path.exists() and not any(m in path.read_text() for m in (MARKER, LEGACY_MARKER))):
         raise ValueError('동일 이름의 기존 자동 시작 파일은 변경하지 않았습니다.')
     shell = shutil.which('sh') or '/bin/sh'
     wake = shutil.which('termux-wake-lock')
@@ -128,6 +130,7 @@ def supervise(root):
         daemon_next = worker_next = 0
         daemon_failures = worker_failures = 0
         daemon_start = worker_start = 0
+        daemon_last_exit = daemon_last_exit_at = None
         worker_stop_sent = False
         disabled = False
         next_report = 0
@@ -160,6 +163,8 @@ def supervise(root):
                     return
             # Connectivity failure never restarts a healthy managing worker.
             if daemon and daemon.poll() is not None:
+                daemon_last_exit = daemon.returncode
+                daemon_last_exit_at = time.time()
                 daemon_failures = 1 if now-daemon_start > 300 else daemon_failures+1
                 daemon_next = now+retry_delay(daemon_failures)
                 daemon = None
@@ -188,9 +193,12 @@ def supervise(root):
             if now >= next_report:
                 next_report = now+5
                 save_json(root/'phone_service_status.json', dict(
-                    pid=os.getpid(), state='stopping' if stop[0] else 'running', mode=initial['mode'],
+                    pid=os.getpid(), service_version=VERSION,
+                    state='stopping' if stop[0] else 'running', mode=initial['mode'],
                     host_process_running=bool(worker and worker.poll() is None),
                     remote_process_running=bool(daemon and daemon.poll() is None),
+                    host_pid=worker.pid if worker else None, remote_pid=daemon.pid if daemon else None,
+                    remote_last_exit_code=daemon_last_exit, remote_last_exit_at=daemon_last_exit_at,
                     host_restarts=worker_failures, remote_restarts=daemon_failures, observed_at=time.time()))
                 for name in ('host.log', 'remote.log', 'service.log', 'boot.log'):
                     trim_log(root/name)
@@ -265,6 +273,9 @@ def setup(root):
     source, _ = verified_installation(root)
     auth_config(root, mobile_module(source))
     remote.install(root)
+    # Downloads/verification finish before stopping the known watch-only v2.
+    from phone_migrate import prepare_watch_upgrade
+    prepare_watch_upgrade(root)
     path = root/'phone_service.json'
     if not path.exists():
         save_json(path, dict(mode='watch', enabled=True))

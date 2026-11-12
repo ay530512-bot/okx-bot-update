@@ -1,4 +1,4 @@
-"""Private Tailscale Serve transport; no public ingress or OKX proxying."""
+"""Private transport; native Android ARM64 build avoids Linux-only syscalls."""
 import hashlib
 import io
 import json
@@ -14,14 +14,22 @@ from pathlib import Path
 VERSION = '1.104.6'
 PACKAGES = {
     'arm64': {
-        'archive': 'd0e4f297da3c428d02162c6235b9948e4ddc245c64502b7b05647da9b96a0971',
-        'tailscale': '2e547c5e8acb4e9dc7c3ae576c302346044bd2f30958515cca5b7a91fb5cd636',
-        'tailscaled': '904044a58d6b22426fa2ff2307f774dc69c0edda0c5053bc3de53fb11a0b8e40'},
+        'archive': '228b6c3a12192434ab1a7f55049222d84360a52c39f34a5eb73725fde140adfb',
+        'tailscale': 'ca27b5c24dfa6bbe63385ff58049bdadea74364dc01b4d4b2873bd16f3256d06',
+        'tailscaled': '1176e405d33d93f45fc2848bf0367017c3c86b6754e755677923f30777c13831',
+        'folder': 'tailscale-1.104.6-android-arm64-r1',
+        'prefix': 'tailscale_1.104.6_android_arm64_r1/',
+        'url': 'https://github.com/ay530512-bot/okx-bot-update/releases/download/phone-tailscale-1.104.6-android-arm64-r1/tailscale_1.104.6_android_arm64_r1.tar.gz'},
     'amd64': {
         'archive': '82a85429f733e52fd1a95dedb2c8dd8cd46d6603504e566a56b1779c9a7a4809',
         'tailscale': 'a781895a86932424dce380c8b445c77b8568dd2248a7fed20ba77ce3cb221185',
         'tailscaled': '01106e93593dfe01ba6d8615ba5de40222ce3e54797525cc66ef7795f682c216'},
 }
+
+
+def binary_folder(root, arch=None):
+    arch = arch or architecture()
+    return root / PACKAGES[arch].get('folder', f'tailscale-{VERSION}-{arch}')
 
 
 def architecture():
@@ -59,14 +67,31 @@ def verify_binaries(folder, arch):
     for name in ('tailscale', 'tailscaled'):
         path = folder / name
         if path.is_symlink() or not path.is_file() or hashlib.sha256(path.read_bytes()).hexdigest() != PACKAGES[arch][name]:
-            raise ValueError('공식 원격 연결 파일 검증 실패: ' + name)
+            raise ValueError('원격 연결 파일 검증 실패: ' + name)
+
+
+def verify_native_runtime(folder, arch):
+    if arch != 'arm64':
+        return
+    try:
+        result = subprocess.run([str(folder/'tailscale'), 'version', '--json'],
+                                capture_output=True, text=True, timeout=15, check=False)
+        version = json.loads(result.stdout)
+        if result.returncode or not isinstance(version, dict) or version.get('short') != VERSION:
+            raise ValueError()
+        result = subprocess.run([str(folder/'tailscaled'), '--version'],
+                                capture_output=True, text=True, timeout=15, check=False)
+        if result.returncode or '1.104.6-phone-android-r1' not in result.stdout:
+            raise ValueError()
+    except (OSError, ValueError, subprocess.TimeoutExpired):
+        raise ValueError('Android용 연결 파일의 실행 확인에 실패했습니다. 기존 조회 실행기는 유지합니다.') from None
 
 
 def unpack(raw, target, arch):
     if hashlib.sha256(raw).hexdigest() != PACKAGES[arch]['archive']:
-        raise ValueError('공식 Tailscale 다운로드 해시 불일치')
+        raise ValueError('Tailscale 다운로드 해시 불일치')
     parts = {}
-    prefix = f'tailscale_{VERSION}_{arch}/'
+    prefix = PACKAGES[arch].get('prefix', f'tailscale_{VERSION}_{arch}/')
     with tarfile.open(fileobj=io.BytesIO(raw), mode='r:gz') as tar:
         for name in ('tailscale', 'tailscaled'):
             entries = [m for m in tar.getmembers() if m.name == prefix + name]
@@ -87,14 +112,15 @@ def unpack(raw, target, arch):
 
 def install(root):
     arch = architecture()
-    target = root / f'tailscale-{VERSION}-{arch}'
+    target = binary_folder(root, arch)
     if target.is_symlink():
         raise ValueError('원격 연결 폴더 링크는 사용할 수 없습니다.')
     if target.exists():
         verify_binaries(target, arch)
+        verify_native_runtime(target, arch)
         return target
-    url = f'https://pkgs.tailscale.com/stable/tailscale_{VERSION}_{arch}.tgz'
-    print('공식 원격 연결 파일 다운로드 중 (약 40MB) …', flush=True)
+    url = PACKAGES[arch].get('url', f'https://pkgs.tailscale.com/stable/tailscale_{VERSION}_{arch}.tgz')
+    print('원격 연결 파일 다운로드·무결성 확인 중 …', flush=True)
     with urllib.request.urlopen(url, timeout=45) as response:
         raw = response.read(80*1024*1024 + 1)
     if len(raw) > 80*1024*1024:
@@ -103,6 +129,7 @@ def install(root):
     temp = Path(tempfile.mkdtemp(prefix='.tailscale-', dir=root))
     try:
         unpack(raw, temp, arch)
+        verify_native_runtime(temp, arch)
         os.rename(temp, target)
     finally:
         if temp.exists():
@@ -111,7 +138,7 @@ def install(root):
 
 
 def paths(root):
-    folder = root / f'tailscale-{VERSION}-{architecture()}'
+    folder = binary_folder(root)
     state = root / 'remote-private'
     if state.is_symlink():
         raise ValueError('원격 설정 폴더 링크는 사용할 수 없습니다.')
@@ -149,7 +176,7 @@ def configure(root):
         result = cli(root, 'up', '--accept-dns=false', '--accept-routes=false',
                      '--hostname=okx-fold-home', '--timeout=3m', capture=False, timeout=190)
         if result.returncode:
-            raise ValueError('로그인/기기 승인 대기입니다. 완료 후 같은 설치 명령으로 이어갈 수 있습니다.')
+            raise ValueError('연결 명령이 중단되었습니다. 승인 대기로 단정할 수 없습니다. 종료 기록을 확인해야 합니다.')
     # Never alter OKX internet egress: no exit node, advertised routes, or DNS changes.
     prefs = cli(root, 'debug', 'prefs')
     try:
@@ -170,4 +197,11 @@ def configure(root):
     verify_serve(json.loads(cli(root, 'serve', 'status', '--json').stdout), host)
     from phone_account import save_json
     save_json(root/'phone_remote.json', dict(https_host=host, transport='private-tailscale-serve', public_access=False))
+    # Verify that a short successful response is not immediately followed by
+    # another daemon crash (the failure observed after browser authentication).
+    import time
+    for _ in range(3):
+        time.sleep(2)
+        if host_from_status(status(root)) != host:
+            raise ValueError('원격 연결 유지 확인 실패')
     return 'https://' + host

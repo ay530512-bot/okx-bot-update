@@ -7,7 +7,7 @@ from pathlib import Path
 import zipfile
 
 FILES = ('phone_host.py', 'phone_mobile.py', 'phone_account.py', 'phone_sources.json',
-         'phone_remote.py', 'phone_service.py')
+         'phone_remote.py', 'phone_service.py', 'phone_migrate.py', 'phone_migration_sources.json')
 BOOTSTRAP = r'''#!/usr/bin/env python3
 """Generic phone host setup. Uses the already configured private phone directory."""
 import base64, hashlib, io, os, shutil, subprocess, sys, tempfile, zipfile
@@ -20,6 +20,8 @@ def install(root=None):
     os.umask(0o077)
     root = Path(root or Path.home()/'okx-phone')
     if root.is_symlink(): raise ValueError('폰 폴더 링크는 사용할 수 없습니다.')
+    if (root/'phone_owner.json').exists() or (root/'phone_owner.json').is_symlink():
+        raise ValueError('폰 실거래 전환 후에는 이 설치기로 교체하지 않습니다.')
     for name in ('phone_credentials.json','phone_installation.json','strategy_config.json'):
         if not (root/name).is_file() or (root/name).is_symlink():
             raise ValueError('기존 폰 계정 설정 파일이 없습니다: '+name)
@@ -29,7 +31,7 @@ def install(root=None):
         if set(z.namelist())!=set(FILES) or len(z.namelist())!=len(FILES):
             raise ValueError('실행기 구성 오류')
         parts={name:z.read(name) for name in FILES}
-    target=root/'host-v2'
+    target=root/'host-v3'
     if target.is_symlink(): raise ValueError('기존 실행기 링크는 사용할 수 없습니다.')
     if target.exists():
         for name,data in parts.items():

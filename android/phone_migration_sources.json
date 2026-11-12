@@ -1,0 +1,10 @@
+{
+  "host-v2": {
+    "phone_host.py": "2283ce4c7d8ef65b65efe4f2f2655854bdd13af63aebf78ee7e4432250abbb6e",
+    "phone_mobile.py": "fc57f57fd9ef289a1e25133192cd8b8444691a8c2b9c08fe7230ef342eea7502",
+    "phone_account.py": "3c4c9f9cccaeaa60a41cc3ff3fdde68c04372aabcd8861098cefb8d918406f81",
+    "phone_sources.json": "1e8a54e5baff2e9f77aa48e1335dea650ae74cc1e5ebfaf562d796960d0838c7",
+    "phone_remote.py": "2a4cb7d7566113dbfbb8f8ef34a403ad09553b9d792897766142d9830011c29d",
+    "phone_service.py": "bfe70ee0bbc488e6614aedf0d96062fd8e19a14ff35e920675d5ba83e53c0e1b"
+  }
+}

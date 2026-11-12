@@ -1,11 +1,11 @@
-# 집 폰 실행기 2 · Q2X
+# 집 폰 실행기 3 · Q2X
 
 목적: 집 Android 폰을 충전기·와이파이에 두고 실행 호스트로 사용하고, 외부 iPhone에서 기존 모바일 화면으로 확인·조작합니다. 계정/전략 설정은 다시 입력하지 않습니다. PC용 설치 업데이트가 아닙니다.
 
 ## 지금 설치할 단계
 
 1. 기존 폰 **조회** 화면이 Termux에서 실행 중이면 CTRL 다음 C로 종료하여 `~ $`로 돌아갑니다. 아직 PC 매매는 유지합니다.
-2. GitHub의 고정 커밋 `android/phone_home_setup.py`를 내려받아 Python으로 실행합니다. 실행기는 `~/okx-phone/host-v2`에 별도로 설치됩니다. 기존 `host-v1`과 API 정보, 설정 원본, 운용 기록을 덮어쓰지 않습니다.
+2. GitHub의 고정 커밋 `android/phone_home_setup.py`를 내려받아 Python으로 실행합니다. 실행기는 `~/okx-phone/host-v3`에 별도로 설치됩니다. 기존 `host-v1`/`host-v2`와 API 정보, 설정 원본, 운용 기록을 덮어쓰지 않습니다. 이미 실행 중인 알려진 `host-v2` 조회 모드는 새 Android 파일 검증 후 정상 종료하여 교체합니다. 실거래 전환 기록이 있으면 이 교체를 거부합니다.
 3. 기존 폰 화면 비밀번호는 재사용합니다. 아직 없을 때만 8자 이상 비밀번호를 두 번 입력합니다. 입력 문자가 표시되지 않는 것이 정상입니다.
 4. Tailscale 로그인 링크가 나오면 **기존 iPhone Tailscale과 같은 계정**으로 승인합니다. HTTPS 활성화 링크가 추가로 표시되면 승인합니다. 타임아웃 후에도 같은 설치 명령으로 이어갈 수 있습니다. API 키나 로그인 토큰을 채팅에 보낼 필요가 없습니다.
 5. 마지막에 출력되는 `https://기기명.네트워크.ts.net:8443`을 iPhone Safari에 저장합니다. iPhone Tailscale 연결을 켜고 폰 화면 비밀번호로 로그인합니다. PC의 기존 주소와는 다른 폰 전용 주소입니다. 기기 등록을 유지하면 재시작 때 같은 주소를 재사용합니다.
@@ -20,13 +20,13 @@
 
 ```sh
 # 실행 상태/저장된 폰 주소
-python -B ~/okx-phone/host-v2/phone_service.py --status
+python -B ~/okx-phone/host-v3/phone_service.py --status
 
 # 이미 설치한 폰 실행기를 다시 켜기
-python -B ~/okx-phone/host-v2/phone_service.py --start
+python -B ~/okx-phone/host-v3/phone_service.py --start
 
 # 정상 종료 요청 (보유분이 있으면 보호 관리 유지)
-python -B ~/okx-phone/host-v2/phone_service.py --stop
+python -B ~/okx-phone/host-v3/phone_service.py --stop
 ```
 
 주문 관리 프로세스와 원격 연결 프로세스는 분리되어 있습니다. 원격 접속 실패로 정상 동작 중인 주문 관리 프로세스를 종료하지 않습니다. 비정상 종료 후 재시도 간격은 2초부터 최대 60초로 늘어납니다. 동일 기기의 중복 실행은 파일 잠금으로 거부합니다. 폰과 PC 사이의 분산 잠금은 없으므로 PC는 인계 이후 계속 종료 상태여야 합니다.
@@ -38,7 +38,7 @@ python -B ~/okx-phone/host-v2/phone_service.py --stop
 3. 폰 Termux에서 아래 명령을 실행하고, 실제 종료한 경우에만 `PC 종료 완료`를 입력합니다.
 
 ```sh
-python -B ~/okx-phone/host-v2/phone_service.py --handover
+python -B ~/okx-phone/host-v3/phone_service.py --handover
 ```
 
 계정 상태를 두 번 새로 조회하여 하나라도 남아 있으면 인계하지 않고 조회로 복귀합니다. 자동 청산하거나 보호 주문을 취소하지 않습니다. 최초 엔진 생성 직전에도 계정이 비어 있는지 다시 확인합니다. 기존 운용 기록이 있는 경우 그대로 복구하며 누락/불일치를 삭제로 우회하지 않습니다.
@@ -54,22 +54,31 @@ python -B ~/okx-phone/host-v2/phone_service.py --handover
 - 원격 HTTPS는 Tailscale 내부에서만 접근합니다. 인터넷 공개 Funnel, 공유기 포트 포워딩, 전체망 리슨, 출구 노드, OKX 트래픽 프록시를 설정하지 않습니다. 이것이 집 인터넷의 공인 IP를 고정해 주지는 않습니다.
 - 계정 키·화면 암호 해시·Tailscale 상태/인증서·로그는 Termux 개인 폴더에 저장합니다. 공개 설치 번들에는 들어가지 않습니다.
 
+## Android 연결 오류 수정 · 2026-11-13 KST
+
+기기 로그에 로그인 상태 정상, 새 netmap 수신 직후 `SIGSYS: bad system call`과 `syscall.Syscall6(0x1b7, ...)`가 확인되었습니다. ARM64의 439(0x1b7)는 `faccessat2`입니다. 기존 Linux ARM64 바이너리는 이 호출을 Android에서 실행했지만 Android의 시스템 호출 제한에 의해 종료되었습니다. TPM 없음, NETLINK/UDP 버퍼 경고만으로 종료 원인을 판단했던 것이 아닙니다.
+
+연결 실행 파일을 upstream Tailscale 1.104.6 소스 그대로 `GOOS=android GOARCH=arm64 CGO_ENABLED=0 -buildmode=pie`로 빌드했습니다. Go의 Android 경로는 `faccessat2`를 우회합니다. 루팅, Android 보안 해제, 바이너리 바이트 패치는 사용하지 않습니다. 미지원 트레이/SSH 서버와 자체 업데이트만 빌드에서 제외했습니다. 원격 HTTPS 기능은 유지합니다.
+
+- 재현 빌드: `python android/build_tailscale_native.py /tmp/okx-native-build`
+- Go 1.27.3 도구체인, 모듈 및 두 실행 파일 해시를 고정합니다. `native_manifest.json`과 빌드 정보는 별도 `phone-tailscale-1.104.6-android-arm64-r1` 사전 릴리스에 보관합니다. 공식 배포 바이너리가 아닌, 공식 원본 소스의 Android 타깃 빌드입니다.
+- PC 최신 릴리스는 Q2X로 유지합니다. 폰 연결 부품을 PC 프로그램 업데이트로 배포하지 않습니다.
+- 설치기는 다운로드 해시 및 폰에서의 두 바이너리 버전 실행을 확인한 **다음에** 기존 조회 실행기를 종료합니다. 새 파일 실행에 실패하면 기존 조회 실행기를 유지합니다.
+- 기존 `remote-private/tailscaled.state`, 계정 설정, 화면 암호, 전략과 운용 기록은 유지합니다. 로그인 완료 전 종료되어 인증이 저장되지 않았다면 로그인 링크가 다시 표시될 수 있습니다.
+- 실행 중인 버전/조회 모드/프로세스를 확인하고 정상 종료를 요청합니다. 강제 종료하거나 상태 파일을 지우지 않습니다. 원격 종료코드를 기록하도록 보완했습니다.
+
 ## 검증 근거와 한계
 
-공식 Tailscale 1.104.6 ARM64/AMD64 압축 파일과 두 실행 파일의 SHA-256을 고정했습니다. ARM64는 폰 설치용이며 AMD64는 개발 검사용입니다. 타사 수정 바이너리를 사용하지 않습니다.
+로컬 재현 빌드와 GitHub Actions 빌드의 압축 파일 SHA-256이 일치합니다. 실제 공개 다운로드 파일까지 확인했습니다. Android용 ELF/PIE와 Go 빌드 정보를 검사했습니다. 설치·정상 종료·개인 파일 보존·중복 실행 거부 및 기존 폰 HTTP 검사들을 실행했습니다. 프로세스와 파일 잠금 검사는 실제 로컬 자식 프로세스로 수행했고, 이 환경에서 금지된 Unix 소켓 조회는 모의 검사입니다.
 
-이 환경에서는 Linux 네트워크/Unix 소켓 정책으로 실제 Tailscale 데몬 연결 시험이 차단되었습니다. 버전/도움말 실행, 다운로드 해시, 모의 감독 프로세스, HTTP 인증/출처 검사, 원본 Q2X 회귀 검사는 실제 실행했습니다. 실제 폰 Tailscale 로그인, iPhone 종단 간 HTTPS, 화면 꺼짐 24시간, 재부팅, 실거래/SL 복구는 별도 미검증입니다. 결과는 `home_validation.json`에 기록합니다.
+**이 수정판의 실제 폰 로그인/연결 성공은 아직 확인 전입니다.** 설치 중 자동 버전 검사는 짧은 실행 확인이며 장시간 안정성을 대신하지 않습니다. iPhone 종단 간 HTTPS, 화면 꺼짐 장시간 운용, 재부팅, 실제 체결과 SL 복구 및 PC 인계도 별도로 확인해야 합니다. 이전 검사 기록은 `home_validation.json`, 이번 기록은 `native_transport_validation.json`입니다.
 
-확인일: 2026-11-13 KST.
+읽기 전용 `phone_remote_check.py`는 새 Android 파일을 우선 사용하고 과거 Linux 파일도 인식합니다. 현재 상태와 과거 종료 로그를 구분합니다. 상태 파일의 크기만으로 손상 여부를 판단하지 않으며 진단 과정에서 키/계정/상태 파일 내용을 읽거나 로그인·주문·설정을 변경하지 않습니다.
 
-### 2026-11-13 기기 로그인 후 EOF 조사
+근거:
 
-사용자 기기에서 브라우저 `Login successful`과 CLI `unexpected EOF` 반복이 확인되었습니다. 기존 실행기 2는 `tailscale up`의 모든 실패를 승인 대기로 표시하므로 이 문구만으로 미로그인이라고 판정하면 안 됩니다. 실기기 원인은 아직 미확정입니다. 로그인·설치 반복이나 상태 파일 삭제 대신 별도 `phone_remote_check.py`로 로컬 서비스 상태와 가린 오류 기록을 확인합니다. 이 진단기는 로그인/중지/재시작/OKX 접속을 하지 않고 원본 설정을 쓰지 않습니다. 수정 완료판으로 간주하지 않습니다.
-
-- [공식 정적 패키지](https://pkgs.tailscale.com/stable/)
-- [1.104.6 Android/Termux 지원 원문](https://github.com/tailscale/tailscale/blob/v1.104.6/feature/androidbin/androidbin.go)
+- [Go 1.27.3 Android Faccessat 경로](https://github.com/golang/go/blob/go1.27.3/src/syscall/syscall_linux.go)
+- [Go Android faccessat2 SIGSYS 문제 원문](https://github.com/golang/go/issues/57393)
+- [Tailscale 1.104.6 Android/Termux 지원 원문](https://github.com/tailscale/tailscale/blob/v1.104.6/feature/androidbin/androidbin.go)
 - [Tailscale Serve](https://tailscale.com/docs/reference/tailscale-cli/serve)
-- [Userspace networking](https://tailscale.com/docs/concepts/userspace-networking)
 - [Termux:Boot 공식 안내](https://github.com/termux/termux-boot)
-
-진단 1의 실기기 결과: 조회 프로세스 재시작 0회, 원격 프로세스 재시작 3회, `NeedsLogin`, 상태 파일 119바이트. UDP 버퍼 경고는 기본값으로 동작한다는 메시지이며 이를 종료 원인으로 확정하지 않습니다. 진단 1은 마지막 8개 오류 문구만 보여 종료 직전 원문이 누락될 수 있었습니다. 진단 2는 재시작 직전 기록 및 패닉/종료 신호를 우선 보존하고 시각과 IPv6 주소를 구분합니다. 읽기 전용이고 로그인 재시도·설정 삭제·설치 파일 교체를 하지 않습니다. 상태 파일 크기만으로 손상을 판정하지 않습니다. 기기 원인 및 복구는 계속 미확정입니다. 단위 검사 11개 통과.

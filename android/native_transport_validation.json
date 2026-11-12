@@ -1,0 +1,88 @@
+{
+  "recorded_at_utc": "2026-11-12T23:34:10.719287+00:00",
+  "version": "phone-host-3",
+  "scope": "Android remote transport repair and guarded watch-only migration; no live handover",
+  "device_evidence": {
+    "browser_login": "successful per user screenshot",
+    "old_cli": "unexpected EOF",
+    "old_remote_restarts": 3,
+    "fatal_signal": "SIGSYS",
+    "syscall_hex": "0x1b7",
+    "arm64_syscall_name": "faccessat2",
+    "native_fix_device_result": "not yet run by user"
+  },
+  "transport": {
+    "schema": 1,
+    "product": "okx-phone-tailscale-native",
+    "upstream_version": "1.104.6",
+    "source_commit": "c54807352ae196919497b3f8fddc3cedf88368b9",
+    "module_sum": "h1:VjIuSsyFQ2Bp+HOtgbZCCJ7ZFTL+fULop5gmUF2bBIA=",
+    "go_version": "1.27.3",
+    "goos": "android",
+    "goarch": "arm64",
+    "cgo_enabled": false,
+    "self_update": false,
+    "archive": "tailscale_1.104.6_android_arm64_r1.tar.gz",
+    "sha256": "228b6c3a12192434ab1a7f55049222d84360a52c39f34a5eb73725fde140adfb",
+    "files": {
+      "tailscale": "ca27b5c24dfa6bbe63385ff58049bdadea74364dc01b4d4b2873bd16f3256d06",
+      "tailscaled": "1176e405d33d93f45fc2848bf0367017c3c86b6754e755677923f30777c13831"
+    },
+    "device_validation": "pending; cross-compilation is not an Android runtime test"
+  },
+  "publication": {
+    "tag": "phone-tailscale-1.104.6-android-arm64-r1",
+    "prerelease": true,
+    "make_latest": false,
+    "workflow_run": 43328837508,
+    "workflow_result": "success",
+    "local_and_actions_archive_identical": true,
+    "published_download_verified": true,
+    "both_executable_hashes_verified_after_extract": true
+  },
+  "tests": {
+    "android_suite_passed": 106,
+    "new_upgrade_tests_passed": 11,
+    "diagnostic_tests_passed": 12,
+    "supervisor_migration": "real local subprocess, locks, /proc identity and graceful stop; inert account/transport stubs; AF_UNIX probe mocked because executor blocks it",
+    "native_version_preflight": "failure and success mocked; actual Android execution will happen before old watcher stops",
+    "original_q2x_files_sha256_unchanged": 148,
+    "original_strategy_config_bytes_preserved": true,
+    "live_orders_sent": 0,
+    "q2x_previous_regression_passed": 38,
+    "q2x_regression_repeated_this_transport_fix": false
+  },
+  "initial_test_failures_resolved": [
+    "unsupported Android SSH server build omitted via upstream build tag; first Actions build failed and published no assets",
+    "executor AF_UNIX denied: test now explicitly mocks local socket probe, no live Unix socket success claimed",
+    "optional /proc task children file absent: added parent-PID fallback and exercised it with real child processes"
+  ],
+  "preservation": [
+    "Tailscale private state path retained",
+    "API credentials and dashboard password retained",
+    "old host-v2 immutable folder retained",
+    "live ownership marker prevents automatic migration",
+    "only recognized watch-only supervisor stopped gracefully",
+    "new binary integrity and version preflight precede old watcher stop"
+  ],
+  "not_verified": [
+    "actual Fold3 native binary execution and post-login daemon stability",
+    "iPhone end-to-end HTTPS",
+    "screen-off long-duration operation",
+    "Termux:Boot real reboot recovery",
+    "PC handover and live order/SL recovery"
+  ],
+  "files": {
+    "phone_remote.py": "1af9a9e4d869d299dacae98fe851376b444f8dac13e5c8d660a7297b1cc02fa2",
+    "phone_service.py": "caa46bb331d1d5e702fd602080594035253cde0e5109cb59170b977e7f96740d",
+    "phone_migrate.py": "b593ff9a938b0d7c4c1ea8eb3c1b1b8d02c33b3d665a838989887631e969d4f2",
+    "phone_migration_sources.json": "5f2773e64be7b1f5e19590c727d2cee0a3409f71d0f336355c142aa18e4d0032",
+    "phone_remote_check.py": "ea5d4eb9a94f496dc10f5dda39bb8bfac88145cae654ccd77b59632cfafb707c",
+    "test_phone_native_upgrade.py": "3bb61efc9a21630cba405adbd760bc5728b1bbe674ec405b1cb3fe496885a40b",
+    "test_phone_remote_check.py": "fc9c9d3bed77893d1a5a54ecd21660bd1dde66d878eaa05c8350d88ac1467a3b",
+    "build_phone_host_bundle.py": "55ecfd5f04933cd0b8650ff40358de2fbed60c36efa1f6a55e27a992fcc19d3f",
+    "phone_home_setup.py": "06d61b217417bd2e7ada1c444ade40ff778f21009400d7f906fc596c5c39dfc0",
+    "PHONE_HOME_KO.md": "daff3c19fb54945b8b67f483dfbeb0e1b2252e0454f99971e37206ebb90b7e37",
+    "README.md": "686a8b1cbe2b6a477b3d5598a79e22cba90ac1d2e8bd22b45870088158001618"
+  }
+}

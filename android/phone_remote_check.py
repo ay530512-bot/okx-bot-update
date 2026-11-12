@@ -15,8 +15,9 @@ import re
 import subprocess
 import time
 
-VERSION = 'phone-remote-check-2'
+VERSION = 'phone-remote-check-3'
 BIN_HASHES = {
+    'android-arm64-r1': 'ca27b5c24dfa6bbe63385ff58049bdadea74364dc01b4d4b2873bd16f3256d06',
     'arm64': '2e547c5e8acb4e9dc7c3ae576c302346044bd2f30958515cca5b7a91fb5cd636',
     'amd64': 'a781895a86932424dce380c8b445c77b8568dd2248a7fed20ba77ce3cb221185',
 }
@@ -81,6 +82,9 @@ def metadata(root):
             result[key] = row.get(key) if type(row.get(key)) is bool else None
         result['state'] = row.get('state') if row.get('state') in ('running', 'stopping', 'stopped') else 'unknown'
         result['mode'] = row.get('mode') if row.get('mode') in ('watch', 'run') else 'unknown'
+        value = row.get('remote_last_exit_code')
+        result['remote_last_exit_code'] = value if type(value) is int else None
+        result['service_version'] = row.get('service_version') if row.get('service_version') == 'phone-service-3' else 'legacy'
         value = row.get('observed_at')
         result['age_seconds'] = max(0, round(time.time()-value)) if type(value) in (int, float) else None
         return result
@@ -125,6 +129,7 @@ def signals(log):
     flags = []
     for label, needles in (
         ('프로세스 패닉', ('panic:', 'fatal error:')),
+        ('금지된 시스템 호출 종료', ('sigsys:',)),
         ('권한 관련 기록(종료 원인 확정 아님)', ('operation not permitted', 'permission denied')),
         ('메모리/강제 종료 기록', ('out of memory', 'signal: killed')),
         ('저장 오류', ('no space left', 'read-only file system')),
@@ -204,7 +209,9 @@ def display(data):
     print('로그인 저장파일:', '있음' if data['state_file_exists'] else '없음', '/ 크기:', data['state_file_bytes'])
     print('로그 신호:', ', '.join(data['log_signals']) or '분류된 오류 없음')
     context = data['exit_context']
-    print('로그 내 시작 횟수:', context['starts_in_log_tail'], '/ 종료코드: 기존 실행기에 기록 없음')
+    print('로그 내 시작 횟수:', context['starts_in_log_tail'], '/ 최근 원격 종료코드:',
+          s.get('remote_last_exit_code') if s.get('remote_last_exit_code') is not None else '기록 없음')
+    print('아래는 과거 종료 기록이며 현재 연결 상태는 위 상태값으로 확인합니다.')
     print('--- 종료 직전 기록 (민감정보 가림) ---')
     for i, text in enumerate(context['before_restart'], 1):
         print(f'{i}. {text}')
