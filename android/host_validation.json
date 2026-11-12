@@ -1,0 +1,52 @@
+{
+  "recorded_at_utc": "2026-11-12T21:55:56.216977+00:00",
+  "version": "phone-host-1",
+  "source_version": "7.32-Q2X",
+  "source_archive_sha256": "6b2a0a90f02cca914ffc5cc0996555e8c1435b7a61618575ee94ee2ebdc2dad1",
+  "source_files": 148,
+  "strategy_files_modified": false,
+  "private_user_config_preserved_byte_for_byte": true,
+  "source_of_device_evidence": "user supplied screenshots; no remote device access",
+  "device_evidence": [
+    "short public API check passed",
+    "60 second public WebSocket check passed",
+    "phone-local authenticated account GETs succeeded"
+  ],
+  "offline_platform": "Linux x86_64 Python 3.12",
+  "tests": {
+    "android_suite": 59,
+    "q2x_long_wick_exit": 29,
+    "q2x_chart_exit_labels": 9,
+    "total_passed": 97,
+    "live_trades_sent": 0
+  },
+  "coverage": [
+    "first handover rejects positions, ordinary orders, conditional orders, account change, missing identity",
+    "two fresh flat snapshots and explicit operator PC-stop acknowledgement",
+    "same-account persistent journal required on restart",
+    "config conflicts and orphan journals fail closed; no deletion or forced overwrite",
+    "authenticated same-origin loopback UI; duplicate requests queue once",
+    "desktop updater blocked at UI and dispatch",
+    "actual Q2X engine constructs without Tk or network; config bytes unchanged",
+    "actual Q2X pause/quit refuses managed-position discard",
+    "generic installer idempotence, private data preserved, changed/extra source blocked"
+  ],
+  "not_verified": [
+    "PC shutdown cannot be remotely verified",
+    "phone runtime UI and full trading engine on actual Fold3",
+    "real phone entry/SL registration/amendment/partial fill/restart recovery",
+    "24-hour screen-off stability, reboot, process kill, thermal behavior",
+    "external iPhone/Tailscale connectivity; local interface only",
+    "Telegram delivery on phone"
+  ],
+  "publishing_scope": "android/** only; no desktop release trigger; no config, credentials, balances, journal",
+  "files": {
+    "phone_host.py": "38154a2d5c044473fbc0178f861a29c083e95a12dc84ea2489dd4f40a8a8e60a",
+    "phone_mobile.py": "78a0f46779484e162c27bad888b1bea1428bb856b0e2d23b5c98b954c5cdbe09",
+    "phone_sources.json": "1e8a54e5baff2e9f77aa48e1335dea650ae74cc1e5ebfaf562d796960d0838c7",
+    "phone_host_setup.py": "5cb36596b38c4658260ec330326626b7166b9521598904c5e6f2682e27038d91",
+    "build_phone_host_bundle.py": "49861f089f7646b02f65597f9753cb39e6d0e425beeaff6d347391879865ea04",
+    "test_phone_host.py": "a9db65f5a3650bd732dece7d2f92c433404f4107e26850c0bc74b6de01d76684",
+    "PHONE_HOST_KO.md": "c10929a87d93f3150a0a2437a6a5c4e2e21713b0ad2353d86b61be34998657f1"
+  }
+}

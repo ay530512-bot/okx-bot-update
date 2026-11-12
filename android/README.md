@@ -48,3 +48,7 @@ Termux에서 `termux-wake-lock`을 실행하고 이 스크립트를 실행하세
 `python -m unittest discover -s android -v`
 
 테스트는 모의 응답으로 동작하며 실제 폴드3나 OKX 연결 성공을 대신하지 않습니다. 이 폴더만 수정하면 기존 `release-input/**` 기반 데스크톱 배포를 시작하지 않습니다.
+# 폰 실행기 추가
+
+계정 조회 이후의 실행기와 PC 전환 절차는 [PHONE_HOST_KO.md](PHONE_HOST_KO.md)를 확인하세요. 기본 조회 모드, 명시적인 최초 전환, 기존 폰 기록으로 재실행을 구분합니다. PC용 프로그램 업데이트가 아니며 실제 폴드3의 장시간/실거래 검증은 별도입니다.
+
