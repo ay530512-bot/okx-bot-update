@@ -1,0 +1,32 @@
+{
+  "version": "phone-account-1",
+  "source_version": "7.32-Q2X",
+  "checks": {
+    "unit_tests": 34,
+    "account_tests": 15,
+    "existing_tests": 19,
+    "real_Q2X_mocked_transport_gets": 9,
+    "private_config_byte_identity": true,
+    "config_validation_mutated": false,
+    "bundle_reinstall_idempotent": true,
+    "changed_existing_config_rejected": true
+  },
+  "tested_environment": "Linux x86_64 Python 3.12, synthetic HTTP/account responses",
+  "device_private_account_test": "pending",
+  "trading_engine_started": false,
+  "live_orders_sent": false,
+  "handover_complete": false,
+  "remaining": [
+    "phone_account_authentication",
+    "headless_live_engine",
+    "protection_and_recovery",
+    "remote_access",
+    "single_host_transition",
+    "long_duration_device_tests"
+  ],
+  "files": {
+    "phone_account.py": "3c4c9f9cccaeaa60a41cc3ff3fdde68c04372aabcd8861098cefb8d918406f81",
+    "test_phone_account.py": "4254b70ded466494028c342c5dedaef7a2f354c60c19d9224661358c232d1def",
+    "build_phone_account_bundle.py": "695d629b9b9be9c43b63edc4023e8a7b1a1f9fe395a3dcde999ec132476fc94b"
+  }
+}

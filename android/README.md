@@ -1,5 +1,22 @@
 # 폴드3 / Termux 사전 점검
 
+## 폰 내부 계정 연결 화면 (phone_account.py)
+
+`phone_account.py`는 **조회 전용** 후속 단계입니다. 아직 실거래 실행기나 PC 이전 완료판이 아닙니다. `build_phone_account_bundle.py`로 Q2X 고정 ZIP, 준비 스크립트, 이 화면, 사용자 설정 원본을 묶은 개인용 `OKX_PHONE_SETUP.py`를 생성합니다. 생성된 개인용 파일은 이 공개 저장소에 올리지 않습니다. API 키는 번들에 포함하지 않으며 브라우저로 폰에서 직접 입력합니다.
+
+설치 파일을 폴드3 Download 폴더에 저장한 뒤 Termux에서 `termux-setup-storage` 실행 및 권한 허용 후 `python ~/storage/downloads/OKX_PHONE_SETUP.py`를 실행합니다. 코드가 화면에 나타나면 폴드3 Chrome으로 `http://127.0.0.1:8767`에 접속해 그 코드를 입력합니다. 접속 코드는 30분간 유효하며 로그인 화면의 세션은 2시간입니다. 다시 켜려면 `python ~/okx-phone/phone_account.py`를 사용합니다.
+
+- 사용자 설정 원본은 재직렬화 없이 바이트 그대로 `~/okx-phone/strategy_config.json`에 보관합니다. 이미 다른 파일이 있으면 덮어쓰지 않습니다.
+- API 정보는 Termux 내부 `~/okx-phone/phone_credentials.json`에 0600 권한으로 저장됩니다. 서버는 127.0.0.1만 바인딩합니다. 다른 폰/PC에서 직접 열 수 있는 주소가 아닙니다.
+- 로그인 후 API 정보 저장과 계정 조회만 가능합니다. API 요청 계층과 HTTP 전송 계층에서 GET 경로 허용 목록을 강제합니다. 주문·취소·계정 설정 변경 경로 및 리디렉션을 차단합니다.
+- Q2X RuleEngine/AccountStream/Telegram을 생성하거나 PC 기록을 가져오지 않습니다. 계정 모드가 다르면 표시만 하며 자동 수정하지 않습니다. 잔고/포지션/주문 수 조회는 거래 활성화나 PC 종료 허가가 아닙니다.
+- 상태 기록 `account-check.json`에는 잔고·계정 ID·API 비밀정보·원문 오류를 넣지 않습니다. PC 실제 운용 상태와 기기 독점 운용은 이 단계에서 확인할 수 없습니다.
+- 아직 미완료: 실제 기기의 계정 연결 결과, 폰 매매 실행부 및 보호주문/복구, 외부 모바일 접근, PC 전환, 화면 꺼짐·장시간 운영. 따라서 기존 PC 프로그램을 유지해야 합니다.
+
+검사: 조회 화면 15개 테스트와 기존 준비 단계 19개, 총 34개 통과. 실제 Q2X 전송 클래스를 사용한 모의 계정 응답으로 GET 9회만 호출됨을 확인했습니다. 사용자 설정은 Q2X 검사에서 수정되지 않았고 개인 번들의 설치/재설치/변경 파일 거부를 확인했습니다. Linux x86_64 검사이며 실제 Android 개인 계정 조회 성공을 의미하지 않습니다.
+
+근거: [Termux 공식 명령 안내](https://github.com/termux/termux-tools/blob/master/doc/termux.1.md.in), [공식 저장공간 연결 스크립트](https://github.com/termux/termux-tools/blob/master/scripts/termux-setup-storage.in).
+
 ## 실행 환경 준비 (phone_prepare.py)
 
 첫 기초점검 이후 `phone_prepare.py`를 Termux Python으로 실행합니다. 기존 Q2X 공개 배포 파일을 고정 커밋에서 내려받아 SHA-256을 확인하고 `~/okx-phone-stage/q2x-source`에 보관합니다. 기존 파일이 다르면 덮어쓰지 않습니다. Windows 배치 파일은 실행하지 않습니다.
