@@ -1,0 +1,42 @@
+test_long_wick_exit_q2x.py
+test_gross_positive_cost_negative (__main__.Costs.test_gross_positive_cost_negative) ... ok
+test_invalid_and_quantity_mismatch (__main__.Costs.test_invalid_and_quantity_mismatch) ... ok
+test_legacy_partial_no_credit_all_debits (__main__.Costs.test_legacy_partial_no_credit_all_debits) ... ok
+test_missing_funding_or_fee_rate_is_unknown (__main__.Costs.test_missing_funding_or_fee_rate_is_unknown) ... ok
+test_net_long_short (__main__.Costs.test_net_long_short) ... ok
+test_partial_funding_allocation_debit_and_credit (__main__.Costs.test_partial_funding_allocation_debit_and_credit) ... ok
+test_partial_proceeds_cannot_subsidize_remainder (__main__.Costs.test_partial_proceeds_cannot_subsidize_remainder) ... ok
+test_partial_snapshot_persisted_in_reconcile (__main__.Costs.test_partial_snapshot_persisted_in_reconcile) ... ok
+test_busy_phases_never_submit (__main__.Integration.test_busy_phases_never_submit) ... ok
+test_existing_stop_first (__main__.Integration.test_existing_stop_first) ... ok
+test_long_partial_remainder_exit (__main__.Integration.test_long_partial_remainder_exit) ... ok
+test_missing_quote_falls_through_to_existing_partial (__main__.Integration.test_missing_quote_falls_through_to_existing_partial) ... ok
+test_no_signal_existing_partial_unchanged (__main__.Integration.test_no_signal_existing_partial_unchanged) ... ok
+test_pending_protection_first (__main__.Integration.test_pending_protection_first) ... ok
+test_profit_below_twenty_percent_roe_can_exit (__main__.Integration.test_profit_below_twenty_percent_roe_can_exit) ... ok
+test_real_close_state_machine_sends_one_close_only (__main__.Integration.test_real_close_state_machine_sends_one_close_only) ... ok
+test_stale_snapshot_quote_wrong_owner_skip_new_exit (__main__.Integration.test_stale_snapshot_quote_wrong_owner_skip_new_exit) ... ok
+test_wick_before_partial_once (__main__.Integration.test_wick_before_partial_once) ... ok
+test_equal_body_wick_rejected (__main__.Pattern.test_equal_body_wick_rejected) ... ok
+test_extreme_equal_or_wrong_side_rejected (__main__.Pattern.test_extreme_equal_or_wrong_side_rejected) ... ok
+test_freshness_boundaries (__main__.Pattern.test_freshness_boundaries) ... ok
+test_future_does_not_change_signal (__main__.Pattern.test_future_does_not_change_signal) ... ok
+test_gap_bad_ohlc_nan_and_bad_entry (__main__.Pattern.test_gap_bad_ohlc_nan_and_bad_entry) ... ok
+test_long_wick_doji (__main__.Pattern.test_long_wick_doji) ... ok
+test_no_reference (__main__.Pattern.test_no_reference) ... ok
+test_own_body_not_previous_body (__main__.Pattern.test_own_body_not_previous_body) ... ok
+test_pre_entry_signal_rejected_reference_allowed (__main__.Pattern.test_pre_entry_signal_rejected_reference_allowed) ... ok
+test_short_and_long_mirror (__main__.Pattern.test_short_and_long_mirror) ... ok
+test_skip_previous_no_wick (__main__.Pattern.test_skip_previous_no_wick) ... ok
+
+----------------------------------------------------------------------
+Ran 29 tests in 0.043s
+
+OK
+
+test_chart_exits_q2w.py
+.........
+----------------------------------------------------------------------
+Ran 9 tests in 0.000s
+
+OK

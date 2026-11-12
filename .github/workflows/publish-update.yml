@@ -27,7 +27,7 @@ jobs:
         shell: bash
         run: |
           python3 - <<'PY'
-          import hashlib, json, os, pathlib, re, subprocess, tempfile, zipfile
+          import hashlib, json, os, pathlib, re, subprocess, sys, tempfile, zipfile
           def gh(*args):
               return subprocess.check_output(["gh", *args], text=True).strip()
           repo = os.environ["GH_REPO"]
@@ -78,6 +78,13 @@ jobs:
               info = json.loads(z.read("release_info.json"))
               for k in ("product", "version", "sequence"):
                   assert info[k] == manifest[k], f"release_info mismatch: {k}"
+          # Offline management tests run on the exact ZIP that will be published.
+          runtime = pathlib.Path(tempfile.mkdtemp())
+          with zipfile.ZipFile(archive) as z:
+              z.extractall(runtime)
+          test_env = dict(os.environ, OKX_TEST_APP=str(runtime), PYTHONPATH=str(runtime))
+          for test in ("tests/test_long_wick_exit_q2x.py", "tests/test_chart_exits_q2w.py"):
+              subprocess.run([sys.executable, "-S", test], env=test_env, check=True)
           if not publish:
               message = f"Existing release {latest['tag_name']} validated. No release or program changed."
           else:
@@ -91,7 +98,9 @@ jobs:
                   message = f"{tag} already published with the same ZIP; no change."
               else:
                   assert sequence > previous["sequence"], "Sequence must increase"
-                  notes = f"Validated OKX update {version}. ZIP SHA256: {digest}"
+                  notes_path = pathlib.Path("release-notes") / (version + ".md")
+                  notes = notes_path.read_text() if notes_path.exists() else f"Validated OKX update {version}."
+                  notes += f"\n\nZIP SHA256: {digest}"
                   releases = json.loads(gh("api", f"repos/{repo}/releases?per_page=100"))
                   release = next((r for r in releases if r["tag_name"] == tag), None)
                   if release is None:
