@@ -1,0 +1,27 @@
+{
+  "date_kst": "2026-11-13",
+  "purpose": "Read-only investigation of intermittent phone entry blocks",
+  "source_sha256": "ef7667e0ac7467d4a6fd50a099f031248d10307760cf1dcece2e54bbf9e8f12f",
+  "checked_core_sha256": "6b2a0a90f02cca914ffc5cc0996555e8c1435b7a61618575ee94ee2ebdc2dad1",
+  "observed_screen": {
+    "account_display_age_seconds": 31,
+    "mode": "폰 재연결·계정 확인 중",
+    "previous_recovery_time_kst": "2026-11-13T10:17:55+09:00"
+  },
+  "findings": [
+    "Dashboard age measures time since dashboard event, not private WebSocket account-message age.",
+    "Private account freshness separately requires connected, USDT equity and received age <30s.",
+    "Screenshot is insufficient to identify network loss, delayed account messages, REST failures or processing delays."
+  ],
+  "validation": {
+    "syntax": true,
+    "offline_fixture": true,
+    "source_files_unchanged": true,
+    "secret_suppression": true,
+    "stale_log_filter": true,
+    "symlink_rejected": true,
+    "local_public_probe": "gaierror; no successful public API latency result in build environment",
+    "actual_phone_execution": "pending"
+  },
+  "changes": "Standalone diagnostic only; no engine, strategy, account, supervisor, release or trading configuration changes."
+}
