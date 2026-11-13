@@ -1,12 +1,14 @@
 {
   "format": "okx-phone-release-1",
-  "version": 9,
+  "version": 10,
+  "display_version": "1.1.2",
   "from_versions": [
-    8
+    8,
+    9
   ],
-  "installer": "android/phone_spacing_setup.py",
-  "sha256": "f0a252bfbb034978d5fffab3081419a91f953eb3310897e65eab71332f3f9541",
-  "bytes": 84383,
-  "notes": "화면 여백 v1: 최근 활동과 업데이트 영역 사이에 32px 간격 추가. 매매 규칙·SL·계정 설정 변경 없음. 설치 후 실거래 시작은 직접 확인하세요.",
-  "commit": "dc7e054751680e10e3d0c0de70a1b2bb26250584"
+  "installer": "android/phone_1_1_2_setup.py",
+  "sha256": "13d0a667ebe5dd9b789efe8b5592669ec496dbf7891a0bd0692b9ed2fefc74e3",
+  "bytes": 85166,
+  "notes": "1.1.2: 버전 이름을 숫자로 통일하고 최근 활동과 업데이트 영역 사이 32px 여백 추가. 매매 규칙·SL·계정 설정 변경 없음.",
+  "commit": "913c0c3fd5d936c41a3f6bba9a5cfab433d49b96"
 }
