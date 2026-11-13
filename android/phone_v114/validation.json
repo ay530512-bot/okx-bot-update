@@ -1,0 +1,18 @@
+{
+  "release": "1.1.4",
+  "tests_passed": 22,
+  "live_exchange_orders": false,
+  "actual_fold_speed_measured": false,
+  "rules_changed": false,
+  "benchmark": {
+    "kind": "local synthetic289 warm packets, not actual phone",
+    "baseline_s": 1.0067789459935739,
+    "cached_s": 0.42249499099852983
+  },
+  "fixture_sha256": "dc673c88961450d5754c78dc2684856908937f81e2545f01933f88d5b604c8f2",
+  "limitations": [
+    "Not a profitability experiment",
+    "Warm repeated input benchmark excludes first calculation",
+    "Live processing and quotes remain asynchronous; zero latency not claimed"
+  ]
+}
