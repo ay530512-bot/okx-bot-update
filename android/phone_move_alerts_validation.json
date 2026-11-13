@@ -1,12 +1,11 @@
 {
-  "checked_utc": "2026-11-13T16:33:14.179266+00:00",
-  "unit_tests": 15,
-  "unit_tests_passed": 15,
+  "version": "phone-move-alerts-2-15m-10pct",
+  "checked_utc": "2026-11-13T18:31:47.434484+00:00",
+  "unit_tests": 17,
+  "unit_tests_passed": 17,
   "phone_installation_verified": false,
   "telegram_delivery_verified": false,
+  "live_candle_fetch_verified": false,
   "trading_process_changed": false,
-  "public_probe": {
-    "endpoint": "https://openapi.okx.com/api/v5/market/tickers?instType=SWAP",
-    "http_status": 403
-  }
+  "code_sha256": "37f692503dc307d8f193be335f947ae83b6aa03d6dc4adf5e6b12a3ae46097e1"
 }
