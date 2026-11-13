@@ -1,0 +1,21 @@
+{
+  "version": "phone-button-validation-1",
+  "tests_passed": 35,
+  "tests": [
+    "9 updater guards",
+    "12 migration/bundle guards",
+    "1 real pinned HTTP adapter with authentication/Origin checks and JavaScript syntax",
+    "13 original public WebSocket regression tests"
+  ],
+  "unchanged_files_sha256": {
+    "phone_sources.json": "1e8a54e5baff2e9f77aa48e1335dea650ae74cc1e5ebfaf562d796960d0838c7",
+    "phone_public_ws.py": "baa3006e8e67fadaf097d5325714b324546e0aacef4c8551e523802974545ff9",
+    "phone_clock.py": "c1465b5e7d796937e16897c28d29d6ea78d4523b1c3a235a3384a97c2af7074c",
+    "phone_account.py": "3c4c9f9cccaeaa60a41cc3ff3fdde68c04372aabcd8861098cefb8d918406f81",
+    "phone_remote.py": "f891e8cc8c8e822eb7f75ccd22d441b4b451162de0bf87a134b3c925e9073e97",
+    "phone_connection_trace.py": "ac739553b832602da5229ae62ccf905dbd857a7b8325c8ed6bda15ce421a0336"
+  },
+  "actual_android_install_tested": false,
+  "exchange_orders_called": false,
+  "live_program_changed": false
+}
