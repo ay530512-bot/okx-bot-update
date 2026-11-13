@@ -1,0 +1,47 @@
+{
+  "checked_utc": "2026-11-13T01:50:00.013683+00:00",
+  "version": "phone-clock-fix-1",
+  "base_commit": "e99bf07639a303a94613328c3b9a72b5ef9a762c",
+  "original_q2x_archive_sha256": "6b2a0a90f02cca914ffc5cc0996555e8c1435b7a61618575ee94ee2ebdc2dad1",
+  "original_q2x_files_checked": 148,
+  "original_q2x_files_unchanged": true,
+  "controlled_original_time_gets_24_clients": 24,
+  "controlled_patched_time_gets_24_clients": 1,
+  "offline_tests": {
+    "clock_and_actual_core": 5,
+    "upgrade_guards_and_bundle": 10,
+    "passed": 15,
+    "failed": 0
+  },
+  "test_interpreter": "CPython 3.13 /usr/bin/python3",
+  "exchange_network_in_tests": false,
+  "phone_installed_by_assistant": false,
+  "actual_phone_retest": "pending",
+  "live_trading_or_settings_changed_by_assistant": false,
+  "installer_sha256": "ca46b7ed710737badc9ab2f531059275222fd8e9a9b70e1c16f8362c4291adc0",
+  "source_sha256": {
+    "README.md": "7cbb1145133eeb59e746a2e185aa120243e68e006238dddf9366c8e881e66f20",
+    "build_clock_fix.py": "f9825a7a9b744820796408eb195efd516227b79bcf6b991c0af63f7fb7273169",
+    "phone_account.py": "3c4c9f9cccaeaa60a41cc3ff3fdde68c04372aabcd8861098cefb8d918406f81",
+    "phone_clock.py": "c1465b5e7d796937e16897c28d29d6ea78d4523b1c3a235a3384a97c2af7074c",
+    "phone_clock_old_sources.json": "049898908f17cf38cc8c5f0e2f63896b06ab33b95b652baa4d65285cff62fa73",
+    "phone_clock_upgrade.py": "cc44edbef8c907474160aebe1928c847acb1f2a3130935c0155cba91e44e09be",
+    "phone_host.py": "2be6803748c9c32b9574e724714f1f9473e4e7f5b789597f0cc517fe2b014a2e",
+    "phone_migrate.py": "aafbe024259d3f4dffc81b9b4ec7c9e9307a3487efeb969b1feed257f66399fb",
+    "phone_migration_sources.json": "214293c5bf0d7fd79838b1037ab9499a2a5428c91758fe3df7c439d790e3691d",
+    "phone_mobile.py": "727e00f1b7a4efde676d4a0e0055d1189a459a4082c1bcfce94019af14c34dfa",
+    "phone_remote.py": "f891e8cc8c8e822eb7f75ccd22d441b4b451162de0bf87a134b3c925e9073e97",
+    "phone_remote_check.py": "7d20cb6dcbbd2d784dab6c9fd8131722175d2f684b2202c3499fc13e8fd194d1",
+    "phone_service.py": "2eb50ebdcb75b1e9d345518e3a0de88490b914ae2c5b23eaa62cd986e7fd4d54",
+    "phone_sources.json": "1e8a54e5baff2e9f77aa48e1335dea650ae74cc1e5ebfaf562d796960d0838c7",
+    "test_clock_upgrade.py": "14996d5eea8ace3d280e1d31b4b2ebccf6a426f3bce2ec8e615e3d7d84bb7592",
+    "test_phone_clock.py": "7974d06a825b1b84ef576f33d8aa6ee6baf817cc54d5599bce5d5ea117afb552"
+  },
+  "limitations": [
+    "No actual Android upgrade run",
+    "No real exchange rate-limit recovery run",
+    "No live order/SL validation",
+    "No long-duration/screen-off/Wi-Fi stability measurement",
+    "All WS/BrokenPipe errors not proven to share this cause"
+  ]
+}
