@@ -1,0 +1,30 @@
+{
+  "version": "phone-ws-compare-1",
+  "purpose": "One unauthenticated public WebSocket control alongside an unchanged trading host; correlate only the same observation window.",
+  "tests": {
+    "command": "PYTHONPATH=/tmp/ws-check-deps python -m unittest discover -s okx-phone-recurrence/android -p test_phone_ws_compare.py -v",
+    "passed": 10,
+    "failed": 0,
+    "websocket_client_version": "1.9.0"
+  },
+  "phone_test": "Not performed by assistant. User-side observation required; no root cause or repair claim.",
+  "scope": {
+    "engine_import": false,
+    "credentials_read": false,
+    "private_api": false,
+    "orders": false,
+    "bot_settings_changed": false,
+    "existing_process_signals": false,
+    "public_connection_limit": 1,
+    "default_seconds": 300
+  },
+  "hashes": {
+    "phone_ws_compare.py": "cb4bcb48dbdc130f21f228f7e2ef69b28bf7455c7ead21687235b1884eff8f2f",
+    "test_phone_ws_compare.py": "598a8fe8014eb5040e412c5a7bb4651fc6123c8b8fb3973eb4e25d2f43de046b"
+  },
+  "network_smoke": {
+    "mode": "public-only worker, 3 seconds requested",
+    "result": "DNS gaierror in assistant environment; no public WebSocket established",
+    "live_phone_or_exchange_validation": false
+  }
+}
