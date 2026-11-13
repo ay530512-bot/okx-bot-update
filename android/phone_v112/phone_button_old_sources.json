@@ -1,0 +1,38 @@
+{
+  "host-v8": {
+    "phone_host.py": "ffff7da7a712ae628223fcccc7fae583de8bde59e836deee0f4aeaa651f386d2",
+    "phone_mobile.py": "16fe3fd68b68b33f7ae3bfda221b8d06d99a1f894275750885aaa8bbf75f1526",
+    "phone_account.py": "3c4c9f9cccaeaa60a41cc3ff3fdde68c04372aabcd8861098cefb8d918406f81",
+    "phone_sources.json": "1e8a54e5baff2e9f77aa48e1335dea650ae74cc1e5ebfaf562d796960d0838c7",
+    "phone_remote.py": "f891e8cc8c8e822eb7f75ccd22d441b4b451162de0bf87a134b3c925e9073e97",
+    "phone_service.py": "259b633b9f80399bb7285415d22f37c34a15e9934d44d1f6b84d90e96908c94a",
+    "phone_migrate.py": "aafbe024259d3f4dffc81b9b4ec7c9e9307a3487efeb969b1feed257f66399fb",
+    "phone_migration_sources.json": "214293c5bf0d7fd79838b1037ab9499a2a5428c91758fe3df7c439d790e3691d",
+    "phone_remote_check.py": "7d20cb6dcbbd2d784dab6c9fd8131722175d2f684b2202c3499fc13e8fd194d1",
+    "phone_clock.py": "c1465b5e7d796937e16897c28d29d6ea78d4523b1c3a235a3384a97c2af7074c",
+    "phone_connection_trace.py": "ac739553b832602da5229ae62ccf905dbd857a7b8325c8ed6bda15ce421a0336",
+    "phone_public_ws.py": "baa3006e8e67fadaf097d5325714b324546e0aacef4c8551e523802974545ff9",
+    "phone_update.py": "85797ae72c4d17d41cbd08bde750fab69b7820181c846f5a7e72dd8f5c30eccb",
+    "phone_update_ui.js": "41f106ed2a76f667a812761d78ef9cbe0b8a20f8c98bf152f8d5b72c8b53a909",
+    "phone_button_upgrade.py": "ec68807932c364195f4fd44933fe6ed8b41785fbb65c9503e97002c7ae8dc7ca",
+    "phone_button_old_sources.json": "c31c58c9f39d91faf0a3c658c50e242c21d8450cd5a1672333d702cb0baf1699"
+  },
+  "host-v9": {
+    "phone_host.py": "ffff7da7a712ae628223fcccc7fae583de8bde59e836deee0f4aeaa651f386d2",
+    "phone_mobile.py": "5a78a13e2225192b92691708e70e9f8174bb55dd78c911fef69815bc898172bd",
+    "phone_account.py": "3c4c9f9cccaeaa60a41cc3ff3fdde68c04372aabcd8861098cefb8d918406f81",
+    "phone_sources.json": "1e8a54e5baff2e9f77aa48e1335dea650ae74cc1e5ebfaf562d796960d0838c7",
+    "phone_remote.py": "f891e8cc8c8e822eb7f75ccd22d441b4b451162de0bf87a134b3c925e9073e97",
+    "phone_service.py": "eea3e2e91866a7c56439ed0753c589ba6964d66b901344ce5b11a33a92e36e95",
+    "phone_migrate.py": "aafbe024259d3f4dffc81b9b4ec7c9e9307a3487efeb969b1feed257f66399fb",
+    "phone_migration_sources.json": "214293c5bf0d7fd79838b1037ab9499a2a5428c91758fe3df7c439d790e3691d",
+    "phone_remote_check.py": "7d20cb6dcbbd2d784dab6c9fd8131722175d2f684b2202c3499fc13e8fd194d1",
+    "phone_clock.py": "c1465b5e7d796937e16897c28d29d6ea78d4523b1c3a235a3384a97c2af7074c",
+    "phone_connection_trace.py": "ac739553b832602da5229ae62ccf905dbd857a7b8325c8ed6bda15ce421a0336",
+    "phone_public_ws.py": "baa3006e8e67fadaf097d5325714b324546e0aacef4c8551e523802974545ff9",
+    "phone_update.py": "c0c6c56a1412d47db2b32a1dffb3f86797a51a315c6af41507e5acee287c738b",
+    "phone_update_ui.js": "41f106ed2a76f667a812761d78ef9cbe0b8a20f8c98bf152f8d5b72c8b53a909",
+    "phone_button_upgrade.py": "75eb9f3f1270482dd3d2b8445bbd3aa9914eca6b7dc3e062529d137d2242e9a3",
+    "phone_button_old_sources.json": "357771b5e853f8a6cd3997f02c63c2f772ccab0886b5e8368de3453a1829176e"
+  }
+}

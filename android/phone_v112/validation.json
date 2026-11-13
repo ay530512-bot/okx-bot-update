@@ -1,0 +1,9 @@
+{
+  "tests_passed": 14,
+  "predecessors": [
+    8,
+    9
+  ],
+  "display_version": "1.1.2",
+  "actual_phone_install_tested": false
+}
