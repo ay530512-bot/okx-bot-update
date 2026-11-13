@@ -1,0 +1,12 @@
+{
+  "format": "okx-phone-release-1",
+  "version": 8,
+  "from_versions": [
+    7
+  ],
+  "installer": "android/phone_button_setup.py",
+  "sha256": "43570e0e948df4608bfb57bacd83980ad14bd38c5ab430ed22ae854839e6eb1c",
+  "bytes": 84195,
+  "notes": "모바일 업데이트 v1: 활동·설정에서 GitHub 폰 배포 확인·설치. 기존 공개 시세 복구/전략/SL/설정 유지. 신규 진입 중지 및 보유·주문 0에서 설치. 설치 후 직접 실거래 시작 확인.",
+  "commit": "c16599bd48246349168db3ea559633003ace1f3a"
+}
