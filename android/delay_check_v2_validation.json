@@ -1,0 +1,12 @@
+{
+  "version": "phone-delay-check-2",
+  "tests_passed": 6,
+  "tests_failed": 0,
+  "live_phone_test": "pending",
+  "trading_code_changes": false,
+  "source_sha256": {
+    "phone_delay_check_v2.py": "68afffd55aa360baa5a6584e08aa1bbcd53bd3659b8054b80e57d8d1fce728f4",
+    "delay_check_v2_notes.md": "54da136f92654b2b30432020fc6d94e78afd3b3edaa14e84d42d0edb540b943d",
+    "test_phone_delay_check_v2.py": "7fd1a6398d22691de8aade47895612c9f6ebc5f67de0eed43276fe87b3f1b82f"
+  }
+}
