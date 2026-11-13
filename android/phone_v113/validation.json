@@ -1,0 +1,10 @@
+{
+  "offline_tests_passed": 19,
+  "flat_four_slots_snapshot_calls": {
+    "baseline": 5,
+    "optimized": 2
+  },
+  "actual_phone_speed_measured": false,
+  "live_orders_tested": false,
+  "rule_ast_difference": "one guarded empty-slot snapshot skip; remaining AST identical"
+}
