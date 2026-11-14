@@ -1,0 +1,87 @@
+test_bootstrap_starts_collection_only_after_success (test_button_upgrade.BundleTests.test_bootstrap_starts_collection_only_after_success) ... ok
+test_bootstrap_stops_on_failed_install_without_collection (test_button_upgrade.BundleTests.test_bootstrap_stops_on_failed_install_without_collection) ... ok
+test_build_is_reproducible_and_staging_never_overwrites (test_button_upgrade.BundleTests.test_build_is_reproducible_and_staging_never_overwrites) ... ok
+test_exchange_positions_orders_algos_unknown_response_block (test_button_upgrade.UpgradeGuards.test_exchange_positions_orders_algos_unknown_response_block) ... ok
+test_paused_empty_passes_active_or_unknown_or_owned_fails (test_button_upgrade.UpgradeGuards.test_paused_empty_passes_active_or_unknown_or_owned_fails) ... ok
+test_asset_cache_returns_identical_bytes_with_bounded_slots (test_fold_runtime.FoldRuntime.test_asset_cache_returns_identical_bytes_with_bounded_slots) ... ok
+test_checkpoints_are_bounded_with_explicit_actual_elapsed (test_fold_runtime.FoldRuntime.test_checkpoints_are_bounded_with_explicit_actual_elapsed) ... ok
+test_elapsed_ignores_wall_clock_jump (test_fold_runtime.FoldRuntime.test_elapsed_ignores_wall_clock_jump) ... ok
+test_empty_proc_fields_do_not_prevent_rss_observation (test_fold_runtime.FoldRuntime.test_empty_proc_fields_do_not_prevent_rss_observation) ... ok
+test_live_position_event_reaches_authenticated_api_immediately (test_fold_runtime.FoldRuntime.test_live_position_event_reaches_authenticated_api_immediately) ... ok
+test_new_market_status_and_log_visible_next_capture (test_fold_runtime.FoldRuntime.test_new_market_status_and_log_visible_next_capture) ... ok
+test_resource_denial_is_nonfatal_and_cpu_is_interval_measurement (test_fold_runtime.FoldRuntime.test_resource_denial_is_nonfatal_and_cpu_is_interval_measurement) ... ok
+test_summary_distinguishes_recent_ticks_and_keeps_admission_record (test_fold_runtime.FoldRuntime.test_summary_distinguishes_recent_ticks_and_keeps_admission_record) ... ok
+test_unchanged_presentation_reused_but_age_and_update_refresh (test_fold_runtime.FoldRuntime.test_unchanged_presentation_reused_but_age_and_update_refresh) ... ok
+test_bytes_limit (test_followup.Followup.test_bytes_limit) ... ok
+test_exception_rethrows_and_no_secret_text (test_followup.Followup.test_exception_rethrows_and_no_secret_text) ... ok
+test_expired_update_clears_ticket (test_followup.Followup.test_expired_update_clears_ticket) ... ok
+test_inputs_shared_only_inside_packet (test_followup.Followup.test_inputs_shared_only_inside_packet) ... ok
+test_slot_replacement_and_shared_pool_reclamation (test_followup.Followup.test_slot_replacement_and_shared_pool_reclamation) ... ok
+test_wait_flood_preserves_admission_diagnostics (test_followup.Followup.test_wait_flood_preserves_admission_diagnostics) ... ok
+test_active_order_or_partial_fill_defers_without_shutdown (test_handover.HandoverTests.test_active_order_or_partial_fill_defers_without_shutdown) ... ok
+test_api_failure_does_not_change_journal_or_stop_manager (test_handover.HandoverTests.test_api_failure_does_not_change_journal_or_stop_manager) ... ok
+test_cancel_during_reads_prevents_late_commit (test_handover.HandoverTests.test_cancel_during_reads_prevents_late_commit) ... ok
+test_expired_cancelled_or_wrong_pid_request_never_stops (test_handover.HandoverTests.test_expired_cancelled_or_wrong_pid_request_never_stops) ... ok
+test_late_stop_wins_after_commit_and_never_executes_close (test_handover.HandoverTests.test_late_stop_wins_after_commit_and_never_executes_close) ... ok
+test_missing_stop_keeps_manager_and_recovery_gate (test_handover.HandoverTests.test_missing_stop_keeps_manager_and_recovery_gate) ... ok
+test_no_watchdog_means_no_handover (test_handover.HandoverTests.test_no_watchdog_means_no_handover) ... ok
+test_operator_command_arriving_during_get_aborts_handover (test_handover.HandoverTests.test_operator_command_arriving_during_get_aborts_handover) ... ok
+test_owned_partial_history_unchanged_and_only_gets (test_handover.HandoverTests.test_owned_partial_history_unchanged_and_only_gets) ... ok
+test_previously_paused_stays_paused (test_handover.HandoverTests.test_previously_paused_stays_paused) ... ok
+test_protection_trigger_arriving_during_get_aborts (test_handover.HandoverTests.test_protection_trigger_arriving_during_get_aborts) ... ok
+test_legacy_restore_only_our_exact_pause_sequence (test_handover.Reconciliation.test_legacy_restore_only_our_exact_pause_sequence) ... ok
+test_multislot_and_multileg_preservation (test_handover.Reconciliation.test_multislot_and_multileg_preservation) ... ok
+test_wrong_stop_side_size_account_duplicates_and_unknown_positions (test_handover.Reconciliation.test_wrong_stop_side_size_account_duplicates_and_unknown_positions) ... ok
+test_serial_worker_exits_before_next_owner_can_take_lock (test_handover_process.Processes.test_serial_worker_exits_before_next_owner_can_take_lock) ... ok
+test_active_intent_restored_after_natural_close_without_manual_pause (test_legacy_transition.Legacy.test_active_intent_restored_after_natural_close_without_manual_pause) ... 구버전 최초 전환: 진입 자동 중지. 보유분은 기존 봇이 관리하며 자연 청산 뒤 설치합니다.
+ok
+test_operator_stop_during_wait_prevents_auto_resume (test_legacy_transition.Legacy.test_operator_stop_during_wait_prevents_auto_resume) ... 구버전 최초 전환: 진입 자동 중지. 보유분은 기존 봇이 관리하며 자연 청산 뒤 설치합니다.
+ok
+test_previously_paused_does_not_become_live (test_legacy_transition.Legacy.test_previously_paused_does_not_become_live) ... 구버전 최초 전환: 진입 자동 중지. 보유분은 기존 봇이 관리하며 자연 청산 뒤 설치합니다.
+ok
+test_actual_tick_ast_unchanged_except_guard (test_performance.PerfTests.test_actual_tick_ast_unchanged_except_guard) ... ok
+test_exclusive_timing_and_exceptions (test_performance.PerfTests.test_exclusive_timing_and_exceptions) ... ok
+test_five_successful_baselines_before_optimization (test_performance.PerfTests.test_five_successful_baselines_before_optimization) ... ok
+test_flat_snapshot_call_count (test_performance.PerfTests.test_flat_snapshot_call_count) ... ok
+test_only_intermediate_empty_normal_slots_skipped (test_performance.PerfTests.test_only_intermediate_empty_normal_slots_skipped) ... ok
+test_thread_local_samples (test_performance.PerfTests.test_thread_local_samples) ... ok
+test_authenticated_update_queue_and_asset (test_phone_mobile_integration.Integration.test_authenticated_update_queue_and_asset) ... ok
+test_292_recovery_old_three_requests_new_one_same_pairs (test_phone_transport.Subscriptions.test_292_recovery_old_three_requests_new_one_same_pairs) ... ok
+test_blocked_send_does_not_lock_market_read_or_watch (test_phone_transport.Subscriptions.test_blocked_send_does_not_lock_market_read_or_watch) ... ok
+test_large_universe_is_split_by_bytes_and_never_loses_pairs (test_phone_transport.Subscriptions.test_large_universe_is_split_by_bytes_and_never_loses_pairs) ... ok
+test_monitor_change_reconnect_and_chunk_progress_invalidate_settled_state (test_phone_transport.Subscriptions.test_monitor_change_reconnect_and_chunk_progress_invalidate_settled_state) ... ok
+test_send_failure_never_marks_pairs_active (test_phone_transport.Subscriptions.test_send_failure_never_marks_pairs_active) ... ok
+test_send_on_obsolete_generation_never_commits (test_phone_transport.Subscriptions.test_send_on_obsolete_generation_never_commits) ... ok
+test_settled_watch_skips_pair_builds_across_many_received_frames (test_phone_transport.Subscriptions.test_settled_watch_skips_pair_builds_across_many_received_frames) ... ok
+test_ten_second_operation_pacing_and_two_second_debounce (test_phone_transport.Subscriptions.test_ten_second_operation_pacing_and_two_second_debounce) ... ok
+test_blocked_close_is_fail_closed_but_does_not_lock_readers (test_phone_transport.Transport.test_blocked_close_is_fail_closed_but_does_not_lock_readers) ... ok
+test_fragmented_data_protocol_ping_and_text_pong (test_phone_transport.Transport.test_fragmented_data_protocol_ping_and_text_pong) ... ok
+test_install_changes_only_three_public_methods_and_is_idempotent (test_phone_transport.Transport.test_install_changes_only_three_public_methods_and_is_idempotent) ... ok
+test_missing_pong_times_out_at_deadline_and_invalidates_quotes (test_phone_transport.Transport.test_missing_pong_times_out_at_deadline_and_invalidates_quotes) ... ok
+test_obsolete_ping_send_does_not_change_new_generation (test_phone_transport.Transport.test_obsolete_ping_send_does_not_change_new_generation) ... ok
+test_original_freshness_and_generation_guards_still_apply (test_phone_transport.Transport.test_original_freshness_and_generation_guards_still_apply) ... ok
+test_peer_close_code_retained_without_raw_reason (test_phone_transport.Transport.test_peer_close_code_retained_without_raw_reason) ... ok
+test_run_reconnects_rebuilds_subscriptions_then_exits_cleanly (test_phone_transport.Transport.test_run_reconnects_rebuilds_subscriptions_then_exits_cleanly) ... ok
+test_silent_socket_reconnects_with_backoff_and_no_old_quote_reuse (test_phone_transport.Transport.test_silent_socket_reconnects_with_backoff_and_no_old_quote_reuse) ... ok
+test_stopped_run_does_not_open_connection (test_phone_transport.Transport.test_stopped_run_does_not_open_connection) ... ok
+test_timely_pong_keeps_transport_live (test_phone_transport.Transport.test_timely_pong_keeps_transport_live) ... ok
+test_both_exact_predecessors_and_tamper (test_predecessors.Predecessors.test_both_exact_predecessors_and_tamper) ... ok
+test_exception_not_cached (test_signal_cache.CacheTests.test_exception_not_cached) ... ok
+test_full_inputs_invalidation_and_copy (test_signal_cache.CacheTests.test_full_inputs_invalidation_and_copy) ... ok
+test_real_packets_and_current_quote_boundary (test_signal_cache.CacheTests.test_real_packets_and_current_quote_boundary) ... ok
+test_new_start_failure_rolls_back_with_positions_intact (test_update_transaction.Transactions.test_new_start_failure_rolls_back_with_positions_intact) ... ok
+test_no_restart_if_preflight_or_handover_fails (test_update_transaction.Transactions.test_no_restart_if_preflight_or_handover_fails) ... ok
+test_orphaned_installer_recovers_previous_only_after_locks_release (test_update_transaction.Transactions.test_orphaned_installer_recovers_previous_only_after_locks_release) ... ok
+test_owned_positions_install_without_manual_pause_or_journal_change (test_update_transaction.Transactions.test_owned_positions_install_without_manual_pause_or_journal_change) ... ok
+test_paused_owned_positions_install_still_paused (test_update_transaction.Transactions.test_paused_owned_positions_install_still_paused) ... ok
+test_rollback_does_not_kill_new_manager_that_refuses_handover (test_update_transaction.Transactions.test_rollback_does_not_kill_new_manager_that_refuses_handover) ... ok
+test_rollback_restores_exact_boot_after_new_process_exit (test_update_transaction.Transactions.test_rollback_restores_exact_boot_after_new_process_exit) ... ok
+test_same_version_install_noop_while_active_with_positions (test_update_transaction.Transactions.test_same_version_install_noop_while_active_with_positions) ... ok
+
+----------------------------------------------------------------------
+Ran 76 tests in 21.730s
+
+OK
+{"benchmark": "synthetic_289_packets_warm", "baseline_s": 1.0850015330070164, "cached_s": 0.27923585299868137, "cache": {"version": "phone-signal-cache-3", "hits": 4100, "misses": 2046, "bypasses": 1, "entries": 2030, "capacity": 4096, "key_bytes": 14863043, "max_key_bytes": 33554432, "serializations": 4390, "shared_inputs": 5268, "evictions": 0, "replacements": 16, "unique_inputs": 872}}
+{"working_set_rounds": 30, "distinct_symbols": 289, "cache": {"version": "phone-signal-cache-3", "hits": 66813, "misses": 2046, "bypasses": 1, "entries": 2030, "capacity": 4096, "key_bytes": 14863043, "max_key_bytes": 33554432, "serializations": 49185, "shared_inputs": 59022, "evictions": 0, "replacements": 16, "unique_inputs": 872}}
+{"rollover_and_correction_symbols": 289, "large_config": true, "cache": {"version": "phone-signal-cache-3", "hits": 69414, "misses": 3491, "bypasses": 1, "entries": 2030, "capacity": 4096, "key_bytes": 14943151, "max_key_bytes": 33554432, "serializations": 52075, "shared_inputs": 62490, "evictions": 0, "replacements": 1461, "unique_inputs": 873}}
