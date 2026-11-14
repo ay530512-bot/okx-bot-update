@@ -1,13 +1,14 @@
 {
   "format": "okx-phone-release-1",
-  "version": 14,
-  "display_version": "1.1.6",
+  "version": 15,
+  "display_version": "1.1.7",
   "from_versions": [
-    13
+    13,
+    14
   ],
-  "installer": "android/phone_1_1_6_setup.py",
-  "sha256": "8e685a5408f3872b3c6b86683a1b4ef3ef842423b97e9be53cfa3fb43e153dc1",
-  "bytes": 94647,
-  "notes": "OKX Ai trade - 1.1.6: 종목별 최신 계산 유지·동일 입력 공유로 캐시 메모리 초과 반복계산 수정. 289종목 30회·새 봉·수정값 검증. 진입 예외 기록 분리. 매매 규칙·최신 시세·주문 직전 검사는 유지. 실제 폴드 속도는 설치 후 측정.",
-  "commit": "fe88ba7a2db6ce468b823bf47a3982968013e1b1"
+  "installer": "android/phone_1_1_7_setup.py",
+  "sha256": "0e27a284f7f6e299fdf220fbec92fcc86598fa6cb792df63e56d2ab861717fec",
+  "bytes": 97799,
+  "notes": "OKX Ai trade - 1.1.7: 폴드3 통합 개선. 동일 봉·설정 계산 재사용과 메모리 관리, 무변경 구독·화면 반복 작업 축소, 공개 시세 무응답 재연결. 모바일 속도·메모리·진입 예외 표시 및 10/30/60분 기록 자동 저장. 기존 규칙·최신 시세·주문 직전 검사 유지. 1.1.5/1.1.6에서 직접 설치. 실제 폴드 속도는 설치 후 관측.",
+  "commit": "112140c567466b97a95ce930ffa0674e0ed38611"
 }
