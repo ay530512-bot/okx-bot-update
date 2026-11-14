@@ -1,0 +1,12 @@
+{
+  "version": "1.1.5",
+  "tests_passed": 26,
+  "trading_rules_changed": false,
+  "actual_fold_measured": false,
+  "live_orders_tested": false,
+  "previous_admission_exceptions_resolved": false,
+  "synthetic_warm_289_packets": {
+    "uncached_s": 0.9618748330103699,
+    "cached_s": 0.2586866170022404
+  }
+}
