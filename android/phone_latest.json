@@ -1,13 +1,13 @@
 {
   "format": "okx-phone-release-1",
-  "version": 12,
-  "display_version": "1.1.4",
+  "version": 13,
+  "display_version": "1.1.5",
   "from_versions": [
-    11
+    12
   ],
-  "installer": "android/phone_1_1_4_setup.py",
-  "sha256": "ebe6ee46301dc5a8e74ed911d1f0d7bd46124bf9f547851a1a4def6de80f00e0",
-  "bytes": 92259,
-  "notes": "OKX Ai trade - 1.1.4: 같은 봉·설정의 패턴/지표/추세 계산 재사용. 새 봉·수정값·설정 변경 시 재계산. 시세·호가·신호 만료·주문 직전 검사 및 매매 규칙 유지. 실제 폴드 속도는 설치 후 계측.",
-  "commit": "a532d1cc9741a0cc10ac6b473ba8ab170f1fa46f"
+  "installer": "android/phone_1_1_5_setup.py",
+  "sha256": "78b05a467d25cbf083d3255ce360539dd9414ff634f10060bf9ad603ab4ce531",
+  "bytes": 93895,
+  "notes": "OKX Ai trade - 1.1.5: 입력 비교의 반복 해시 제거·후보 내 봉 변환 공유. 봉 수정 감지·실시간 검사·매매 규칙 유지. 진입/봉 검사 예외 유형 기록 추가. 만료된 업데이트 확인 버튼 복구. 실제 폴드 속도 개선은 설치 후 측정.",
+  "commit": "a95015f9ea8bc9057ef832827bddcb1ab1839917"
 }
