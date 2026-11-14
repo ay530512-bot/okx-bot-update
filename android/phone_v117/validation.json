@@ -1,0 +1,77 @@
+{
+  "version": "1.1.7",
+  "tests_passed": 57,
+  "tests_duration_s": 20.914,
+  "pinned_runtime_files_verified": 148,
+  "results": [
+    {
+      "benchmark": "synthetic_289_packets_warm",
+      "baseline_s": 1.0193753500061575,
+      "cached_s": 0.2847696599928895,
+      "cache": {
+        "version": "phone-signal-cache-3",
+        "hits": 4100,
+        "misses": 2046,
+        "bypasses": 1,
+        "entries": 2030,
+        "capacity": 4096,
+        "key_bytes": 14863043,
+        "max_key_bytes": 33554432,
+        "serializations": 4390,
+        "shared_inputs": 5268,
+        "evictions": 0,
+        "replacements": 16,
+        "unique_inputs": 872
+      }
+    },
+    {
+      "working_set_rounds": 30,
+      "distinct_symbols": 289,
+      "cache": {
+        "version": "phone-signal-cache-3",
+        "hits": 66813,
+        "misses": 2046,
+        "bypasses": 1,
+        "entries": 2030,
+        "capacity": 4096,
+        "key_bytes": 14863043,
+        "max_key_bytes": 33554432,
+        "serializations": 49185,
+        "shared_inputs": 59022,
+        "evictions": 0,
+        "replacements": 16,
+        "unique_inputs": 872
+      }
+    },
+    {
+      "rollover_and_correction_symbols": 289,
+      "large_config": true,
+      "cache": {
+        "version": "phone-signal-cache-3",
+        "hits": 69414,
+        "misses": 3491,
+        "bypasses": 1,
+        "entries": 2030,
+        "capacity": 4096,
+        "key_bytes": 14943151,
+        "max_key_bytes": 33554432,
+        "serializations": 52075,
+        "shared_inputs": 62490,
+        "evictions": 0,
+        "replacements": 1461,
+        "unique_inputs": 873
+      }
+    }
+  ],
+  "soak_file": "soak_cache.json",
+  "subscription_noop_local_10000": {
+    "prior_s": 0.278299,
+    "new_s": 0.008898
+  },
+  "limitations": [
+    "Synthetic Linux local tests, not actual Fold3 engine latency/thermal/battery/screen-off tests.",
+    "Actual phone observations pending; no zero-latency/permanent operation guarantee.",
+    "Trading core/configuration unchanged; no OR candidate installed.",
+    "Observer resource sampler initial empty-proc-field error fixed before final57test suite."
+  ]
+}

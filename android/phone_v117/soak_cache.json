@@ -1,0 +1,128 @@
+{
+  "distinct_symbols": 289,
+  "rounds": 201,
+  "packets": 58089,
+  "elapsed_s": 45.902619745000266,
+  "observations": [
+    {
+      "round": 0,
+      "cache": {
+        "version": "phone-signal-cache-3",
+        "hits": 0,
+        "misses": 2023,
+        "bypasses": 0,
+        "entries": 2023,
+        "capacity": 4096,
+        "key_bytes": 8394965,
+        "max_key_bytes": 33554432,
+        "serializations": 1445,
+        "shared_inputs": 1734,
+        "evictions": 0,
+        "replacements": 0,
+        "unique_inputs": 869
+      },
+      "resources": {
+        "threads": 2,
+        "rss_mib": 62.3,
+        "peak_rss_mib": 62.3
+      }
+    },
+    {
+      "round": 10,
+      "cache": {
+        "version": "phone-signal-cache-3",
+        "hits": 20230,
+        "misses": 2023,
+        "bypasses": 0,
+        "entries": 2023,
+        "capacity": 4096,
+        "key_bytes": 8394965,
+        "max_key_bytes": 33554432,
+        "serializations": 15895,
+        "shared_inputs": 19074,
+        "evictions": 0,
+        "replacements": 0,
+        "unique_inputs": 869
+      },
+      "resources": {
+        "threads": 2,
+        "cpu_one_core_pct": 100.0,
+        "rss_mib": 62.5,
+        "peak_rss_mib": 62.5
+      }
+    },
+    {
+      "round": 50,
+      "cache": {
+        "version": "phone-signal-cache-3",
+        "hits": 101150,
+        "misses": 2023,
+        "bypasses": 0,
+        "entries": 2023,
+        "capacity": 4096,
+        "key_bytes": 8394965,
+        "max_key_bytes": 33554432,
+        "serializations": 73695,
+        "shared_inputs": 88434,
+        "evictions": 0,
+        "replacements": 0,
+        "unique_inputs": 869
+      },
+      "resources": {
+        "threads": 2,
+        "cpu_one_core_pct": 100.1,
+        "rss_mib": 62.5,
+        "peak_rss_mib": 62.5
+      }
+    },
+    {
+      "round": 100,
+      "cache": {
+        "version": "phone-signal-cache-3",
+        "hits": 202300,
+        "misses": 2023,
+        "bypasses": 0,
+        "entries": 2023,
+        "capacity": 4096,
+        "key_bytes": 8394965,
+        "max_key_bytes": 33554432,
+        "serializations": 145945,
+        "shared_inputs": 175134,
+        "evictions": 0,
+        "replacements": 0,
+        "unique_inputs": 869
+      },
+      "resources": {
+        "threads": 2,
+        "cpu_one_core_pct": 100.2,
+        "rss_mib": 62.5,
+        "peak_rss_mib": 62.5
+      }
+    },
+    {
+      "round": 200,
+      "cache": {
+        "version": "phone-signal-cache-3",
+        "hits": 404600,
+        "misses": 2023,
+        "bypasses": 0,
+        "entries": 2023,
+        "capacity": 4096,
+        "key_bytes": 8394965,
+        "max_key_bytes": 33554432,
+        "serializations": 290445,
+        "shared_inputs": 348534,
+        "evictions": 0,
+        "replacements": 0,
+        "unique_inputs": 869
+      },
+      "resources": {
+        "threads": 2,
+        "cpu_one_core_pct": 99.7,
+        "rss_mib": 62.5,
+        "peak_rss_mib": 62.5
+      }
+    }
+  ],
+  "limitations": "Accelerated offline repeat test; no Fold3, thermal, real WS or order execution tested."
+}
