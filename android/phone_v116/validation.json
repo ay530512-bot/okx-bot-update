@@ -1,0 +1,70 @@
+{
+  "tests_passed": 29,
+  "pinned_runtime_files_verified": 148,
+  "results": [
+    {
+      "benchmark": "synthetic_289_packets_warm",
+      "baseline_s": 0.8962682959972881,
+      "cached_s": 0.23548489400127437,
+      "cache": {
+        "version": "phone-signal-cache-3",
+        "hits": 4100,
+        "misses": 2046,
+        "bypasses": 1,
+        "entries": 2030,
+        "capacity": 4096,
+        "key_bytes": 14863043,
+        "max_key_bytes": 33554432,
+        "serializations": 4390,
+        "shared_inputs": 5268,
+        "evictions": 0,
+        "replacements": 16,
+        "unique_inputs": 872
+      }
+    },
+    {
+      "working_set_rounds": 30,
+      "distinct_symbols": 289,
+      "cache": {
+        "version": "phone-signal-cache-3",
+        "hits": 66813,
+        "misses": 2046,
+        "bypasses": 1,
+        "entries": 2030,
+        "capacity": 4096,
+        "key_bytes": 14863043,
+        "max_key_bytes": 33554432,
+        "serializations": 49185,
+        "shared_inputs": 59022,
+        "evictions": 0,
+        "replacements": 16,
+        "unique_inputs": 872
+      }
+    },
+    {
+      "rollover_and_correction_symbols": 289,
+      "large_config": true,
+      "cache": {
+        "version": "phone-signal-cache-3",
+        "hits": 69414,
+        "misses": 3491,
+        "bypasses": 1,
+        "entries": 2030,
+        "capacity": 4096,
+        "key_bytes": 14943151,
+        "max_key_bytes": 33554432,
+        "serializations": 52075,
+        "shared_inputs": 62490,
+        "evictions": 0,
+        "replacements": 1461,
+        "unique_inputs": 873
+      }
+    }
+  ],
+  "limitations": [
+    "Synthetic local packet timings, not actual Fold or PC performance.",
+    "Actual phone measurements pending.",
+    "Trading rules/configuration unchanged.",
+    "Earlier admission errors remain unclassified without their original records."
+  ]
+}
