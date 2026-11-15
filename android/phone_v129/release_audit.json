@@ -1,0 +1,24 @@
+{
+  "version": "1.2.9",
+  "installer_commit": "89f6c725b16dcdadf91c957a38d140f7eb207276",
+  "offline_tests": {
+    "quarter_sizing": 5,
+    "release_and_routes": 4,
+    "predecessors": [
+      24,
+      25,
+      26
+    ]
+  },
+  "research": {
+    "cases": 80,
+    "settings": 10,
+    "new_candidates": 9,
+    "all_data_reused": true,
+    "adopted": [],
+    "decision": "Restore user-requested original three-route OR only; no additional indicators adopted",
+    "report_library_file_id": "libfile_fde3_f-7834720d5b808191bc5f2aa6a9082a57_e7cce633df5c8191a5bb9d03b0fa2e6e"
+  },
+  "device_install_verified": false,
+  "exchange_orders_sent": false
+}
