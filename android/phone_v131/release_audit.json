@@ -1,0 +1,29 @@
+{
+  "user_log": {
+    "elapsed_s": 361.467,
+    "public_connected": true,
+    "account_connected": true,
+    "account_fresh": true,
+    "entry_enabled": true,
+    "entry_cancelled": false,
+    "recovering": false,
+    "user_paused": false,
+    "disconnect_count": 1,
+    "pattern_none": 289,
+    "pending": 0,
+    "exception_counts": {},
+    "admission_metric_printed": false
+  },
+  "old_screenshot_elapsed_minutes": 270,
+  "same_run": false,
+  "live_cause_confirmed": false,
+  "live_orders_sent": false,
+  "rule_threshold_changes": false,
+  "preserved_base": "1.3.0",
+  "tests": {
+    "diagnostic": 7,
+    "parallel": 15,
+    "release": 12,
+    "ui_states": 3
+  }
+}
