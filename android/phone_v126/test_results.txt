@@ -1,0 +1,116 @@
+COMMAND ['/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python', '-B', '/workspace/scratch/288d871497cb/release_1110_repo/android/phone_v126/test_parallel.py']
+test_bad_response_revision_rejected (__main__.Tests.test_bad_response_revision_rejected) ... ok
+test_changed_input_after_prepare_uses_current_data (__main__.Tests.test_changed_input_after_prepare_uses_current_data) ... ok
+test_connection_change_during_work_discards_batch (__main__.Tests.test_connection_change_during_work_discards_batch) ... ok
+test_correction_and_config_never_reuse_old_packet (__main__.Tests.test_correction_and_config_never_reuse_old_packet) ... ok
+test_dead_worker_falls_back_and_skips_failed_tick (__main__.Tests.test_dead_worker_falls_back_and_skips_failed_tick) ... ok
+test_expiry_while_workers_run_no_final_entry (__main__.Tests.test_expiry_while_workers_run_no_final_entry) ... ok
+test_final_check_runs_only_in_parent_once (__main__.Tests.test_final_check_runs_only_in_parent_once) ... ok
+test_held_seen_and_manual_excluded_by_parent (__main__.Tests.test_held_seen_and_manual_excluded_by_parent) ... ok
+test_invalid_preferences_fail_to_serial (__main__.Tests.test_invalid_preferences_fail_to_serial) ... ok
+test_real_quote_reader_rejects_stale_future_prior_generation (__main__.Tests.test_real_quote_reader_rejects_stale_future_prior_generation) ... ok
+test_resource_summary_counts_workers (__main__.Tests.test_resource_summary_counts_workers) ... ok
+test_restore_closes_workers_and_persists (__main__.Tests.test_restore_closes_workers_and_persists) ... ok
+test_same_signals_priority_changes_and_expiry (__main__.Tests.test_same_signals_priority_changes_and_expiry) ... ok
+test_switch_during_worker_result_discards_batch (__main__.Tests.test_switch_during_worker_result_discards_batch) ... ok
+test_timeout_falls_back_and_cleans_children (__main__.Tests.test_timeout_falls_back_and_cleans_children) ... ok
+
+----------------------------------------------------------------------
+Ran 15 tests in 3.667s
+
+OK
+
+COMMAND ['/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python', '-B', '/workspace/scratch/288d871497cb/release_1110_repo/android/phone_v126/test_controls.py']
+test_auth_and_origin_required (__main__.Controls.test_auth_and_origin_required) ... ok
+test_change_restore_and_replay_idempotent (__main__.Controls.test_change_restore_and_replay_idempotent) ... ok
+test_readonly_installing_and_bad_mode_rejected (__main__.Controls.test_readonly_installing_and_bad_mode_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 1.565s
+
+OK
+
+COMMAND ['/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python', '-B', '/workspace/scratch/288d871497cb/release_1110_repo/android/phone_v126/test_release.py']
+test_actual_predecessor_files_and_boot_registration_match (__main__.Release.test_actual_predecessor_files_and_boot_registration_match) ... ok
+test_modified_download_is_rejected_before_execution (__main__.Release.test_modified_download_is_rejected_before_execution) ... ok
+test_old_button_accepts_new_release_and_verifies_installer (__main__.Release.test_old_button_accepts_new_release_and_verifies_installer) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.008s
+
+OK
+
+COMMAND ['/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python', '-B', '/workspace/scratch/288d871497cb/release_1110_repo/android/phone_v125/test_cpu_paths.py']
+test_duplicate_price_keeps_timestamp_and_book_freshness (__main__.Feed.test_duplicate_price_keeps_timestamp_and_book_freshness) ... ok
+test_each_frame_quotes_bars_callbacks_and_errors_match (__main__.Feed.test_each_frame_quotes_bars_callbacks_and_errors_match) ... ok
+test_bad_or_changed_candles_cannot_reuse_success (__main__.FrozenClock.test_bad_or_changed_candles_cannot_reuse_success) ... ok
+test_expiry_during_scan_drops_signal (__main__.FrozenClock.test_expiry_during_scan_drops_signal) ... ok
+test_fix_passes_same_quote_to_final_check (__main__.FrozenClock.test_fix_passes_same_quote_to_final_check) ... ok
+test_hourly_correction_invalidates_selection_cache (__main__.FrozenClock.test_hourly_correction_invalidates_selection_cache) ... ok
+test_prepatch_rejects_fresh_quotes_after_nine_second_scan (__main__.FrozenClock.test_prepatch_rejects_fresh_quotes_after_nine_second_scan) ... ok
+test_repeated_inputs_skip_validation_but_not_quote_checks (__main__.FrozenClock.test_repeated_inputs_skip_validation_but_not_quote_checks) ... ok
+test_stale_future_and_prior_generation_still_blocked (__main__.FrozenClock.test_stale_future_and_prior_generation_still_blocked) ... ok
+test_detached_readonly_rows_and_editable_deepcopy (__main__.ImmutableInputs.test_detached_readonly_rows_and_editable_deepcopy) ... ok
+test_full_and_incremental_producer_preserve_corrections (__main__.ImmutableInputs.test_full_and_incremental_producer_preserve_corrections) ... ok
+test_scanner_publishes_frozen_frames_and_reuses_without_requests (__main__.ImmutableInputs.test_scanner_publishes_frozen_frames_and_reuses_without_requests) ... ok
+test_types_signed_zero_and_unusual_data_are_not_collapsed (__main__.ImmutableInputs.test_types_signed_zero_and_unusual_data_are_not_collapsed) ... ok
+test_frozen_inputs_match_original_and_invalidate_on_correction (__main__.Signals.test_frozen_inputs_match_original_and_invalidate_on_correction) ... ok
+
+----------------------------------------------------------------------
+Ran 14 tests in 0.233s
+
+OK
+
+COMMAND ['/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python', '-B', '/workspace/scratch/288d871497cb/release_1110_repo/android/phone_v123/test_candidate_fast.py']
+{"test": "81 symbols, 8 scans including repeated inputs; synthetic workstation, not Fold latency", "original_s": 1.3727085120044649, "optimized_s": 0.25241800300136674, "cache": {"version": "phone-signal-cache-4", "hits": 619, "misses": 172, "bypasses": 0, "entries": 88, "capacity": 4096, "key_bytes": 2784337, "max_key_bytes": 33554432, "serializations": 2229, "shared_inputs": 52, "frozen_reuses": 0, "evictions": 0, "replacements": 3, "unique_inputs": 167}}
+.
+----------------------------------------------------------------------
+Ran 1 test in 2.117s
+
+OK
+
+COMMAND ['/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python', '-B', '/workspace/scratch/288d871497cb/release_1110_repo/android/phone_v123/test_entry_clock.py']
+.......
+----------------------------------------------------------------------
+Ran 7 tests in 0.091s
+
+OK
+
+COMMAND ['/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python', '-B', '/workspace/scratch/288d871497cb/release_1110_repo/android/phone_v120/test_pullback_size.py']
+test_both_same_reduces_only_the_baseline_selected_trend_long (__main__.PullbackSizeTests.test_both_same_reduces_only_the_baseline_selected_trend_long) ... ok
+test_idempotent_overlay_and_source_hash_fail_closed (__main__.PullbackSizeTests.test_idempotent_overlay_and_source_hash_fail_closed) ... ok
+test_minimum_lot_and_account_reserve_are_retained (__main__.PullbackSizeTests.test_minimum_lot_and_account_reserve_are_retained) ... ok
+test_prepare_and_final_recheck_do_not_scale_twice (__main__.PullbackSizeTests.test_prepare_and_final_recheck_do_not_scale_twice) ... ok
+test_unrelated_orders_have_exact_original_plan (__main__.PullbackSizeTests.test_unrelated_orders_have_exact_original_plan) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.056s
+
+OK
+
+COMMAND ['/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python', '-B', '/workspace/scratch/288d871497cb/release_1110_repo/android/phone_v123/test_runtime_health.py']
+...
+----------------------------------------------------------------------
+Ran 3 tests in 0.001s
+
+OK
+
+COMMAND ['/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python', '-B', '-m', 'unittest', 'test_handover', 'test_update_transaction']
+......................
+----------------------------------------------------------------------
+Ran 22 tests in 0.038s
+
+OK
+
+COMMAND ['/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python', '-B', '-m', 'unittest', 'discover', '-s', '/workspace/scratch/288d871497cb/release_1110_repo/android/phone_v124', '-p', 'test_*.py']
+...........................
+----------------------------------------------------------------------
+Ran 27 tests in 0.659s
+
+OK
+
+COMMAND ['node', '/workspace/scratch/288d871497cb/release_1110_repo/android/phone_v124/test_health_ui.cjs']
+3 diagnostic DOM state checks passed
+
+COMMAND ['node', '/workspace/scratch/288d871497cb/release_1110_repo/android/phone_v126/test_parallel_ui.cjs']
+4 mode UI checks passed

@@ -1,0 +1,72 @@
+{
+  "version": "1.2.6",
+  "python_tests_passed": 100,
+  "ui_checks_passed": 7,
+  "preserved_byte_for_byte": [
+    "phone_public_ws.py",
+    "phone_account.py",
+    "phone_pullback_size.py",
+    "phone_handover.py",
+    "phone_sources.json",
+    "phone_host.py",
+    "phone_runtime_health.py",
+    "phone_signal_cache.py",
+    "phone_feed_fast.py",
+    "phone_frozen_bars.py"
+  ],
+  "scope": "Offline spawn, packet/candidate equivalence, source correction, 90s expiry, actual quote freshness reader, worker faults, serial restore, authenticated HTTP preference controls, update handover and rollback mocks. No real orders, no direct Fold verification.",
+  "development_corrections": [
+    "First parallel test fixture had mismatched instrument ctValCcy; corrected the fixture rather than bypassing the real universe filter.",
+    "Added request-id replay protection to calculation mode control before release.",
+    "Added connection-generation/freshness rejection during worker calculation and reran required tests/benchmark; earlier complete benchmark raw file was overwritten, preliminary console summary recorded in README."
+  ],
+  "installer_sha256": "f479fcbcc8ef896ed18b85822103e8bf8cb39784c374744f5fd7ae1db1bf8f0c",
+  "source_sha256": {
+    "phone_candidate_fast.py": "5680ed73e7fccd910847d6eecf8e0a428c47965139616583fe7402068d720b77",
+    "phone_performance.py": "44e502d4ac7491df5eb1a2759224a31787e0fce12225c99338a98610ecd4c535",
+    "build_release.py": "9cb35562fee2489fa108b432f7dfa1ce7f5ac195537a61cd1ff8257016568756",
+    "test_release.py": "32bff82f75f8204a7bea89d3c011887500a4ee8011e0cc126c43662bf3353668",
+    "test_parallel.py": "56a6b9e20df47d06933771497fa1da5b18948261025d0c1a50e4e08ac0c6a250",
+    "test_controls.py": "620b8bb35f59e1ad73b28ed9b5b5e654edc6c1782b55ad8d021c85802174bbaf",
+    "run_validation.py": "8e21f21a8f90516e94333968cddb4c11cb549936f3963f3da61117bf8ee1cefb",
+    "phone_parallel.py": "63787c1d13932479b77fa10d7f18230daac679f1421da50834437fa957db5893",
+    "benchmark_release.py": "375650ee4309e120bc629636d06992da0c25dbb5d432a334e1109ca59389b5da",
+    "phone_mobile.py": "3fb0b6699681936f04c9deba03f4cc49a91b3eb8e48514a3ef509bc75183cc00"
+  },
+  "benchmark": {
+    "cases": 12,
+    "scans": 168,
+    "equivalence": true,
+    "summary": [
+      {
+        "kind": "mostly_waiting",
+        "mode": 0,
+        "cold": 0.4247276029927889,
+        "warm": 0.00677894199907314,
+        "all_changed": 0.4428760860027978
+      },
+      {
+        "kind": "mostly_waiting",
+        "mode": 4,
+        "cold": 0.48069326700351667,
+        "warm": 0.008153622504323721,
+        "all_changed": 0.3406947200128343
+      },
+      {
+        "kind": "many_signals",
+        "mode": 0,
+        "cold": 0.5427476379991276,
+        "warm": 0.04066815449914429,
+        "all_changed": 0.5578826849960024
+      },
+      {
+        "kind": "many_signals",
+        "mode": 4,
+        "cold": 0.45943982699827757,
+        "warm": 0.023727576503006276,
+        "all_changed": 0.34018043299147394
+      }
+    ]
+  },
+  "benchmark_source_sha256": "375650ee4309e120bc629636d06992da0c25dbb5d432a334e1109ca59389b5da"
+}
