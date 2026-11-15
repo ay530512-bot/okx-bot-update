@@ -1,0 +1,40 @@
+{
+  "version": "1.2.4",
+  "date_kst": "2026-11-15",
+  "kind": "post_install_offline_regression",
+  "tested_host": "host-v22",
+  "source_commit": "e94267277fdaadaaa43ed275e0c456b65a6ba691",
+  "installer_sha256": "15d5b03e3aa5b307ef7d5392af7d25673676dfcbd4b77a6d6f325fd4f60191d3",
+  "results": {
+    "candidate_differential": 1,
+    "entry_clock_and_freshness": 7,
+    "pullback_sizing": 5,
+    "runtime_health": 3,
+    "handover_and_update_transactions": 22,
+    "public_transport": 27,
+    "python_total": 65,
+    "ui_dom_scenarios": 3,
+    "failures": 0
+  },
+  "candidate_scope": "81 fixture/synthetic symbols x 8 scans; original and optimized pending signals equal. Not a profitability or phone-speed test.",
+  "admission_scope": "9-second scan with fresh quote reaches mocked final check; stale/future/prior-generation quotes and expired signals blocked. No actual order or fill.",
+  "sizing_scope": "Selected trend_pullback LONG only uses quarter original target. Other routes unchanged, no double scaling. Minimum lot/reserve and fill-assessment checks exercised with fixtures.",
+  "handover_scope": "GET-only fixture API and mocked process boundaries; position/partial-profit history preservation, invalid protection/pending orders defer, update failure rollback.",
+  "unchanged_from_123": [
+    "phone_candidate_fast.py",
+    "phone_signal_cache.py",
+    "phone_account.py",
+    "phone_pullback_size.py",
+    "phone_handover.py",
+    "phone_sources.json",
+    "phone_performance.py"
+  ],
+  "limitations": [
+    "No direct access to installed phone",
+    "No live connection stability validation",
+    "No exchange order, fill, or actual protective stop placement tested",
+    "User installation version/hash not independently read",
+    "No new profitability validation"
+  ],
+  "decision": "Offline regression passed; live stability and end-to-end execution remain unverified. No new installer or live-setting changes."
+}
