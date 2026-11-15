@@ -1,0 +1,30 @@
+{
+  "changed": [
+    "phone_button_upgrade.py",
+    "phone_button_old_sources.json",
+    "phone_update.py",
+    "phone_service.py",
+    "phone_signal_cache.py",
+    "phone_mobile.py",
+    "phone_entry_routes.py"
+  ],
+  "sha256": "4424505ee0ac74c721205272f930a47d22a7b46c621c25c0070b8c2277cb7598",
+  "size": 297634,
+  "from_versions": [
+    24,
+    25
+  ],
+  "live_changed": false,
+  "version": "1.2.8",
+  "tests": {
+    "route_cache_payload": 3,
+    "quarter_sizing": 5,
+    "updater_126": 3,
+    "updater_127": 3
+  },
+  "checks_passed": true,
+  "device_install_verified": false,
+  "exchange_orders_sent": false,
+  "installer_commit": "6b01a18e058070b8dd4c518394c8d490a0335f5a",
+  "policy": "mild726 excluding trend_pullback LONG/SHORT OR unchanged two_wick732; uniform original quarter allocation"
+}
