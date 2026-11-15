@@ -1,0 +1,30 @@
+{
+  "display_version": "1.2.7",
+  "host_version": 25,
+  "predecessor": 24,
+  "user_approved": "Remove extra quarter reduction on pullback longs; use original quarter allocation for new entries",
+  "allocation": "min(account equity, allocation seed after reserve)/4",
+  "reserve_usdt": 3,
+  "open_position_topup": false,
+  "live_device_install_verified": false,
+  "changed_modules": [
+    "phone_pullback_size.py",
+    "phone_mobile.py",
+    "phone_service.py",
+    "phone_update.py",
+    "phone_button_upgrade.py",
+    "phone_button_old_sources.json"
+  ],
+  "offline_tests_passed": 8,
+  "checks": [
+    "all long/short routes exact original quarter plan",
+    "combined same-side signals not reduced",
+    "reserve/minlot/rounding rejection unchanged",
+    "prepare/final recheck consistent",
+    "source hash and old wrapper fail closed",
+    "predecessor button accepts new release",
+    "tampered installer rejected",
+    "predecessor boot verification"
+  ],
+  "installer_commit": "8b8bc6137816eeccf32dfa65be1f929d2e46ded2"
+}
