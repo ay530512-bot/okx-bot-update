@@ -1,0 +1,54 @@
+{
+  "version": "1.2.5",
+  "date_kst": "2026-11-15",
+  "python_tests_passed": 82,
+  "ui_dom_scenarios": 3,
+  "offline_warm_scan_cpu_reduction_pct": 75.39,
+  "offline_feed_cpu_reduction_pct": {
+    "repeated_prices": 26.23,
+    "changing_prices": 11.64
+  },
+  "benchmark_conditions": "Same 289 synthetic/fixture symbols; 150 warm scans per release. 30000 frames x 5 trials for each feed workload. Median process CPU time; no network.",
+  "preserved_byte_for_byte": [
+    "phone_public_ws.py",
+    "phone_account.py",
+    "phone_pullback_size.py",
+    "phone_handover.py",
+    "phone_sources.json",
+    "phone_performance.py",
+    "phone_host.py",
+    "phone_runtime_health.py"
+  ],
+  "changed_runtime_modules": [
+    "phone_frozen_bars.py",
+    "phone_feed_fast.py",
+    "phone_candidate_fast.py",
+    "phone_signal_cache.py"
+  ],
+  "installer_sha256": "166ae71ddc3b3f4554ff3e95d4be0d1bf00766ae7be274f8d4f414055071cc97",
+  "candidate_source_sha256": {
+    "phone_candidate_fast.py": "f7e63a6c8149cf4ef9f5a0b5b050ed2bbbc983ec529c2820b4f4d67c4feefd56",
+    "build_release.py": "0493d8ca3f31f44a71dcf8f7acc1b2b309fc27ef4f90a78966bb633c46564421",
+    "test_release.py": "e9b7c019c71302743a432ea071188ca2681202172e71f28afb333886eba001fa",
+    "phone_feed_fast.py": "7dfd89a43397ef0e180b12bb0bac3537b04832b0018747fd425ee9b722641e8e",
+    "run_validation.py": "53f475e9ac5035909f523dd7eaad159bec3c1bfbe5ce734fb56c16a9f1c24210",
+    "test_cpu_paths.py": "c1cd46085995430e3dd43b2b28a32fb22b13ff43121bf12107a4e91be3b9f456",
+    "benchmark_cpu.py": "a4a3b16b940857264daaf55a689b2f364c32a733cdeeab59cf534f386742307c",
+    "phone_frozen_bars.py": "03fbd57f0116046d27791b9e4dbbf3c1ddf8b17076b1115b066e28650ed674e2",
+    "phone_signal_cache.py": "802a29462eac71f3e00d8bbbd30dd8de66aff2976b87f9b3b057754883931008"
+  },
+  "issues_found_and_fixed": [
+    "Generated feed indentation rejected during tests; replaced with AST node transform.",
+    "Tuple rows in positive signal evidence differed from original lists; positive/manual packet outputs now thaw to original shape.",
+    "Initial changing-price benchmark accidentally repeated prices per symbol; corrected workload.",
+    "Initial changed-price fast path was about 4% slower; removed max/min call overhead and reran both workloads."
+  ],
+  "live_phone_verified": false,
+  "live_orders_sent": false,
+  "limitations": [
+    "CPU savings apply to measured code paths, not whole-phone CPU percentage.",
+    "No real Fold latency, heat, battery or sustained connection measurement.",
+    "No live fill/stop-registration verification, no new profitability backtest.",
+    "Single sequential trading engine retained; no new parallel order owner."
+  ]
+}

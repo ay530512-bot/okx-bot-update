@@ -1,0 +1,75 @@
+{
+  "host": "host-v23",
+  "inputs_sha256": "db1f8ef511dd8eae8b3ab57c24e057ea05f508b5f52f32c2faaec28d6f6c02df",
+  "symbols": 289,
+  "scans_per_trial": 30,
+  "trials": 5,
+  "scan_cpu_s": [
+    0.00678335583333333,
+    0.008394825166666668,
+    0.009018933533333332,
+    0.008423847633333334,
+    0.008572555633333338
+  ],
+  "scan_median_cpu_s": 0.008423847633333334,
+  "result_sha256": "9a6d64d1c3184845cc291674b2586a0f657f665eb079b9c259f9b4eff31a6d40",
+  "cache_before": {
+    "version": "phone-signal-cache-4",
+    "hits": 0,
+    "misses": 295,
+    "bypasses": 0,
+    "entries": 295,
+    "capacity": 4096,
+    "key_bytes": 51493,
+    "max_key_bytes": 33554432,
+    "serializations": 293,
+    "shared_inputs": 5,
+    "frozen_reuses": 578,
+    "evictions": 0,
+    "replacements": 0,
+    "unique_inputs": 8
+  },
+  "cache_after": {
+    "version": "phone-signal-cache-4",
+    "hits": 44250,
+    "misses": 295,
+    "bypasses": 0,
+    "entries": 295,
+    "capacity": 4096,
+    "key_bytes": 51493,
+    "max_key_bytes": 33554432,
+    "serializations": 44243,
+    "shared_inputs": 755,
+    "frozen_reuses": 87278,
+    "evictions": 0,
+    "replacements": 0,
+    "unique_inputs": 8
+  },
+  "feed": {
+    "repeated_prices": {
+      "frames": 30000,
+      "cpu_s": [
+        0.10750883199999972,
+        0.10571972000000018,
+        0.10734469700000027,
+        0.10569449200000003,
+        0.10570186200000009
+      ],
+      "median_cpu_s": 0.10571972000000018,
+      "final_bars_sha256": "c3e137103e51fb0353c21266d4e6fa4755ca69441ba2770a3cfa70ba0c501075"
+    },
+    "changing_prices": {
+      "frames": 30000,
+      "cpu_s": [
+        0.11963993299999975,
+        0.11781003000000023,
+        0.12164774199999995,
+        0.12030375100000024,
+        0.11880856600000023
+      ],
+      "median_cpu_s": 0.11963993299999975,
+      "final_bars_sha256": "6ca316f7b4852b7f4066e9c6c0a54e53205d272e0c9979270cdc3eef671a0a57"
+    }
+  },
+  "limitations": "Synthetic offline workstation CPU time; excludes network, account API, OS scheduling and real Fold thermals. No profitability claim."
+}

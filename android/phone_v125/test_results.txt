@@ -1,0 +1,81 @@
+COMMAND ['/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python', '-B', '/workspace/scratch/288d871497cb/release_1110_repo/android/phone_v125/test_cpu_paths.py']
+test_duplicate_price_keeps_timestamp_and_book_freshness (__main__.Feed.test_duplicate_price_keeps_timestamp_and_book_freshness) ... ok
+test_each_frame_quotes_bars_callbacks_and_errors_match (__main__.Feed.test_each_frame_quotes_bars_callbacks_and_errors_match) ... ok
+test_bad_or_changed_candles_cannot_reuse_success (__main__.FrozenClock.test_bad_or_changed_candles_cannot_reuse_success) ... ok
+test_expiry_during_scan_drops_signal (__main__.FrozenClock.test_expiry_during_scan_drops_signal) ... ok
+test_fix_passes_same_quote_to_final_check (__main__.FrozenClock.test_fix_passes_same_quote_to_final_check) ... ok
+test_hourly_correction_invalidates_selection_cache (__main__.FrozenClock.test_hourly_correction_invalidates_selection_cache) ... ok
+test_prepatch_rejects_fresh_quotes_after_nine_second_scan (__main__.FrozenClock.test_prepatch_rejects_fresh_quotes_after_nine_second_scan) ... ok
+test_repeated_inputs_skip_validation_but_not_quote_checks (__main__.FrozenClock.test_repeated_inputs_skip_validation_but_not_quote_checks) ... ok
+test_stale_future_and_prior_generation_still_blocked (__main__.FrozenClock.test_stale_future_and_prior_generation_still_blocked) ... ok
+test_detached_readonly_rows_and_editable_deepcopy (__main__.ImmutableInputs.test_detached_readonly_rows_and_editable_deepcopy) ... ok
+test_full_and_incremental_producer_preserve_corrections (__main__.ImmutableInputs.test_full_and_incremental_producer_preserve_corrections) ... ok
+test_scanner_publishes_frozen_frames_and_reuses_without_requests (__main__.ImmutableInputs.test_scanner_publishes_frozen_frames_and_reuses_without_requests) ... ok
+test_types_signed_zero_and_unusual_data_are_not_collapsed (__main__.ImmutableInputs.test_types_signed_zero_and_unusual_data_are_not_collapsed) ... ok
+test_frozen_inputs_match_original_and_invalidate_on_correction (__main__.Signals.test_frozen_inputs_match_original_and_invalidate_on_correction) ... ok
+
+----------------------------------------------------------------------
+Ran 14 tests in 0.254s
+
+OK
+
+COMMAND ['/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python', '-B', '/workspace/scratch/288d871497cb/release_1110_repo/android/phone_v125/test_release.py']
+test_actual_predecessor_files_and_boot_registration_match (__main__.Release.test_actual_predecessor_files_and_boot_registration_match) ... ok
+test_modified_download_is_rejected_before_execution (__main__.Release.test_modified_download_is_rejected_before_execution) ... ok
+test_old_button_accepts_new_release_and_verifies_installer (__main__.Release.test_old_button_accepts_new_release_and_verifies_installer) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.009s
+
+OK
+
+COMMAND ['/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python', '-B', '/workspace/scratch/288d871497cb/release_1110_repo/android/phone_v123/test_candidate_fast.py']
+{"test": "81 symbols, 8 scans including repeated inputs; synthetic workstation, not Fold latency", "original_s": 1.347499190000235, "optimized_s": 0.2567495679977583, "cache": {"version": "phone-signal-cache-4", "hits": 619, "misses": 172, "bypasses": 0, "entries": 88, "capacity": 4096, "key_bytes": 2784337, "max_key_bytes": 33554432, "serializations": 2229, "shared_inputs": 52, "frozen_reuses": 0, "evictions": 0, "replacements": 3, "unique_inputs": 167}}
+.
+----------------------------------------------------------------------
+Ran 1 test in 2.118s
+
+OK
+
+COMMAND ['/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python', '-B', '/workspace/scratch/288d871497cb/release_1110_repo/android/phone_v123/test_entry_clock.py']
+.......
+----------------------------------------------------------------------
+Ran 7 tests in 0.094s
+
+OK
+
+COMMAND ['/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python', '-B', '/workspace/scratch/288d871497cb/release_1110_repo/android/phone_v120/test_pullback_size.py']
+test_both_same_reduces_only_the_baseline_selected_trend_long (__main__.PullbackSizeTests.test_both_same_reduces_only_the_baseline_selected_trend_long) ... ok
+test_idempotent_overlay_and_source_hash_fail_closed (__main__.PullbackSizeTests.test_idempotent_overlay_and_source_hash_fail_closed) ... ok
+test_minimum_lot_and_account_reserve_are_retained (__main__.PullbackSizeTests.test_minimum_lot_and_account_reserve_are_retained) ... ok
+test_prepare_and_final_recheck_do_not_scale_twice (__main__.PullbackSizeTests.test_prepare_and_final_recheck_do_not_scale_twice) ... ok
+test_unrelated_orders_have_exact_original_plan (__main__.PullbackSizeTests.test_unrelated_orders_have_exact_original_plan) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.057s
+
+OK
+
+COMMAND ['/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python', '-B', '/workspace/scratch/288d871497cb/release_1110_repo/android/phone_v123/test_runtime_health.py']
+...
+----------------------------------------------------------------------
+Ran 3 tests in 0.001s
+
+OK
+
+COMMAND ['/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python', '-B', '-m', 'unittest', 'test_handover', 'test_update_transaction']
+......................
+----------------------------------------------------------------------
+Ran 22 tests in 0.041s
+
+OK
+
+COMMAND ['/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python', '-B', '-m', 'unittest', 'discover', '-s', '/workspace/scratch/288d871497cb/release_1110_repo/android/phone_v124', '-p', 'test_*.py']
+...........................
+----------------------------------------------------------------------
+Ran 27 tests in 0.613s
+
+OK
+
+COMMAND ['node', '/workspace/scratch/288d871497cb/release_1110_repo/android/phone_v124/test_health_ui.cjs']
+3 diagnostic DOM state checks passed
