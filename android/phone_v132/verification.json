@@ -1,0 +1,17 @@
+{
+  "unit_tests": 12,
+  "historical_signal_parity": 110,
+  "reused_data": "Binance 2024-02~03; prior research dip_only",
+  "live_orders": false,
+  "full_3plus1_portfolio_profitability_tested": false,
+  "alert_unit_tests": 9,
+  "dom_contract_checks": 10,
+  "order_requests_in_dom_test": 0,
+  "extra_market_api_requests": 0,
+  "browser_layout_tested": false,
+  "browser_blocker": "Chromium socket creation Operation not permitted",
+  "actual_phone_tested": false,
+  "telegram_inbox_mirror": false,
+  "alert_basis": "confirmed15m open-to-close inclusive ±10%; existing bot candle cache;24h100events",
+  "diagnosis_from_user_image": "107 scans; candidate_returns0; all three route pass_count0; data_wait_count0; currently connected"
+}
