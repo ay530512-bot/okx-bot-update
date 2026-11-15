@@ -1,0 +1,22 @@
+{
+  "version": "1.2.4",
+  "date_kst": "2026-11-15",
+  "python_tests_passed": 49,
+  "ui_dom_scenarios": 3,
+  "transport_scope": "periodic 20-second keepalive restored; genuine silence still times out; incoming frames prevent false pong-only timeout",
+  "known_working_user_version": "not confirmed",
+  "EOF_root_cause": "not confirmed",
+  "live_phone_verification": false,
+  "prior_phone_comparison": "10 minutes: bot/idle/periodic all zero disconnects; does not establish benefit",
+  "preserved_byte_for_byte": [
+    "phone_candidate_fast.py",
+    "phone_signal_cache.py",
+    "phone_account.py",
+    "phone_pullback_size.py",
+    "phone_handover.py",
+    "phone_sources.json",
+    "phone_performance.py"
+  ],
+  "installer_sha256": "15d5b03e3aa5b307ef7d5392af7d25673676dfcbd4b77a6d6f325fd4f60191d3",
+  "archive_core_hash": "6b2a0a90f02cca914ffc5cc0996555e8c1435b7a61618575ee94ee2ebdc2dad1"
+}
