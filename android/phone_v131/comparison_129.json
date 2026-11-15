@@ -1,0 +1,16 @@
+{
+  "comparisons": 362,
+  "positive": 70,
+  "negative": 292,
+  "routes": {
+    "exhaustion724": 30,
+    "trend_pullback": 34,
+    "double_wick": 6
+  },
+  "seconds": 4.52,
+  "basis": "same archived Binance OHLCV, original PC packet vs phone serial vs four real spawn workers",
+  "period": "2026-08~10, reused data",
+  "live_phone": false,
+  "missed_live_signals_proven": false,
+  "host": "1.2.9"
+}
