@@ -1,0 +1,22 @@
+{
+  "display_version": "1.3.0",
+  "host": 28,
+  "changed": [
+    "phone_button_upgrade.py",
+    "phone_button_old_sources.json",
+    "phone_update.py",
+    "phone_host.py",
+    "phone_service.py",
+    "phone_mobile.py",
+    "phone_trend_slot.py"
+  ],
+  "sha256": "d7f80a1d156ccda65a5bfd1b69c0aa25f3d7b2417101916bad1bd83611916d34",
+  "bytes": 329147,
+  "from_versions": [
+    24,
+    25,
+    26,
+    27
+  ],
+  "live_orders_tested": false
+}
