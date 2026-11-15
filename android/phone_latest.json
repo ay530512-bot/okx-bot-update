@@ -1,16 +1,17 @@
 {
   "format": "okx-phone-release-1",
-  "version": 28,
-  "display_version": "1.3.0",
+  "version": 29,
+  "display_version": "1.3.1",
   "from_versions": [
     24,
     25,
     26,
-    27
+    27,
+    28
   ],
-  "installer": "android/phone_1_3_0_setup.py",
-  "sha256": "d7f80a1d156ccda65a5bfd1b69c0aa25f3d7b2417101916bad1bd83611916d34",
-  "bytes": 329147,
-  "commit": "a3f3ac9d4fc0cbd583c5cee9cbc3eb1d13e84534",
-  "notes": "기존 눌림목·확정반전·두꼬리 3자리 공유 + 상승률1위 추세 전용1자리. KST15시 이후 돌파 후 확정봉 눌림, 추세만5배·증거금1/4·절반익절 없음·추적SL·최대72시간. 조건 없으면 예약자리 대기. 기존 보유분·계산모드 유지. 12기능검사 및 재사용 과거110신호 구현일치 확인; 실기기 체결과 3+1 통합수익성은 미검증."
+  "installer": "android/phone_1_3_1_setup.py",
+  "sha256": "5430a129db3445145bfc997cb92e8363019b0a28ea05ab47146163696515c09b",
+  "bytes": 343189,
+  "commit": "7680e5ee7e862da7d2ad49c88c06ca50495e93ef",
+  "notes": "1.3.0 기존3자리+추세5배1자리 유지. 진입 거절 이유를 규칙별 조건/봉자료/상태별 비활성으로 분리, 재시작 이후 진단 기록 보존. PC원본과 폰 단일/4개분산의 재사용 과거362개 종목-시점 신호 일치. 진입조건·주문·SL 기준 변경 없음. 실제 기기의 무진입 원인은 아직 미확정."
 }
