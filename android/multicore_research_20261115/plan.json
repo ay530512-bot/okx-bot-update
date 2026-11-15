@@ -1,0 +1,49 @@
+{
+  "recorded_at_utc": "2026-11-15T11:31:24.403540+00:00",
+  "purpose": "Offline multicore comparison only; no live changes or orders",
+  "hypotheses": [
+    "Parallel workers may reduce cold/full-change latency",
+    "IPC and evidence copying may erase warm-cache gains",
+    "Parent scheduling may improve when CPU work leaves main process"
+  ],
+  "criteria": {
+    "exact_signal_priority_equivalence": true,
+    "cold_and_all_changed_median_improvement_min": 0.2,
+    "warm_p95_regression_max": 0.1,
+    "deployment": "No live adoption from server results alone; device measurements required"
+  },
+  "design": {
+    "modes": [
+      0,
+      1,
+      2,
+      4,
+      8
+    ],
+    "meaning": "0 inline; others spawned processes, OS schedules physical cores",
+    "workloads": [
+      "mostly_waiting",
+      "many_signals"
+    ],
+    "instruments": 289,
+    "repetitions": 3,
+    "scans_per_case": 30,
+    "case_order_seed": 20261115,
+    "smoke_checks": "inline and two workers before full experiment; excluded from final performance summary"
+  },
+  "data": "Preserved OP fixture cloned into synthetic instruments; flat rows for non-signals. No claim of market representativeness or profitability.",
+  "environment": {
+    "python": "3.12.14",
+    "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+    "cpu_count": 9,
+    "affinity_count": 9
+  },
+  "benchmark_sha256": "a55ae3ac853342d2f1808263e5783901faadadfebbc2fef609b5bf9501b6b15f",
+  "source_hashes": {
+    "fixture121/host-v23/phone_candidate_fast.py": "f7e63a6c8149cf4ef9f5a0b5b050ed2bbbc983ec529c2820b4f4d67c4feefd56",
+    "fixture121/host-v23/phone_signal_cache.py": "802a29462eac71f3e00d8bbbd30dd8de66aff2976b87f9b3b057754883931008",
+    "fixture121/host-v23/phone_frozen_bars.py": "03fbd57f0116046d27791b9e4dbbf3c1ddf8b17076b1115b066e28650ed674e2",
+    "core121/okx_channel701.py": "3c28baf17938fd735913ddc1f0287c28234b547eb155fd6d3b1e1d05c7138f2c",
+    "release_1110_repo/android/phone_v118/test_signal_fixture.json": "dc673c88961450d5754c78dc2684856908937f81e2545f01933f88d5b604c8f2"
+  }
+}

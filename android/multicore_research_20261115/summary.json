@@ -1,0 +1,537 @@
+{
+  "equivalence": true,
+  "process_cases": 30,
+  "scan_comparisons": 900,
+  "summary": [
+    {
+      "kind": "mostly_waiting",
+      "mode": 0,
+      "stats": {
+        "cold": {
+          "wall_s": 0.6829511090036249,
+          "cpu_s": 0.684275181,
+          "send_bytes": 0,
+          "receive_bytes": 0,
+          "wall_p95_s": 0.6829511090036249
+        },
+        "warm": {
+          "wall_s": 0.006093922995205503,
+          "cpu_s": 0.006103523,
+          "send_bytes": 0.0,
+          "receive_bytes": 0.0,
+          "wall_p95_s": 0.008841173999826424
+        },
+        "one_correction": {
+          "wall_s": 0.00815395751124015,
+          "cpu_s": 0.008175500999999974,
+          "send_bytes": 0.0,
+          "receive_bytes": 0.0,
+          "wall_p95_s": 0.008787864004261792
+        },
+        "all_changed": {
+          "wall_s": 0.5831250619958155,
+          "cpu_s": 0.5846237059999999,
+          "send_bytes": 0,
+          "receive_bytes": 0,
+          "wall_p95_s": 0.6491269870020915
+        },
+        "expired": {
+          "wall_s": 0.012146444001700729,
+          "cpu_s": 0.012204561999999974,
+          "send_bytes": 0,
+          "receive_bytes": 0,
+          "wall_p95_s": 0.012146444001700729
+        },
+        "missing_next_candle": {
+          "wall_s": 0.03567778199794702,
+          "cpu_s": 0.035777316999999975,
+          "send_bytes": 0,
+          "receive_bytes": 0,
+          "wall_p95_s": 0.03567778199794702
+        }
+      },
+      "startup_s": 0.02877024699409958,
+      "aggregate_rss_mib": 102.30859375,
+      "aggregate_pss_mib": 99.6572265625,
+      "main_heartbeat_lateness_p95_s": 0.00806180499785114,
+      "main_heartbeat_lateness_max_s": 0.05183527400367893
+    },
+    {
+      "kind": "mostly_waiting",
+      "mode": 1,
+      "stats": {
+        "cold": {
+          "wall_s": 0.7559663569991244,
+          "cpu_s": 0.768336143,
+          "send_bytes": 8265231,
+          "receive_bytes": 7027,
+          "wall_p95_s": 0.7559663569991244
+        },
+        "warm": {
+          "wall_s": 0.006268016004469246,
+          "cpu_s": 0.006240802000000031,
+          "send_bytes": 28.0,
+          "receive_bytes": 7027.0,
+          "wall_p95_s": 0.00806738699611742
+        },
+        "one_correction": {
+          "wall_s": 0.009212414996000007,
+          "cpu_s": 0.009198308500000002,
+          "send_bytes": 28736.0,
+          "receive_bytes": 7042.0,
+          "wall_p95_s": 0.009482993991696276
+        },
+        "all_changed": {
+          "wall_s": 0.6887718840007437,
+          "cpu_s": 0.692143272,
+          "send_bytes": 8265231,
+          "receive_bytes": 7042,
+          "wall_p95_s": 0.7314193409984
+        },
+        "expired": {
+          "wall_s": 0.014226564002456143,
+          "cpu_s": 0.014044809999999686,
+          "send_bytes": 28,
+          "receive_bytes": 44,
+          "wall_p95_s": 0.014226564002456143
+        },
+        "missing_next_candle": {
+          "wall_s": 0.035070755999186076,
+          "cpu_s": 0.035208611000000056,
+          "send_bytes": 28,
+          "receive_bytes": 44,
+          "wall_p95_s": 0.035070755999186076
+        }
+      },
+      "startup_s": 0.08035555999958888,
+      "aggregate_rss_mib": 221.7265625,
+      "aggregate_pss_mib": 214.5546875,
+      "main_heartbeat_lateness_p95_s": 0.005227767993346788,
+      "main_heartbeat_lateness_max_s": 0.0433627189922845
+    },
+    {
+      "kind": "mostly_waiting",
+      "mode": 2,
+      "stats": {
+        "cold": {
+          "wall_s": 0.3627319960069144,
+          "cpu_s": 0.701886519,
+          "send_bytes": 8265364,
+          "receive_bytes": 7071,
+          "wall_p95_s": 0.3627319960069144
+        },
+        "warm": {
+          "wall_s": 0.0034921489932457916,
+          "cpu_s": 0.006202063999999993,
+          "send_bytes": 56.0,
+          "receive_bytes": 7071.0,
+          "wall_p95_s": 0.004242783994413912
+        },
+        "one_correction": {
+          "wall_s": 0.005776732497906778,
+          "cpu_s": 0.008883853500000038,
+          "send_bytes": 28764.0,
+          "receive_bytes": 7086.0,
+          "wall_p95_s": 0.006490597996162251
+        },
+        "all_changed": {
+          "wall_s": 0.39746437000576407,
+          "cpu_s": 0.7294755290000002,
+          "send_bytes": 8265364,
+          "receive_bytes": 7086,
+          "wall_p95_s": 0.43254529999103397
+        },
+        "expired": {
+          "wall_s": 0.008242074996815063,
+          "cpu_s": 0.014920754000000036,
+          "send_bytes": 56,
+          "receive_bytes": 88,
+          "wall_p95_s": 0.008242074996815063
+        },
+        "missing_next_candle": {
+          "wall_s": 0.018906999001046643,
+          "cpu_s": 0.037215821000000204,
+          "send_bytes": 56,
+          "receive_bytes": 88,
+          "wall_p95_s": 0.018906999001046643
+        }
+      },
+      "startup_s": 0.0807356540026376,
+      "aggregate_rss_mib": 243.4921875,
+      "aggregate_pss_mib": 231.7412109375,
+      "main_heartbeat_lateness_p95_s": 0.0052875379915349185,
+      "main_heartbeat_lateness_max_s": 0.04549771199526731
+    },
+    {
+      "kind": "mostly_waiting",
+      "mode": 4,
+      "stats": {
+        "cold": {
+          "wall_s": 0.1932242850016337,
+          "cpu_s": 0.666362562,
+          "send_bytes": 8265639,
+          "receive_bytes": 7159,
+          "wall_p95_s": 0.1932242850016337
+        },
+        "warm": {
+          "wall_s": 0.002386537002166733,
+          "cpu_s": 0.0077573530000000085,
+          "send_bytes": 112.0,
+          "receive_bytes": 7159.0,
+          "wall_p95_s": 0.0038256740081124008
+        },
+        "one_correction": {
+          "wall_s": 0.005089206504635513,
+          "cpu_s": 0.011277311999999984,
+          "send_bytes": 28820.0,
+          "receive_bytes": 7174.0,
+          "wall_p95_s": 0.006047468006727286
+        },
+        "all_changed": {
+          "wall_s": 0.21258030900207814,
+          "cpu_s": 0.7192118509999998,
+          "send_bytes": 8265639,
+          "receive_bytes": 7174,
+          "wall_p95_s": 0.2531219889933709
+        },
+        "expired": {
+          "wall_s": 0.005416284999228083,
+          "cpu_s": 0.01621807399999997,
+          "send_bytes": 112,
+          "receive_bytes": 176,
+          "wall_p95_s": 0.005416284999228083
+        },
+        "missing_next_candle": {
+          "wall_s": 0.010531798005104065,
+          "cpu_s": 0.03823560699999995,
+          "send_bytes": 112,
+          "receive_bytes": 176,
+          "wall_p95_s": 0.010531798005104065
+        }
+      },
+      "startup_s": 0.101126961002592,
+      "aggregate_rss_mib": 265.859375,
+      "aggregate_pss_mib": 244.62109375,
+      "main_heartbeat_lateness_p95_s": 0.005977724998956546,
+      "main_heartbeat_lateness_max_s": 0.042917572005535476
+    },
+    {
+      "kind": "mostly_waiting",
+      "mode": 8,
+      "stats": {
+        "cold": {
+          "wall_s": 0.1507216729951324,
+          "cpu_s": 0.860168651,
+          "send_bytes": 8266180,
+          "receive_bytes": 7335,
+          "wall_p95_s": 0.1507216729951324
+        },
+        "warm": {
+          "wall_s": 0.0017792755097616464,
+          "cpu_s": 0.007856381499999981,
+          "send_bytes": 224.0,
+          "receive_bytes": 7335.0,
+          "wall_p95_s": 0.0024911660002544522
+        },
+        "one_correction": {
+          "wall_s": 0.0037837964919162914,
+          "cpu_s": 0.010372545999999996,
+          "send_bytes": 28932.0,
+          "receive_bytes": 7350.0,
+          "wall_p95_s": 0.004730971006210893
+        },
+        "all_changed": {
+          "wall_s": 0.14332877600099891,
+          "cpu_s": 0.7685711000000001,
+          "send_bytes": 8266180,
+          "receive_bytes": 7350,
+          "wall_p95_s": 0.15697014400211629
+        },
+        "expired": {
+          "wall_s": 0.003317848008009605,
+          "cpu_s": 0.01946034799999985,
+          "send_bytes": 224,
+          "receive_bytes": 352,
+          "wall_p95_s": 0.003317848008009605
+        },
+        "missing_next_candle": {
+          "wall_s": 0.007928036007797346,
+          "cpu_s": 0.04489308299999989,
+          "send_bytes": 224,
+          "receive_bytes": 352,
+          "wall_p95_s": 0.007928036007797346
+        }
+      },
+      "startup_s": 0.10810352899716236,
+      "aggregate_rss_mib": 341.69921875,
+      "aggregate_pss_mib": 301.0419921875,
+      "main_heartbeat_lateness_p95_s": 0.005383563999203034,
+      "main_heartbeat_lateness_max_s": 0.039909601997351274
+    },
+    {
+      "kind": "many_signals",
+      "mode": 0,
+      "stats": {
+        "cold": {
+          "wall_s": 0.7241828670084942,
+          "cpu_s": 0.726233038,
+          "send_bytes": 0,
+          "receive_bytes": 0,
+          "wall_p95_s": 0.7241828670084942
+        },
+        "warm": {
+          "wall_s": 0.04122576199006289,
+          "cpu_s": 0.04134066699999994,
+          "send_bytes": 0.0,
+          "receive_bytes": 0.0,
+          "wall_p95_s": 0.05222912500903476
+        },
+        "one_correction": {
+          "wall_s": 0.04339872650598409,
+          "cpu_s": 0.04353552449999998,
+          "send_bytes": 0.0,
+          "receive_bytes": 0.0,
+          "wall_p95_s": 0.047771566998562776
+        },
+        "all_changed": {
+          "wall_s": 0.7000757670029998,
+          "cpu_s": 0.702017208,
+          "send_bytes": 0,
+          "receive_bytes": 0,
+          "wall_p95_s": 0.7699705389968585
+        },
+        "expired": {
+          "wall_s": 0.043172124002012424,
+          "cpu_s": 0.04325253400000051,
+          "send_bytes": 0,
+          "receive_bytes": 0,
+          "wall_p95_s": 0.043172124002012424
+        },
+        "missing_next_candle": {
+          "wall_s": 0.03730514999188017,
+          "cpu_s": 0.037415277000000025,
+          "send_bytes": 0,
+          "receive_bytes": 0,
+          "wall_p95_s": 0.03730514999188017
+        }
+      },
+      "startup_s": 0.02776352698856499,
+      "aggregate_rss_mib": 103.7734375,
+      "aggregate_pss_mib": 101.1220703125,
+      "main_heartbeat_lateness_p95_s": 0.009961101997760125,
+      "main_heartbeat_lateness_max_s": 0.06004613099503331
+    },
+    {
+      "kind": "many_signals",
+      "mode": 1,
+      "stats": {
+        "cold": {
+          "wall_s": 0.8064253269985784,
+          "cpu_s": 0.806035777,
+          "send_bytes": 8265231,
+          "receive_bytes": 337835,
+          "wall_p95_s": 0.8064253269985784
+        },
+        "warm": {
+          "wall_s": 0.04849297799955821,
+          "cpu_s": 0.048507883500000015,
+          "send_bytes": 28.0,
+          "receive_bytes": 337835.0,
+          "wall_p95_s": 0.0704168380034389
+        },
+        "one_correction": {
+          "wall_s": 0.05293305800296366,
+          "cpu_s": 0.05329329050000001,
+          "send_bytes": 28736.0,
+          "receive_bytes": 337850.0,
+          "wall_p95_s": 0.061370993993477896
+        },
+        "all_changed": {
+          "wall_s": 0.8970413330098381,
+          "cpu_s": 0.8999871770000001,
+          "send_bytes": 8265231,
+          "receive_bytes": 338537,
+          "wall_p95_s": 0.9610537789994851
+        },
+        "expired": {
+          "wall_s": 0.0482633799983887,
+          "cpu_s": 0.048435054999999894,
+          "send_bytes": 28,
+          "receive_bytes": 44,
+          "wall_p95_s": 0.0482633799983887
+        },
+        "missing_next_candle": {
+          "wall_s": 0.03672891898895614,
+          "cpu_s": 0.036861860999999774,
+          "send_bytes": 28,
+          "receive_bytes": 44,
+          "wall_p95_s": 0.03672891898895614
+        }
+      },
+      "startup_s": 0.07970341500185896,
+      "aggregate_rss_mib": 236.734375,
+      "aggregate_pss_mib": 229.544921875,
+      "main_heartbeat_lateness_p95_s": 0.005271639005513862,
+      "main_heartbeat_lateness_max_s": 0.045972367996000685
+    },
+    {
+      "kind": "many_signals",
+      "mode": 2,
+      "stats": {
+        "cold": {
+          "wall_s": 0.41845925300731324,
+          "cpu_s": 0.806358593,
+          "send_bytes": 8265364,
+          "receive_bytes": 339042,
+          "wall_p95_s": 0.41845925300731324
+        },
+        "warm": {
+          "wall_s": 0.024778430495643988,
+          "cpu_s": 0.04694348449999999,
+          "send_bytes": 56.0,
+          "receive_bytes": 339042.0,
+          "wall_p95_s": 0.03882689500460401
+        },
+        "one_correction": {
+          "wall_s": 0.03081253350683255,
+          "cpu_s": 0.055377691000000034,
+          "send_bytes": 28764.0,
+          "receive_bytes": 339057.0,
+          "wall_p95_s": 0.03264744800981134
+        },
+        "all_changed": {
+          "wall_s": 0.4645379729918204,
+          "cpu_s": 0.8688221330000001,
+          "send_bytes": 8265364,
+          "receive_bytes": 339750,
+          "wall_p95_s": 0.5103374369937228
+        },
+        "expired": {
+          "wall_s": 0.03698886300844606,
+          "cpu_s": 0.07261907399999967,
+          "send_bytes": 56,
+          "receive_bytes": 88,
+          "wall_p95_s": 0.03698886300844606
+        },
+        "missing_next_candle": {
+          "wall_s": 0.02000231201236602,
+          "cpu_s": 0.037989983999999755,
+          "send_bytes": 56,
+          "receive_bytes": 88,
+          "wall_p95_s": 0.02000231201236602
+        }
+      },
+      "startup_s": 0.08667745199636556,
+      "aggregate_rss_mib": 242.3828125,
+      "aggregate_pss_mib": 230.5849609375,
+      "main_heartbeat_lateness_p95_s": 0.007731336998404004,
+      "main_heartbeat_lateness_max_s": 0.04378106199146714
+    },
+    {
+      "kind": "many_signals",
+      "mode": 4,
+      "stats": {
+        "cold": {
+          "wall_s": 0.26205685900640674,
+          "cpu_s": 0.8830875140000001,
+          "send_bytes": 8265639,
+          "receive_bytes": 341474,
+          "wall_p95_s": 0.26205685900640674
+        },
+        "warm": {
+          "wall_s": 0.016034998501709197,
+          "cpu_s": 0.05174092250000001,
+          "send_bytes": 112.0,
+          "receive_bytes": 341474.0,
+          "wall_p95_s": 0.029153284995118156
+        },
+        "one_correction": {
+          "wall_s": 0.017634828000154812,
+          "cpu_s": 0.052428148499999966,
+          "send_bytes": 28820.0,
+          "receive_bytes": 341489.0,
+          "wall_p95_s": 0.022826865999377333
+        },
+        "all_changed": {
+          "wall_s": 0.25688942200213205,
+          "cpu_s": 0.883348706,
+          "send_bytes": 8265639,
+          "receive_bytes": 342194,
+          "wall_p95_s": 0.2822206740092952
+        },
+        "expired": {
+          "wall_s": 0.020550348999677226,
+          "cpu_s": 0.06517852099999977,
+          "send_bytes": 112,
+          "receive_bytes": 176,
+          "wall_p95_s": 0.020550348999677226
+        },
+        "missing_next_candle": {
+          "wall_s": 0.016003855998860672,
+          "cpu_s": 0.06277113699999992,
+          "send_bytes": 112,
+          "receive_bytes": 176,
+          "wall_p95_s": 0.016003855998860672
+        }
+      },
+      "startup_s": 0.09623059901059605,
+      "aggregate_rss_mib": 268.4453125,
+      "aggregate_pss_mib": 247.0927734375,
+      "main_heartbeat_lateness_p95_s": 0.009362378987134434,
+      "main_heartbeat_lateness_max_s": 0.05115623299207073
+    },
+    {
+      "kind": "many_signals",
+      "mode": 8,
+      "stats": {
+        "cold": {
+          "wall_s": 0.20155220400192775,
+          "cpu_s": 1.059011104,
+          "send_bytes": 8266180,
+          "receive_bytes": 346302,
+          "wall_p95_s": 0.20155220400192775
+        },
+        "warm": {
+          "wall_s": 0.01147167800081661,
+          "cpu_s": 0.0573767075,
+          "send_bytes": 224.0,
+          "receive_bytes": 346302.0,
+          "wall_p95_s": 0.016690332995494828
+        },
+        "one_correction": {
+          "wall_s": 0.01413985800172668,
+          "cpu_s": 0.06508658499999989,
+          "send_bytes": 28932.0,
+          "receive_bytes": 346317.0,
+          "wall_p95_s": 0.02775510400533676
+        },
+        "all_changed": {
+          "wall_s": 0.17625221599882934,
+          "cpu_s": 0.9569348599999999,
+          "send_bytes": 8266180,
+          "receive_bytes": 347046,
+          "wall_p95_s": 0.1797719630121719
+        },
+        "expired": {
+          "wall_s": 0.0104915109986905,
+          "cpu_s": 0.0625941659999999,
+          "send_bytes": 224,
+          "receive_bytes": 352,
+          "wall_p95_s": 0.0104915109986905
+        },
+        "missing_next_candle": {
+          "wall_s": 0.008018733002245426,
+          "cpu_s": 0.04570609399999992,
+          "send_bytes": 224,
+          "receive_bytes": 352,
+          "wall_p95_s": 0.008018733002245426
+        }
+      },
+      "startup_s": 0.10925474201212637,
+      "aggregate_rss_mib": 349.49609375,
+      "aggregate_pss_mib": 308.6435546875,
+      "main_heartbeat_lateness_p95_s": 0.00948606600286439,
+      "main_heartbeat_lateness_max_s": 0.04276677999587264
+    }
+  ]
+}
