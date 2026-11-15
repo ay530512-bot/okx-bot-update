@@ -1,0 +1,8 @@
+{
+  "environment": "local CPU; not phone benchmark",
+  "symbols": 289,
+  "bars_per_symbol": 97,
+  "first_scan_ms": 48.851,
+  "same_immutable_cache_mean_ms": 0.185,
+  "extra_rest_requests": 0
+}
