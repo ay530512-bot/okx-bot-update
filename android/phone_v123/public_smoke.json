@@ -1,0 +1,20 @@
+{
+  "seconds": 25.0,
+  "market_data_seen": false,
+  "connected": false,
+  "error": "gaierror",
+  "frames": 0,
+  "disconnect_count": 4,
+  "last_disconnect": {
+    "generation": null,
+    "error": "gaierror",
+    "stage": "dns",
+    "close_code": null,
+    "cause": "other_transport_error",
+    "connection_uptime_s": null,
+    "frame_age_s": null,
+    "pong_age_s": null,
+    "pending_ping_age_s": null,
+    "observed_at": 1794728017.3396387
+  }
+}

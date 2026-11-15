@@ -1,0 +1,56 @@
+{
+  "date_kst": "2026-11-15",
+  "release": "1.2.3",
+  "python_tests_passed": 60,
+  "ui_dom_scenarios_passed": 3,
+  "observations": {
+    "clock_regression": "Original rejects new quotes after a simulated 9-second scan; corrected candidate reaches mocked final check. Stale, future and old-generation quotes remain rejected. No order submitted.",
+    "workload": "289 symbols, 10 repeated scans: full validations 2890 -> 10; pending signals 1 -> 1.",
+    "workstation_benchmark": {
+      "1.2.2_mean_s": 0.11449974999923143,
+      "1.2.3_mean_s": 0.04037155940168304,
+      "phone_performance_claim": false
+    },
+    "transport": "22 tests including transient TLS wait vs real EOF, partial-frame recovery, subscription rebuild/pacing and fault recovery.",
+    "live_public_attempt": {
+      "seconds": 25.0,
+      "market_data_seen": false,
+      "connected": false,
+      "error": "gaierror",
+      "frames": 0,
+      "disconnect_count": 4,
+      "last_disconnect": {
+        "generation": null,
+        "error": "gaierror",
+        "stage": "dns",
+        "close_code": null,
+        "cause": "other_transport_error",
+        "connection_uptime_s": null,
+        "frame_age_s": null,
+        "pong_age_s": null,
+        "pending_ping_age_s": null,
+        "observed_at": 1794728017.3396387
+      }
+    },
+    "browser_render": "Unavailable: local Chromium launch blocked by environment socket permissions. Text-only UI DOM contract tested."
+  },
+  "source_hashes": {
+    "benchmark_scan.py": "74e949818863ac82a0191c5469f346ecdc6ee36cda6d52029d87ceebd7a4b16b",
+    "health_ui.js": "dacc830f8e87feaa1a5aa7d2721116a6289b70afa81b7d38de597c9f3bb926b0",
+    "phone_candidate_fast.py": "a13ca10ee3884abdff60e230bd3a250ff29d6204e683865e2b12047245b628d6",
+    "phone_public_ws.py": "09c2a06ca2a093dc267aa576505203590d670839fe69def9c8e3a5df59691dce",
+    "phone_runtime_health.py": "4177c24e5da1806dd0ebc9afcfb13629562474e763c8a97cfe40af608905a38e",
+    "test_candidate_fast.py": "eb544a5e54d5eb7537ce4830596d036a095e0ea461ea25acc3e1a61038ed65f0",
+    "test_entry_clock.py": "7f221f027758936978e408e56bfbacb52478a2e356d24418c170cab84379fe42",
+    "test_health_ui.cjs": "b79c2f7d3ea98cacb9c3f7e280cca4b3395f78fa91c3cc166cb5609cbd8486da",
+    "test_public_ws.py": "2f3cf3abe02719eb7917b84b6c93c083a440229d4479b78d297807ba76499601",
+    "test_runtime_health.py": "0312b9db9ed8e9d7f20e00b35a9d1c6d01577e7b08f31d9c57279b20b7c6e969"
+  },
+  "limits": [
+    "No remote access to user phone; no live phone performance or connectivity verification.",
+    "No live account or order tests.",
+    "All core strategy, protection, funding, sizing and admission policies retained.",
+    "Network disconnections cannot be ruled out by local transport tests."
+  ],
+  "installer_sha256": "313b1d4b75d4bb722d0b3820c42276bb19e35a8d423de935368e79a2999d4a38"
+}
