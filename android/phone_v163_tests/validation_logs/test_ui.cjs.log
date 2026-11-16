@@ -1,0 +1,2 @@
+PASS variable diagnostic rows retain one save button, pending state, scroll and fixed-height containers
+PASS KST month/day including midnight/new year; combined diagnostic DOM, latest-per-symbol single row, no trade requests

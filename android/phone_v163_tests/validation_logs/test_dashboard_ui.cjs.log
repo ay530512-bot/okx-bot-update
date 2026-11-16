@@ -1,0 +1,9 @@
+PASS received balances repaint without waiting for a blocked full snapshot
+PASS heartbeat-only deltas retain account and position fields; stale packets cannot roll back
+PASS private updates never make stale order/account controls ready
+PASS fast paint requests coalesce and do not rebuild hidden panels
+PASS streams close on page changes and hiding; old source callbacks are ignored
+PASS fallback is bounded and inactive pages perform no requests
+PASS full snapshots are throttled while streaming remains independent
+PASS market prices update existing nodes and preserve scroll and selection
+PASS 8 dashboard scenarios; simulated DOM and network only; no exchange orders

@@ -1,0 +1,27 @@
+test_changed_candle_or_stop_touch_block (__main__.EntryTests.test_changed_candle_or_stop_touch_block) ... ok
+test_expiry_no_resurrection_or_duplicate_structure (__main__.EntryTests.test_expiry_no_resurrection_or_duplicate_structure) ... ok
+test_final_time_limit_even_when_pending (__main__.EntryTests.test_final_time_limit_even_when_pending) ... ok
+test_four_worker_entry_fill_protection (__main__.EntryTests.test_four_worker_entry_fill_protection) ... ok
+test_full_tick_entry (__main__.EntryTests.test_full_tick_entry) ... ok
+test_hourly_not_required_for_live_rank_or_morning_pattern (__main__.EntryTests.test_hourly_not_required_for_live_rank_or_morning_pattern) ... ok
+test_long_reserved_slot_and_common_positions_unchanged (__main__.EntryTests.test_long_reserved_slot_and_common_positions_unchanged) ... ok
+test_no_quotes_no_entry_then_recover (__main__.EntryTests.test_no_quotes_no_entry_then_recover) ... ok
+test_rank_change_blocks (__main__.EntryTests.test_rank_change_blocks) ... ok
+test_selected_latest15m_still_required (__main__.EntryTests.test_selected_latest15m_still_required) ... ok
+test_single_entry_fill_protection (__main__.EntryTests.test_single_entry_fill_protection) ... ok
+test_wide_spread_missing_channel_block (__main__.EntryTests.test_wide_spread_missing_channel_block) ... ok
+test_after08_hit_closes_full (__main__.ProtectionTests.test_after08_hit_closes_full) ... ok
+test_after08_trails_and_never_loosens (__main__.ProtectionTests.test_after08_trails_and_never_loosens) ... ok
+test_observed_low_is_persisted_no_partial_latch (__main__.ProtectionTests.test_observed_low_is_persisted_no_partial_latch) ... ok
+test_stale_atr_keeps_exchange_stop (__main__.ProtectionTests.test_stale_atr_keeps_exchange_stop) ... ok
+test_stale_ws_low_used_but_stale_last_not_used (__main__.ProtectionTests.test_stale_ws_low_used_but_stale_last_not_used) ... ok
+test_boundaries_all_minutes_and_year_roll (__main__.PureTests.test_boundaries_all_minutes_and_year_roll) ... ok
+test_cutoff_clears_only_pending (__main__.PureTests.test_cutoff_clears_only_pending) ... ok
+test_forming_candle_excluded (__main__.PureTests.test_forming_candle_excluded) ... ok
+test_no_rebound_no_new_low_green_bar_or_high_break_no_signal (__main__.PureTests.test_no_rebound_no_new_low_green_bar_or_high_break_no_signal) ... ok
+test_ordered_pattern_and_stop (__main__.PureTests.test_ordered_pattern_and_stop) ... ok
+
+----------------------------------------------------------------------
+Ran 22 tests in 1.571s
+
+OK
