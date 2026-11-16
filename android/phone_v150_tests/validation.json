@@ -1,0 +1,159 @@
+{
+  "version": "1.5.0",
+  "release": {
+    "display_version": "1.5.0",
+    "version": 40,
+    "host": "host-v40",
+    "from_versions": [
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39
+    ],
+    "sha256": "030a89062a424ebbcfae60896e4420baa6403d02c8dd1899f210891e3fb18093",
+    "bytes": 475959,
+    "files": {
+      "phone_account.py": "3c4c9f9cccaeaa60a41cc3ff3fdde68c04372aabcd8861098cefb8d918406f81",
+      "phone_button_old_sources.json": "a0e6c7aeba451a71374642aca1fe16e39bb86f12644f7453a9b7fb372cb24a27",
+      "phone_button_upgrade.py": "3648584e36ee2565e3312e7f28d2139ce03ec5b4465bc5f7fb7cb311320e9ac0",
+      "phone_clock.py": "c1465b5e7d796937e16897c28d29d6ea78d4523b1c3a235a3384a97c2af7074c",
+      "phone_connection_trace.py": "ff056a0183ccb790543af70695874084346a548f6efc193b6239c3a7f00e898d",
+      "phone_diagnostic_export.py": "5da56d3ed0f335d49fb7158bf3589c6bf71fa7a54772242f1030fbdcd3ae16f1",
+      "phone_entry_diagnostics.py": "ada9f16c3147624e279a9f9b48443cf890a16b5ff581b95177d20b76b8894a3b",
+      "phone_entry_feed.py": "3b4d3317efc33dc0ef29f96f2b33c94a97e03391f87cf4d7bb35dceb33c4b3ba",
+      "phone_entry_journey.py": "dacd4c8376df28ebbd065d71386b089f2c3f23cce4beec87b2a3adc370c60476",
+      "phone_exit_details.py": "6975bcf766aebd8a65869ef82b6c7904b70558181822915f4a064e5d07b8306d",
+      "phone_exit_ui.js": "bab731fba9036803e3501d1fcc5a38c7f8d0276ac1822004a0c021838eb6b195",
+      "phone_feed_fast.py": "7dfd89a43397ef0e180b12bb0bac3537b04832b0018747fd425ee9b722641e8e",
+      "phone_frozen_bars.py": "03fbd57f0116046d27791b9e4dbbf3c1ddf8b17076b1115b066e28650ed674e2",
+      "phone_handover.py": "11d26680baa581043998005af8b2016a40a4df1eff7730d9d34b10706c89523c",
+      "phone_host.py": "24c6157272bba57ebaca852203e93e16c06e938465ed32156a6aba5659355234",
+      "phone_market_alerts.py": "0e72dcd9567f31c6124f6e20aaf79b2a57bbe16dcf682379b6bf2c2c35b4c66e",
+      "phone_market_ui.js": "f8875b3bcde79b809ed6ebdac794a64134e9c493cb0f9fd0c1f8e2008415f512",
+      "phone_migrate.py": "aafbe024259d3f4dffc81b9b4ec7c9e9307a3487efeb969b1feed257f66399fb",
+      "phone_migration_sources.json": "214293c5bf0d7fd79838b1037ab9499a2a5428c91758fe3df7c439d790e3691d",
+      "phone_mobile.py": "f8555510c5f66d1ff9dd54796b5fd1da72a2dc8b0b697a9104d8cbef188df826",
+      "phone_mobile_compute.py": "0c1dc8bff08221f775066c38db368377abc3934f9a00fbf64707860f2b8d6151",
+      "phone_mobile_entry.py": "b2beff4b57a54c030d96f658e5968371be850891f7e9836fafa7ebd475c41a80",
+      "phone_mobile_policy.py": "48ad9abc49a611efab12c5c9dbc1f6a7d017c2b88e9db30c05e82c938bb08fc0",
+      "phone_morning_short.py": "240854ef9feef7208ac9ed9e460264cc3c67b0bb6a01d2b92a8887730dff216d",
+      "phone_parallel.py": "7a0385256d977a6eca21401e807445d4c842d6b842ad0a2f60d09a8acee96df5",
+      "phone_performance.py": "8cc9d03823563bac455ccb35c7997aaac6d54dad9ce8721afe9853cfc142abe9",
+      "phone_public_ws.py": "cd9f99ca029cad77fdc933b9905a5d13e2be9d6cc517ec7c1298145719b18335",
+      "phone_pullback_size.py": "c07212673667875f3251e3e1b0204dfa4251fc1045b0c8408f4c73476a6ab9e7",
+      "phone_quote_registry.py": "0eed08d0d545bd5b9140b179f11e24780a05b629649359cc54b9774749d48e39",
+      "phone_remote.py": "f891e8cc8c8e822eb7f75ccd22d441b4b451162de0bf87a134b3c925e9073e97",
+      "phone_remote_check.py": "7d20cb6dcbbd2d784dab6c9fd8131722175d2f684b2202c3499fc13e8fd194d1",
+      "phone_restore_previous.py": "01798dba1a43cd993f5a4d1183b4f411c0f9aceb21dcf4162aa62136cb6b3e18",
+      "phone_runtime_health.py": "3a4d31b4ea85bd19e864f7e1812d022b96f17d48885d16a5c5806a6b7eb17f7c",
+      "phone_sections.css": "109750caa88c4a3e8855d9e456e9c0a264576c25f5b0dfd36bbed5064c11d975",
+      "phone_service.py": "2cbc257b0ba8caec3ccd94cea193b6b5d49b59efe95ed426af491efad1bf8908",
+      "phone_signal_cache.py": "47a0efaa59f96b3ec68840b6c6c52e393cc59207ce942d4f216aa60e5b81ace3",
+      "phone_sources.json": "1e8a54e5baff2e9f77aa48e1335dea650ae74cc1e5ebfaf562d796960d0838c7",
+      "phone_trend_inputs.py": "73d2085c351fdb550fc2d2c86a664e1f057fcad43e6b9d238ece7b9dd8c147a0",
+      "phone_trend_slot.py": "ce7a145e8aa6954c0f0022def0fe207d359715cda34a61e83e60069ed4aa64e8",
+      "phone_update.py": "0ead0372ccade45e9ca8186b53d5eaa6f0d5685644802446e54be4200771b1de",
+      "phone_update_ui.js": "0304ac29ac1d8986bb2fd14e05c6baded0a73e060f47a684e8dbc8cd6cd27de9"
+    }
+  },
+  "python_tests": 173,
+  "javascript_suites": 1,
+  "all_passed": true,
+  "results": [
+    {
+      "script": "test_inputs.py",
+      "returncode": 0,
+      "tests": 14,
+      "log_sha256": "d12dd0e45a3fdf612c4833858fcf00688a1396d26f88e37e73d2dee490096f3b"
+    },
+    {
+      "script": "test_export.py",
+      "returncode": 0,
+      "tests": 4,
+      "log_sha256": "b78dbfeb5fbd0c23ca19a22411c55ea38137c595b9453a1824dcd95b38c173bd"
+    },
+    {
+      "script": "test_mobile.py",
+      "returncode": 0,
+      "tests": 26,
+      "log_sha256": "5f8a8a5ffea4f437d6f4aeeaed1be29a048f5949c033ad0597498d203abbda23"
+    },
+    {
+      "script": "test_paths.py",
+      "returncode": 0,
+      "tests": 4,
+      "log_sha256": "98255317dbdec068621cfd1c730ebd962e38b6f8c534b73c2b3cbfc806ea738c"
+    },
+    {
+      "script": "test_window.py",
+      "returncode": 0,
+      "tests": 4,
+      "log_sha256": "08cfe753dea342833ec59beb905243853f9c393973961852ed25ee316be39537"
+    },
+    {
+      "script": "test_latency.py",
+      "returncode": 0,
+      "tests": 13,
+      "log_sha256": "d3271e866f2ad5218e261719190dca0c8e3f8fc22cf3cf4d0961216e1cbe891c"
+    },
+    {
+      "script": "test_release.py",
+      "returncode": 0,
+      "tests": 4,
+      "log_sha256": "0b567de78c87a2c75f05ca7f221fc53b40c2bcdcf98d01086955eecf1314a670"
+    },
+    {
+      "script": "test_execution.py",
+      "returncode": 0,
+      "tests": 38,
+      "log_sha256": "0ec289856f89ad69e3f0c3327bb0b9580b6a81cd5af8b187d3d50ce6d565b251"
+    },
+    {
+      "script": "test_morning.py",
+      "returncode": 0,
+      "tests": 21,
+      "log_sha256": "9697dec0f3ad7021b8f993e2339a51b9b8ca84691a41d68da713879f89a1d200"
+    },
+    {
+      "script": "test_switch.py",
+      "returncode": 0,
+      "tests": 9,
+      "log_sha256": "e6bee5f54c37c166bb0c2fa240500e41769a481e81fc5548aac78626d3e0da0c"
+    },
+    {
+      "script": "test_ui.cjs",
+      "returncode": 0,
+      "tests": null,
+      "log_sha256": "f30a4d9b5f829c2a9251c76a416440de4159d1efe2b65b23aea236597e8e2927"
+    },
+    {
+      "script": "test_transport.py",
+      "returncode": 0,
+      "tests": 22,
+      "log_sha256": "1739c64c3fcabadce56822dccd1e94a02e8942a08b9a01a81f19691981147987"
+    },
+    {
+      "script": "test_handover.py",
+      "returncode": 0,
+      "tests": 14,
+      "log_sha256": "f633ad8e738512bb7562a43fab273ab65cdc5a224925052dd0e38b5bd4931a80"
+    }
+  ],
+  "actual_phone_tested": false,
+  "actual_exchange_order_requests": 0,
+  "profitability_backtest": false,
+  "runner_note": "The first combined run omitted PYTHONPATH for two inherited suites; both were rerun after fixing the runner. Runtime files were unchanged by this correction.",
+  "scope": "Real strategy/engine functions with fake exchange I/O; synthetic morning candles. UI uses a minimal DOM."
+}

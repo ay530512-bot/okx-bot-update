@@ -1,0 +1,19 @@
+test_bad_hourly_does_not_count_omitted_symbol_as_nonpositive (__main__.Tests.test_bad_hourly_does_not_count_omitted_symbol_as_nonpositive) ... ok
+test_complete_ranks_identical_for_every_quarter_in_same_hour (__main__.Tests.test_complete_ranks_identical_for_every_quarter_in_same_hour) ... ok
+test_core_predicates_and_financial_management_identical (__main__.Tests.test_core_predicates_and_financial_management_identical) ... ok
+test_every_eligible_symbol_hourly_required (__main__.Tests.test_every_eligible_symbol_hourly_required) ... ok
+test_expiry_remains90_seconds (__main__.Tests.test_expiry_remains90_seconds) ... ok
+test_invalid_hourly_values_are_not_admitted (__main__.Tests.test_invalid_hourly_values_are_not_admitted) ... ok
+test_leader15m_still_required (__main__.Tests.test_leader15m_still_required) ... ok
+test_missing09_reference_is_not_partial_rank (__main__.Tests.test_missing09_reference_is_not_partial_rank) ... ok
+test_other15m_and_all4h_do_not_block_ranking (__main__.Tests.test_other15m_and_all4h_do_not_block_ranking) ... ok
+test_partial_scan_reproduces_old_wait_and_new_same_signal_as_complete (__main__.Tests.test_partial_scan_reproduces_old_wait_and_new_same_signal_as_complete) ... ok
+test_real_collector_unrelated4h_wait_does_not_block_ready_trend_inputs (__main__.Tests.test_real_collector_unrelated4h_wait_does_not_block_ready_trend_inputs) ... ok
+test_snapshot_age_and_future_still_block (__main__.Tests.test_snapshot_age_and_future_still_block) ... ok
+test_stale_hour_rejected_at_new_hour (__main__.Tests.test_stale_hour_rejected_at_new_hour) ... ok
+test_universe_change_and_pause_block (__main__.Tests.test_universe_change_and_pause_block) ... ok
+
+----------------------------------------------------------------------
+Ran 14 tests in 0.086s
+
+OK
