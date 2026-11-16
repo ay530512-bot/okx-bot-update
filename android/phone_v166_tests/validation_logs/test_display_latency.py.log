@@ -1,0 +1,15 @@
+test_blocked_rank_collection_never_stalls_chart_or_private_display (__main__.CaptureTests.test_blocked_rank_collection_never_stalls_chart_or_private_display) ... ok
+test_fallback_payload_is_also_outside_display_lock (__main__.CaptureTests.test_fallback_payload_is_also_outside_display_lock) ... ok
+test_rank_cleaning_reuses_same_observation_without_mutating_publisher (__main__.CaptureTests.test_rank_cleaning_reuses_same_observation_without_mutating_publisher) ... ok
+test_chart_quote_does_not_wait_for_blocked_whole_market_reader (__main__.QuoteTests.test_chart_quote_does_not_wait_for_blocked_whole_market_reader) ... ok
+test_close_stops_reader_and_idle_worker (__main__.QuoteTests.test_close_stops_reader_and_idle_worker) ... ok
+test_display_diagnostic_reports_its_own_lane_only (__main__.QuoteTests.test_display_diagnostic_reports_its_own_lane_only) ... ok
+test_idling_drops_socket_and_new_watch_can_reuse_reader (__main__.QuoteTests.test_idling_drops_socket_and_new_watch_can_reuse_reader) ... ok
+test_lazy_single_ticker_watch_replaces_instead_of_accumulating (__main__.QuoteTests.test_lazy_single_ticker_watch_replaces_instead_of_accumulating) ... ok
+test_reconnection_and_staleness_keep_existing_freshness_checks (__main__.QuoteTests.test_reconnection_and_staleness_keep_existing_freshness_checks) ... ok
+test_same_selection_does_not_reset_quote_or_subscription_revision (__main__.QuoteTests.test_same_selection_does_not_reset_quote_or_subscription_revision) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.073s
+
+OK

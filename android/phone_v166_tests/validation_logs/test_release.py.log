@@ -1,0 +1,24 @@
+test_complete_bundle_preserves_policy_hashes_stages_once (__main__.Tests.test_complete_bundle_preserves_policy_hashes_stages_once) ... ok
+test_direct_151_and_152_upgrade_preserves_unrelated_files (__main__.Tests.test_direct_151_and_152_upgrade_preserves_unrelated_files) ... ok
+test_production_install_order_uses_one_coordinator (__main__.Tests.test_production_install_order_uses_one_coordinator) ... ok
+test_restore_verifies_full_previous_payload (__main__.Tests.test_restore_verifies_full_previous_payload) ... ok
+test_trend_predicates_quantity_and_management_unchanged (__main__.Tests.test_trend_predicates_quantity_and_management_unchanged) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 5.921s
+
+OK
+해시 확인된 1.6.6 파일 준비: /tmp/tmprd2f99lj/host-v53
+이미 검증된 1.6.6 파일이 준비되어 있습니다.
+해시 확인된 1.6.6 파일 준비: /tmp/tmp2k4jb_x7/host-v53
+해시 확인된 1.6.6 파일 준비: /tmp/tmpv5hbngqd/host-v53
+해시 확인된 1.6.6 파일 준비: /tmp/tmptlqh3bqe/host-v53
+해시 확인된 1.6.6 파일 준비: /tmp/tmpddcx461e/host-v53
+해시 확인된 1.6.6 파일 준비: /tmp/tmp2adcayjy/host-v53
+해시 확인된 1.6.6 파일 준비: /tmp/tmp_qsagq_u/host-v53
+해시 확인된 1.6.6 파일 준비: /tmp/tmpwl0rg_cq/host-v53
+해시 확인된 1.6.6 파일 준비: /tmp/tmpk1ypko7v/host-v53
+해시 확인된 1.6.6 파일 준비: /tmp/tmpc1gcl9nr/host-v53
+해시 확인된 1.6.6 파일 준비: /tmp/tmpu5_cocmt/host-v53
+해시 확인된 1.6.6 파일 준비: /tmp/tmpz0g1md3b/host-v53
+해시 확인된 1.6.6 파일 준비: /tmp/tmp35zqn5ib/host-v53
