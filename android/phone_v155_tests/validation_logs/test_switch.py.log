@@ -1,0 +1,14 @@
+test_expired_after_close_no_forced_short (__main__.SwitchTests.test_expired_after_close_no_forced_short) ... ok
+test_full_capacity_still_collects_for_reversal_but_remains_full (__main__.SwitchTests.test_full_capacity_still_collects_for_reversal_but_remains_full) ... ok
+test_full_tick_switch_long_close_then_short_fill_and_sl (__main__.SwitchTests.test_full_tick_switch_long_close_then_short_fill_and_sl) ... ok
+test_missing_close_ack_no_duplicate_close (__main__.SwitchTests.test_missing_close_ack_no_duplicate_close) ... ok
+test_other_positions_and_manual_target_never_closed (__main__.SwitchTests.test_other_positions_and_manual_target_never_closed) ... ok
+test_partial_close_no_short (__main__.SwitchTests.test_partial_close_no_short) ... ok
+test_restart_intent_flat_ack_or_unfinished_cleanup_blocks (__main__.SwitchTests.test_restart_intent_flat_ack_or_unfinished_cleanup_blocks) ... ok
+test_same_symbol_does_not_overlap_positions (__main__.SwitchTests.test_same_symbol_does_not_overlap_positions) ... ok
+test_user_pause_preview_connection_or_day_stop_preserves_long (__main__.SwitchTests.test_user_pause_preview_connection_or_day_stop_preserves_long) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 1.223s
+
+OK

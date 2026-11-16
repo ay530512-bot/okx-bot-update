@@ -1,0 +1,31 @@
+test_account_generation_change_discards (__main__.Tests.test_account_generation_change_discards) ... ok
+test_changed_cfg_and_cutoff_not_reused (__main__.Tests.test_changed_cfg_and_cutoff_not_reused) ... ok
+test_changed_old_hourly_bar_recomputes (__main__.Tests.test_changed_old_hourly_bar_recomputes) ... ok
+test_cold_start_candidate_does_not_wait_for_workers (__main__.Tests.test_cold_start_candidate_does_not_wait_for_workers) ... ok
+test_common_three_slot_limit (__main__.Tests.test_common_three_slot_limit) ... ok
+test_conflict_removes_pending (__main__.Tests.test_conflict_removes_pending) ... ok
+test_current_quote_reader_stale_future_generation (__main__.Tests.test_current_quote_reader_stale_future_generation) ... ok
+test_disconnect_invalidates_publication (__main__.Tests.test_disconnect_invalidates_publication) ... ok
+test_exact_inputs_not_recomputed_on_every_tick (__main__.Tests.test_exact_inputs_not_recomputed_on_every_tick) ... ok
+test_existing_candidate_survives_blocked_new_batch (__main__.Tests.test_existing_candidate_survives_blocked_new_batch) ... ok
+test_expiry_after_work_never_reaches_final_check (__main__.Tests.test_expiry_after_work_never_reaches_final_check) ... ok
+test_expiry_while_existing_candidate_waits (__main__.Tests.test_expiry_while_existing_candidate_waits) ... ok
+test_final_rest_rejection_never_returns_candidate (__main__.Tests.test_final_rest_rejection_never_returns_candidate) ... ok
+test_generation_change_discards_finished_batch (__main__.Tests.test_generation_change_discards_finished_batch) ... ok
+test_held_manual_seen_excluded (__main__.Tests.test_held_manual_seen_excluded) ... ok
+test_invalid_and_corrected_inputs_fail_closed (__main__.Tests.test_invalid_and_corrected_inputs_fail_closed) ... ok
+test_invalid_preference_recovers_to_single_computation (__main__.Tests.test_invalid_preference_recovers_to_single_computation) ... ok
+test_only_one_batch_bounded_while_work_is_pending (__main__.Tests.test_only_one_batch_bounded_while_work_is_pending) ... ok
+test_preference_change_discards_finished_batch (__main__.Tests.test_preference_change_discards_finished_batch) ... ok
+test_real_dead_worker_falls_back (__main__.Tests.test_real_dead_worker_falls_back) ... ok
+test_real_four_spawn_workers_match_serial_then_restore (__main__.Tests.test_real_four_spawn_workers_match_serial_then_restore) ... ok
+test_same_candidate_and_priority_as_original (__main__.Tests.test_same_candidate_and_priority_as_original) ... ok
+test_trend_count_and_priority (__main__.Tests.test_trend_count_and_priority) ... ok
+test_ui_watch_change_does_not_remove_candidates (__main__.Tests.test_ui_watch_change_does_not_remove_candidates) ... ok
+test_worker_failure_falls_back_without_losing_valid_pending (__main__.Tests.test_worker_failure_falls_back_without_losing_valid_pending) ... ok
+test_workers_never_receive_engine_or_secrets (__main__.Tests.test_workers_never_receive_engine_or_secrets) ... ok
+
+----------------------------------------------------------------------
+Ran 26 tests in 1.570s
+
+OK

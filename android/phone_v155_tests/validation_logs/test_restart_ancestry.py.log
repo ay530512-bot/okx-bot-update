@@ -1,0 +1,12 @@
+test_fixed_button_descendant_survives_and_restores_intent (__main__.Ancestry.test_fixed_button_descendant_survives_and_restores_intent) ... ok
+test_pid_reuse_cannot_retire_other_process (__main__.Ancestry.test_pid_reuse_cannot_retire_other_process) ... ok
+test_real_spawn_workers_with_inherited_B_flag_are_retired (__main__.Ancestry.test_real_spawn_workers_with_inherited_B_flag_are_retired) ... ok
+test_reproduces_154_self_termination_then_repairs_frozen_supervisor (__main__.Ancestry.test_reproduces_154_self_termination_then_repairs_frozen_supervisor) ... 중단된 설치 복구 중 · 보유 기록을 유지하고 관리 프로그램을 먼저 재시작합니다.
+기존 관리 복구 확인 · 신규 진입 중지 상태는 유지하고 새 버전을 설치합니다.
+ok
+test_unsafe_154_children_never_include_installer_or_watchdog (__main__.Ancestry.test_unsafe_154_children_never_include_installer_or_watchdog) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 3.834s
+
+OK
