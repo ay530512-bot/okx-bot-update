@@ -1,0 +1,23 @@
+test_actual_private_position_metrics_preserve_controls_and_evidence (__main__.PrivateTests.test_actual_private_position_metrics_preserve_controls_and_evidence) ... ok
+test_cumulative_position_observer_is_bounded (__main__.PrivateTests.test_cumulative_position_observer_is_bounded) ... ok
+test_day_rollover_does_not_apply_previous_daily_base (__main__.PrivateTests.test_day_rollover_does_not_apply_previous_daily_base) ... ok
+test_disconnect_staleness_and_generation_never_grant_freshness (__main__.PrivateTests.test_disconnect_staleness_and_generation_never_grant_freshness) ... ok
+test_missing_margin_is_not_zeroed (__main__.PrivateTests.test_missing_margin_is_not_zeroed) ... ok
+test_nan_invalid_and_missing_fields_do_not_invent_money (__main__.PrivateTests.test_nan_invalid_and_missing_fields_do_not_invent_money) ... ok
+test_old_event_cannot_replace_newer_rest_or_private_observation (__main__.PrivateTests.test_old_event_cannot_replace_newer_rest_or_private_observation) ... ok
+test_original_feed_errors_are_not_swallowed (__main__.PrivateTests.test_original_feed_errors_are_not_swallowed) ... ok
+test_original_private_risk_callback_runs_before_display_observer (__main__.PrivateTests.test_original_private_risk_callback_runs_before_display_observer) ... ok
+test_other_side_or_entry_is_not_applied_to_holding (__main__.PrivateTests.test_other_side_or_entry_is_not_applied_to_holding) ... ok
+test_partial_or_full_close_does_not_apply_old_size_metrics (__main__.PrivateTests.test_partial_or_full_close_does_not_apply_old_size_metrics) ... ok
+test_projection_captures_same_snapshot_equity_and_day_baseline (__main__.PrivateTests.test_projection_captures_same_snapshot_equity_and_day_baseline) ... ok
+test_received_balance_and_daily_profit_do_not_wait_for_engine (__main__.PrivateTests.test_received_balance_and_daily_profit_do_not_wait_for_engine) ... ok
+test_sensitive_raw_fields_never_leave_observer (__main__.PrivateTests.test_sensitive_raw_fields_never_leave_observer) ... ok
+test_home_stream_excludes_whole_market_and_diagnostics (__main__.StreamTests.test_home_stream_excludes_whole_market_and_diagnostics) ... ok
+test_live_route_requires_host_and_session (__main__.StreamTests.test_live_route_requires_host_and_session) ... ok
+test_unchanged_values_are_not_repeated_and_stream_slot_is_released (__main__.StreamTests.test_unchanged_values_are_not_repeated_and_stream_slot_is_released) ... ok
+test_unknown_page_and_expired_session (__main__.StreamTests.test_unknown_page_and_expired_session) ... ok
+
+----------------------------------------------------------------------
+Ran 18 tests in 0.326s
+
+OK
