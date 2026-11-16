@@ -25,10 +25,22 @@ It does not connect to OKX. No certificate or key is committed.
 
 The tests do not claim actual-device latency, fills or profitability. The
 benchmark is synthetic and excludes network costs. `validation.json` records
-188 Python cases plus one JavaScript suite; `local_soak.json` and
+220 Python cases plus one JavaScript suite; `local_soak.json` and
 `receive_benchmark.json` record the separate experiments. The transport and
 lane suites were also run with websocket-client 1.8.0 (36 cases).
 
 The direct 1.5.1 upgrade test checks every unchanged runtime file byte for byte,
 the exact predecessor pin set, installation staging and idempotency. Policy,
 account, clock, position protection, handover and CSS files are unchanged.
+
+An additional entry audit exercises eight rule/direction combinations in four
+states: first subscription, monitor disconnection, execution reconnection and
+cold startup. It starts with no execution quotes for the candidate, sends the
+production subscription payload, feeds simulated socket frames through the
+production receive/decode/feed functions, and uses full engine ticks for order,
+fill and verified protection. All 32 cases preserve the same signal and place
+exactly one simulated opening request. Three channels alone and old-generation
+quotes cannot place an order. `dynamic_entry_results.json` records the results
+and exact runtime hashes. These 32 cases were run after the initial 188-case
+validation against the identical published 1.5.2 installer; no runtime change
+or additional phone update was made for this audit.

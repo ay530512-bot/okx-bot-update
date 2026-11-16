@@ -88,7 +88,7 @@
       "phone_update_ui.js": "ca491834016950da38e6ec988285011a80a6aaf38918226128cfccd717d97bce"
     }
   },
-  "python_tests": 188,
+  "python_tests": 220,
   "javascript_suites": 1,
   "all_passed": true,
   "results": [
@@ -175,6 +175,12 @@
       "returncode": 0,
       "tests": null,
       "log_sha256": "f30a4d9b5f829c2a9251c76a416440de4159d1efe2b65b23aea236597e8e2927"
+    },
+    {
+      "script": "test_dynamic_entry.py",
+      "returncode": 0,
+      "tests": 32,
+      "log_sha256": "2fcd384f91df5a7ce07409ca342771168cd688bd801795798b744600f07a60fe"
     }
   ],
   "actual_phone_tested": false,
@@ -185,5 +191,6 @@
   "legacy_transport_tests": 36,
   "legacy_websocket_client": "1.8.0",
   "local_tls_soak": "local_soak.json",
-  "synthetic_benchmark": "receive_benchmark.json"
+  "synthetic_benchmark": "receive_benchmark.json",
+  "additional_entry_audit": "32 cases added against the identical published runtime; see dynamic_entry_results.json"
 }

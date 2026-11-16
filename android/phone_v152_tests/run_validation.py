@@ -12,7 +12,8 @@ ENV = dict(os.environ, PYTHONDONTWRITEBYTECODE='1',
            PYTHONPATH=os.pathsep.join((str(D.parent/'phone_v152'), str(D.parents[2]/'core121'))))
 SCRIPTS = ('test_inputs.py', 'test_export.py', 'test_mobile.py', 'test_transport.py',
            'test_paths.py', 'test_window.py', 'test_latency.py', 'test_handover.py',
-           'test_release.py', 'test_execution.py', 'test_morning.py', 'test_switch.py', 'test_lanes.py')
+           'test_release.py', 'test_execution.py', 'test_morning.py', 'test_switch.py', 'test_lanes.py',
+           'test_dynamic_entry.py')
 
 
 def main():

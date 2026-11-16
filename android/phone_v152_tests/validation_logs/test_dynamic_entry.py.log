@@ -1,0 +1,37 @@
+test_double_wick_LONG_cold_start (__main__.DynamicEntry.test_double_wick_LONG_cold_start) ... ok
+test_double_wick_LONG_execution_recovery (__main__.DynamicEntry.test_double_wick_LONG_execution_recovery) ... ok
+test_double_wick_LONG_first_subscription (__main__.DynamicEntry.test_double_wick_LONG_first_subscription) ... ok
+test_double_wick_LONG_monitor_disconnect (__main__.DynamicEntry.test_double_wick_LONG_monitor_disconnect) ... ok
+test_double_wick_SHORT_cold_start (__main__.DynamicEntry.test_double_wick_SHORT_cold_start) ... ok
+test_double_wick_SHORT_execution_recovery (__main__.DynamicEntry.test_double_wick_SHORT_execution_recovery) ... ok
+test_double_wick_SHORT_first_subscription (__main__.DynamicEntry.test_double_wick_SHORT_first_subscription) ... ok
+test_double_wick_SHORT_monitor_disconnect (__main__.DynamicEntry.test_double_wick_SHORT_monitor_disconnect) ... ok
+test_exhaustion724_LONG_cold_start (__main__.DynamicEntry.test_exhaustion724_LONG_cold_start) ... ok
+test_exhaustion724_LONG_execution_recovery (__main__.DynamicEntry.test_exhaustion724_LONG_execution_recovery) ... ok
+test_exhaustion724_LONG_first_subscription (__main__.DynamicEntry.test_exhaustion724_LONG_first_subscription) ... ok
+test_exhaustion724_LONG_monitor_disconnect (__main__.DynamicEntry.test_exhaustion724_LONG_monitor_disconnect) ... ok
+test_exhaustion724_SHORT_cold_start (__main__.DynamicEntry.test_exhaustion724_SHORT_cold_start) ... ok
+test_exhaustion724_SHORT_execution_recovery (__main__.DynamicEntry.test_exhaustion724_SHORT_execution_recovery) ... ok
+test_exhaustion724_SHORT_first_subscription (__main__.DynamicEntry.test_exhaustion724_SHORT_first_subscription) ... ok
+test_exhaustion724_SHORT_monitor_disconnect (__main__.DynamicEntry.test_exhaustion724_SHORT_monitor_disconnect) ... ok
+test_morning_top1_SHORT_cold_start (__main__.DynamicEntry.test_morning_top1_SHORT_cold_start) ... ok
+test_morning_top1_SHORT_execution_recovery (__main__.DynamicEntry.test_morning_top1_SHORT_execution_recovery) ... ok
+test_morning_top1_SHORT_first_subscription (__main__.DynamicEntry.test_morning_top1_SHORT_first_subscription) ... ok
+test_morning_top1_SHORT_monitor_disconnect (__main__.DynamicEntry.test_morning_top1_SHORT_monitor_disconnect) ... ok
+test_top1_15kst_dip130_LONG_cold_start (__main__.DynamicEntry.test_top1_15kst_dip130_LONG_cold_start) ... ok
+test_top1_15kst_dip130_LONG_execution_recovery (__main__.DynamicEntry.test_top1_15kst_dip130_LONG_execution_recovery) ... ok
+test_top1_15kst_dip130_LONG_first_subscription (__main__.DynamicEntry.test_top1_15kst_dip130_LONG_first_subscription) ... ok
+test_top1_15kst_dip130_LONG_monitor_disconnect (__main__.DynamicEntry.test_top1_15kst_dip130_LONG_monitor_disconnect) ... ok
+test_trend_pullback_LONG_cold_start (__main__.DynamicEntry.test_trend_pullback_LONG_cold_start) ... ok
+test_trend_pullback_LONG_execution_recovery (__main__.DynamicEntry.test_trend_pullback_LONG_execution_recovery) ... ok
+test_trend_pullback_LONG_first_subscription (__main__.DynamicEntry.test_trend_pullback_LONG_first_subscription) ... ok
+test_trend_pullback_LONG_monitor_disconnect (__main__.DynamicEntry.test_trend_pullback_LONG_monitor_disconnect) ... ok
+test_trend_pullback_SHORT_cold_start (__main__.DynamicEntry.test_trend_pullback_SHORT_cold_start) ... ok
+test_trend_pullback_SHORT_execution_recovery (__main__.DynamicEntry.test_trend_pullback_SHORT_execution_recovery) ... ok
+test_trend_pullback_SHORT_first_subscription (__main__.DynamicEntry.test_trend_pullback_SHORT_first_subscription) ... ok
+test_trend_pullback_SHORT_monitor_disconnect (__main__.DynamicEntry.test_trend_pullback_SHORT_monitor_disconnect) ... ok
+
+----------------------------------------------------------------------
+Ran 32 tests in 18.471s
+
+OK
