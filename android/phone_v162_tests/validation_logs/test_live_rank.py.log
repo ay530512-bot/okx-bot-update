@@ -1,0 +1,31 @@
+test_after02_wait_tracks_b_then05_checks_b (__main__.EntryTests.test_after02_wait_tracks_b_then05_checks_b) ... ok
+test_brief_rank_data_gap_does_not_lose_unexpired_long_setup (__main__.EntryTests.test_brief_rank_data_gap_does_not_lose_unexpired_long_setup) ... ok
+test_change_during_candle_request_blocks_before_any_order (__main__.EntryTests.test_change_during_candle_request_blocks_before_any_order) ... ok
+test_changed_leader_same_bar_new_short_orders_fills_and_protects (__main__.EntryTests.test_changed_leader_same_bar_new_short_orders_fills_and_protects) ... ok
+test_first_selected_after_close_can_replay_valid_long_setup (__main__.EntryTests.test_first_selected_after_close_can_replay_valid_long_setup) ... ok
+test_force_read_ignores_one_second_rank_cache_before_order (__main__.EntryTests.test_force_read_ignores_one_second_rank_cache_before_order) ... ok
+test_last_submit_guard_rechecks_after_risk_calculation (__main__.EntryTests.test_last_submit_guard_rechecks_after_risk_calculation) ... ok
+test_new_leader_waits_for_candles_then_evaluates_same_close (__main__.EntryTests.test_new_leader_waits_for_candles_then_evaluates_same_close) ... ok
+test_new_long_leader_replay_cannot_revive_old_confirmation (__main__.EntryTests.test_new_long_leader_replay_cannot_revive_old_confirmation) ... ok
+test_rank_change_never_renews_90_second_expiry (__main__.EntryTests.test_rank_change_never_renews_90_second_expiry) ... ok
+test_290_symbols_cached_without_rest_requests (__main__.RankTests.test_290_symbols_cached_without_rest_requests) ... ok
+test_excluded_assets_never_win_and_ties_stable (__main__.RankTests.test_excluded_assets_never_win_and_ties_stable) ... ok
+test_export_keeps_live_rank_source_and_coverage (__main__.RankTests.test_export_keeps_live_rank_source_and_coverage) ... ok
+test_fresh_ws_wins_but_older_ws_cannot_roll_back_rest (__main__.RankTests.test_fresh_ws_wins_but_older_ws_cannot_roll_back_rest) ... ok
+test_live_leader_changes_inside_same_quarter_and_hour (__main__.RankTests.test_live_leader_changes_inside_same_quarter_and_hour) ... ok
+test_missing_or_stale_quote_blocks_partial_ranking (__main__.RankTests.test_missing_or_stale_quote_blocks_partial_ranking) ... ok
+test_missing_selected_candles_do_not_promote_second_place (__main__.RankTests.test_missing_selected_candles_do_not_promote_second_place) ... ok
+test_new_leader_clears_old_arm_and_pending_even_if_new_bars_missing (__main__.RankTests.test_new_leader_clears_old_arm_and_pending_even_if_new_bars_missing) ... ok
+test_no_positive_return_no_leader (__main__.RankTests.test_no_positive_return_no_leader) ... ok
+test_old_session_baseline_never_transplanted_to_new_ws_price (__main__.RankTests.test_old_session_baseline_never_transplanted_to_new_ws_price) ... ok
+test_outside_windows_tracks_new_short_target_without_entry (__main__.RankTests.test_outside_windows_tracks_new_short_target_without_entry) ... ok
+test_partial_scan_and_missing_unrelated_candles_do_not_block (__main__.RankTests.test_partial_scan_and_missing_unrelated_candles_do_not_block) ... ok
+test_publisher_and_inspection_share_exact_snapshot (__main__.RankTests.test_publisher_and_inspection_share_exact_snapshot) ... ok
+test_publisher_runs_when_entry_paused_and_holds_exist (__main__.RankTests.test_publisher_runs_when_entry_paused_and_holds_exist) ... ok
+test_unknown_listing_metadata_cannot_hide_missing_quote (__main__.RankTests.test_unknown_listing_metadata_cannot_hide_missing_quote) ... ok
+test_verified_new_listing_excluded_then_rejoins_next09 (__main__.RankTests.test_verified_new_listing_excluded_then_rejoins_next09) ... ok
+
+----------------------------------------------------------------------
+Ran 26 tests in 2.689s
+
+OK
