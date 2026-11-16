@@ -1,0 +1,12 @@
+{
+  "source": "https://www.okx.com/api/v5/public/instruments?instType=SWAP&instId=JCT-USDT-SWAP",
+  "observed_utc": "2026-11-16T14:57:00.117318+00:00",
+  "public_instrument": {
+    "instId": "JCT-USDT-SWAP",
+    "instType": "SWAP",
+    "state": "live",
+    "listTime": "1794826800000",
+    "listing_utc": "2026-11-16T11:00:00+00:00"
+  },
+  "announcement": "https://www.okx.com/help/okx-to-list-perpetual-future-for-janction-crypto"
+}

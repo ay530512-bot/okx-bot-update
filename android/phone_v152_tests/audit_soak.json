@@ -1,0 +1,131 @@
+{
+  "local_tls_only": true,
+  "actual_phone_tested": false,
+  "actual_exchange_order_requests": 0,
+  "elapsed_s": 600.0,
+  "cpu_s": 150.52,
+  "websocket_client": "1.9.2",
+  "sent": {
+    "monitor": 669973,
+    "execution": 92128
+  },
+  "injected_faults": {
+    "monitor": 2,
+    "execution": 1
+  },
+  "execution": {
+    "version": "phone-public-ws-7",
+    "stage": "receive",
+    "frames": 92172,
+    "text_pings": 28,
+    "text_pongs": 28,
+    "max_frame_gap_s": 0.5044683479936793,
+    "subscription_frames": 2,
+    "last_subscription_bytes": 421,
+    "last_disconnect": {
+      "generation": 1,
+      "error": "WebSocketConnectionClosedException",
+      "stage": "receive",
+      "close_code": null,
+      "cause": "read_eof",
+      "server_notice": null,
+      "connection_uptime_s": 15.952,
+      "frame_age_s": 0.058,
+      "pong_age_s": null,
+      "pending_ping_age_s": null,
+      "observed_at": 1794840572.4428053
+    },
+    "disconnect_count": 1,
+    "disconnect_history": [
+      {
+        "generation": 1,
+        "error": "WebSocketConnectionClosedException",
+        "stage": "receive",
+        "close_code": null,
+        "cause": "read_eof",
+        "server_notice": null,
+        "connection_uptime_s": 15.952,
+        "frame_age_s": 0.058,
+        "pong_age_s": null,
+        "pending_ping_age_s": null,
+        "observed_at": 1794840572.4428053
+      }
+    ],
+    "server_notice": null,
+    "frame_at": 33620.052206036,
+    "pong_at": 33600.896298369,
+    "pending_ping_at": null,
+    "last_ping_at": 33600.855849547,
+    "pong_rtt_s": 0.0404,
+    "peer_close_code": null,
+    "connected_at": 33038.13237631
+  },
+  "monitor": {
+    "version": "phone-public-ws-7",
+    "stage": "receive",
+    "frames": 670858,
+    "text_pings": 28,
+    "text_pongs": 28,
+    "max_frame_gap_s": 0.8792028969983221,
+    "subscription_frames": 3,
+    "last_subscription_bytes": 14707,
+    "last_disconnect": {
+      "generation": 2,
+      "error": "WebSocketConnectionClosedException",
+      "stage": "receive",
+      "close_code": null,
+      "cause": "read_eof",
+      "server_notice": null,
+      "connection_uptime_s": 13.644,
+      "frame_age_s": 0.001,
+      "pong_age_s": null,
+      "pending_ping_age_s": null,
+      "observed_at": 1794840580.435756
+    },
+    "disconnect_count": 2,
+    "disconnect_history": [
+      {
+        "generation": 1,
+        "error": "WebSocketConnectionClosedException",
+        "stage": "receive",
+        "close_code": null,
+        "cause": "read_eof",
+        "server_notice": null,
+        "connection_uptime_s": 7.95,
+        "frame_age_s": 0.006,
+        "pong_age_s": null,
+        "pending_ping_age_s": null,
+        "observed_at": 1794840564.435966
+      },
+      {
+        "generation": 2,
+        "error": "WebSocketConnectionClosedException",
+        "stage": "receive",
+        "close_code": null,
+        "cause": "read_eof",
+        "server_notice": null,
+        "connection_uptime_s": 13.644,
+        "frame_age_s": 0.001,
+        "pong_age_s": null,
+        "pending_ping_age_s": null,
+        "observed_at": 1794840580.435756
+      }
+    ],
+    "server_notice": null,
+    "frame_at": 33620.072069982,
+    "pong_at": 33609.720724437,
+    "pending_ping_at": null,
+    "last_ping_at": 33609.676832159,
+    "pong_rtt_s": 0.0439,
+    "peer_close_code": null,
+    "connected_at": 33046.124405666
+  },
+  "fresh_execution_while_monitor_down": 163,
+  "final_ready": true,
+  "server_errors": [],
+  "runtime_transport_sha256": {
+    "phone_public_ws.py": "5087f2cc0146be7ce13edfe6917882151d61cbe8d7a0e9acde1cc64ffb141425",
+    "phone_public_lanes.py": "b6b430cefaeb5ce696efeef4a6db0dfd798a0dcbf15d63022ec48b8a3ebfbba4",
+    "phone_feed_fast.py": "7dfd89a43397ef0e180b12bb0bac3537b04832b0018747fd425ee9b722641e8e"
+  }
+}

@@ -28,8 +28,10 @@ transport.install();lanes.install()
 
 
 class Server:
-    def __init__(self,context):
+    def __init__(self,context,quote_provider=None,fault_targets=None):
         self.context=context;self.stop=threading.Event();self.errors=[]
+        self.quote_provider=quote_provider
+        self.fault_targets=fault_targets or {'monitor':[8,24],'execution':[16]}
         self.listener=socket.socket();self.listener.bind(('127.0.0.1',0));self.listener.listen(10)
         self.listener.settimeout(.2);self.port=self.listener.getsockname()[1]
         self.peers=[];self.faults={'monitor':0,'execution':0};self.lock=threading.Lock()
@@ -71,7 +73,7 @@ class Server:
                 now=time.monotonic();elapsed=now-self.started
                 if lane:
                     with self.lock:
-                        targets=[8,24] if lane=='monitor' else [16]
+                        targets=self.fault_targets[lane]
                         count=self.faults[lane]
                         fault=count<len(targets) and elapsed>=targets[count]
                         if fault:self.faults[lane]+=1
@@ -84,8 +86,12 @@ class Server:
                         row={'ts':str(int(time.time()*1000)),'last':'2','markPx':'2',
                              'bidPx':'1.9999','askPx':'2.0001','bids':[['1.9999','10000','0','1']],
                              'asks':[['2.0001','10000','0','1']],'px':'2','sz':'1'}
+                        if self.quote_provider is not None:
+                            row=self.quote_provider(symbol,ch)
+                            if row is None:continue
                         send(json.dumps({'arg':{'channel':ch,'instId':symbol},'data':[row]},separators=(',',':')))
-                    self.sent[lane]+=n;index+=n
+                        self.sent[lane]+=1
+                    index+=n
                     next_send=now+(.02 if lane=='monitor' else .05)
         except (OSError,websocket.WebSocketConnectionClosedException):
             pass
@@ -102,7 +108,7 @@ class Server:
         self.thread.join(1)
 
 
-def main(seconds=120):
+def main(seconds=120,report_path=None):
     with tempfile.TemporaryDirectory() as tmp:
         key,cert=Path(tmp)/'key.pem',Path(tmp)/'cert.pem'
         subprocess.run(['openssl','req','-x509','-newkey','rsa:2048','-nodes','-keyout',str(key),
@@ -146,7 +152,7 @@ def main(seconds=120):
                 stream._phone_reader.join(3);m._phone_reader.join(3)
         finally:
             stream.stop();server.close()
-        Path(__file__).with_name('local_soak.json').write_text(json.dumps(report,indent=2)+'\n')
+        Path(report_path or Path(__file__).with_name('local_soak.json')).write_text(json.dumps(report,indent=2)+'\n')
         print(json.dumps({k:v for k,v in report.items() if k not in ('execution','monitor')}))
 
 
