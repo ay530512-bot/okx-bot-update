@@ -1,0 +1,85 @@
+{
+  "synthetic": true,
+  "actual_phone_tested": false,
+  "actual_exchange_connections": 0,
+  "websocket_client": "1.9.2",
+  "tls": "OpenSSL 3.5.8 25 Aug 2026",
+  "samples": [
+    {
+      "before": {
+        "frames": 60000,
+        "wall_s": 1.341753,
+        "cpu_s": 1.34165,
+        "tls_reads": 181143,
+        "frames_per_second": 44718,
+        "messages_sha256": "b9acca7dfa86fba3563d2a5678df75b0add048c5ae0839f7f21c0ee91079a893",
+        "symbols": 290,
+        "latest_sha256": "0d25c03bcd075c8ac3250ca75997ca5c7cd4c5699ddcb7458e0a718e4860be07",
+        "bands_sha256": "690dbd2720836c5f0cb053ad5e018c368d51645e9272488a1c6d7222d0873196"
+      },
+      "after": {
+        "frames": 60000,
+        "wall_s": 1.34116,
+        "cpu_s": 1.335427,
+        "tls_reads": 1154,
+        "frames_per_second": 44737,
+        "messages_sha256": "b9acca7dfa86fba3563d2a5678df75b0add048c5ae0839f7f21c0ee91079a893",
+        "symbols": 290,
+        "latest_sha256": "0d25c03bcd075c8ac3250ca75997ca5c7cd4c5699ddcb7458e0a718e4860be07",
+        "bands_sha256": "690dbd2720836c5f0cb053ad5e018c368d51645e9272488a1c6d7222d0873196"
+      }
+    },
+    {
+      "after": {
+        "frames": 60000,
+        "wall_s": 1.205074,
+        "cpu_s": 1.201255,
+        "tls_reads": 1154,
+        "frames_per_second": 49789,
+        "messages_sha256": "b9acca7dfa86fba3563d2a5678df75b0add048c5ae0839f7f21c0ee91079a893",
+        "symbols": 290,
+        "latest_sha256": "0d25c03bcd075c8ac3250ca75997ca5c7cd4c5699ddcb7458e0a718e4860be07",
+        "bands_sha256": "690dbd2720836c5f0cb053ad5e018c368d51645e9272488a1c6d7222d0873196"
+      },
+      "before": {
+        "frames": 60000,
+        "wall_s": 1.695899,
+        "cpu_s": 1.69539,
+        "tls_reads": 181143,
+        "frames_per_second": 35379,
+        "messages_sha256": "b9acca7dfa86fba3563d2a5678df75b0add048c5ae0839f7f21c0ee91079a893",
+        "symbols": 290,
+        "latest_sha256": "0d25c03bcd075c8ac3250ca75997ca5c7cd4c5699ddcb7458e0a718e4860be07",
+        "bands_sha256": "690dbd2720836c5f0cb053ad5e018c368d51645e9272488a1c6d7222d0873196"
+      }
+    },
+    {
+      "before": {
+        "frames": 60000,
+        "wall_s": 1.804244,
+        "cpu_s": 1.803735,
+        "tls_reads": 181143,
+        "frames_per_second": 33255,
+        "messages_sha256": "b9acca7dfa86fba3563d2a5678df75b0add048c5ae0839f7f21c0ee91079a893",
+        "symbols": 290,
+        "latest_sha256": "0d25c03bcd075c8ac3250ca75997ca5c7cd4c5699ddcb7458e0a718e4860be07",
+        "bands_sha256": "690dbd2720836c5f0cb053ad5e018c368d51645e9272488a1c6d7222d0873196"
+      },
+      "after": {
+        "frames": 60000,
+        "wall_s": 1.311346,
+        "cpu_s": 1.310814,
+        "tls_reads": 1154,
+        "frames_per_second": 45754,
+        "messages_sha256": "b9acca7dfa86fba3563d2a5678df75b0add048c5ae0839f7f21c0ee91079a893",
+        "symbols": 290,
+        "latest_sha256": "0d25c03bcd075c8ac3250ca75997ca5c7cd4c5699ddcb7458e0a718e4860be07",
+        "bands_sha256": "690dbd2720836c5f0cb053ad5e018c368d51645e9272488a1c6d7222d0873196"
+      }
+    }
+  ],
+  "median_cpu_before_s": 1.69539,
+  "median_cpu_after_s": 1.310814,
+  "cpu_reduction_pct": 22.68,
+  "note": "Verified in-memory TLS records; full unchanged WebSocket frame decoding and ticker feed. Local CPU, not Android/network latency."
+}

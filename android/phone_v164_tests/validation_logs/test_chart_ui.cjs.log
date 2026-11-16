@@ -1,0 +1,20 @@
+PASS live prices retain official open/volume, closed candles and chart navigation
+PASS wrong symbols/frames and out-of-order server/quote updates are rejected
+PASS a new candle comes from REST; rollover quote never invents OHLCV
+PASS older REST packets cannot downgrade newer candle fields; fresh quote can overlay
+PASS bad OHLC and non-finite prices never draw a live price
+PASS UTC day/week and minute boundaries are handled independently
+PASS repaint requests coalesce; hidden charts do no painting or streaming
+PASS selection changes close the old stream and ignore its late messages
+PASS fallback only starts for a missing stream; one request at most twice per second
+PASS JSON fallback works without EventSource and stops when chart is hidden
+PASS whole history fetches are throttled; older history is available immediately
+PASS new frame requests abort an old slow response; it cannot replace the new chart
+PASS fresh streaming bars survive a slower full snapshot; quote never refreshes analysis age
+PASS actual compiled canvas draw retains dimensions across updates and draws current price
+PASS countdown matches the selected official candle and ticks without new quotes
+PASS price badge follows the price axis and stays inside the plot edges
+PASS later REST receipt timestamp cannot split candle close from the live price marker
+PASS fresh quote without a REST delta projects into only the current official candle
+PASS historical navigation hides the live price marker and returns to the current candle on demand
+PASS 19 chart scenarios; final asset syntax checked; no exchange orders or real browser claims
