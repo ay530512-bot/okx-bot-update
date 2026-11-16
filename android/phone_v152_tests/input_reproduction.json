@@ -1,0 +1,11 @@
+{
+  "type": "synthetic confirmed candle input ordering, not actual missed-trade replay",
+  "all_eligible_hourly_available": true,
+  "leader_latest15m_available": true,
+  "published_scan_rows": 1,
+  "universe": 2,
+  "old141": "whole scan incomplete: no signal",
+  "new142": "same signal as old complete-data reference",
+  "unchanged_signal_fields": true,
+  "live_orders": 0
+}

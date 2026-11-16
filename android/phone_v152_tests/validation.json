@@ -1,0 +1,189 @@
+{
+  "version": "1.5.2",
+  "release": {
+    "display_version": "1.5.2",
+    "version": 42,
+    "host": "host-v42",
+    "from_versions": [
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41
+    ],
+    "sha256": "ed2923ad30e0f823d1e7b5d19a5d30f8e052b1e460b58fc39d67edae4c109ce3",
+    "bytes": 500872,
+    "changed_files": [
+      "phone_button_old_sources.json",
+      "phone_button_upgrade.py",
+      "phone_connection_trace.py",
+      "phone_diagnostic_export.py",
+      "phone_entry_feed.py",
+      "phone_host.py",
+      "phone_mobile.py",
+      "phone_public_lanes.py",
+      "phone_public_ws.py",
+      "phone_restore_previous.py",
+      "phone_runtime_health.py",
+      "phone_service.py",
+      "phone_update.py",
+      "phone_update_ui.js"
+    ],
+    "unchanged_files": 28,
+    "files": {
+      "phone_account.py": "3c4c9f9cccaeaa60a41cc3ff3fdde68c04372aabcd8861098cefb8d918406f81",
+      "phone_button_old_sources.json": "be4038ce11b704646bae56e50407c6ea351234b2f51a22cc880c307ad50a6ed7",
+      "phone_button_upgrade.py": "5253da8d06f8cec02f23b753e0cdf1e03ff5ecc36d0a004f98a755fe6f1180f9",
+      "phone_clock.py": "c1465b5e7d796937e16897c28d29d6ea78d4523b1c3a235a3384a97c2af7074c",
+      "phone_connection_trace.py": "b891aa6ea9a767019629bad0cefbf3cadea791bfb886d68fc6a4a388d62ddda0",
+      "phone_diagnostic_export.py": "461e969e83c3ec9653be4441b27184bd72370a55720908b2a5026cc062e0b729",
+      "phone_entry_diagnostics.py": "ada9f16c3147624e279a9f9b48443cf890a16b5ff581b95177d20b76b8894a3b",
+      "phone_entry_feed.py": "032124f8ae259776d0b6a8fe6eb63231e8b6fe924503f36514698a987bf0bebd",
+      "phone_entry_journey.py": "dacd4c8376df28ebbd065d71386b089f2c3f23cce4beec87b2a3adc370c60476",
+      "phone_exit_details.py": "6975bcf766aebd8a65869ef82b6c7904b70558181822915f4a064e5d07b8306d",
+      "phone_exit_ui.js": "bab731fba9036803e3501d1fcc5a38c7f8d0276ac1822004a0c021838eb6b195",
+      "phone_feed_fast.py": "7dfd89a43397ef0e180b12bb0bac3537b04832b0018747fd425ee9b722641e8e",
+      "phone_frozen_bars.py": "03fbd57f0116046d27791b9e4dbbf3c1ddf8b17076b1115b066e28650ed674e2",
+      "phone_handover.py": "11d26680baa581043998005af8b2016a40a4df1eff7730d9d34b10706c89523c",
+      "phone_host.py": "ca6311d0f9c50eed47cdfc833ac16f1f98078ab55f381b5174af235f8bc1dcbe",
+      "phone_market_alerts.py": "0e72dcd9567f31c6124f6e20aaf79b2a57bbe16dcf682379b6bf2c2c35b4c66e",
+      "phone_market_ui.js": "f8875b3bcde79b809ed6ebdac794a64134e9c493cb0f9fd0c1f8e2008415f512",
+      "phone_migrate.py": "aafbe024259d3f4dffc81b9b4ec7c9e9307a3487efeb969b1feed257f66399fb",
+      "phone_migration_sources.json": "214293c5bf0d7fd79838b1037ab9499a2a5428c91758fe3df7c439d790e3691d",
+      "phone_mobile.py": "bbd82b30fefb48d138b582528b12bcf8a361718afd44c7dec1b9c9a6e124c80a",
+      "phone_mobile_compute.py": "0c1dc8bff08221f775066c38db368377abc3934f9a00fbf64707860f2b8d6151",
+      "phone_mobile_entry.py": "b2beff4b57a54c030d96f658e5968371be850891f7e9836fafa7ebd475c41a80",
+      "phone_mobile_policy.py": "48ad9abc49a611efab12c5c9dbc1f6a7d017c2b88e9db30c05e82c938bb08fc0",
+      "phone_morning_short.py": "240854ef9feef7208ac9ed9e460264cc3c67b0bb6a01d2b92a8887730dff216d",
+      "phone_parallel.py": "7a0385256d977a6eca21401e807445d4c842d6b842ad0a2f60d09a8acee96df5",
+      "phone_performance.py": "8cc9d03823563bac455ccb35c7997aaac6d54dad9ce8721afe9853cfc142abe9",
+      "phone_public_lanes.py": "b6b430cefaeb5ce696efeef4a6db0dfd798a0dcbf15d63022ec48b8a3ebfbba4",
+      "phone_public_ws.py": "5087f2cc0146be7ce13edfe6917882151d61cbe8d7a0e9acde1cc64ffb141425",
+      "phone_pullback_size.py": "c07212673667875f3251e3e1b0204dfa4251fc1045b0c8408f4c73476a6ab9e7",
+      "phone_quote_registry.py": "0eed08d0d545bd5b9140b179f11e24780a05b629649359cc54b9774749d48e39",
+      "phone_remote.py": "f891e8cc8c8e822eb7f75ccd22d441b4b451162de0bf87a134b3c925e9073e97",
+      "phone_remote_check.py": "7d20cb6dcbbd2d784dab6c9fd8131722175d2f684b2202c3499fc13e8fd194d1",
+      "phone_restore_previous.py": "756205e2f9cf470acf796930f08608e524f9ad120262fa8df1b195e83afa5c55",
+      "phone_runtime_health.py": "9732f3097ac1d326a0491dbdc09d3f66126cdbd0b372eb6511cb03f9fb412dc5",
+      "phone_sections.css": "d27839c70798a27840d2bdf32b3c0a97c63122d63bbc949f3dfcb477e99d9f24",
+      "phone_service.py": "0b532199e55fc7b01d67b25814935b3a78f1fa047ba03eaf65c07420728872c0",
+      "phone_signal_cache.py": "47a0efaa59f96b3ec68840b6c6c52e393cc59207ce942d4f216aa60e5b81ace3",
+      "phone_sources.json": "1e8a54e5baff2e9f77aa48e1335dea650ae74cc1e5ebfaf562d796960d0838c7",
+      "phone_trend_inputs.py": "73d2085c351fdb550fc2d2c86a664e1f057fcad43e6b9d238ece7b9dd8c147a0",
+      "phone_trend_slot.py": "ce7a145e8aa6954c0f0022def0fe207d359715cda34a61e83e60069ed4aa64e8",
+      "phone_update.py": "d4b743a884832b2e426fa7f705fd016312cd37d25d12f0b3923e847c78434b5d",
+      "phone_update_ui.js": "ca491834016950da38e6ec988285011a80a6aaf38918226128cfccd717d97bce"
+    }
+  },
+  "python_tests": 188,
+  "javascript_suites": 1,
+  "all_passed": true,
+  "results": [
+    {
+      "script": "test_inputs.py",
+      "returncode": 0,
+      "tests": 14,
+      "log_sha256": "216fd2507550ab9ab012556cb6788ce889ab25f38b104a283bcbfe03d835895a"
+    },
+    {
+      "script": "test_export.py",
+      "returncode": 0,
+      "tests": 4,
+      "log_sha256": "301de831f14a983d3638795b69ea31ef9c165b3bfd8631723ab2dc197319097a"
+    },
+    {
+      "script": "test_mobile.py",
+      "returncode": 0,
+      "tests": 26,
+      "log_sha256": "181ac0d1f537a34dc439c0b818e5e51ec39e7ca8e7c741e6542cfe94666dd105"
+    },
+    {
+      "script": "test_transport.py",
+      "returncode": 0,
+      "tests": 22,
+      "log_sha256": "2bc801ed55385bf95e834a3651a77edb2ee3df47cfdc38458923894acd334723"
+    },
+    {
+      "script": "test_paths.py",
+      "returncode": 0,
+      "tests": 4,
+      "log_sha256": "44825f24cdbd1bcc73113cc0e880161c602c66296af8171cc29ead1360391377"
+    },
+    {
+      "script": "test_window.py",
+      "returncode": 0,
+      "tests": 4,
+      "log_sha256": "66d6e314674f6e6ea71cf48674237688347597b068c9457453dcd6ce6dfe124b"
+    },
+    {
+      "script": "test_latency.py",
+      "returncode": 0,
+      "tests": 13,
+      "log_sha256": "c1e5982c7a2ba2fa5bb66c58bde0c84a272449e20a2e4a3a3522e58cb668ff1c"
+    },
+    {
+      "script": "test_handover.py",
+      "returncode": 0,
+      "tests": 14,
+      "log_sha256": "e68df21350c2e606673c38dcf5dfe4b1a31fc6d26c59ea10313ff44bd46d0cfc"
+    },
+    {
+      "script": "test_release.py",
+      "returncode": 0,
+      "tests": 5,
+      "log_sha256": "6211f4213548b04e87f62c2662e92eb7da005016ccac53bacca5a27cdc68c384"
+    },
+    {
+      "script": "test_execution.py",
+      "returncode": 0,
+      "tests": 38,
+      "log_sha256": "629b2761e349dfb4638ae3a7f5a218b6f2d0c50cf83c29256be86ab2daaf0d16"
+    },
+    {
+      "script": "test_morning.py",
+      "returncode": 0,
+      "tests": 21,
+      "log_sha256": "c23959b482529e1e31b66d4217730197be5b7d5640125eb567383a28d964ed36"
+    },
+    {
+      "script": "test_switch.py",
+      "returncode": 0,
+      "tests": 9,
+      "log_sha256": "8bf1fd9289fd6ed3705dfc6b61c5265b5996d74872fca85e7fdb224e4ef275dd"
+    },
+    {
+      "script": "test_lanes.py",
+      "returncode": 0,
+      "tests": 14,
+      "log_sha256": "5ba985e2011f8985f7b3289546774e22c5312607dcd967ee52dc4721b61df2d3"
+    },
+    {
+      "script": "test_ui.cjs",
+      "returncode": 0,
+      "tests": null,
+      "log_sha256": "f30a4d9b5f829c2a9251c76a416440de4159d1efe2b65b23aea236597e8e2927"
+    }
+  ],
+  "actual_phone_tested": false,
+  "actual_exchange_order_requests": 0,
+  "profitability_backtest": false,
+  "runner_note": "Inherited transport timeout expectation accounts for the upstream fix in websocket-client 1.9; legacy 1.8 is validated separately.",
+  "scope": "Real strategy/engine functions with fake exchange I/O; synthetic morning candles. UI uses a minimal DOM.",
+  "legacy_transport_tests": 36,
+  "legacy_websocket_client": "1.8.0",
+  "local_tls_soak": "local_soak.json",
+  "synthetic_benchmark": "receive_benchmark.json"
+}

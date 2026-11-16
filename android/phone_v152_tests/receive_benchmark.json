@@ -1,0 +1,20 @@
+{
+  "synthetic": true,
+  "actual_phone_tested": false,
+  "websocket_client": "1.9.2",
+  "before": {
+    "frames": 60000,
+    "wall_s": 4.585166,
+    "cpu_s": 4.575878,
+    "messages_per_second": 13086
+  },
+  "after": {
+    "frames": 60000,
+    "wall_s": 0.511821,
+    "cpu_s": 0.511685,
+    "messages_per_second": 117229
+  },
+  "cpu_reduction_pct": 88.82,
+  "throughput_ratio": 8.96,
+  "note": "Same 60000 unmasked 340-byte ticker payloads; frame assembly, strict text validation, JSON parsing and original optimized feed. No network/Android timing claim."
+}

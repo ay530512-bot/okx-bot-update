@@ -1,0 +1,45 @@
+#phoneMovesPanel{margin:28px 0 36px}
+#phoneMovesPanel h2{margin-bottom:8px}
+#phoneMoveRows{display:flex;flex-direction:column;gap:5px;max-height:360px;overflow-y:auto;overscroll-behavior:contain;padding:2px}
+.phone-move-card{display:flex;flex-direction:row;align-items:center;justify-content:space-between;gap:7px;text-align:left;border:1px solid #343434;border-radius:8px;padding:9px 8px;min-height:38px;min-width:0;width:100%;background:#1e1e1e;color:#eee;white-space:nowrap;overflow-x:auto;font-size:11px;line-height:1.25;box-sizing:border-box}
+.phone-move-card>*{flex-shrink:0;white-space:nowrap}
+.phone-move-card strong{font-size:12px}
+.phone-move-card small{display:inline;font-size:10px;color:#aaa;line-height:1.25}
+.phone-move-prices{font-size:10px;color:#ccc}
+#phoneMovesPanel>p{font-size:12px;line-height:1.5;margin:5px 0}
+.phone-move-card:focus-visible{outline:2px solid #d0ff61;outline-offset:1px}
+#phoneHealthSummary{margin-top:28px;white-space:normal}
+.phone-diagnostic-section{margin:0 0 18px;padding:20px 0;border-top:1px solid #414141}
+.phone-diagnostic-section h3{font-size:17px;color:#f0f0f0;margin:0 0 14px;line-height:1.5}
+.phone-diagnostic-section p{font-size:14px;line-height:1.8;margin:9px 0;color:#bbb;overflow-wrap:anywhere}
+.phone-rule-card{padding:16px;margin:12px 0;border-radius:14px;background:#292929}
+.phone-rule-card h4{color:#d0ff61;font-size:16px;margin:0 0 10px}
+.phone-rule-card p{margin:8px 0}
+#phonePerfSummary{line-height:1.9;padding:20px 0;margin-top:24px;border-top:1px solid #414141}
+#parallel126{border-top:1px solid #414141;padding-top:24px;margin-top:20px;line-height:1.9}
+#parallel126 button{margin:10px 10px 0 0}
+
+/* Settings body matches the 12px update handover note. */
+#activities{height:250px;max-height:32vh;overscroll-behavior-y:auto;margin-bottom:28px}
+#activities .activity{padding:10px 0}
+#activities .activity p,#activities .activity time,
+#phonePerfSummary,#phoneHealthSummary .phone-diagnostic-section p,
+#parallel126,#parallel126 p,#parallel126 button{font-size:12px;line-height:1.65}
+#phoneHealthSummary .phone-diagnostic-section h3,
+#phoneHealthSummary .phone-rule-card h4{font-size:13px;line-height:1.5}
+#phoneHealthSummary .phone-diagnostic-section{padding:14px 0;margin-bottom:12px}
+#phoneHealthSummary .phone-rule-card{padding:12px;margin:8px 0}
+
+/* Compact explanation, with distinct title, labels and supporting text. */
+.phone-host-notice{margin:0 0 20px;padding:12px 14px;border:1px solid #383838;border-radius:16px;background:#080808;min-width:0}
+.phone-host-notice h2{margin:0 0 4px;font-size:14px;font-weight:700;line-height:1.5;letter-spacing:0;color:#d0ff61}
+.phone-host-notice .phone-host-allocation{margin:0 0 10px;font-size:11px;line-height:1.5;color:#a8a8a8;word-break:keep-all;overflow-wrap:anywhere}
+.phone-host-rule{display:grid;grid-template-columns:48px minmax(0,1fr);gap:10px;align-items:start;padding-top:9px;border-top:1px solid #303030}
+.phone-host-rule+.phone-host-rule{margin-top:9px}
+.phone-host-rule>strong{font-size:11px;font-weight:600;line-height:1.65;color:#d0ff61;white-space:nowrap}
+.phone-host-time{display:block;margin-bottom:2px;font-size:11px;line-height:1.6;color:#ededed}
+.phone-host-rule p{margin:0;font-size:12px;line-height:1.55;color:#bcbcbc;word-break:keep-all;overflow-wrap:anywhere}
+#mobileUpdateButton{border:2px solid #d0ff61;color:#d0ff61;background:#171b10;min-height:48px}
+#mobileUpdateButton:hover:not(:disabled){background:#242d15}
+#mobileUpdateButton:focus-visible{outline:2px solid #fff;outline-offset:3px}
+#mobileUpdateButton:disabled{border-color:#829653;color:#a9b98a;background:#20221b}
