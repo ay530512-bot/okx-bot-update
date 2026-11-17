@@ -1,0 +1,7 @@
+test_live_position_refuses_quit_and_keeps_protection (__main__.QuitTests.test_live_position_refuses_quit_and_keeps_protection) ... ok
+test_paused_flat_serial_quit_succeeds_despite_old_risk_flag (__main__.QuitTests.test_paused_flat_serial_quit_succeeds_despite_old_risk_flag) ... ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.165s
+
+OK

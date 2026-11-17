@@ -1,0 +1,28 @@
+test_complete_bundle_preserves_policy_hashes_stages_once (__main__.Tests.test_complete_bundle_preserves_policy_hashes_stages_once) ... ok
+test_direct_151_and_152_upgrade_preserves_unrelated_files (__main__.Tests.test_direct_151_and_152_upgrade_preserves_unrelated_files) ... ok
+test_production_install_order_uses_one_coordinator (__main__.Tests.test_production_install_order_uses_one_coordinator) ... ok
+test_restore_verifies_full_previous_payload (__main__.Tests.test_restore_verifies_full_previous_payload) ... ok
+test_trend_predicates_quantity_and_management_unchanged (__main__.Tests.test_trend_predicates_quantity_and_management_unchanged) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 3.407s
+
+OK
+해시 확인된 1.6.10 파일 준비: /tmp/tmp_zilbh8i/host-v57
+이미 검증된 1.6.10 파일이 준비되어 있습니다.
+해시 확인된 1.6.10 파일 준비: /tmp/tmphu8xhgvo/host-v57
+해시 확인된 1.6.10 파일 준비: /tmp/tmp5pw4dycc/host-v57
+해시 확인된 1.6.10 파일 준비: /tmp/tmp8yauigh3/host-v57
+해시 확인된 1.6.10 파일 준비: /tmp/tmpgqz4fol9/host-v57
+해시 확인된 1.6.10 파일 준비: /tmp/tmp70g8g80w/host-v57
+해시 확인된 1.6.10 파일 준비: /tmp/tmpp7mjd8b0/host-v57
+해시 확인된 1.6.10 파일 준비: /tmp/tmp6v9mmcce/host-v57
+해시 확인된 1.6.10 파일 준비: /tmp/tmpnvfkxrpc/host-v57
+해시 확인된 1.6.10 파일 준비: /tmp/tmp02bj7js5/host-v57
+해시 확인된 1.6.10 파일 준비: /tmp/tmpi08ybxj2/host-v57
+해시 확인된 1.6.10 파일 준비: /tmp/tmp7lxaxp4v/host-v57
+해시 확인된 1.6.10 파일 준비: /tmp/tmppuwrjb2s/host-v57
+해시 확인된 1.6.10 파일 준비: /tmp/tmpq1u7i78s/host-v57
+해시 확인된 1.6.10 파일 준비: /tmp/tmp7qg7fqse/host-v57
+해시 확인된 1.6.10 파일 준비: /tmp/tmpnz9rjb1a/host-v57
+해시 확인된 1.6.10 파일 준비: /tmp/tmp2sp16o1b/host-v57

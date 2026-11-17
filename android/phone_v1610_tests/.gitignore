@@ -1,0 +1,4 @@
+__pycache__/
+fixtures.json
+runner_frozen.json
+chart_asset.js

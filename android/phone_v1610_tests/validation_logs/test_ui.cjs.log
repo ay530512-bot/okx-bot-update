@@ -1,0 +1,4 @@
+PASS diagnostic refresh preserves text-node identity, nested scroll, last-good data and reading freeze without trading actions
+PASS structured analysis keeps original scores, conditional PnL, stale/symbol gates and details state; no trade API invoked
+PASS compact two-line funding, pay/receive signs, unknown margin, stale/settlement/symbol guards and stable text nodes
+PASS KST month/day including midnight/new year; combined diagnostic DOM, latest-per-symbol single row, no trade requests
