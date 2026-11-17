@@ -1,0 +1,29 @@
+test_all_automatic_rules_manual_half_preserves_rule_and_management (__main__.Reductions.test_all_automatic_rules_manual_half_preserves_rule_and_management) ... ok
+test_boot_after_old_quantity_error_replays_saved_entry_proof (__main__.Reductions.test_boot_after_old_quantity_error_replays_saved_entry_proof) ... ok
+test_duplicate_fill_rows_count_once (__main__.Reductions.test_duplicate_fill_rows_count_once) ... ok
+test_four_slots_reconcile_and_one_pending_does_not_block_other_slots (__main__.Reductions.test_four_slots_reconcile_and_one_pending_does_not_block_other_slots) ... ok
+test_full_close_retains_two_observation_confirmation (__main__.Reductions.test_full_close_retains_two_observation_confirmation) ... ok
+test_increased_quantity_and_other_position_id_not_adopted (__main__.Reductions.test_increased_quantity_and_other_position_id_not_adopted) ... ok
+test_inflight_tighter_stop_not_widened (__main__.Reductions.test_inflight_tighter_stop_not_widened) ... ok
+test_manual_reduction_does_not_invent_profit_target_or_widen_existing_floor (__main__.Reductions.test_manual_reduction_does_not_invent_profit_target_or_widen_existing_floor) ... ok
+test_manual_reduction_racing_bot_partial_terminal_fill (__main__.Reductions.test_manual_reduction_racing_bot_partial_terminal_fill) ... ok
+test_missing_history_waits_without_fabricated_quantity (__main__.Reductions.test_missing_history_waits_without_fabricated_quantity) ... ok
+test_new_stop_verified_before_old_stop_cancel (__main__.Reductions.test_new_stop_verified_before_old_stop_cancel) ... ok
+test_no_duplicate_automatic_half_after_manual_reduction (__main__.Reductions.test_no_duplicate_automatic_half_after_manual_reduction) ... ok
+test_protection_rejection_closes_remainder_not_original_size (__main__.Reductions.test_protection_rejection_closes_remainder_not_original_size) ... ok
+test_reopen_same_posid_and_average_is_not_adopted (__main__.Reductions.test_reopen_same_posid_and_average_is_not_adopted) ... ok
+test_repeat_reductions_before_and_after_stop_ack (__main__.Reductions.test_repeat_reductions_before_and_after_stop_ack) ... ok
+test_restart_uses_saved_intent_without_duplicate_protection_post (__main__.Reductions.test_restart_uses_saved_intent_without_duplicate_protection_post) ... ok
+test_stale_larger_snapshot_never_restores_closed_quantity (__main__.Reductions.test_stale_larger_snapshot_never_restores_closed_quantity) ... ok
+test_stop_already_crossed_closes_remainder_without_new_stop (__main__.Reductions.test_stop_already_crossed_closes_remainder_without_new_stop) ... ok
+test_tick_continues_existing_management_while_entries_paused (__main__.Reductions.test_tick_continues_existing_management_while_entries_paused) ... ok
+test_unacknowledged_protection_keeps_old_stop_and_never_resends (__main__.Reductions.test_unacknowledged_protection_keeps_old_stop_and_never_resends) ... ok
+test_unchanged_quantity_does_not_fetch_fill_history (__main__.Reductions.test_unchanged_quantity_does_not_fetch_fill_history) ... ok
+test_unrelated_manual_position_is_not_adopted_or_cancelled (__main__.Reductions.test_unrelated_manual_position_is_not_adopted_or_cancelled) ... ok
+test_update_preflight_is_readonly_accepts_covered_proven_reduction (__main__.Reductions.test_update_preflight_is_readonly_accepts_covered_proven_reduction) ... ok
+test_user_or_guard_full_close_during_resize_does_not_stall (__main__.Reductions.test_user_or_guard_full_close_during_resize_does_not_stall) ... ok
+
+----------------------------------------------------------------------
+Ran 24 tests in 1.307s
+
+OK

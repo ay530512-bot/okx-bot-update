@@ -1,0 +1,21 @@
+test_cancelled_registration_closes_late_socket (__main__.Tests.test_cancelled_registration_closes_late_socket) ... ok
+test_changed_watch_cannot_adopt_wrong_subscriptions (__main__.Tests.test_changed_watch_cannot_adopt_wrong_subscriptions) ... ok
+test_disconnect_http_status_is_numeric_without_raw_headers (__main__.Tests.test_disconnect_http_status_is_numeric_without_raw_headers) ... ok
+test_eof_after_healthy_stream_uses_fast_retry_early_failure_backs_off (__main__.Tests.test_eof_after_healthy_stream_uses_fast_retry_early_failure_backs_off) ... ok
+test_failed_warm_handshake_closes_raw_and_retains_original (__main__.Tests.test_failed_warm_handshake_closes_raw_and_retains_original) ... ok
+test_manual_generation_change_cannot_adopt_late_worker (__main__.Tests.test_manual_generation_change_cannot_adopt_late_worker) ... ok
+test_missing_subscription_ack_cannot_handover (__main__.Tests.test_missing_subscription_ack_cannot_handover) ... ok
+test_monitor_rollover_does_not_touch_execution_owner (__main__.Tests.test_monitor_rollover_does_not_touch_execution_owner) ... ok
+test_only_notice_creates_one_warm_worker_without_blocking_old_reader (__main__.Tests.test_only_notice_creates_one_warm_worker_without_blocking_old_reader) ... ok
+test_original_lock_remains_available_during_blocked_retired_close (__main__.Tests.test_original_lock_remains_available_during_blocked_retired_close) ... ok
+test_replacement_receiving_own_upgrade_notice_is_not_adopted (__main__.Tests.test_replacement_receiving_own_upgrade_notice_is_not_adopted) ... ok
+test_stale_replacement_is_rejected_without_disconnecting_current (__main__.Tests.test_stale_replacement_is_rejected_without_disconnecting_current) ... ok
+test_stopped_owner_discards_ready_worker (__main__.Tests.test_stopped_owner_discards_ready_worker) ... ok
+test_warm_adoption_keeps_fresh_timestamps_new_generation_no_old_quotes (__main__.Tests.test_warm_adoption_keeps_fresh_timestamps_new_generation_no_old_quotes) ... ok
+test_warm_failure_keeps_current_and_rate_limits_retries (__main__.Tests.test_warm_failure_keeps_current_and_rate_limits_retries) ... ok
+test_warm_worker_has_no_risk_callback_and_uses_real_subscription_acks (__main__.Tests.test_warm_worker_has_no_risk_callback_and_uses_real_subscription_acks) ... ok
+
+----------------------------------------------------------------------
+Ran 16 tests in 0.008s
+
+OK

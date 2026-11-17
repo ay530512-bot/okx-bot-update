@@ -1,0 +1,15 @@
+test_25_simulated_hours_scan_through_midnight_and_reconnect (__main__.Tests.test_25_simulated_hours_scan_through_midnight_and_reconnect) ... ok
+test_callback_between_original_discard_and_cleanup_is_retired (__main__.Tests.test_callback_between_original_discard_and_cleanup_is_retired) ... ok
+test_failed_cleanup_not_retired_and_entry_stays_blocked (__main__.Tests.test_failed_cleanup_not_retired_and_entry_stays_blocked) ... ok
+test_journal_failure_requeues_protection_before_any_execution (__main__.Tests.test_journal_failure_requeues_protection_before_any_execution) ... ok
+test_late_arrival_and_existing_operator_close_preserved (__main__.Tests.test_late_arrival_and_existing_operator_close_preserved) ... ok
+test_late_closed_guard_no_longer_creates_orphan (__main__.Tests.test_late_closed_guard_no_longer_creates_orphan) ... ok
+test_operator_pause_still_blocks_after_retirement (__main__.Tests.test_operator_pause_still_blocks_after_retirement) ... ok
+test_other_pending_risk_preserved_and_deduplicated (__main__.Tests.test_other_pending_risk_preserved_and_deduplicated) ... ok
+test_real_tick_resumes_scanning_only_after_healthy_recovery (__main__.Tests.test_real_tick_resumes_scanning_only_after_healthy_recovery) ... ok
+test_reconcile_error_after_consumption_keeps_durable_close_reason (__main__.Tests.test_reconcile_error_after_consumption_keeps_durable_close_reason) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 1.852s
+
+OK

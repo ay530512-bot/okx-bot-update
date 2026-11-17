@@ -1,0 +1,18 @@
+test_all_candidate_channels_before_unrelated_tickers (__main__.Tests.test_all_candidate_channels_before_unrelated_tickers) ... ok
+test_current_leader_prewarms_without_creating_signal_or_order (__main__.Tests.test_current_leader_prewarms_without_creating_signal_or_order) ... ok
+test_expired_trend_updates_text_and_clears_without_returning (__main__.Tests.test_expired_trend_updates_text_and_clears_without_returning) ... ok
+test_failed_send_never_claims_requested_or_spends_new_generation_budget (__main__.Tests.test_failed_send_never_claims_requested_or_spends_new_generation_budget) ... ok
+test_last_rejection_survives_expiry (__main__.Tests.test_last_rejection_survives_expiry) ... ok
+test_late_candidate_old_expires_new_ready_with_same_time_and_freshness (__main__.Tests.test_late_candidate_old_expires_new_ready_with_same_time_and_freshness) ... ok
+test_nonurgent_still_waits_ten_seconds (__main__.Tests.test_nonurgent_still_waits_ten_seconds) ... ok
+test_obsolete_generation_never_commits_send (__main__.Tests.test_obsolete_generation_never_commits_send) ... ok
+test_requested_and_sent_are_distinct_and_generation_safe (__main__.Tests.test_requested_and_sent_are_distinct_and_generation_safe) ... ok
+test_seen_trend_cannot_still_claim_pending (__main__.Tests.test_seen_trend_cannot_still_claim_pending) ... ok
+test_stale_arm_and_02_cutoff_are_not_prewarmed (__main__.Tests.test_stale_arm_and_02_cutoff_are_not_prewarmed) ... ok
+test_urgent_operation_hard_rolling_budget_and_one_second_minimum (__main__.Tests.test_urgent_operation_hard_rolling_budget_and_one_second_minimum) ... ok
+test_valid_pending_kept_and_prioritized_during_ui_watch (__main__.Tests.test_valid_pending_kept_and_prioritized_during_ui_watch) ... ok
+
+----------------------------------------------------------------------
+Ran 13 tests in 0.508s
+
+OK

@@ -1,0 +1,12 @@
+test_actual_previous_runtime_record_survives_handover_and_manual_half (__main__.Tests.test_actual_previous_runtime_record_survives_handover_and_manual_half) ... ok
+test_coordinator_never_scans_support_and_discards_old_pending (__main__.Tests.test_coordinator_never_scans_support_and_discards_old_pending) ... ok
+test_direct_saved_signal_is_also_rejected (__main__.Tests.test_direct_saved_signal_is_also_rejected) ... ok
+test_existing_long_and_morning_short_sources_are_identical (__main__.Tests.test_existing_long_and_morning_short_sources_are_identical) ... ok
+test_legacy_support_remains_reserved_owned_and_managed (__main__.Tests.test_legacy_support_remains_reserved_owned_and_managed) ... ok
+test_new_home_and_diagnostics_no_longer_advertise_removed_entry (__main__.Tests.test_new_home_and_diagnostics_no_longer_advertise_removed_entry) ... ok
+test_scan_cannot_revive_saved_support_signal (__main__.Tests.test_scan_cannot_revive_saved_support_signal) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.218s
+
+OK

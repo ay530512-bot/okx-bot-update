@@ -1,0 +1,19 @@
+test_fragmented_unicode_still_decoded_strictly (__main__.Decoding.test_fragmented_unicode_still_decoded_strictly) ... ok
+test_invalid_text_binary_and_close_utf8_are_rejected (__main__.Decoding.test_invalid_text_binary_and_close_utf8_are_rejected) ... ok
+test_290_tickers_and_candidate_use_separate_connections (__main__.Lanes.test_290_tickers_and_candidate_use_separate_connections) ... ok
+test_all_mark_callbacks_remain_on_execution_lane (__main__.Lanes.test_all_mark_callbacks_remain_on_execution_lane) ... ok
+test_both_disconnect_histories_and_rtt_export_without_secrets (__main__.Lanes.test_both_disconnect_histories_and_rtt_export_without_secrets) ... ok
+test_execution_eof_cannot_use_fresh_monitor_quotes (__main__.Lanes.test_execution_eof_cannot_use_fresh_monitor_quotes) ... ok
+test_manual_reconnect_and_stop_cover_both_lanes (__main__.Lanes.test_manual_reconnect_and_stop_cover_both_lanes) ... ok
+test_monitor_bands_preserve_intrabar_extremes (__main__.Lanes.test_monitor_bands_preserve_intrabar_extremes) ... ok
+test_monitor_eof_keeps_live_execution_quotes_and_generation (__main__.Lanes.test_monitor_eof_keeps_live_execution_quotes_and_generation) ... ok
+test_promoting_monitor_symbol_requires_new_execution_data (__main__.Lanes.test_promoting_monitor_symbol_requires_new_execution_data) ... ok
+test_stale_future_and_old_generation_remain_rejected_both_lanes (__main__.Lanes.test_stale_future_and_old_generation_remain_rejected_both_lanes) ... ok
+test_start_is_idempotent_and_reader_ownership_is_separate (__main__.Lanes.test_start_is_idempotent_and_reader_ownership_is_separate) ... ok
+test_subscription_ack_distinguished_from_sent_and_cleared_on_disconnect (__main__.Lanes.test_subscription_ack_distinguished_from_sent_and_cleared_on_disconnect) ... ok
+test_ui_monitor_changes_do_not_evict_execution (__main__.Lanes.test_ui_monitor_changes_do_not_evict_execution) ... ok
+
+----------------------------------------------------------------------
+Ran 14 tests in 0.016s
+
+OK

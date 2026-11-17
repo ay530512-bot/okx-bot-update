@@ -1,0 +1,24 @@
+test_analysis_jobs_coalesce_and_old_selection_is_ignored (__main__.FeedTests.test_analysis_jobs_coalesce_and_old_selection_is_ignored) ... ok
+test_limit_two_for_warm_cache_full_reload_after_gap (__main__.FeedTests.test_limit_two_for_warm_cache_full_reload_after_gap) ... ok
+test_slow_analysis_cannot_block_new_candle_refreshes (__main__.FeedTests.test_slow_analysis_cannot_block_new_candle_refreshes) ... ok
+test_confirmed_bar_never_changes (__main__.LiveTests.test_confirmed_bar_never_changes) ... ok
+test_disconnect_generation_and_stale_quote_mark_unavailable (__main__.LiveTests.test_disconnect_generation_and_stale_quote_mark_unavailable) ... ok
+test_expired_session_stops_stream (__main__.LiveTests.test_expired_session_stops_stream) ... ok
+test_live_price_and_all_tick_extremes_without_rest (__main__.LiveTests.test_live_price_and_all_tick_extremes_without_rest) ... ok
+test_nonfinite_or_negative_price_not_emitted (__main__.LiveTests.test_nonfinite_or_negative_price_not_emitted) ... ok
+test_old_generation_high_not_imported_after_reconnection (__main__.LiveTests.test_old_generation_high_not_imported_after_reconnection) ... ok
+test_older_or_newer_frame_quote_never_rewrites_wrong_candle (__main__.LiveTests.test_older_or_newer_frame_quote_never_rewrites_wrong_candle) ... ok
+test_one_minute_day_week_overlay_preserves_official_open_and_volume (__main__.LiveTests.test_one_minute_day_week_overlay_preserves_official_open_and_volume) ... ok
+test_rest_failure_retains_existing_chart_without_false_freshness (__main__.LiveTests.test_rest_failure_retains_existing_chart_without_false_freshness) ... ok
+test_rollover_shows_price_without_fabricating_new_candle (__main__.LiveTests.test_rollover_shows_price_without_fabricating_new_candle) ... ok
+test_selection_only_adds_monitor_ticker (__main__.LiveTests.test_selection_only_adds_monitor_ticker) ... ok
+test_sse_disconnect_and_connection_limit_do_not_leak_slots (__main__.LiveTests.test_sse_disconnect_and_connection_limit_do_not_leak_slots) ... ok
+test_sse_small_packet_flushed_and_slot_released (__main__.LiveTests.test_sse_small_packet_flushed_and_slot_released) ... ok
+test_compact_funding_and_original_trade_controls_precede_analysis_tables (__main__.Routes.test_compact_funding_and_original_trade_controls_precede_analysis_tables) ... ok
+test_final_mobile_asset_integrates_stream_and_canvas_without_changing_close_actions (__main__.Routes.test_final_mobile_asset_integrates_stream_and_canvas_without_changing_close_actions) ... ok
+test_live_route_requires_allowed_host_and_login (__main__.Routes.test_live_route_requires_allowed_host_and_login) ... ok
+
+----------------------------------------------------------------------
+Ran 19 tests in 1.104s
+
+OK
