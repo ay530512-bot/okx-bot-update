@@ -1,0 +1,17 @@
+{
+  "type": "offline synthetic timeline, not actual CASHCAT replay or fills",
+  "input_first_seen_s": 77.358,
+  "valid_seconds": 90,
+  "engine_poll_seconds": 5,
+  "assumed_feed_response_seconds": 3,
+  "previous_subscription_at_s": 77,
+  "old140": {
+    "subscribe_at_s": 87.108,
+    "first_poll_ready_s": null
+  },
+  "new141": {
+    "subscribe_at_s": 78.108,
+    "first_poll_ready_s": 82.358
+  },
+  "same_expiry_and_freshness": true
+}

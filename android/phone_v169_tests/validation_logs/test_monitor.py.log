@@ -1,0 +1,21 @@
+test_actual_eof_is_detected_after_all_received_bytes_are_consumed (__main__.BufferedTests.test_actual_eof_is_detected_after_all_received_bytes_are_consumed) ... ok
+test_available_one_byte_returns_without_waiting_to_fill_buffer (__main__.BufferedTests.test_available_one_byte_returns_without_waiting_to_fill_buffer) ... ok
+test_exact_frames_across_small_extended_and_large_lengths (__main__.BufferedTests.test_exact_frames_across_small_extended_and_large_lengths) ... ok
+test_execution_default_keeps_original_exact_read_size (__main__.BufferedTests.test_execution_default_keeps_original_exact_read_size) ... ok
+test_fragmentation_protocol_ping_and_close_are_not_skipped (__main__.BufferedTests.test_fragmentation_protocol_ping_and_close_are_not_skipped) ... ok
+test_invalid_buffer_size_is_rejected (__main__.BufferedTests.test_invalid_buffer_size_is_rejected) ... ok
+test_invalid_utf8_and_reserved_frame_flags_still_fail (__main__.BufferedTests.test_invalid_utf8_and_reserved_frame_flags_still_fail) ... ok
+test_many_frames_use_one_tls_read_and_keep_order (__main__.BufferedTests.test_many_frames_use_one_tls_read_and_keep_order) ... ok
+test_partial_frame_preserved_through_temporary_tls_timeout (__main__.BufferedTests.test_partial_frame_preserved_through_temporary_tls_timeout) ... ok
+test_runtime_enables_buffer_for_monitor_only (__main__.BufferedTests.test_runtime_enables_buffer_for_monitor_only) ... ok
+test_socket_replacement_and_external_close_never_reuse_buffered_bytes (__main__.BufferedTests.test_socket_replacement_and_external_close_never_reuse_buffered_bytes) ... ok
+test_bounded_trace_remains_exportable_during_disconnect_storm (__main__.TraceTests.test_bounded_trace_remains_exportable_during_disconnect_storm) ... ok
+test_locked_monitor_does_not_create_fake_disconnect_event (__main__.TraceTests.test_locked_monitor_does_not_create_fake_disconnect_event) ... ok
+test_monitor_only_eof_and_recovery_are_recorded_without_resetting_execution (__main__.TraceTests.test_monitor_only_eof_and_recovery_are_recorded_without_resetting_execution) ... ok
+test_periodic_monitor_samples_keep_cpu_and_lag_context_between_events (__main__.TraceTests.test_periodic_monitor_samples_keep_cpu_and_lag_context_between_events) ... ok
+test_quote_lag_uses_existing_clock_and_latest_arrival_not_stalest_symbol (__main__.TraceTests.test_quote_lag_uses_existing_clock_and_latest_arrival_not_stalest_symbol) ... ok
+
+----------------------------------------------------------------------
+Ran 16 tests in 1.854s
+
+OK

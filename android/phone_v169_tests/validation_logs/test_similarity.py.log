@@ -1,0 +1,14 @@
+test_all_eight_automatic_paths_capture_confirmation_features (__main__.Tests.test_all_eight_automatic_paths_capture_confirmation_features) ... ok
+test_missing_or_corrected_data_recomputes_without_signal_override (__main__.Tests.test_missing_or_corrected_data_recomputes_without_signal_override) ... ok
+test_only_confirmed_auto_record_can_anchor_and_entry_snapshot_frozen (__main__.Tests.test_only_confirmed_auto_record_can_anchor_and_entry_snapshot_frozen) ... ok
+test_priority_only_reorders_valid_same_direction_and_same_expiry (__main__.Tests.test_priority_only_reorders_valid_same_direction_and_same_expiry) ... ok
+test_scale_invariant_chart_and_self_relative_volume (__main__.Tests.test_scale_invariant_chart_and_self_relative_volume) ... ok
+test_similar_but_no_original_signal_never_returns_entry (__main__.Tests.test_similar_but_no_original_signal_never_returns_entry) ... ok
+test_similarity_cannot_bypass_original_preflight_rejection (__main__.Tests.test_similarity_cannot_bypass_original_preflight_rejection) ... ok
+test_three_common_positions_enter_fill_and_verify_stops_then_reserved_slot_remains (__main__.Tests.test_three_common_positions_enter_fill_and_verify_stops_then_reserved_slot_remains) ... ok
+test_unfinished_candles_do_not_change_features (__main__.Tests.test_unfinished_candles_do_not_change_features) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.601s
+
+OK
