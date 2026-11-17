@@ -1,0 +1,7 @@
+test_existing_quantity_mismatch_can_update_with_exchange_stop_retained (__main__.UpgradeReduction.test_existing_quantity_mismatch_can_update_with_exchange_stop_retained) ... ok
+test_missing_reduction_proof_keeps_existing_manager_running (__main__.UpgradeReduction.test_missing_reduction_proof_keeps_existing_manager_running) ... ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.818s
+
+OK

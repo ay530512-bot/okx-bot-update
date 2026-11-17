@@ -1,0 +1,24 @@
+test_conditional_order_blocks_without_cancelling (__main__.FlatProcesses.test_conditional_order_blocks_without_cancelling) ... ok
+test_dead_installer_watchdog_restores_after_all_owners_exit (__main__.FlatProcesses.test_dead_installer_watchdog_restores_after_all_owners_exit) ... ok
+test_flat_paused_stale_work_can_exit_normally_and_preserves_pause (__main__.FlatProcesses.test_flat_paused_stale_work_can_exit_normally_and_preserves_pause) ... ok
+test_installed166_busy_reply_to168_fallback_over_real_request_files (__main__.FlatProcesses.test_installed166_busy_reply_to168_fallback_over_real_request_files) ... ok
+test_live_order_blocks_without_stopping (__main__.FlatProcesses.test_live_order_blocks_without_stopping) ... ok
+test_nonzero_position_blocks_without_stopping (__main__.FlatProcesses.test_nonzero_position_blocks_without_stopping) ... ok
+test_pending_local_record_blocks_even_if_exchange_looks_flat (__main__.FlatProcesses.test_pending_local_record_blocks_even_if_exchange_looks_flat) ... ok
+test_position_arriving_on_second_read_keeps_original_running (__main__.FlatProcesses.test_position_arriving_on_second_read_keeps_original_running) ... ok
+test_post_stop_query_failure_restores_original (__main__.FlatProcesses.test_post_stop_query_failure_restores_original) ... ok
+test_query_failure_before_stop_leaves_original_running (__main__.FlatProcesses.test_query_failure_before_stop_leaves_original_running) ... ok
+test_refused_normal_quit_never_escalates_or_starts_another_owner (__main__.FlatProcesses.test_refused_normal_quit_never_escalates_or_starts_another_owner) ... ok
+test_unpaused_intent_never_implicitly_pauses (__main__.FlatProcesses.test_unpaused_intent_never_implicitly_pauses) ... ok
+test_watchdog_does_not_replace_live_new_owner (__main__.FlatProcesses.test_watchdog_does_not_replace_live_new_owner) ... ok
+test_wrong_pid_token_is_never_signalled (__main__.FlatProcesses.test_wrong_pid_token_is_never_signalled) ... ok
+test_repeated_known_busy_uses_flat_checks (__main__.RetryTests.test_repeated_known_busy_uses_flat_checks) ... ok
+test_transient_busy_is_retried_before_flat_fallback (__main__.RetryTests.test_transient_busy_is_retried_before_flat_fallback) ... ok
+test_unrelated_handover_error_never_uses_fallback (__main__.RetryTests.test_unrelated_handover_error_never_uses_fallback) ... ok
+test_new_handover_reports_each_waiting_component (__main__.BusyEvidence.test_new_handover_reports_each_waiting_component) ... ok
+test_old166_flat_risk_flag_reproduces_generic_block_without_account_read (__main__.BusyEvidence.test_old166_flat_risk_flag_reproduces_generic_block_without_account_read) ... ok
+
+----------------------------------------------------------------------
+Ran 19 tests in 5.871s
+
+OK

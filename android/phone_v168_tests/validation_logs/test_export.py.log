@@ -1,0 +1,9 @@
+test_endpoint_requires_valid_host_and_session (__main__.Tests.test_endpoint_requires_valid_host_and_session) ... ok
+test_export_is_bounded_and_skips_links (__main__.Tests.test_export_is_bounded_and_skips_links) ... ok
+test_full_metrics_and_transport_survive_allowlist (__main__.Tests.test_full_metrics_and_transport_survive_allowlist) ... ok
+test_prior_run_journey_retained_without_restoring_pending (__main__.Tests.test_prior_run_journey_retained_without_restoring_pending) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.535s
+
+OK

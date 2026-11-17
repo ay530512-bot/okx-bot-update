@@ -1,0 +1,43 @@
+test_changed_confirmation_at_final_read_blocks (__main__.EntryTests.test_changed_confirmation_at_final_read_blocks) ... ok
+test_exchange_rejection_is_not_a_fill (__main__.EntryTests.test_exchange_rejection_is_not_a_fill) ... ok
+test_expired_before_candidate_blocks (__main__.EntryTests.test_expired_before_candidate_blocks) ... ok
+test_expiry_during_admission_blocks (__main__.EntryTests.test_expiry_during_admission_blocks) ... ok
+test_first_observed77s_quotes80s_still_enters (__main__.EntryTests.test_first_observed77s_quotes80s_still_enters) ... ok
+test_first_observed77s_quotes91s_blocks (__main__.EntryTests.test_first_observed77s_quotes91s_blocks) ... ok
+test_initial_stop_touch_while_waiting_blocks (__main__.EntryTests.test_initial_stop_touch_while_waiting_blocks) ... ok
+test_insufficient_funds_blocks_no_tiny_substitution (__main__.EntryTests.test_insufficient_funds_blocks_no_tiny_substitution) ... ok
+test_manual_reserved_capital_uses_remaining_seed_quarter (__main__.EntryTests.test_manual_reserved_capital_uses_remaining_seed_quarter) ... ok
+test_missing_one_channel_blocks_every_rule (__main__.EntryTests.test_missing_one_channel_blocks_every_rule) ... ok
+test_missing_protection_pauses_and_requests_close (__main__.EntryTests.test_missing_protection_pauses_and_requests_close) ... ok
+test_missing_quotes_block_then_same_valid_signal_recovers (__main__.EntryTests.test_missing_quotes_block_then_same_valid_signal_recovers) ... ok
+test_positive_double_wick_LONG_workers0 (__main__.EntryTests.test_positive_double_wick_LONG_workers0) ... ok
+test_positive_double_wick_LONG_workers4 (__main__.EntryTests.test_positive_double_wick_LONG_workers4) ... ok
+test_positive_double_wick_SHORT_workers0 (__main__.EntryTests.test_positive_double_wick_SHORT_workers0) ... ok
+test_positive_double_wick_SHORT_workers4 (__main__.EntryTests.test_positive_double_wick_SHORT_workers4) ... ok
+test_positive_exhaustion724_LONG_workers0 (__main__.EntryTests.test_positive_exhaustion724_LONG_workers0) ... ok
+test_positive_exhaustion724_LONG_workers4 (__main__.EntryTests.test_positive_exhaustion724_LONG_workers4) ... ok
+test_positive_exhaustion724_SHORT_workers0 (__main__.EntryTests.test_positive_exhaustion724_SHORT_workers0) ... ok
+test_positive_exhaustion724_SHORT_workers4 (__main__.EntryTests.test_positive_exhaustion724_SHORT_workers4) ... ok
+test_positive_top1_15kst_dip130_LONG_workers0 (__main__.EntryTests.test_positive_top1_15kst_dip130_LONG_workers0) ... ok
+test_positive_top1_15kst_dip130_LONG_workers4 (__main__.EntryTests.test_positive_top1_15kst_dip130_LONG_workers4) ... ok
+test_positive_trend_pullback_LONG_workers0 (__main__.EntryTests.test_positive_trend_pullback_LONG_workers0) ... ok
+test_positive_trend_pullback_LONG_workers4 (__main__.EntryTests.test_positive_trend_pullback_LONG_workers4) ... ok
+test_positive_trend_pullback_SHORT_workers0 (__main__.EntryTests.test_positive_trend_pullback_SHORT_workers0) ... ok
+test_positive_trend_pullback_SHORT_workers4 (__main__.EntryTests.test_positive_trend_pullback_SHORT_workers4) ... ok
+test_reserved_slot_rules (__main__.EntryTests.test_reserved_slot_rules) ... ok
+test_stale_quotes_after_candidate_blocks (__main__.EntryTests.test_stale_quotes_after_candidate_blocks) ... ok
+test_tick_double_wick_LONG (__main__.EntryTests.test_tick_double_wick_LONG) ... ok
+test_tick_double_wick_SHORT (__main__.EntryTests.test_tick_double_wick_SHORT) ... ok
+test_tick_exhaustion724_LONG (__main__.EntryTests.test_tick_exhaustion724_LONG) ... ok
+test_tick_exhaustion724_SHORT (__main__.EntryTests.test_tick_exhaustion724_SHORT) ... ok
+test_tick_top1_15kst_dip130_LONG (__main__.EntryTests.test_tick_top1_15kst_dip130_LONG) ... ok
+test_tick_trend_pullback_LONG (__main__.EntryTests.test_tick_trend_pullback_LONG) ... ok
+test_tick_trend_pullback_SHORT (__main__.EntryTests.test_tick_trend_pullback_SHORT) ... ok
+test_trend_at02_is_not_new_entry (__main__.EntryTests.test_trend_at02_is_not_new_entry) ... ok
+test_unknown_post_outcome_reconciles_without_resend (__main__.EntryTests.test_unknown_post_outcome_reconciles_without_resend) ... ok
+test_wide_spread_blocks (__main__.EntryTests.test_wide_spread_blocks) ... ok
+
+----------------------------------------------------------------------
+Ran 38 tests in 7.087s
+
+OK
