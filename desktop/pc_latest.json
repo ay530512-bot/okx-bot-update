@@ -1,9 +1,9 @@
 {
   "format": 1,
-  "version": "2.0.14",
-  "revision": 20014,
-  "commit": "ee5a399172bff11c7c6cba15a9478c2028b3f5c6",
-  "bytes": 693085,
-  "sha256": "21d10a275c7df4c790a23333226c520c3e4c04ab25d9607c1cc6489584b116a7",
-  "notes": "홈에서만 진입 시간표 표시 · 규칙 하나당 한 줄"
+  "version": "2.1.1",
+  "revision": 20101,
+  "commit": "c33bfba1505d2efaeecbb6777e5e1ef6af41d955",
+  "bytes": 693615,
+  "sha256": "7ef6b7f0084fd7b7fbf621a3cd1e220fe1b742300997ccb606590f2ede2392db",
+  "notes": "자동·수동 보유 포지션과 거래소 손절을 유지한 업데이트 인계"
 }
