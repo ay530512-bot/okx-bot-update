@@ -1,9 +1,9 @@
 {
   "format": 1,
-  "version": "2.0.6",
-  "revision": 20006,
-  "commit": "00d4f328f80a7fddf4c1246680319a3274dba2b9",
-  "bytes": 683484,
-  "sha256": "a81258c5fa4d8def930ebdb8055f4a874d30e8222079f912f87262d0a8347b9f",
-  "notes": "전일 KST09시 기준 상승률 상위 3종목을 고정하고 KST11시부터 15시 전까지 EMA·RSI·거래량 및 저점 이탈 확인 후 한 종목만 5배 숏. 진입 후 기존 15분 ATR 추적 관리."
+  "version": "2.0.7",
+  "revision": 20007,
+  "commit": "3cda3a222346bf2859eda862d9e608be94a6b1aa",
+  "bytes": 684728,
+  "sha256": "d9a81fc52388b02a06249a00c423c0d3a8ab0cd215797e053c7311fff8203bcb",
+  "notes": "전일 상승률 1~3위 · KST 23:00~다음 날 03:00 · 15분봉 전일 종가 이탈과 정산 펀딩률 확인 · 하루 한 종목 5배 숏. 초기 SL을 유지하다 1R 진행 후 2×15분 ATR 전량 추적."
 }
