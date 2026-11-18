@@ -1,9 +1,9 @@
 {
   "format": 1,
-  "revision": 20104,
-  "version": "2.1.4",
-  "notes": "신규 진입 시간표와 규칙별 예시 차트 · 신규 PC 버전 자동 확인 및 업데이트대기 표시",
-  "bytes": 697532,
-  "sha256": "770e62b94adc3f7e338774a2fc46b7afe4401cf817ff7213f0aa46c3be4d350a",
-  "commit": "8c530aec54a2ea80fb1c28523d88f6feadb031f6"
+  "revision": 20105,
+  "version": "2.1.5",
+  "notes": "진입 예시를 하나씩 펼쳐 보고 캔들 등락과 마감 시 진입 기준점을 재생합니다.",
+  "bytes": 698963,
+  "sha256": "4f6b8560aed557363ceef49948b4b371b5f5acef781c939b1d740aae0118a34e",
+  "commit": "a496941a327758a4376f7b6ff841d22714c167c9"
 }
