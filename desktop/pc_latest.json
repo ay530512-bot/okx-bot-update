@@ -1,9 +1,9 @@
 {
   "format": 1,
-  "version": "2.0.11",
-  "revision": 20011,
-  "commit": "d3194508db3bbdb7d8273ade3a8bb8b19ee41241",
-  "bytes": 692715,
-  "sha256": "7dffb30c413f00aaea0fd3fa8ae4e1b7430642bb6b2abdcdc280879e47b5be76",
-  "notes": "KST 8개 규칙 · 미진입 시 다음 신호 · 첫 부분/전량 체결 후 해당 규칙 마감 · 10% 증거금 · 공용 9 + 전용 1."
+  "version": "2.0.12",
+  "revision": 20012,
+  "commit": "3903669fcacac0558f6b8abbc5b7dd8e76e55bbb",
+  "bytes": 692589,
+  "sha256": "900459a552c5ac4e129ae189894c290e9d8a673d7370ce1dd0e5bdd3ba4d1515",
+  "notes": "2.0.11 시작 시 예전 주문량 파일 해시를 검사해 복귀하던 오류 수정. 기존 진입 규칙과 포지션 설정 유지."
 }
