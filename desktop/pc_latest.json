@@ -1,9 +1,9 @@
 {
   "format": 1,
-  "version": "2.0.13",
-  "revision": 20013,
-  "commit": "3520fdc344bdd88a41ca5b640430f8c1bf0d5d97",
-  "bytes": 693181,
-  "sha256": "910301fe21101d008ee61401ccd41dd039ac4c8263c788b5190e4d159d782147",
-  "notes": "홈 신규 진입 시간 안내 축소 · 규칙명, 한국시간, 진입 조건 요약을 세 칸으로 표시"
+  "version": "2.0.14",
+  "revision": 20014,
+  "commit": "ee5a399172bff11c7c6cba15a9478c2028b3f5c6",
+  "bytes": 693085,
+  "sha256": "21d10a275c7df4c790a23333226c520c3e4c04ab25d9607c1cc6489584b116a7",
+  "notes": "홈에서만 진입 시간표 표시 · 규칙 하나당 한 줄"
 }
