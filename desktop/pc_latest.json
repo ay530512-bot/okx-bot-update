@@ -1,9 +1,9 @@
 {
   "format": 1,
-  "version": "2.0.10",
-  "revision": 20010,
-  "commit": "4cb849f145fa60af82a0a5430368abaf68389f87",
-  "bytes": 692268,
-  "sha256": "e0f90defca0ab9f0e6a8ca9f7f7e9b793d0b937a454901c22d6c40447b600ad8",
-  "notes": "15~18시 가중평균 회귀 숏, 18~21시 2.75배 거래량 눌림목 롱·숏. KST 21시 이후 정각 확정반전 포함."
+  "version": "2.0.11",
+  "revision": 20011,
+  "commit": "d3194508db3bbdb7d8273ade3a8bb8b19ee41241",
+  "bytes": 692715,
+  "sha256": "7dffb30c413f00aaea0fd3fa8ae4e1b7430642bb6b2abdcdc280879e47b5be76",
+  "notes": "KST 8개 규칙 · 미진입 시 다음 신호 · 첫 부분/전량 체결 후 해당 규칙 마감 · 10% 증거금 · 공용 9 + 전용 1."
 }
