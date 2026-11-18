@@ -1,9 +1,9 @@
 {
   "format": 1,
-  "version": "2.1.1",
-  "revision": 20101,
-  "commit": "c33bfba1505d2efaeecbb6777e5e1ef6af41d955",
-  "bytes": 693615,
-  "sha256": "7ef6b7f0084fd7b7fbf621a3cd1e220fe1b742300997ccb606590f2ede2392db",
-  "notes": "자동·수동 보유 포지션과 거래소 손절을 유지한 업데이트 인계"
+  "version": "2.1.2",
+  "revision": 20102,
+  "commit": "2006ed11b78476099b8fccae67b1c66eb9e9501d",
+  "bytes": 694251,
+  "sha256": "d412a0dc709900701a69959033f66558f35795a991713cf4ee854105bce9f3ed",
+  "notes": "최근 활동에서 시간대별 실제 검사 시각·완료봉·검사 종목·봉 자료 대기·후보 수 구분"
 }
