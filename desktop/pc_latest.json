@@ -1,9 +1,9 @@
 {
   "format": 1,
-  "version": "2.0.12",
-  "revision": 20012,
-  "commit": "3903669fcacac0558f6b8abbc5b7dd8e76e55bbb",
-  "bytes": 692589,
-  "sha256": "900459a552c5ac4e129ae189894c290e9d8a673d7370ce1dd0e5bdd3ba4d1515",
-  "notes": "2.0.11 시작 시 예전 주문량 파일 해시를 검사해 복귀하던 오류 수정. 기존 진입 규칙과 포지션 설정 유지."
+  "version": "2.0.13",
+  "revision": 20013,
+  "commit": "3520fdc344bdd88a41ca5b640430f8c1bf0d5d97",
+  "bytes": 693181,
+  "sha256": "910301fe21101d008ee61401ccd41dd039ac4c8263c788b5190e4d159d782147",
+  "notes": "홈 신규 진입 시간 안내 축소 · 규칙명, 한국시간, 진입 조건 요약을 세 칸으로 표시"
 }
