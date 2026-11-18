@@ -1,9 +1,9 @@
 {
   "format": 1,
-  "version": "2.0.7",
-  "revision": 20007,
-  "commit": "3cda3a222346bf2859eda862d9e608be94a6b1aa",
-  "bytes": 684728,
-  "sha256": "d9a81fc52388b02a06249a00c423c0d3a8ab0cd215797e053c7311fff8203bcb",
-  "notes": "전일 상승률 1~3위 · KST 23:00~다음 날 03:00 · 15분봉 전일 종가 이탈과 정산 펀딩률 확인 · 하루 한 종목 5배 숏. 초기 SL을 유지하다 1R 진행 후 2×15분 ATR 전량 추적."
+  "version": "2.0.8",
+  "revision": 20008,
+  "commit": "c6b9b7f4afab801b5177277d8efa30b61acf3a34",
+  "bytes": 691520,
+  "sha256": "50ad91104377bc705f9e1a3fac6416735e97913dfdcfe6acd962778a00ad94bb",
+  "notes": "KST 규칙별 진입 시간과 당일 첫 신호 적용. 활동·설정에서 2.0.7 진입 규칙 복원 가능."
 }
