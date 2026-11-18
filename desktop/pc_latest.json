@@ -1,9 +1,9 @@
 {
   "format": 1,
-  "version": "2.0.9",
-  "revision": 20009,
-  "commit": "32c65878e77088b257e4bf7ec2564dbd2cd8da10",
-  "bytes": 691814,
-  "sha256": "9609830cce7c795ef8fd4b38d694d03923a67681286251f24cfb02fad8cb65a8",
-  "notes": "21·22·23시 KST 정각 마감봉에서 저녁 확정반전 롱·숏 검사. 공용 자리, 하루 첫 신호, 최대 12시간 관리."
+  "version": "2.0.10",
+  "revision": 20010,
+  "commit": "4cb849f145fa60af82a0a5430368abaf68389f87",
+  "bytes": 692268,
+  "sha256": "e0f90defca0ab9f0e6a8ca9f7f7e9b793d0b937a454901c22d6c40447b600ad8",
+  "notes": "15~18시 가중평균 회귀 숏, 18~21시 2.75배 거래량 눌림목 롱·숏. KST 21시 이후 정각 확정반전 포함."
 }
