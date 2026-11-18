@@ -1,9 +1,9 @@
 {
   "format": 1,
-  "version": "2.0.8",
-  "revision": 20008,
-  "commit": "c6b9b7f4afab801b5177277d8efa30b61acf3a34",
-  "bytes": 691520,
-  "sha256": "50ad91104377bc705f9e1a3fac6416735e97913dfdcfe6acd962778a00ad94bb",
-  "notes": "KST 규칙별 진입 시간과 당일 첫 신호 적용. 활동·설정에서 2.0.7 진입 규칙 복원 가능."
+  "version": "2.0.9",
+  "revision": 20009,
+  "commit": "32c65878e77088b257e4bf7ec2564dbd2cd8da10",
+  "bytes": 691814,
+  "sha256": "9609830cce7c795ef8fd4b38d694d03923a67681286251f24cfb02fad8cb65a8",
+  "notes": "21·22·23시 KST 정각 마감봉에서 저녁 확정반전 롱·숏 검사. 공용 자리, 하루 첫 신호, 최대 12시간 관리."
 }
