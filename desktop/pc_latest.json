@@ -1,9 +1,9 @@
 {
   "format": 1,
-  "bytes": 701293,
-  "sha256": "bf6fa0728ab3cd2b1b28bbf90db8f66de339c98428624c723a3e3fc84c2b8614",
-  "version": "2.2.1",
-  "revision": 20201,
-  "commit": "62cbc9e9f6f19f290ef526d4407906aaa37ed399",
-  "notes": "시간표 11개 규칙 모두 +1R부터 추적손절 · 기존 익절 및 보유시간 유지"
+  "bytes": 701517,
+  "sha256": "7e6c043a8a6a999ed310319f40126f2a0241b170020df3eedde124f64fe54f4a",
+  "version": "2.3.0",
+  "revision": 20300,
+  "commit": "7a11dfc7726a2063c14faa992c5712bfebb0164c",
+  "notes": "시간표 11개 규칙 · 진입 증거금 대비 +20%에 수량 30% 1회 익절 · 잔량 추적손절"
 }
