@@ -1,9 +1,9 @@
 {
   "format": 1,
-  "bytes": 701517,
-  "sha256": "7e6c043a8a6a999ed310319f40126f2a0241b170020df3eedde124f64fe54f4a",
-  "version": "2.3.0",
-  "revision": 20300,
-  "commit": "7a11dfc7726a2063c14faa992c5712bfebb0164c",
-  "notes": "시간표 11개 규칙 · 진입 증거금 대비 +20%에 수량 30% 1회 익절 · 잔량 추적손절"
+  "bytes": 701349,
+  "sha256": "d09ac218fa1dec04ebb18f8efe2cd9e94c62a18977b159244bec6c13e358c74a",
+  "version": "2.4.0",
+  "revision": 20400,
+  "commit": "68120c6841864d4e74c182b55ebb08eb2e318791",
+  "notes": "시간표 11개 규칙의 +20% 부분익절 해제 · +1R 추적손절과 기존 전량 청산 조건 적용"
 }
