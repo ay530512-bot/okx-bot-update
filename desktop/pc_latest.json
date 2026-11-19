@@ -1,9 +1,9 @@
 {
   "format": 1,
-  "revision": 20200,
-  "version": "2.2.0",
-  "notes": "시간대별 단타 롱 3종과 캔들 예시 · 두꼬리 04~08시, 꼬리실패 10~14시, 새 음봉꼬리 08~20시 KST",
-  "bytes": 701247,
-  "sha256": "e7879f310ad62441e443ae668cfd80215732073affc2b59c0db8ad60d89ad057",
-  "commit": "2b26d9e4330843eca0c77ba1d6994326a3978ac2"
+  "bytes": 701293,
+  "sha256": "bf6fa0728ab3cd2b1b28bbf90db8f66de339c98428624c723a3e3fc84c2b8614",
+  "version": "2.2.1",
+  "revision": 20201,
+  "commit": "62cbc9e9f6f19f290ef526d4407906aaa37ed399",
+  "notes": "시간표 11개 규칙 모두 +1R부터 추적손절 · 기존 익절 및 보유시간 유지"
 }
