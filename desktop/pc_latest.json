@@ -1,9 +1,9 @@
 {
   "format": 1,
-  "bytes": 711036,
-  "sha256": "2227be45cf5095d461c2f11caeb3f3fc73944ccdc1642f2f856e92ec01b54a2a",
-  "version": "2.5.0",
-  "revision": 20500,
-  "commit": "2e40305103bc2a3a364572f62182e54bacb2e841",
-  "notes": "규칙별 모의체결부터 시작 · 최근 20건 비용 차감 성과에 따라 실거래 자격 자동 전환 · 구조·변동성 손절과 위험 한도 수량 · 1R 전량 추적"
+  "bytes": 714994,
+  "sha256": "4060c91811ad20eedb6151c88167332bacb64f8845fd09958dee6adcd22c9e2d",
+  "version": "2.6.0",
+  "revision": 20600,
+  "commit": "27308be76be6889b9d71cf66ecd32dc56ea4783c",
+  "notes": "자동 3~5배 · 수동 5배 · 3 USDT 유보 후 3등분 · 보유·신규 미체결 합산 최대 3개 · 첫 꼬리 바깥 초기 손절과 전량 추적"
 }
