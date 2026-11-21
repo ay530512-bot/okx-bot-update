@@ -22,7 +22,7 @@ class ScheduleTest(unittest.TestCase):
         for part in ('home','market'):
             self.assertEqual(Dashboard(mobile).snapshot(part=part)['wick_alert_status'],mobile.snapshot['wick_alert_status'])
 
-    def test_only_manual_alerts_even_with_cached_qualified_rules(self):
+    def test_live_wick_alerts_even_with_cached_qualified_rules(self):
         app=mobile_module(PACKAGE/'core')
         now=int(time.time()*1000)
         old_state={'legacy_entries207':True,'forward':{'rules':{'trend_long':{'ready':True,'n':20}}}}
@@ -58,11 +58,11 @@ class ScheduleTest(unittest.TestCase):
             el=page.locator
             expect(el('#dashboard')).to_be_visible()
             expect(el('#pcWickStatus')).to_have_text(data['wick_alert_status'])
-            expect(el('#pcEntryAlerts')).to_contain_text('24시간 · 롱·숏 수동 진입')
+            expect(el('#pcEntryAlerts')).to_contain_text('24시간 · 롱·숏 자동 진입과 수동 진입')
             for selector in ('[data-forward-rule]','#pcWatchGroup','#rules207','#restoreEntryRules','#pcScheduleSettings'):
                 expect(el(selector)).to_have_count(0)
             self.assertNotIn('모의 관찰',el('#part-home').text_content())
-            self.assertNotIn('자동매매 활성화',el('#part-home').text_content())
+            self.assertIn('두 꼬리 자동 진입 활성화',el('#part-home').text_content())
             el('#pcManualWicks summary').click()
             expect(el('#pcManualWicks figure')).to_have_count(2)
             expect(el('#pcManualWicks figure').first).to_contain_text('롱 알림')

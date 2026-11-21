@@ -1,4 +1,4 @@
-"""Offline acceptance for the PC 2.6.1 manual two-wick Telegram signal."""
+"""Offline acceptance for the PC intrabar two-wick Telegram signal."""
 import json
 import math
 from pathlib import Path
@@ -65,7 +65,7 @@ class Pattern(unittest.TestCase):
                 self.assertAlmostEqual(h['first'],96.50 if side==1 else 103.50)
                 self.assertAlmostEqual(h['second'],96.56 if side==1 else 103.44)
                 m=alert_text(SYMBOL,h,'0.01')
-                self.assertIn('수동 '+('롱' if side==1 else '숏')+' 관찰',m)
+                self.assertIn('두 꼬리 '+('롱' if side==1 else '숏')+' 신호',m)
                 self.assertIn('15분봉',m)
                 self.assertIn('KST',m)
                 self.assertIn('음봉 아랫꼬리' if side==1 else '양봉 윗꼬리',m)

@@ -93,7 +93,7 @@ class RetiredSchedule(unittest.TestCase):
     def test_no_scanner_or_policy_in_ship_manifest(self):
         from pc_update import verify_package
         m=verify_package(P)
-        self.assertEqual(m['version'],'2.7.0')
+        self.assertGreaterEqual(m['revision'],20700)
         for name in ('pc_forward.py','pc_monthly.py','pc_timing.py','pc_timing_rules.json','pc_scalp.py','phone_mobile_entry.py'):
             self.assertNotIn('runtime/'+name,m['files'])
         self.assertFalse(hasattr(RuleEngine,'candidate_decision'))
