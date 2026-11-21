@@ -160,6 +160,16 @@ class Release(unittest.TestCase):
         e.api.failure=False
         with patch('okx_pattern15.check_entry',return_value={}):e.send_simulated(s)
         self.assertEqual(e.records()[0]['initial_margin_target'],'49')
+    def test_new_manual_trails_full_size(self):
+        from pc_monthly import manage
+        e=Harness();changes=[];e.trail=lambda snap,p,o,level:changes.append(level)
+        s={'pc260':True,'click716':True,'stop':99}
+        held=dict(v4_signal=s,direction='long',stop_px='99',entry_ms=NOW)
+        self.assertTrue(manage(e,{},dict(markPx='104.1',avgPx='100'),held))
+        self.assertEqual(changes,[103.1])
+        held['stop_px']='103.1'
+        self.assertFalse(manage(e,{},dict(markPx='103.5',avgPx='100'),held))
+
     def test_uncertain_write_stops_batch(self):
         e=Harness();s=signal()
         def fail(_):raise UnknownOutcome('ambiguous fake write')
@@ -179,6 +189,6 @@ class Release(unittest.TestCase):
             self.assertTrue(valid_leverage(signal(),Harness().cfg))
             self.assertFalse(valid_leverage(dict(signal(),leverage=10),Harness().cfg))
         html=phone_mobile.mobile_module(P/'core').asset('index.html').decode()
-        self.assertIn('PC 2.6.0',html);self.assertIn('전체 최대 3포지션',html);self.assertEqual(html.count('data-forward-rule='),13)
+        self.assertIn('PC 2.6.0',html);self.assertIn('전체 최대 3포지션',html);self.assertNotIn('시드1/4',html);self.assertNotIn('최대4개',html);self.assertNotIn('최초 절반청산',html);self.assertEqual(html.count('data-forward-rule='),13)
 
 if __name__=='__main__':unittest.main()

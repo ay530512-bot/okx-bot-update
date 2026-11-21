@@ -1,9 +1,5 @@
 """Replay the released PC 2.6 scheduled rules on preverified public minute data."""
-"""Replay closed-candle signals against subsequent one-minute OKX trades. Public data only.
-Run from a study directory with OKX_PC_PACKAGE/, raw/, and ins.json. --help lists options.
-"""
 import argparse
-import os
 import concurrent.futures
 import json
 import math

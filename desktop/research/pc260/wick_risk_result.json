@@ -1,0 +1,90 @@
+{
+  "base": {
+    "combined": {
+      "final": 36.1281,
+      "net_pct": -75.915,
+      "trades": 766,
+      "wins": 148,
+      "max_open": 2,
+      "closed_drawdown_pct": 76.031
+    },
+    "individual": {
+      "wick_touch_reversal_long": {
+        "final": 101.2377,
+        "net_pct": -32.508,
+        "trades": 206,
+        "wins": 34,
+        "max_open": 1,
+        "closed_drawdown_pct": 32.78
+      },
+      "wick_touch_reversal_short": {
+        "final": 116.4728,
+        "net_pct": -22.351,
+        "trades": 161,
+        "wins": 40,
+        "max_open": 1,
+        "closed_drawdown_pct": 22.351
+      },
+      "wick_touch_trend_long": {
+        "final": 93.5851,
+        "net_pct": -37.61,
+        "trades": 204,
+        "wins": 30,
+        "max_open": 1,
+        "closed_drawdown_pct": 37.61
+      },
+      "wick_touch_trend_short": {
+        "final": 107.6391,
+        "net_pct": -28.241,
+        "trades": 208,
+        "wins": 51,
+        "max_open": 1,
+        "closed_drawdown_pct": 29.202
+      }
+    }
+  },
+  "double_slippage": {
+    "combined": {
+      "final": 54.0641,
+      "net_pct": -63.957,
+      "trades": 365,
+      "wins": 34,
+      "max_open": 1,
+      "closed_drawdown_pct": 64.052
+    },
+    "individual": {
+      "wick_touch_reversal_long": {
+        "final": 101.3905,
+        "net_pct": -32.406,
+        "trades": 127,
+        "wins": 8,
+        "max_open": 1,
+        "closed_drawdown_pct": 32.601
+      },
+      "wick_touch_reversal_short": {
+        "final": 133.4824,
+        "net_pct": -11.012,
+        "trades": 44,
+        "wins": 5,
+        "max_open": 1,
+        "closed_drawdown_pct": 11.012
+      },
+      "wick_touch_trend_long": {
+        "final": 109.1689,
+        "net_pct": -27.221,
+        "trades": 110,
+        "wins": 9,
+        "max_open": 1,
+        "closed_drawdown_pct": 27.221
+      },
+      "wick_touch_trend_short": {
+        "final": 116.5061,
+        "net_pct": -22.329,
+        "trades": 95,
+        "wins": 12,
+        "max_open": 1,
+        "closed_drawdown_pct": 22.329
+      }
+    }
+  }
+}
