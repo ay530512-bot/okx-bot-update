@@ -1,0 +1,28 @@
+{
+  "start_kst": "2026-09-22",
+  "end_exclusive_kst": "2026-11-21",
+  "symbols": 31,
+  "candle_model": "1m public traded OHLC; next open, funding; no archived order book or mark trigger replay; empty observation history",
+  "fresh_gate": {
+    "initial_usdt": 150,
+    "final_usdt": 150.0,
+    "net_pct": 0.0,
+    "trades": 0,
+    "max_closed_drawdown_pct": 0.0,
+    "observations": {
+      "scalp_double": 23,
+      "scalp_higher": 2
+    }
+  },
+  "signals_without_qualification": {
+    "initial_usdt": 150,
+    "final_usdt": 146.4176,
+    "net_pct": -2.388,
+    "trades": 23,
+    "max_closed_drawdown_pct": 2.715,
+    "observations": {
+      "scalp_double": 23,
+      "scalp_higher": 2
+    }
+  }
+}
