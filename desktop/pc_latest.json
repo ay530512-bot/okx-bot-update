@@ -1,9 +1,9 @@
 {
   "format": 1,
-  "bytes": 701349,
-  "sha256": "d09ac218fa1dec04ebb18f8efe2cd9e94c62a18977b159244bec6c13e358c74a",
-  "version": "2.4.0",
-  "revision": 20400,
-  "commit": "68120c6841864d4e74c182b55ebb08eb2e318791",
-  "notes": "시간표 11개 규칙의 +20% 부분익절 해제 · +1R 추적손절과 기존 전량 청산 조건 적용"
+  "bytes": 701693,
+  "sha256": "7b3515b2540cdc59994823d8edb4f5f4ca9be170a0483e256cc3f620775da141",
+  "version": "2.4.1",
+  "revision": 20401,
+  "commit": "7f66e32b46da978458823908b61d2bac0fdba4d4",
+  "notes": "손절·목표가·시간만료 청산 사유 분리 · 포지션 상세에 보호 가격과 만료 시각 표시"
 }
