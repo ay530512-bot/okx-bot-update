@@ -1,0 +1,291 @@
+{
+  "version": "2.5.0",
+  "base_version": "2.4.1",
+  "universe": "31 named OKX USDT perpetual instruments",
+  "time_zone": "Asia/Seoul",
+  "filters": 5,
+  "configurations": 880,
+  "training": [
+    "2026-07-06",
+    "2026-09-01"
+  ],
+  "selection_validation": [
+    "2026-09-01",
+    "2026-09-22"
+  ],
+  "frozen_test": [
+    "2026-09-22",
+    "2026-11-21"
+  ],
+  "fee_each_side": 0.0005,
+  "slippage_each_side": 0.0005,
+  "end_dates_exclusive": true,
+  "closed_price_bars_and_realized_funding": true,
+  "research_candidate_full_test": {
+    "n": 27,
+    "net": -2.0801966251500104,
+    "dd": 2.0801966251500104,
+    "wins": 11,
+    "final": 146.87970506227498
+  },
+  "paper_first": true,
+  "forward_replay": {
+    "2026-05-06": {
+      "interval": [
+        "2026-05-06",
+        "2026-07-01"
+      ],
+      "summary": {
+        "n": 3,
+        "net": -0.41797,
+        "dd": 0.55315,
+        "wins": 1,
+        "final": 149.37305
+      },
+      "shadow": {
+        "reversal": 8,
+        "two_wick": 29,
+        "afternoon_vwap": 17,
+        "evening_pullback": 19,
+        "late_reversal": 8,
+        "failed_wick": 15,
+        "rank_short": 14,
+        "trend_long": 22,
+        "pivot_long": 22,
+        "pivot_short": 25,
+        "scalp_double": 87,
+        "scalp_break": 81,
+        "scalp_higher": 55
+      },
+      "admitted": {
+        "reversal": 0,
+        "two_wick": 0,
+        "afternoon_vwap": 0,
+        "evening_pullback": 0,
+        "late_reversal": 0,
+        "failed_wick": 0,
+        "rank_short": 0,
+        "trend_long": 0,
+        "pivot_long": 0,
+        "pivot_short": 0,
+        "scalp_double": 3,
+        "scalp_break": 0,
+        "scalp_higher": 0
+      },
+      "trades": [
+        [
+          1781383080000,
+          1781383500000,
+          "scalp_double",
+          "EDGE",
+          0.20389611200003144
+        ],
+        [
+          1781384400000,
+          1781384700000,
+          "scalp_double",
+          "EDGE",
+          -0.1491599889999732
+        ],
+        [
+          1781473800000,
+          1781474460000,
+          "scalp_double",
+          "XRP",
+          -0.6816889247999968
+        ]
+      ]
+    },
+    "2026-09-22": {
+      "interval": [
+        "2026-09-22",
+        "2026-11-21"
+      ],
+      "summary": {
+        "n": 1,
+        "net": -0.44865,
+        "dd": 0.44865,
+        "wins": 0,
+        "final": 149.32703
+      },
+      "shadow": {
+        "reversal": 15,
+        "two_wick": 29,
+        "afternoon_vwap": 24,
+        "evening_pullback": 15,
+        "late_reversal": 14,
+        "failed_wick": 17,
+        "rank_short": 19,
+        "trend_long": 27,
+        "pivot_long": 23,
+        "pivot_short": 30,
+        "scalp_double": 116,
+        "scalp_break": 103,
+        "scalp_higher": 59
+      },
+      "admitted": {
+        "reversal": 0,
+        "two_wick": 0,
+        "afternoon_vwap": 0,
+        "evening_pullback": 0,
+        "late_reversal": 0,
+        "failed_wick": 0,
+        "rank_short": 0,
+        "trend_long": 0,
+        "pivot_long": 0,
+        "pivot_short": 0,
+        "scalp_double": 1,
+        "scalp_break": 0,
+        "scalp_higher": 0
+      },
+      "trades": [
+        [
+          1792438980000,
+          1792439520000,
+          "scalp_double",
+          "INIT",
+          -0.6729724114749903
+        ]
+      ]
+    }
+  },
+  "qualification": {
+    "reversal": {
+      "configs": 70,
+      "reason": "development"
+    },
+    "two_wick": {
+      "train_1": {
+        "n": 16,
+        "net": 0.43773,
+        "dd": 0.87399,
+        "wins": 7,
+        "final": 150.65659
+      },
+      "train_2": {
+        "n": 9,
+        "net": 0.94701,
+        "dd": 1.34301,
+        "wins": 6,
+        "final": 151.42052
+      },
+      "validation": {
+        "n": 14,
+        "net": -1.19505,
+        "dd": 1.94534,
+        "wins": 6,
+        "final": 148.20743
+      },
+      "configs": 70
+    },
+    "afternoon_vwap": {
+      "configs": 70,
+      "reason": "development"
+    },
+    "evening_pullback": {
+      "train_1": {
+        "n": 8,
+        "net": 0.30598,
+        "dd": 0.47697,
+        "wins": 4,
+        "final": 150.45897
+      },
+      "train_2": {
+        "n": 8,
+        "net": 2.61445,
+        "dd": 0.43054,
+        "wins": 5,
+        "final": 153.92168
+      },
+      "validation": {
+        "n": 4,
+        "net": -0.83158,
+        "dd": 0.84845,
+        "wins": 1,
+        "final": 148.75263
+      },
+      "configs": 70
+    },
+    "late_reversal": {
+      "train_1": {
+        "n": 9,
+        "net": 0.3129,
+        "dd": 0.6519,
+        "wins": 4,
+        "final": 150.46935
+      },
+      "train_2": {
+        "n": 10,
+        "net": 0.58919,
+        "dd": 0.74878,
+        "wins": 6,
+        "final": 150.88379
+      },
+      "validation": {
+        "n": 9,
+        "net": -0.63291,
+        "dd": 0.81229,
+        "wins": 4,
+        "final": 149.05063
+      },
+      "configs": 70
+    },
+    "failed_wick": {
+      "configs": 70,
+      "reason": "development"
+    },
+    "rank_short": {
+      "configs": 70,
+      "reason": "development"
+    },
+    "trend_long": {
+      "train_1": {
+        "n": 15,
+        "net": 0.53106,
+        "dd": 1.08233,
+        "wins": 10,
+        "final": 150.79659
+      },
+      "train_2": {
+        "n": 15,
+        "net": 1.4931,
+        "dd": 0.87559,
+        "wins": 10,
+        "final": 152.23965
+      },
+      "validation": {
+        "n": 14,
+        "net": 0.30136,
+        "dd": 1.18608,
+        "wins": 7,
+        "final": 150.45205
+      },
+      "configs": 70
+    },
+    "pivot_long": {
+      "configs": 60,
+      "reason": "development"
+    },
+    "pivot_short": {
+      "configs": 60,
+      "reason": "development"
+    },
+    "scalp_double": {
+      "configs": 60,
+      "reason": "development"
+    },
+    "scalp_break": {
+      "configs": 70,
+      "reason": "development"
+    },
+    "scalp_higher": {
+      "configs": 70,
+      "reason": "development"
+    }
+  },
+  "limitations": [
+    "Replays use last-price 1m OHLC for mark-path proxy, deterministic stop-first order, modeled slippage and no historical depth. Paper watcher uses contemporaneous bid/ask and 1m mark and trade data. Neither supplies live fills.",
+    "Single-rule replay uses settled equity for admission. Combined account budgets approximate open exposure.",
+    "The November baseline and most of the recent interval were examined in earlier work. May\u2013June was replayed once after rule selection as an earlier, untrained period."
+  ]
+}
