@@ -1,0 +1,21 @@
+{
+  "registered_kst": "2026-11-22",
+  "historical_latest_day_inclusive": "2026-11-21",
+  "first_whole_prospective_kst": "2026-11-23",
+  "time_zone": "Asia/Seoul",
+  "baseline": {
+    "version": "2.6.0",
+    "revision": 20600,
+    "deployment_commit": "27308be76be6889b9d71cf66ecd32dc56ea4783c",
+    "price_source": "OKX public chronological trades, completed 1m/5m/15m and funding. Track private PC shadow observations separately."
+  },
+  "outcome": "Every KST calendar close, including inactive days, should grow 5% to 10% inclusive versus the preceding actual close on one continuous equity curve. Base 150 USDT. Compare each admitted rule in a standalone account and all admitted rules in a shared account. Do not clamp the measured return. Future returns remain uncertain.",
+  "registered_controls": [
+    "Production timetable with its own admissibility state clearly identified",
+    "Frozen qualified reversal_short and scalp_long individually and shared, with and without the +7.5% account lock",
+    "Matched full-slot sizing, same-quantity +1R/1R trailing, and one-way slippage doubled at identical contracts as well as with risk sizing recomputed."
+  ],
+  "insufficient_history": "All dates through 2026-11-21 have been used for research and 2026-11-22 began before registration. Exclude them from independent evidence. Keep rejected settings in the cumulative ledger.",
+  "promotion": "Use the prior 60-new-calendar-day, 30-fill, 10-active-day evidence gate, at least ten distinct fills in each chronological half on standalone candidates. Also apply the clarified daily target to every calendar close for each candidate account and the one shared account. Require stable cost-adjusted improvement over the deployed baseline on the same coverage, no dependence on one winning trade or one instrument, and positive after fixed-quantity doubled slippage. Revisit only with independently observed prints; disclose any incomplete data, never count it as zero.",
+  "live_migration": "No changes to the installer or real orders as part of research. A qualifying future package needs regression tests preserving every open position, its existing initial stop, favorable trailing watermark and stop, and manual holdings."
+}
