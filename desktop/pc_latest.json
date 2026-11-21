@@ -1,9 +1,9 @@
 {
   "format": 1,
-  "bytes": 724570,
-  "sha256": "13fca95331f339cc7b304c3abda1c49df8fb0aa942c5eba6d4a2cc2cd54bbf63",
-  "version": "2.6.2",
-  "revision": 20602,
-  "commit": "887bffb6edba625efbc57e36694abd11c38bd2e8",
-  "notes": "홈 시간표 정리 · 15분봉 롱·숏 텔레그램 알림과 실거래 자격 규칙을 표시하고 모의 관찰 목록은 기본으로 접습니다."
+  "bytes": 693908,
+  "sha256": "cfe2a7773dc95f8bad887e2e1581db9b21e04d77a9ca483da64c90eca1e46255",
+  "version": "2.7.0",
+  "revision": 20700,
+  "commit": "390c60946838fc4a51b5b8cb6d67403d2bdcc053",
+  "notes": "이전 시간표 규칙 13개와 모의 감시·자동 진입·규칙 복원을 삭제했습니다. 15분봉 두 꼬리 롱·숏 텔레그램 알림, 수동 진입과 기존 보유분의 손절·추적손절을 지원합니다."
 }
