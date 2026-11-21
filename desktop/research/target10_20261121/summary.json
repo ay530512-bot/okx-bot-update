@@ -1,0 +1,48 @@
+{
+  "tested_pc_version": "2.5.0",
+  "manifest_commit": "4accf599e7911dd7f5e85c1bfec5c4a9de6ddfde",
+  "initial_usdt": 150,
+  "target_final_usdt": 165,
+  "timezone": "Asia/Seoul",
+  "test_start": "2026-09-22",
+  "test_end_exclusive": "2026-11-21",
+  "symbol_count": 31,
+  "candle_minutes": 2678400,
+  "gaps_after_listing": 0,
+  "development_configurations": {
+    "target": 6400,
+    "limit": 640,
+    "model": 256
+  },
+  "frozen_rule_settings": 45,
+  "development_and_validation_pass": [
+    "evening_pullback",
+    "trend_long",
+    "indicator_model_long"
+  ],
+  "individually_above_or_equal_10pct": [],
+  "highest_frozen_base": "limit_wick_short",
+  "original_250_portfolio": {
+    "n": 1,
+    "net": -0.44865,
+    "dd": 0.44865,
+    "wins": 0,
+    "final": 149.32703
+  },
+  "portfolio_base": {
+    "final": 145.23584460714983,
+    "net_pct": -3.176103595233448,
+    "trades": 117,
+    "wins": 48,
+    "max_close_dd_pct": 5.07465806474412,
+    "max_open": 2
+  },
+  "portfolio_stress": {
+    "final": 147.0698089876121,
+    "net_pct": -1.953460674925267,
+    "trades": 116,
+    "wins": 45,
+    "max_close_dd_pct": 5.205490588127026,
+    "max_open": 2
+  }
+}
