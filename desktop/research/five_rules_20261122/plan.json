@@ -1,0 +1,21 @@
+{
+  "source_commits": ["9c7f65ddca0ba633557a7515e2aee606c5ff231f","088b1fd297594173d81a843542accc24cf835a44"],
+  "span_kst_inclusive": ["2026-09-23","2026-11-21"],
+  "forward_status": "Previously used development data, including both chronological halves. First whole unobserved KST date 2026-11-23.",
+  "families": {
+    "reversal": ["original","band_room","band_room_and_flow"],
+    "trend": ["original","flow","outer_room_and_flow"],
+    "scalp": ["original","strong_close","lower_band_reclaim","prior_retest_on_same_symbol"]
+  },
+  "windows": "Fixed original KST hours for reversals (long 16-20, short 12-16) and EMA20 pullbacks (long 08-12, short 00-04); compare six nonoverlapping 4h scalp windows. Holding remains allowed after each window closes.",
+  "definitions": "Reversals require directional prior Bollinger band breach and a separate strictly higher/lower wick retest on 5m candle 1..30. Trends enter the first tick response of a short wick at the 5m EMA20 in a confirmed 15m trend. Scalp enters on the high-volume long lower-wick bullish 5m close, with the upper-band long upper-wick bearish close within the following 1..20 bars or time exit at 20. Preserve original stop, full +1R/1R trail, 3–5x and sizing/cap rules for all candidates.",
+  "optional_filters": {
+    "band_room":"At the signal the favorable distance from its quote to the last completed 5m BB20 midpoint (reversal), or same-side outer band (trend), is at least 0.60% of quote, 3x the base round-trip costs.",
+    "flow":"At least 5 prints in the last completed 10s, >=60% initiating notional on the signal side; in the 15 completed minutes >=60% of other observed altcoins moved in the same direction with >=20 valid comparison symbols.",
+    "strong_close":"Scalp candle volume >=3x the prior 20-bar mean and its close in the top quarter of its range.",
+    "lower_band_reclaim":"At least 3 lower-band breaches in the 6 completed 5m bars before the bullish candle; midpoint and price fell, and the signal candle recovered the lower band on its close.",
+    "prior_retest_on_same_symbol":"A strictly earlier eligible reversal-long signal on the same instrument within 30 five-minute periods before the scalp entry; same-symbol duplicate positions stay blocked."
+  },
+  "illustrative_combination":{"reversal":"band_room","trend":"flow","scalp":"prior_retest_on_same_symbol","scalp_window_kst":"16–20","purpose":"Predefined example of connecting the user's two long patterns without pyramid entries; no profitability claim or execution change."},
+  "assessment":"All 216 combinations share a single 150 USDT account (3 USDT reserve, margin slots, 3x–5x, 0.5% per trade/2% aggregate, one rule and one symbol per open position). Keep fees, slippage, carry and full trailing. Count every KST day using net liquidation value including cross-midnight positions. Run the five legs separately. Score every calendar day; do not promote a winner selected from the existing historical window. Exclude only incomplete last-day coverage from claiming a pass, never erase a losing day. Repeat at doubled slippage."
+}

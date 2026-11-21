@@ -1,0 +1,20 @@
+{
+  "status": "research_only",
+  "base_commit": "088b1fd297594173d81a843542accc24cf835a44",
+  "prospective_start_kst": "2026-11-23",
+  "shared_combinations": 216,
+  "standalone_configurations": 36,
+  "tested_cost_regimes": 2,
+  "confirmed_daily_target_combinations": 0,
+  "sha256": {
+    "plan.json": "1ded21ee8c1d0544ded7d3759934caf20bb3e9f00cb7539b5dfc6102356e2bb0",
+    "run.py": "e79fe57f16d9c125cfd18251e09ab48fc0be6cf68618037a954cf6af25ef239f",
+    "envelope.py": "b8d3249f756666992fbbd18a79a79196221e75a2a4740f86b8c8ada28281359b",
+    "runs.csv": "b9f56b4c397e2b7797c4425a301369068a51d0176c785089e3b1cc82667abfa6",
+    "daily.csv.gz": "c240617577c70b4ff1fb2ae03df3a3dfdb3560244775b79ccffbe44fe36fe7e6",
+    "example_fills.csv.gz": "8f6b0b701ff078c6e63ed0df56e29d380ca67d1082361696832138c362dfc906",
+    "envelope.json": "019760d37701b8861223b62f3cca7d09a9b3a91a328e067c5e01c612b2b4973a",
+    "README.md": "60e594b52947ee86d6091aa931fc20058966b613e129e4837e2a95d1b33bd73e",
+    "research.zip": "88661697291b832599beb2b2ba53565b898652d18abf6eae9d2f9d2817d503b8"
+  }
+}
