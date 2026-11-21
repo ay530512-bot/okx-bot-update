@@ -1,9 +1,9 @@
 {
   "format": 1,
-  "bytes": 723164,
-  "sha256": "2ff0800d84e193ee26f7151d62c15792d3a35fa1b61611243063781d8c4245c8",
-  "version": "2.6.1",
-  "revision": 20601,
-  "commit": "0855a02803fabed3cc39814b4b56f51520ddf23d",
-  "notes": "15분봉 볼린저밴드 두 꼬리 텔레그램 알림 · 하락 뒤 높은 저점은 롱, 상승 뒤 낮은 고점은 숏 · 두 번째 봉 마감 전 첫 체결 반응 · 수동 진입용"
+  "bytes": 724570,
+  "sha256": "13fca95331f339cc7b304c3abda1c49df8fb0aa942c5eba6d4a2cc2cd54bbf63",
+  "version": "2.6.2",
+  "revision": 20602,
+  "commit": "887bffb6edba625efbc57e36694abd11c38bd2e8",
+  "notes": "홈 시간표 정리 · 15분봉 롱·숏 텔레그램 알림과 실거래 자격 규칙을 표시하고 모의 관찰 목록은 기본으로 접습니다."
 }
