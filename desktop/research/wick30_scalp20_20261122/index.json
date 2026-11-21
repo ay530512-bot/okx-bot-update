@@ -1,0 +1,26 @@
+{
+  "prior_research_commit": "f05b0819342fe846e18d962172b18a6dc68dde23",
+  "deployed_commit": "27308be76be6889b9d71cf66ecd32dc56ea4783c",
+  "deployed_version": "2.6.0",
+  "research_only": true,
+  "span_kst": [
+    "2026-09-23T00:00:00+09:00",
+    "2026-11-22T00:00:00+09:00"
+  ],
+  "prospective_start_kst": "2026-11-23T00:00:00+09:00",
+  "sha256": {
+    "research.zip": "2c696b0a96774913fa3e3a41d36867cd59579375458ff5d3988a4177679aab3d",
+    "bb_filter.py": "cfb7fc78825dbfee3b6195972bcb74c43397ff52b671287d340aa0b597661c08",
+    "bb_plan.json": "9d380a29cca643937c578912c5d09dccf7492f7be6d01fde56886fd2d5995a40",
+    "scalp_plan.json": "5bea7c49b9ebdc6e16dcfbdd9972b170fc4d354a4a0dee50156895b9c4637b2b",
+    "forward_gate.json": "8092f83e71623f156c7c54a044bd5b71b085cc2c9a476b75998a3e55b902c117"
+  },
+  "independent_account_reconciliations": 72,
+  "checks": {
+    "benchmark_outcomes": 186,
+    "symbols": 31,
+    "history_control_n": 41,
+    "history_control_final": 137.4717418998695,
+    "account_reconciliations": 12
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "rule": "Bollinger reversal retest",
+  "applies_to": ["reversal_long", "reversal_short"],
+  "bar_minutes": 5,
+  "window": {
+    "definition": "Subtract the index of the closed first-wick bar from the index of the live second-wick bar. The first bar after the anchor is number 1.",
+    "minimum_bar_number": 1,
+    "maximum_bar_number_inclusive": 30,
+    "timeout_ms_after_anchor_close": 9000000,
+    "trigger": "As soon as the existing first distinct retest reacts. Do not wait for the second bar to close or for bar 30. Preserve prior anchor invalidation, replacement, direction, trading hours and risk limits."
+  },
+  "prior_approach": "Keep the previous closed 5m Bollinger(20,2) test. At least 3 of 6 extremes outside the matching band, last breach farther out than first, net directional move at least 1 anchor ATR and matching midline slope.",
+  "brief_pause": "Keep prior range <=1.5 anchor ATR, absolute net movement <=0.5 ATR and intact first extreme on the completed candles strictly between the two wicks. With no completed bar between them, evaluate only actual prints from the next bar's open through the turn, in exchange order, using at least one earlier print and the turning print. No mandatory minimum number of completed candles.",
+  "evaluation": "Predeclared after 2026-11-21 closed. Fixed 2026-09-23 inclusive to 2026-11-22 exclusive KST, retrospective, 31 instruments. Same isolated rule and shared accounts, PC 2.6.0 risk, fees 0.05% and slippage 0.05% per side plus reported funding, stress at 0.10% slippage. Fractions of the day 2026-11-22 that predate the specification are not prospective. First full prospective KST day is 2026-11-23.",
+  "reference": "Research commit f05b0819342fe846e18d962172b18a6dc68dde23 preserves the historical two-to-five-intervening-candle comparison."
+}

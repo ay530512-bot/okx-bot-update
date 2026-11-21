@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "prospective_from_kst": "2026-11-23T00:00:00+09:00",
+  "exploratory_span_kst": ["2026-09-23", "2026-11-22"],
+  "direction": "long only, independent of two-wick and lower-band approach conditions",
+  "entry": "On the close of a completed bullish 5m candle, lower wick at least 50% of high-low, volume at least 2 times the prior 20 completed 5m average, positive volume and range. Signal at bar boundary; fill first actual subsequent print (timestamp >= boundary) with modeled slip.",
+  "exit": "First following completed bearish 5m bar 1..20 inclusive having upper wick at least 50% of high-low and high >= its SMA20+2 population SD of closes. Sell on first trade at or after bar close. If none, exit on first print at or after close of candle 20. Initial and full trailing stop can exit earlier.",
+  "risk": "PC 2.6.0 3..5x, modeled initial stop below entry low by max(2 ticks, .15 ATR14) rounded down. Full trailing from +1R, 1R gap, initialize on actual slipped fill. 150 USDT, reserve 3, one of 3 slots, one position per rule/symbol, up to 4 accepted trades/day per rule as in reversal. Same lots, .5% single risk, 2% aggregate risk. No partial exit.",
+  "windows": "All-day research comparison plus six pre-specified non-overlapping 4-hour KST windows. Same 60-day interval, two calendar halves. No ranking used for promotion.",
+  "costs": "0.05% fee and 0.05% slippage on each side plus historic realized funding; stress uses 0.10% slippage per side. Same timestamp tie: largest relative volume first, then symbol.",
+  "gate": ">=165 USDT in 60 days separately and for shared account, plus sufficient new untouched trades, robust after costs and removing largest winner; no retrospective promotion. First full unobserved day Nov 23 KST."
+}

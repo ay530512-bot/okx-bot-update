@@ -1,0 +1,11 @@
+{
+  "applicability": "These are study-specific promotion criteria registered for future observations. They do not alter the trading application.",
+  "first_whole_new_day_kst": "2026-11-23",
+  "retrospective_end_kst_exclusive": "2026-11-22",
+  "universe": "Same fixed 31 OKX USDT perpetuals; same PC 2.6.0 risk, costs and liquidity/lot checks. Only the predefined reversal KST windows and the six predefined scalp 4-hour windows can become live candidates.",
+  "windows": "Count nonoverlapping new KST trades and keep each subsequent 60-day window UTC+9 aligned. Label a time window chosen on historical data as selected; do not reuse those days for forward validation.",
+  "absolute": "Standalone and shared 150-USDT account must each end >=165 USDT after all costs over a complete new 60-day period. Require both chronological 30-day subperiods above starting equity when separately rebased to 150.",
+  "minimum_evidence": "For a candidate at least 30 actually admitted independent fills over at least 10 KST trading dates in 60 new days, with at least ten fills per chronological half. Do not annualize or repeat fills to meet the target.",
+  "robustness": "Require a positive net result with largest profitable trade removed and with its largest profitable instrument removed, and a positive net on normal fills at unchanged quantities and doubled one-way slippage. Report recomputed account under stressed risk separately. Compare marked and closed drawdown to production baseline on identical covered data; no promotion if risk materially worsens or essential trade coverage is absent.",
+  "release": "Compare existing/new-rule ledgers separately from local PC paper ledgers. Verify existing positions and trailing-stop migration; only after passing all independent evidence gates and release regression checks may a package affect the desktop update manifest."
+}
