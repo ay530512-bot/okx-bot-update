@@ -1,0 +1,191 @@
+{
+  "release": "PC 2.11.0",
+  "baseline": "PC 2.10.0",
+  "start_kst": "2026-10-01",
+  "end_kst_inclusive": "2026-11-21",
+  "universe": [
+    "AVAX",
+    "DOT",
+    "ZAMA",
+    "DGAI",
+    "PNUT",
+    "RAVE",
+    "AKE",
+    "ALLO",
+    "JELLYJELLY",
+    "AI",
+    "CT",
+    "CP",
+    "ZRO",
+    "ACT",
+    "INIT",
+    "PENDLE",
+    "EDGE",
+    "ARB",
+    "LINK",
+    "DOGE",
+    "OP",
+    "BONK"
+  ],
+  "method": "실제 OKX 15분 완료봉과 체결 ID 순서로 두 꼬리 신호를 재현. 1초 주문 지연, 첫 후속 체결, 편도 수수료 0.05% 및 불리한 슬리피지 0.05%, 공시 펀딩 적용. 1초 마크가격으로 첫 손절과 +1R 추적, KST 23:59 잔량 정리.",
+  "sizing": "신호별 독립 150 USDT, 유보 3 USDT, 한 자리 49 USDT, 원본 3~5배 및 0.5% 위험 검사. 종목·시간 사이 복리와 동시 포트폴리오 점유는 미반영. 과거 전체 호가장 및 서버 지연을 정확히 재현할 수 없어 실제 승인·체결 내역과 차이가 있을 수 있음.",
+  "design": "11월 1~21일에 넓은 조건의 거래 수를 먼저 확인하고, 일목·RSI 선택 조건을 정한 뒤 별도 10월 기간에 그대로 적용. 두 기간 모두 과거 자료이며 전진 실거래 결과가 아님.",
+  "cases": {
+    "base": "기존 큰 반응 재시험과 직접 타점",
+    "selective": "기존 큰 반응 재시험 우선. 가격·전환선/기준선이 모두 반대이고 RSI가 30 이하에서 더 약화(롱) 또는 70 이상에서 더 강화(숏)되면 첫 반응가에서 1~2틱 후속 체결, 15초 내.",
+    "aligned_only": "가격과 전환선/기준선이 모두 같은 방향인 후보만 허용",
+    "context_follow": "일목이 반대이거나 반대 확정 패턴이면 1~2틱 후속 체결",
+    "context_retest": "동일 상황에서 두 번째 꼬리 재시험 대기"
+  },
+  "default": "기존 진입이 기본. 지표 확인 모드는 선택. 모든 신호에 구름·RSI·확정 패턴을 표시.",
+  "periods": {
+    "October": {
+      "signals": 199,
+      "pattern_counts": {
+        "diamond": 3,
+        "inverse_hs": 1
+      },
+      "cases": {
+        "base": {
+          "entries": 46,
+          "wins": 8,
+          "initial_stop_within_60s": 7,
+          "sum_net_usdt": -16.088,
+          "mean_net_usdt": -0.3497,
+          "same_path_double_slippage_net_usdt": -22.814
+        },
+        "selective": {
+          "entries": 37,
+          "wins": 6,
+          "initial_stop_within_60s": 4,
+          "sum_net_usdt": -13.598,
+          "mean_net_usdt": -0.3675,
+          "same_path_double_slippage_net_usdt": -19.01
+        },
+        "aligned_only": {
+          "entries": 0,
+          "wins": 0,
+          "initial_stop_within_60s": 0,
+          "sum_net_usdt": 0,
+          "mean_net_usdt": null,
+          "same_path_double_slippage_net_usdt": 0
+        },
+        "context_follow": {
+          "entries": 22,
+          "wins": 4,
+          "initial_stop_within_60s": 3,
+          "sum_net_usdt": -8.37,
+          "mean_net_usdt": -0.3804,
+          "same_path_double_slippage_net_usdt": -11.587
+        },
+        "context_retest": {
+          "entries": 20,
+          "wins": 1,
+          "initial_stop_within_60s": 3,
+          "sum_net_usdt": -9.044,
+          "mean_net_usdt": -0.4522,
+          "same_path_double_slippage_net_usdt": -11.967
+        }
+      }
+    },
+    "November": {
+      "signals": 105,
+      "pattern_counts": {
+        "diamond": 2,
+        "hs": 1
+      },
+      "cases": {
+        "base": {
+          "entries": 14,
+          "wins": 0,
+          "initial_stop_within_60s": 3,
+          "sum_net_usdt": -6.924,
+          "mean_net_usdt": -0.4946,
+          "same_path_double_slippage_net_usdt": -8.971
+        },
+        "selective": {
+          "entries": 12,
+          "wins": 0,
+          "initial_stop_within_60s": 3,
+          "sum_net_usdt": -6.322,
+          "mean_net_usdt": -0.5268,
+          "same_path_double_slippage_net_usdt": -8.079
+        },
+        "aligned_only": {
+          "entries": 0,
+          "wins": 0,
+          "initial_stop_within_60s": 0,
+          "sum_net_usdt": 0,
+          "mean_net_usdt": null,
+          "same_path_double_slippage_net_usdt": 0
+        },
+        "context_follow": {
+          "entries": 5,
+          "wins": 0,
+          "initial_stop_within_60s": 1,
+          "sum_net_usdt": -2.171,
+          "mean_net_usdt": -0.4342,
+          "same_path_double_slippage_net_usdt": -2.904
+        },
+        "context_retest": {
+          "entries": 3,
+          "wins": 0,
+          "initial_stop_within_60s": 2,
+          "sum_net_usdt": -1.534,
+          "mean_net_usdt": -0.5113,
+          "same_path_double_slippage_net_usdt": -1.974
+        }
+      }
+    },
+    "combined": {
+      "signals": 304,
+      "pattern_counts": {
+        "diamond": 5,
+        "inverse_hs": 1,
+        "hs": 1
+      },
+      "cases": {
+        "base": {
+          "entries": 60,
+          "wins": 8,
+          "initial_stop_within_60s": 10,
+          "sum_net_usdt": -23.013,
+          "mean_net_usdt": -0.3835,
+          "same_path_double_slippage_net_usdt": -31.785
+        },
+        "selective": {
+          "entries": 49,
+          "wins": 6,
+          "initial_stop_within_60s": 7,
+          "sum_net_usdt": -19.919,
+          "mean_net_usdt": -0.4065,
+          "same_path_double_slippage_net_usdt": -27.089
+        },
+        "aligned_only": {
+          "entries": 0,
+          "wins": 0,
+          "initial_stop_within_60s": 0,
+          "sum_net_usdt": 0,
+          "mean_net_usdt": null,
+          "same_path_double_slippage_net_usdt": 0
+        },
+        "context_follow": {
+          "entries": 27,
+          "wins": 4,
+          "initial_stop_within_60s": 4,
+          "sum_net_usdt": -10.541,
+          "mean_net_usdt": -0.3904,
+          "same_path_double_slippage_net_usdt": -14.491
+        },
+        "context_retest": {
+          "entries": 23,
+          "wins": 1,
+          "initial_stop_within_60s": 5,
+          "sum_net_usdt": -10.578,
+          "mean_net_usdt": -0.4599,
+          "same_path_double_slippage_net_usdt": -13.941
+        }
+      }
+    }
+  }
+}
