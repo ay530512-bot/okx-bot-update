@@ -1,0 +1,177 @@
+{
+  "release": "PC 2.12.0",
+  "baseline": "PC 2.11.0 standard",
+  "start_kst": "2026-10-01",
+  "end_kst_inclusive": "2026-11-21",
+  "symbols": [
+    "AVAX",
+    "DOT",
+    "ZAMA",
+    "DGAI",
+    "PNUT",
+    "RAVE",
+    "AKE",
+    "ALLO",
+    "JELLYJELLY",
+    "AI",
+    "CT",
+    "CP",
+    "ZRO",
+    "ACT",
+    "INIT",
+    "PENDLE",
+    "EDGE",
+    "ARB",
+    "LINK",
+    "DOGE",
+    "OP",
+    "BONK"
+  ],
+  "entry_window": {
+    "15m_long": [
+      1,
+      100
+    ],
+    "15m_short": [
+      1,
+      30
+    ],
+    "count": "first candle 0, by interval open; inclusive"
+  },
+  "extension": {
+    "required": "Completed qualifying first lower wick, subsequent zone reachable before first-low invalidation and 1.5 anchor ATR range; existing higher second low and ordered reaction.",
+    "additional_possible_anchors": 0,
+    "additional_long_signals": 0
+  },
+  "timeframes": {
+    "15m": "2.11.0 standard; both legs 15m, 30 bars",
+    "mixed": "Same 15m entries, veto only if previous fully closed 1H close and 9/26 lines both oppose the intended side, using the cloud plotted over that closed hour. Unknown history bypasses this optional veto (2 unfilled CT signals).",
+    "1H": "Both wick legs use 1H bars, max 30 hours; same intrabar ordered trades, 15-second reaction TTL, intraday exit, and risk thresholds."
+  },
+  "method": "Static 22 altcoin universe. OKX completed market candles and ordered trades, 1-second entry latency, 1-second mark price for triggered exits, realized funding, fee 0.05% and unfavorable slippage 0.05% per side. KST 23:59 remaining exposure exit. The 15m legs reuse the pc2110 replay. Independently trade each signal using 150 USDT initial capital and 49 USDT requested margin. Full historical order book and concurrent portfolio occupancy excluded. Net and mean in USDT.",
+  "periods": {
+    "oct": {
+      "15m": {
+        "signals": 199,
+        "entries": 46,
+        "wins": 8,
+        "early": 7,
+        "initial": 30,
+        "trail": 15,
+        "net": -16.0884,
+        "mean": -0.34975,
+        "profit_factor": 0.1222,
+        "risk_exceeds_reference": 88,
+        "cost_stress": -22.8141
+      },
+      "mixed": {
+        "signals": 112,
+        "entries": 33,
+        "wins": 7,
+        "early": 5,
+        "initial": 21,
+        "trail": 12,
+        "net": -10.213,
+        "mean": -0.30948,
+        "profit_factor": 0.1783,
+        "risk_exceeds_reference": 42,
+        "cost_stress": -15.0382
+      },
+      "1H": {
+        "signals": 43,
+        "entries": 1,
+        "wins": 0,
+        "early": 0,
+        "initial": 0,
+        "trail": 0,
+        "net": -0.0613,
+        "mean": -0.06133,
+        "profit_factor": 0.0,
+        "risk_exceeds_reference": 38,
+        "cost_stress": -0.2079
+      }
+    },
+    "nov": {
+      "15m": {
+        "signals": 105,
+        "entries": 14,
+        "wins": 0,
+        "early": 3,
+        "initial": 12,
+        "trail": 2,
+        "net": -6.9245,
+        "mean": -0.49461,
+        "profit_factor": 0.0,
+        "risk_exceeds_reference": 67,
+        "cost_stress": -8.9713
+      },
+      "mixed": {
+        "signals": 40,
+        "entries": 7,
+        "wins": 0,
+        "early": 1,
+        "initial": 7,
+        "trail": 0,
+        "net": -4.0107,
+        "mean": -0.57295,
+        "profit_factor": 0.0,
+        "risk_exceeds_reference": 20,
+        "cost_stress": -5.0364
+      },
+      "1H": {
+        "signals": 24,
+        "entries": 0,
+        "wins": 0,
+        "early": 0,
+        "initial": 0,
+        "trail": 0,
+        "net": 0,
+        "mean": null,
+        "profit_factor": null,
+        "risk_exceeds_reference": 23,
+        "cost_stress": 0
+      }
+    },
+    "combined": {
+      "15m": {
+        "signals": 304,
+        "entries": 60,
+        "wins": 8,
+        "early": 10,
+        "initial": 42,
+        "trail": 17,
+        "net": -23.0129,
+        "mean": -0.38355,
+        "profit_factor": 0.0887,
+        "risk_exceeds_reference": 155,
+        "cost_stress": -31.7854
+      },
+      "mixed": {
+        "signals": 152,
+        "entries": 40,
+        "wins": 7,
+        "early": 6,
+        "initial": 28,
+        "trail": 12,
+        "net": -14.2237,
+        "mean": -0.35559,
+        "profit_factor": 0.1348,
+        "risk_exceeds_reference": 62,
+        "cost_stress": -20.0746
+      },
+      "1H": {
+        "signals": 67,
+        "entries": 1,
+        "wins": 0,
+        "early": 0,
+        "initial": 0,
+        "trail": 0,
+        "net": -0.0613,
+        "mean": -0.06133,
+        "profit_factor": 0.0,
+        "risk_exceeds_reference": 61,
+        "cost_stress": -0.2079
+      }
+    }
+  }
+}

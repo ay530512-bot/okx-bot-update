@@ -103,15 +103,15 @@ class Pattern(unittest.TestCase):
                 w=MarketWicks(.01);w.seed(rows if side==1 else [reflect(r) for r in rows])
                 self.assertIsNone((w.long if side==1 else w.short).anchor)
 
-    def test_30_bar_window_and_gap(self):
+    def test_directional_retest_window_and_gap(self):
         for side in (1,-1):
-            for number in (30,31):
+            for number in (30,31,99,100,101):
                 rows=candles(side);w=MarketWicks(.01);w.seed(rows);anchor=rows[-1][0]
                 for k in range(1,number):
                     row=(anchor+k*STEP,96.78,96.82,96.74,96.78,70)
                     w.closed(row if side==1 else reflect(row))
                 ev=print_series(w,side,anchor+number*STEP,[96.74,96.55,96.56])
-                self.assertEqual(len(ev),int(number==30))
+                self.assertEqual(len(ev),int(number<=(100 if side==1 else 30)))
             w=MarketWicks(.01);w.seed(rows)
             w.closed((anchor+2*STEP,96.8,96.9,96.7,96.8,8))
             self.assertFalse(w.wants_trades())
