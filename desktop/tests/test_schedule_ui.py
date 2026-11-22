@@ -58,7 +58,7 @@ class ScheduleTest(unittest.TestCase):
             el=page.locator
             expect(el('#dashboard')).to_be_visible()
             expect(el('#pcWickStatus')).to_have_text(data['wick_alert_status'])
-            expect(el('#pcEntryAlerts')).to_contain_text('24시간 · 롱·숏 자동 진입과 수동 진입')
+            expect(el('#pcEntryAlerts')).to_contain_text('24시간 신호 · 롱·숏 자동 및 수동 진입')
             for selector in ('[data-forward-rule]','#pcWatchGroup','#rules207','#restoreEntryRules','#pcScheduleSettings'):
                 expect(el(selector)).to_have_count(0)
             self.assertNotIn('모의 관찰',el('#part-home').text_content())
