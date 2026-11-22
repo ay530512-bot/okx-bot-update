@@ -1,9 +1,9 @@
 {
   "format": 1,
-  "bytes": 769873,
-  "sha256": "a48a51af44bd8e7c0ee0bb9841b69a2e127e147985c12f9dfbf73b195fe5bb6c",
-  "version": "2.15.0",
-  "revision": 21500,
-  "commit": "c94ab9c0e0a4f26fcd0bba8671bd71b8c7a58218",
-  "notes": "두 꼬리·스윙 돌파 시장가 진입에서 예상 슬리피지 0.07% 제한을 해제했습니다. 예상치는 기록하고 스프레드 및 구조 손절 위험은 계속 확인합니다."
+  "bytes": 780655,
+  "sha256": "89f32e493579cdfbc69d880a50f04ab27b50daa6ab69ec1f7ea8dceb2cf3d7e7",
+  "version": "2.16.0",
+  "revision": 21600,
+  "commit": "149e4fe69ee11e5c491894af1f28bb309b54668f",
+  "notes": "종목 흐름 모드를 추가했습니다. 빠를 때는 독립 5분봉 재시험, 보통일 때는 15분봉과 마감된 1시간봉으로 판단합니다. 활동·설정에서 선택할 수 있습니다."
 }
