@@ -1,0 +1,436 @@
+[
+ {
+  "symbol": "AAVE",
+  "source_date_utc8": "2026-11-21",
+  "http": 200,
+  "bytes": 2951097,
+  "url": "https://static.okx.com/cdn/okex/traderecords/trades/daily/20261121/AAVE-USDT-SWAP-trades-2026-11-21.zip"
+ },
+ {
+  "symbol": "AAVE",
+  "source_date_utc8": "2026-11-22",
+  "http": 404,
+  "bytes": null,
+  "url": "https://static.okx.com/cdn/okex/traderecords/trades/daily/20261122/AAVE-USDT-SWAP-trades-2026-11-22.zip"
+ },
+ {
+  "symbol": "ACT",
+  "source_date_utc8": "2026-11-21",
+  "http": 200,
+  "bytes": 824455,
+  "url": "https://static.okx.com/cdn/okex/traderecords/trades/daily/20261121/ACT-USDT-SWAP-trades-2026-11-21.zip"
+ },
+ {
+  "symbol": "ACT",
+  "source_date_utc8": "2026-11-22",
+  "http": 404,
+  "bytes": null,
+  "url": "https://static.okx.com/cdn/okex/traderecords/trades/daily/20261122/ACT-USDT-SWAP-trades-2026-11-22.zip"
+ },
+ {
+  "symbol": "ADA",
+  "source_date_utc8": "2026-11-21",
+  "http": 200,
+  "bytes": 1453682,
+  "url": "https://static.okx.com/cdn/okex/traderecords/trades/daily/20261121/ADA-USDT-SWAP-trades-2026-11-21.zip"
+ },
+ {
+  "symbol": "ADA",
+  "source_date_utc8": "2026-11-22",
+  "http": 404,
+  "bytes": null,
+  "url": "https://static.okx.com/cdn/okex/traderecords/trades/daily/20261122/ADA-USDT-SWAP-trades-2026-11-22.zip"
+ },
+ {
+  "symbol": "APT",
+  "source_date_utc8": "2026-11-21",
+  "http": 200,
+  "bytes": 1803349,
+  "url": "https://static.okx.com/cdn/okex/traderecords/trades/daily/20261121/APT-USDT-SWAP-trades-2026-11-21.zip"
+ },
+ {
+  "symbol": "APT",
+  "source_date_utc8": "2026-11-22",
+  "http": 404,
+  "bytes": null,
+  "url": "https://static.okx.com/cdn/okex/traderecords/trades/daily/20261122/APT-USDT-SWAP-trades-2026-11-22.zip"
+ },
+ {
+  "symbol": "ARB",
+  "source_date_utc8": "2026-11-21",
+  "http": 200,
+  "bytes": 4177810,
+  "url": "https://static.okx.com/cdn/okex/traderecords/trades/daily/20261121/ARB-USDT-SWAP-trades-2026-11-21.zip"
+ },
+ {
+  "symbol": "ARB",
+  "source_date_utc8": "2026-11-22",
+  "http": 404,
+  "bytes": null,
+  "url": "https://static.okx.com/cdn/okex/traderecords/trades/daily/20261122/ARB-USDT-SWAP-trades-2026-11-22.zip"
+ },
+ {
+  "symbol": "ATOM",
+  "source_date_utc8": "2026-11-21",
+  "http": 200,
+  "bytes": 327510,
+  "url": "https://static.okx.com/cdn/okex/traderecords/trades/daily/20261121/ATOM-USDT-SWAP-trades-2026-11-21.zip"
+ },
+ {
+  "symbol": "ATOM",
+  "source_date_utc8": "2026-11-22",
+  "http": 404,
+  "bytes": null,
+  "url": "https://static.okx.com/cdn/okex/traderecords/trades/daily/20261122/ATOM-USDT-SWAP-trades-2026-11-22.zip"
+ },
+ {
+  "symbol": "AVAX",
+  "source_date_utc8": "2026-11-21",
+  "http": 200,
+  "bytes": 2464435,
+  "url": "https://static.okx.com/cdn/okex/traderecords/trades/daily/20261121/AVAX-USDT-SWAP-trades-2026-11-21.zip"
+ },
+ {
+  "symbol": "AVAX",
+  "source_date_utc8": "2026-11-22",
+  "http": 404,
+  "bytes": null,
+  "url": "https://static.okx.com/cdn/okex/traderecords/trades/daily/20261122/AVAX-USDT-SWAP-trades-2026-11-22.zip"
+ },
+ {
+  "symbol": "BCH",
+  "source_date_utc8": "2026-11-21",
+  "http": 200,
+  "bytes": 3437414,
+  "url": "https://static.okx.com/cdn/okex/traderecords/trades/daily/20261121/BCH-USDT-SWAP-trades-2026-11-21.zip"
+ },
+ {
+  "symbol": "BCH",
+  "source_date_utc8": "2026-11-22",
+  "http": 404,
+  "bytes": null,
+  "url": "https://static.okx.com/cdn/okex/traderecords/trades/daily/20261122/BCH-USDT-SWAP-trades-2026-11-22.zip"
+ },
+ {
+  "symbol": "BONK",
+  "source_date_utc8": "2026-11-21",
+  "http": 200,
+  "bytes": 354239,
+  "url": "https://static.okx.com/cdn/okex/traderecords/trades/daily/20261121/BONK-USDT-SWAP-trades-2026-11-21.zip"
+ },
+ {
+  "symbol": "BONK",
+  "source_date_utc8": "2026-11-22",
+  "http": 404,
+  "bytes": null,
+  "url": "https://static.okx.com/cdn/okex/traderecords/trades/daily/20261122/BONK-USDT-SWAP-trades-2026-11-22.zip"
+ },
+ {
+  "symbol": "BREV",
+  "source_date_utc8": "2026-11-21",
+  "http": 200,
+  "bytes": 1917487,
+  "url": "https://static.okx.com/cdn/okex/traderecords/trades/daily/20261121/BREV-USDT-SWAP-trades-2026-11-21.zip"
+ },
+ {
+  "symbol": "BREV",
+  "source_date_utc8": "2026-11-22",
+  "http": 404,
+  "bytes": null,
+  "url": "https://static.okx.com/cdn/okex/traderecords/trades/daily/20261122/BREV-USDT-SWAP-trades-2026-11-22.zip"
+ },
+ {
+  "symbol": "CRV",
+  "source_date_utc8": "2026-11-21",
+  "http": 200,
+  "bytes": 1159421,
+  "url": "https://static.okx.com/cdn/okex/traderecords/trades/daily/20261121/CRV-USDT-SWAP-trades-2026-11-21.zip"
+ },
+ {
+  "symbol": "CRV",
+  "source_date_utc8": "2026-11-22",
+  "http": 404,
+  "bytes": null,
+  "url": "https://static.okx.com/cdn/okex/traderecords/trades/daily/20261122/CRV-USDT-SWAP-trades-2026-11-22.zip"
+ },
+ {
+  "symbol": "DOGE",
+  "source_date_utc8": "2026-11-21",
+  "http": 200,
+  "bytes": 5537923,
+  "url": "https://static.okx.com/cdn/okex/traderecords/trades/daily/20261121/DOGE-USDT-SWAP-trades-2026-11-21.zip"
+ },
+ {
+  "symbol": "DOGE",
+  "source_date_utc8": "2026-11-22",
+  "http": 404,
+  "bytes": null,
+  "url": "https://static.okx.com/cdn/okex/traderecords/trades/daily/20261122/DOGE-USDT-SWAP-trades-2026-11-22.zip"
+ },
+ {
+  "symbol": "DOT",
+  "source_date_utc8": "2026-11-21",
+  "http": 200,
+  "bytes": 1808107,
+  "url": "https://static.okx.com/cdn/okex/traderecords/trades/daily/20261121/DOT-USDT-SWAP-trades-2026-11-21.zip"
+ },
+ {
+  "symbol": "DOT",
+  "source_date_utc8": "2026-11-22",
+  "http": 404,
+  "bytes": null,
+  "url": "https://static.okx.com/cdn/okex/traderecords/trades/daily/20261122/DOT-USDT-SWAP-trades-2026-11-22.zip"
+ },
+ {
+  "symbol": "EDGE",
+  "source_date_utc8": "2026-11-21",
+  "http": 200,
+  "bytes": 179890,
+  "url": "https://static.okx.com/cdn/okex/traderecords/trades/daily/20261121/EDGE-USDT-SWAP-trades-2026-11-21.zip"
+ },
+ {
+  "symbol": "EDGE",
+  "source_date_utc8": "2026-11-22",
+  "http": 404,
+  "bytes": null,
+  "url": "https://static.okx.com/cdn/okex/traderecords/trades/daily/20261122/EDGE-USDT-SWAP-trades-2026-11-22.zip"
+ },
+ {
+  "symbol": "ETC",
+  "source_date_utc8": "2026-11-21",
+  "http": 200,
+  "bytes": 1101075,
+  "url": "https://static.okx.com/cdn/okex/traderecords/trades/daily/20261121/ETC-USDT-SWAP-trades-2026-11-21.zip"
+ },
+ {
+  "symbol": "ETC",
+  "source_date_utc8": "2026-11-22",
+  "http": 404,
+  "bytes": null,
+  "url": "https://static.okx.com/cdn/okex/traderecords/trades/daily/20261122/ETC-USDT-SWAP-trades-2026-11-22.zip"
+ },
+ {
+  "symbol": "FIL",
+  "source_date_utc8": "2026-11-21",
+  "http": 200,
+  "bytes": 3818869,
+  "url": "https://static.okx.com/cdn/okex/traderecords/trades/daily/20261121/FIL-USDT-SWAP-trades-2026-11-21.zip"
+ },
+ {
+  "symbol": "FIL",
+  "source_date_utc8": "2026-11-22",
+  "http": 404,
+  "bytes": null,
+  "url": "https://static.okx.com/cdn/okex/traderecords/trades/daily/20261122/FIL-USDT-SWAP-trades-2026-11-22.zip"
+ },
+ {
+  "symbol": "INIT",
+  "source_date_utc8": "2026-11-21",
+  "http": 200,
+  "bytes": 1728684,
+  "url": "https://static.okx.com/cdn/okex/traderecords/trades/daily/20261121/INIT-USDT-SWAP-trades-2026-11-21.zip"
+ },
+ {
+  "symbol": "INIT",
+  "source_date_utc8": "2026-11-22",
+  "http": 404,
+  "bytes": null,
+  "url": "https://static.okx.com/cdn/okex/traderecords/trades/daily/20261122/INIT-USDT-SWAP-trades-2026-11-22.zip"
+ },
+ {
+  "symbol": "INJ",
+  "source_date_utc8": "2026-11-21",
+  "http": 200,
+  "bytes": 2697691,
+  "url": "https://static.okx.com/cdn/okex/traderecords/trades/daily/20261121/INJ-USDT-SWAP-trades-2026-11-21.zip"
+ },
+ {
+  "symbol": "INJ",
+  "source_date_utc8": "2026-11-22",
+  "http": 404,
+  "bytes": null,
+  "url": "https://static.okx.com/cdn/okex/traderecords/trades/daily/20261122/INJ-USDT-SWAP-trades-2026-11-22.zip"
+ },
+ {
+  "symbol": "LDO",
+  "source_date_utc8": "2026-11-21",
+  "http": 200,
+  "bytes": 486669,
+  "url": "https://static.okx.com/cdn/okex/traderecords/trades/daily/20261121/LDO-USDT-SWAP-trades-2026-11-21.zip"
+ },
+ {
+  "symbol": "LDO",
+  "source_date_utc8": "2026-11-22",
+  "http": 404,
+  "bytes": null,
+  "url": "https://static.okx.com/cdn/okex/traderecords/trades/daily/20261122/LDO-USDT-SWAP-trades-2026-11-22.zip"
+ },
+ {
+  "symbol": "LINK",
+  "source_date_utc8": "2026-11-21",
+  "http": 200,
+  "bytes": 3022584,
+  "url": "https://static.okx.com/cdn/okex/traderecords/trades/daily/20261121/LINK-USDT-SWAP-trades-2026-11-21.zip"
+ },
+ {
+  "symbol": "LINK",
+  "source_date_utc8": "2026-11-22",
+  "http": 404,
+  "bytes": null,
+  "url": "https://static.okx.com/cdn/okex/traderecords/trades/daily/20261122/LINK-USDT-SWAP-trades-2026-11-22.zip"
+ },
+ {
+  "symbol": "LTC",
+  "source_date_utc8": "2026-11-21",
+  "http": 200,
+  "bytes": 1490811,
+  "url": "https://static.okx.com/cdn/okex/traderecords/trades/daily/20261121/LTC-USDT-SWAP-trades-2026-11-21.zip"
+ },
+ {
+  "symbol": "LTC",
+  "source_date_utc8": "2026-11-22",
+  "http": 404,
+  "bytes": null,
+  "url": "https://static.okx.com/cdn/okex/traderecords/trades/daily/20261122/LTC-USDT-SWAP-trades-2026-11-22.zip"
+ },
+ {
+  "symbol": "NEAR",
+  "source_date_utc8": "2026-11-21",
+  "http": 200,
+  "bytes": 3361842,
+  "url": "https://static.okx.com/cdn/okex/traderecords/trades/daily/20261121/NEAR-USDT-SWAP-trades-2026-11-21.zip"
+ },
+ {
+  "symbol": "NEAR",
+  "source_date_utc8": "2026-11-22",
+  "http": 404,
+  "bytes": null,
+  "url": "https://static.okx.com/cdn/okex/traderecords/trades/daily/20261122/NEAR-USDT-SWAP-trades-2026-11-22.zip"
+ },
+ {
+  "symbol": "OP",
+  "source_date_utc8": "2026-11-21",
+  "http": 200,
+  "bytes": 2092997,
+  "url": "https://static.okx.com/cdn/okex/traderecords/trades/daily/20261121/OP-USDT-SWAP-trades-2026-11-21.zip"
+ },
+ {
+  "symbol": "OP",
+  "source_date_utc8": "2026-11-22",
+  "http": 404,
+  "bytes": null,
+  "url": "https://static.okx.com/cdn/okex/traderecords/trades/daily/20261122/OP-USDT-SWAP-trades-2026-11-22.zip"
+ },
+ {
+  "symbol": "PENDLE",
+  "source_date_utc8": "2026-11-21",
+  "http": 200,
+  "bytes": 232146,
+  "url": "https://static.okx.com/cdn/okex/traderecords/trades/daily/20261121/PENDLE-USDT-SWAP-trades-2026-11-21.zip"
+ },
+ {
+  "symbol": "PENDLE",
+  "source_date_utc8": "2026-11-22",
+  "http": 404,
+  "bytes": null,
+  "url": "https://static.okx.com/cdn/okex/traderecords/trades/daily/20261122/PENDLE-USDT-SWAP-trades-2026-11-22.zip"
+ },
+ {
+  "symbol": "PEPE",
+  "source_date_utc8": "2026-11-21",
+  "http": 200,
+  "bytes": 5574446,
+  "url": "https://static.okx.com/cdn/okex/traderecords/trades/daily/20261121/PEPE-USDT-SWAP-trades-2026-11-21.zip"
+ },
+ {
+  "symbol": "PEPE",
+  "source_date_utc8": "2026-11-22",
+  "http": 404,
+  "bytes": null,
+  "url": "https://static.okx.com/cdn/okex/traderecords/trades/daily/20261122/PEPE-USDT-SWAP-trades-2026-11-22.zip"
+ },
+ {
+  "symbol": "SUI",
+  "source_date_utc8": "2026-11-21",
+  "http": 200,
+  "bytes": 3600039,
+  "url": "https://static.okx.com/cdn/okex/traderecords/trades/daily/20261121/SUI-USDT-SWAP-trades-2026-11-21.zip"
+ },
+ {
+  "symbol": "SUI",
+  "source_date_utc8": "2026-11-22",
+  "http": 404,
+  "bytes": null,
+  "url": "https://static.okx.com/cdn/okex/traderecords/trades/daily/20261122/SUI-USDT-SWAP-trades-2026-11-22.zip"
+ },
+ {
+  "symbol": "TRX",
+  "source_date_utc8": "2026-11-21",
+  "http": 200,
+  "bytes": 1133619,
+  "url": "https://static.okx.com/cdn/okex/traderecords/trades/daily/20261121/TRX-USDT-SWAP-trades-2026-11-21.zip"
+ },
+ {
+  "symbol": "TRX",
+  "source_date_utc8": "2026-11-22",
+  "http": 404,
+  "bytes": null,
+  "url": "https://static.okx.com/cdn/okex/traderecords/trades/daily/20261122/TRX-USDT-SWAP-trades-2026-11-22.zip"
+ },
+ {
+  "symbol": "UNI",
+  "source_date_utc8": "2026-11-21",
+  "http": 200,
+  "bytes": 3012762,
+  "url": "https://static.okx.com/cdn/okex/traderecords/trades/daily/20261121/UNI-USDT-SWAP-trades-2026-11-21.zip"
+ },
+ {
+  "symbol": "UNI",
+  "source_date_utc8": "2026-11-22",
+  "http": 404,
+  "bytes": null,
+  "url": "https://static.okx.com/cdn/okex/traderecords/trades/daily/20261122/UNI-USDT-SWAP-trades-2026-11-22.zip"
+ },
+ {
+  "symbol": "WIF",
+  "source_date_utc8": "2026-11-21",
+  "http": 200,
+  "bytes": 670343,
+  "url": "https://static.okx.com/cdn/okex/traderecords/trades/daily/20261121/WIF-USDT-SWAP-trades-2026-11-21.zip"
+ },
+ {
+  "symbol": "WIF",
+  "source_date_utc8": "2026-11-22",
+  "http": 404,
+  "bytes": null,
+  "url": "https://static.okx.com/cdn/okex/traderecords/trades/daily/20261122/WIF-USDT-SWAP-trades-2026-11-22.zip"
+ },
+ {
+  "symbol": "XRP",
+  "source_date_utc8": "2026-11-21",
+  "http": 200,
+  "bytes": 7172698,
+  "url": "https://static.okx.com/cdn/okex/traderecords/trades/daily/20261121/XRP-USDT-SWAP-trades-2026-11-21.zip"
+ },
+ {
+  "symbol": "XRP",
+  "source_date_utc8": "2026-11-22",
+  "http": 404,
+  "bytes": null,
+  "url": "https://static.okx.com/cdn/okex/traderecords/trades/daily/20261122/XRP-USDT-SWAP-trades-2026-11-22.zip"
+ },
+ {
+  "symbol": "ZEC",
+  "source_date_utc8": "2026-11-21",
+  "http": 200,
+  "bytes": 26056198,
+  "url": "https://static.okx.com/cdn/okex/traderecords/trades/daily/20261121/ZEC-USDT-SWAP-trades-2026-11-21.zip"
+ },
+ {
+  "symbol": "ZEC",
+  "source_date_utc8": "2026-11-22",
+  "http": 404,
+  "bytes": null,
+  "url": "https://static.okx.com/cdn/okex/traderecords/trades/daily/20261122/ZEC-USDT-SWAP-trades-2026-11-22.zip"
+ }
+]
