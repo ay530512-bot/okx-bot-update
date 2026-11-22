@@ -1,0 +1,46 @@
+{
+  "period": "2026-10-01 through 2026-11-21 KST",
+  "universe": "22 fixed OKX altcoin perpetuals, available cached instrument-days only; no assumption of random coverage",
+  "method": "15-minute forward markout using first public trade 1 second after signal and 15 minutes later, fixed round-trip cost 0.20%. Standalone signal comparison, not live account PnL; no full book, sizing, funding or protective exit replay.",
+  "stats": {
+    "Oct": {
+      "base": {
+        "n": 1124,
+        "mean_net_percent": -0.25110960213125116,
+        "losses": 751
+      },
+      "m": {
+        "n": 171,
+        "mean_net_percent": -0.2220155292098924,
+        "losses": 114,
+        "within_initial_risk_at_trigger": 2
+      }
+    },
+    "Nov": {
+      "base": {
+        "n": 660,
+        "mean_net_percent": -0.25156528673537143,
+        "losses": 429
+      },
+      "m": {
+        "n": 115,
+        "mean_net_percent": -0.4391360308792939,
+        "losses": 88,
+        "within_initial_risk_at_trigger": 1
+      }
+    },
+    "total": {
+      "base": {
+        "n": 1784,
+        "mean_net_percent": -0.2512781850004886,
+        "losses": 1180
+      },
+      "m": {
+        "n": 286,
+        "mean_net_percent": -0.3093192274336029,
+        "losses": 202,
+        "within_initial_risk_at_trigger": 3
+      }
+    }
+  }
+}
