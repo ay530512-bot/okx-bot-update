@@ -1,5 +1,6 @@
 """Causal public-data reference portfolios. Never substitute an incomplete curve for NAV."""
 import heapq,math
+from decimal import Decimal
 from collections import Counter
 def simulate(events,arm,source,opening,info,complete,lock=False):
     if not complete or opening is None:
@@ -50,15 +51,30 @@ def simulate(events,arm,source,opening,info,complete,lock=False):
             due[:]=[(p['exit'],sym) for sym,p in live.items()];heapq.heapify(due)
     try:
         # Event paths are used only for admission-independent exits. Future outcomes do not enter selection.
-        for e in sorted(events,key=lambda x:(x.get('fill_ref',[x['signal']])[0],x['sym'],x['signal'],x.get('source',''))):
+        ordered=[];pending={};consumed=set()
+        for ix,e in enumerate(events):
             if source and e.get('source')!=source:continue
-            if 'fill_ref' not in e:raise ValueError('unverified entry boundary')
-            ts=e['fill_ref'][0];sym=e['sym'];advance(ts);settle(ts)
-            if locked:counts['locked']+=1;continue
-            if sym in live or len(live)>=3:
-                counts['duplicate_symbol' if sym in live else 'three_slots']+=1;continue
-            if arm=='E':counts['intentional_skip']+=1;continue
-            if arm=='C' and e.get('trend_side')==0:counts['trend_wait']+=1;continue
+            ordered.append((e['signal'],1,e['sym'],ix))
+            if 'fill_ref' in e:ordered.append((e['fill_ref'][0],0,e['sym'],ix))
+        for ts,action,sym,ix in sorted(ordered):
+            e=events[ix];advance(ts);settle(ts)
+            if action==1:
+                if locked:counts['locked']+=1;continue
+                if arm=='E':counts['intentional_skip']+=1;continue
+                if arm=='C' and e.get('trend_side')==0:counts['trend_wait']+=1;continue
+                if e.get('skip') in ('day_deadline','indicator_history','original_risk_admission'):
+                    counts[e['skip']]+=1;continue
+                if sym in live or sym in pending or len(live)+len(pending)>=3:
+                    counts['duplicate_symbol' if sym in live or sym in pending else 'three_slots']+=1;continue
+                anchor=(sym,e['side'],e.get('anchor',e['signal']))
+                if anchor in consumed:counts['duplicate_first_anchor']+=1;continue
+                if 'fill_ref' not in e:raise ValueError('unverified entry boundary')
+                equity=net_liquidation(ts)
+                pending[sym]=(ix,max(0,(equity-3)/3),max(0,.005*equity));consumed.add(anchor)
+                continue
+            if sym not in pending or pending[sym][0]!=ix:continue
+            del pending[sym]
+            if locked:counts['lock_canceled_pending']+=1;continue
             if e.get('skip'):
                 if e['skip']=='below_minimum' and cash>150:raise ValueError('larger balance could change reference minimum admission')
                 counts[e['skip']]+=1;continue
@@ -71,8 +87,8 @@ def simulate(events,arm,source,opening,info,complete,lock=False):
             loss_per_contract=ct*(s*(entry-p['first_stop']*(1-s*.0005))+.0005*(entry+p['first_stop']*(1-s*.0005)))
             if loss_per_contract<=0:raise ValueError('invalid risk')
             slot=max(0,(equity-3)/3)
-            free=max(0,equity-3-sum(v['margin'] for v in live.values()))
-            risk_room=max(0,.02*equity-sum(v['risk'] for v in live.values()))
+            free=max(0,equity-3-sum(v['margin'] for v in live.values())-sum(p[1] for p in pending.values()))
+            risk_room=max(0,.02*equity-sum(v['risk'] for v in live.values())-sum(p[2] for p in pending.values()))
             # Preserve conservative matched-risk sizing (input quantity was lot-floored at 150).
             n=math.floor(min(q0*equity/150,min(free,slot)*lev/(ct*entry),min(.005*equity,risk_room)/loss_per_contract)/lot+1e-10)*lot
             if n<minq:counts['size_or_risk']+=1;continue
@@ -83,7 +99,9 @@ def simulate(events,arm,source,opening,info,complete,lock=False):
         if live:raise ValueError('unvalued carry at midnight')
     except (KeyError,ValueError) as err:
         return dict(status='missing',reason=str(err),closing_nav=None,day_return_pct=None,partial_verified_exits=len(fills),counts=dict(counts))
-    ret=(cash/opening-1)*100;band='below' if cash<opening*1.05 else 'above' if cash>opening*1.10 else 'inside'
+    ret=(cash/opening-1)*100
+    close_d,open_d=Decimal(str(cash)),Decimal(str(opening))
+    band='below' if close_d<open_d*Decimal('1.05') else 'above' if close_d>open_d*Decimal('1.10') else 'inside'
     bysym=Counter()
     for p in fills:bysym[p['sym']]+=p['net']
     return dict(status=band,profit_lock=lock,lock_triggered=locked,opening_nav=opening,closing_nav=cash,day_return_pct=ret,closed_trades=len(fills),counts=dict(counts),fills=fills,zero_trades=not fills,net=cash-opening,largest_winner=max([0]+[p['net'] for p in fills]),best_symbol=max([0]+list(bysym.values())),net_stress_same_contracts=sum(p['stress'] for p in fills),drawdown_sampled_pct=100*dd)

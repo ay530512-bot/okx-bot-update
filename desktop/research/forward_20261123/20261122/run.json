@@ -1,6 +1,6 @@
 {
  "kst_day": "2026-11-22",
- "recorded_kst": "2026-11-23T00:56:07.438820+09:00",
+ "recorded_kst": "2026-11-23T01:11:46.025128+09:00",
  "end_exclusive": "2026-11-23T00:00:00+09:00",
  "source": "publicly replayed development data",
  "package": {
@@ -21,269 +21,269 @@
  },
  "fast_raw_windows": 339,
  "signals_15m_observed": 12,
- "paired_events_in_snapshot": 107,
+ "paired_events_in_snapshot": 224,
  "cohorts": {
   "native_fast_direct": {
-   "coverage_for_events": false,
+   "coverage_for_events": true,
    "matched": {
     "A": {
-     "checked": 81,
-     "missing_known_path": 0,
-     "net_on_checked_events": -8.919244443000114,
-     "stressed_net_on_checked_events": -12.632192846910113
+     "checked": 192,
+     "missing_known_path": 1,
+     "net_on_checked_events": -15.456689442631152,
+     "stressed_net_on_checked_events": -23.989012826423654
     },
     "B": {
-     "checked": 79,
+     "checked": 191,
      "missing_known_path": 2,
-     "net_on_checked_events": -7.204231054784046,
-     "stressed_net_on_checked_events": -10.828778576568046
+     "net_on_checked_events": -16.937544795602953,
+     "stressed_net_on_checked_events": -25.421896715049453
     },
     "C": {
-     "checked": 57,
+     "checked": 147,
      "missing_known_path": 0,
-     "net_on_checked_events": -5.166289685215982,
-     "stressed_net_on_checked_events": -7.844878624858731
+     "net_on_checked_events": -15.57383571475013,
+     "stressed_net_on_checked_events": -22.16394409473538
     },
     "D": {
-     "checked": 79,
-     "missing_known_path": 2,
-     "net_on_checked_events": -8.127808991807257,
-     "stressed_net_on_checked_events": -11.770099093114506
+     "checked": 186,
+     "missing_known_path": 7,
+     "net_on_checked_events": -17.020033755974538,
+     "stressed_net_on_checked_events": -25.325174269911788
     }
    },
    "accounts": {
     "A": {
-     "status": "missing",
-     "closing_nav": null,
-     "closed_trades": null,
-     "reason": "incomplete signal, price or preceding account history",
-     "day_return_pct": null
+     "status": "below",
+     "closing_nav": 146.31149998462652,
+     "closed_trades": 31,
+     "reason": null,
+     "day_return_pct": -2.4590000102489906
     },
     "B": {
      "status": "missing",
      "closing_nav": null,
      "closed_trades": null,
-     "reason": "incomplete signal, price or preceding account history",
+     "reason": "unverified exit or decision",
      "day_return_pct": null
     },
     "C": {
-     "status": "missing",
-     "closing_nav": null,
-     "closed_trades": null,
-     "reason": "incomplete signal, price or preceding account history",
-     "day_return_pct": null
+     "status": "below",
+     "closing_nav": 149.96914706692718,
+     "closed_trades": 33,
+     "reason": null,
+     "day_return_pct": -0.020568622048544594
     },
     "D": {
      "status": "missing",
      "closing_nav": null,
      "closed_trades": null,
-     "reason": "incomplete signal, price or preceding account history",
+     "reason": "unverified exit or decision",
      "day_return_pct": null
     },
     "E": {
-     "status": "missing",
-     "closing_nav": null,
-     "closed_trades": null,
-     "reason": "incomplete signal, price or preceding account history",
-     "day_return_pct": null
+     "status": "below",
+     "closing_nav": 150,
+     "closed_trades": 0,
+     "reason": null,
+     "day_return_pct": 0.0
     }
    }
   },
   "deployed_wick15": {
-   "coverage_for_events": false,
+   "coverage_for_events": true,
    "matched": {
     "A": {
-     "checked": 3,
+     "checked": 6,
      "missing_known_path": 0,
-     "net_on_checked_events": -1.7210957584500024,
-     "stressed_net_on_checked_events": -1.8647438169000026
+     "net_on_checked_events": -2.5821515991250004,
+     "stressed_net_on_checked_events": -2.8749776482500002
     },
     "B": {
-     "checked": 3,
+     "checked": 6,
      "missing_known_path": 0,
-     "net_on_checked_events": -0.320195908574996,
-     "stressed_net_on_checked_events": -0.46314386714999606
+     "net_on_checked_events": -0.9931638022749966,
+     "stressed_net_on_checked_events": -1.2851957545499966
     },
     "C": {
-     "checked": 3,
+     "checked": 6,
      "missing_known_path": 0,
-     "net_on_checked_events": 1.2592920866750013,
-     "stressed_net_on_checked_events": 1.1155883233500012
+     "net_on_checked_events": 1.6476124583749994,
+     "stressed_net_on_checked_events": 1.3546689667499996
     },
     "D": {
-     "checked": 3,
+     "checked": 6,
      "missing_known_path": 0,
-     "net_on_checked_events": -0.10843915559999515,
-     "stressed_net_on_checked_events": -0.25145871119999513
+     "net_on_checked_events": 0.388772243350001,
+     "stressed_net_on_checked_events": 0.09645848670000098
     }
    },
    "accounts": {
     "A": {
-     "status": "missing",
-     "closing_nav": null,
-     "closed_trades": null,
-     "reason": "incomplete signal, price or preceding account history",
-     "day_return_pct": null
+     "status": "below",
+     "closing_nav": 147.59867950110004,
+     "closed_trades": 4,
+     "reason": null,
+     "day_return_pct": -1.6008803325999743
     },
     "B": {
-     "status": "missing",
-     "closing_nav": null,
-     "closed_trades": null,
-     "reason": "incomplete signal, price or preceding account history",
-     "day_return_pct": null
+     "status": "below",
+     "closing_nav": 149.20440092385002,
+     "closed_trades": 5,
+     "reason": null,
+     "day_return_pct": -0.5303993840999888
     },
     "C": {
-     "status": "missing",
-     "closing_nav": null,
-     "closed_trades": null,
-     "reason": "incomplete signal, price or preceding account history",
-     "day_return_pct": null
+     "status": "below",
+     "closing_nav": 151.78135454745,
+     "closed_trades": 4,
+     "reason": null,
+     "day_return_pct": 1.1875696983000061
     },
     "D": {
-     "status": "missing",
-     "closing_nav": null,
-     "closed_trades": null,
-     "reason": "incomplete signal, price or preceding account history",
-     "day_return_pct": null
+     "status": "below",
+     "closing_nav": 150.534263956825,
+     "closed_trades": 5,
+     "reason": null,
+     "day_return_pct": 0.35617597121666567
     },
     "E": {
-     "status": "missing",
-     "closing_nav": null,
-     "closed_trades": null,
-     "reason": "incomplete signal, price or preceding account history",
-     "day_return_pct": null
+     "status": "below",
+     "closing_nav": 150,
+     "closed_trades": 0,
+     "reason": null,
+     "day_return_pct": 0.0
     }
    }
   },
   "shared": {
-   "coverage_for_events": false,
+   "coverage_for_events": true,
    "matched": {
     "A": {
-     "checked": 84,
-     "missing_known_path": 0,
-     "net_on_checked_events": -10.640340201450115,
-     "stressed_net_on_checked_events": -14.496936663810116
+     "checked": 198,
+     "missing_known_path": 1,
+     "net_on_checked_events": -18.038841041756154,
+     "stressed_net_on_checked_events": -26.863990474673653
     },
     "B": {
-     "checked": 82,
+     "checked": 197,
      "missing_known_path": 2,
-     "net_on_checked_events": -7.524426963359042,
-     "stressed_net_on_checked_events": -11.291922443718041
+     "net_on_checked_events": -17.93070859787795,
+     "stressed_net_on_checked_events": -26.70709246959945
     },
     "C": {
-     "checked": 60,
+     "checked": 153,
      "missing_known_path": 0,
-     "net_on_checked_events": -3.9069975985409804,
-     "stressed_net_on_checked_events": -6.729290301508731
+     "net_on_checked_events": -13.926223256375131,
+     "stressed_net_on_checked_events": -20.809275127985384
     },
     "D": {
-     "checked": 82,
-     "missing_known_path": 2,
-     "net_on_checked_events": -8.236248147407252,
-     "stressed_net_on_checked_events": -12.021557804314503
+     "checked": 192,
+     "missing_known_path": 7,
+     "net_on_checked_events": -16.631261512624537,
+     "stressed_net_on_checked_events": -25.228715783211786
     }
    },
    "accounts": {
     "A": {
-     "status": "missing",
-     "closing_nav": null,
-     "closed_trades": null,
-     "reason": "incomplete signal, price or preceding account history",
-     "day_return_pct": null
+     "status": "below",
+     "closing_nav": 145.38135502056002,
+     "closed_trades": 31,
+     "reason": null,
+     "day_return_pct": -3.0790966529599895
     },
     "B": {
      "status": "missing",
      "closing_nav": null,
      "closed_trades": null,
-     "reason": "incomplete signal, price or preceding account history",
+     "reason": "unverified exit or decision",
      "day_return_pct": null
     },
     "C": {
-     "status": "missing",
-     "closing_nav": null,
-     "closed_trades": null,
-     "reason": "incomplete signal, price or preceding account history",
-     "day_return_pct": null
+     "status": "below",
+     "closing_nav": 149.6672478758052,
+     "closed_trades": 33,
+     "reason": null,
+     "day_return_pct": -0.22183474946320114
     },
     "D": {
      "status": "missing",
      "closing_nav": null,
      "closed_trades": null,
-     "reason": "incomplete signal, price or preceding account history",
+     "reason": "unverified exit or decision",
      "day_return_pct": null
     },
     "E": {
-     "status": "missing",
-     "closing_nav": null,
-     "closed_trades": null,
-     "reason": "incomplete signal, price or preceding account history",
-     "day_return_pct": null
+     "status": "below",
+     "closing_nav": 150,
+     "closed_trades": 0,
+     "reason": null,
+     "day_return_pct": 0.0
     }
    }
   },
   "speed_routed": {
-   "coverage_for_events": false,
+   "coverage_for_events": true,
    "matched": {
     "A": {
-     "checked": 3,
+     "checked": 8,
      "missing_known_path": 0,
-     "net_on_checked_events": -0.461212144153082,
-     "stressed_net_on_checked_events": -0.600980088703082
+     "net_on_checked_events": -1.5465018087288627,
+     "stressed_net_on_checked_events": -1.9402521263538623
     },
     "B": {
-     "checked": 3,
+     "checked": 8,
      "missing_known_path": 0,
-     "net_on_checked_events": -0.3099433071750033,
-     "stressed_net_on_checked_events": -0.4505649643500032
+     "net_on_checked_events": -1.0593460677100097,
+     "stressed_net_on_checked_events": -1.4535991354200095
     },
     "C": {
-     "checked": 2,
+     "checked": 7,
      "missing_known_path": 0,
-     "net_on_checked_events": -0.27286172039691753,
-     "stressed_net_on_checked_events": -0.3710307403969176
+     "net_on_checked_events": -0.12822107747270478,
+     "stressed_net_on_checked_events": -0.4804071630477047
     },
     "D": {
-     "checked": 3,
+     "checked": 8,
      "missing_known_path": 0,
-     "net_on_checked_events": -0.5123475578750075,
-     "stressed_net_on_checked_events": -0.6527713657500076
+     "net_on_checked_events": -0.3498694503000089,
+     "stressed_net_on_checked_events": -0.744204120600009
     }
    },
    "accounts": {
     "A": {
-     "status": "missing",
-     "closing_nav": null,
-     "closed_trades": null,
-     "reason": "incomplete signal, price or preceding account history",
-     "day_return_pct": null
+     "status": "below",
+     "closing_nav": 148.50001987236053,
+     "closed_trades": 8,
+     "reason": null,
+     "day_return_pct": -0.9999867517596517
     },
     "B": {
-     "status": "missing",
-     "closing_nav": null,
-     "closed_trades": null,
-     "reason": "incomplete signal, price or preceding account history",
-     "day_return_pct": null
+     "status": "below",
+     "closing_nav": 148.9568926823225,
+     "closed_trades": 8,
+     "reason": null,
+     "day_return_pct": -0.6954048784516775
     },
     "C": {
-     "status": "missing",
-     "closing_nav": null,
-     "closed_trades": null,
-     "reason": "incomplete signal, price or preceding account history",
-     "day_return_pct": null
+     "status": "below",
+     "closing_nav": 149.8728057528398,
+     "closed_trades": 7,
+     "reason": null,
+     "day_return_pct": -0.08479616477345964
     },
     "D": {
-     "status": "missing",
-     "closing_nav": null,
-     "closed_trades": null,
-     "reason": "incomplete signal, price or preceding account history",
-     "day_return_pct": null
+     "status": "below",
+     "closing_nav": 149.667761890025,
+     "closed_trades": 8,
+     "reason": null,
+     "day_return_pct": -0.22149207331667586
     },
     "E": {
-     "status": "missing",
-     "closing_nav": null,
-     "closed_trades": null,
-     "reason": "incomplete signal, price or preceding account history",
-     "day_return_pct": null
+     "status": "below",
+     "closing_nav": 150,
+     "closed_trades": 0,
+     "reason": null,
+     "day_return_pct": 0.0
     }
    }
   }
@@ -305,5 +305,19 @@
   "release_channel_modified": false
  },
  "pc215_shadow": "unobserved; separate local PC journal",
- "real_fills": null
+ "real_fills": null,
+ "verified_first_touch_count": 212,
+ "entry_sources_complete": true,
+ "scalp_long_signal_count_only": 43,
+ "flow_coverage": {
+  "covered": 41,
+  "missing": 183
+ },
+ "archive_head_check_kst": "2026-11-23T00:36:10.558153+09:00",
+ "data_limits": [
+  "Historical order book depth and user orders are unobserved. Matching quantities and mark-based exits are public-data simulations.",
+  "Market-price MFE/MAE flag partial clipping when entry/exit-minute prints are not complete. Fee and slippage are fixed research assumptions.",
+  "Mark-second ambiguity is recorded as unverified. Only evaluate a continuous account when every admitted path permits it. Do not treat unavailable inputs as zero.",
+  "Scalp control records nominal completed-bar opportunities; it is excluded from the matched two-source account and has no independent completed date this run."
+ ]
 }

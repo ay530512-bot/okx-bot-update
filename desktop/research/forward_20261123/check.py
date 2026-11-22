@@ -22,4 +22,11 @@ def test(path):
     assert native_pace(sample[:-1],40*F)=='unknown'
     assert simulate([], 'A',None,150,{},True)['status']=='below'
     assert simulate([], 'A',None,150,{},False)['closing_nav'] is None
+    position=dict(exit_time=125000,qty_contracts=1,first_stop=99,net=.2,stressed_net_same_quantity=.1,gross=.4,fee=.1,slippage=.1,funding=0)
+    e=dict(signal=60500,sym='X',source='test',side=1,leverage=3,trend_side=1,fill_ref=[61000,1,100],A=position)
+    market={'X':dict(ct=.1,lot=1,minq=1,marks={m:[100]*4 for m in range(0,180000,60000)},funding=[])}
+    example=simulate([e,dict(e,signal=62000,fill_ref=[63000,2,100])],'A',None,150,market,True)
+    assert example['counts']=={'duplicate_symbol':1} and example['closed_trades']==1
+    assert abs(example['closing_nav']-150.2)<1e-9
+    assert simulate([], 'A',None,None,market,True)['closing_nav'] is None
 if __name__=='__main__':test(Path(sys.argv[1]))

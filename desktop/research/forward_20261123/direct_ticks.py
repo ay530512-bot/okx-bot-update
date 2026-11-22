@@ -68,6 +68,13 @@ def main(scan,cache,tape,out):
                 if r['status'].startswith('reaction'):seen.add(key)
                 if r['status']=='missing':uncertain.add(key)
             rows.append(dict(window=w['time'],side=w['side'],anchor=w['anchor'],first=w['level'],atr=w['atr'],**r))
+        if any(r['status']=='missing' for r in rows):
+            from busy_touch import replay
+            alternate=replay(sym,data[sym]['native_fast_tick_windows'],cache,tape)
+            unresolved=lambda rr:sum(r['status'] in ('missing','earlier_unverified','reaction_fill_unverified') for r in rr)
+            pairs=zip(rows,alternate)
+            agree=all(a==b for a,b in pairs if a['status'] not in ('missing','earlier_unverified','reaction_fill_unverified') and b['status'] not in ('missing','earlier_unverified','reaction_fill_unverified'))
+            if agree and unresolved(alternate)<unresolved(rows):rows=alternate
         target.write_text(json.dumps(rows,separators=(',',':')))
     with ThreadPoolExecutor(18) as pool:list(pool.map(process,data))
 if __name__=='__main__':

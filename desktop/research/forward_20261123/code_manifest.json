@@ -1,0 +1,48 @@
+{
+ "current_pc_source": "149e4fe69ee11e5c491894af1f28bb309b54668f",
+ "prior_daily_development": "088b1fd297594173d81a843542accc24cf835a44",
+ "five_families_development": "25e2b2f272b91befcb2f2664f26cf4558dd93b87",
+ "prior_compound_development": "29c11795b3a37daf7df846c00b92deaee083e120",
+ "prior_pc290_development": "89283833059e10bf941728741d83d746c7f71e5e",
+ "historical_research_only_dates": "2026-09-22 through 2026-11-22 KST inclusive",
+ "immutable_protocol": "ed435b117a4ab256576ec94e341f078bbeb2c5bc",
+ "historical_comparator_sources": [
+  "desktop/research/pc250/timing_research",
+  "desktop/research/pc290",
+  "desktop/research/target10_20261121",
+  "desktop/research/wick_touch_20261121",
+  "desktop/research/wick30_scalp20_20261122",
+  "desktop/research/five_rules_20261122",
+  "desktop/research/compound_band_20261122",
+  "desktop/research/daily_close_20261122"
+ ],
+ "entry_implementations": {
+  "production_pinned": "runtime/pc_wick_alert.py, runtime/pc_sizing.py, runtime/pc_held_positions.py, runtime/pc_fast_setup.py and runtime/pc_symbol_flow.py",
+  "new_fast": "scan.py and direct_ticks.py",
+  "native_15m_standing": "wick15.py",
+  "matched_risk": "paired.py and accounts.py"
+ },
+ "research_files_sha256": {
+  "accounts.py": "b3238d6fd86ef2d8b33fe7a9fe17f1594c479b12ebb21fd0efe4a8b7e9cec6bb",
+  "archive_status.py": "12491600ab5de1ef54356bffd2c2773c3f08ff0301bedff256bfe25b91fefaf4",
+  "assessment.py": "bc3faab0d0c16273c89fa9c9be2fa604811179397b3b618422ca8fbc0e4154e4",
+  "busy_touch.py": "423a318701aa5deed9b9863f3577819147930082c074b3f555be0ff68f0dae54",
+  "cache_day.py": "701d49f3206dad84fd89d34f2658d93ff08cb7e5b2634d334027e12638f8963c",
+  "charts.py": "4f836c0984a7084455c2d4761bdc7994d8069aa07250457c2b405e0278b3f31a",
+  "check.py": "3733c85ac627c8e1a85caa8b7f66c153097dc62ec617dc7675d346e497beaaf1",
+  "direct_ticks.py": "7f313971d2b64731438f6fc1d5664bb3aef6fe97a330e9554ea72da3d85b051c",
+  "events.py": "d0ea93d204415f7a51ae0f93c98cd24d9c1137c4e7e9eb1d3d6b9ba28cbbfe93",
+  "excursions.py": "f2d7fd5babe0ec2c78956cf76dad92a4f25bd9e5c60920c5d7848028729ac62a",
+  "finalize.py": "717fa54e7e749b0ebb389e040df66b1efd3ce6785f928ff879dd9315d7f7557f",
+  "pack_inputs.py": "916db8912088fe49e162c30a46246c0730e5a5cef703d89b40c63c961ef447a7",
+  "paired.py": "a98a64a5442d23cd0de53c2446978f76eb24821cd39d39443714d683e6757840",
+  "pressure.py": "7b99f1eab52e2cd823ed72c7d8c9ea703e3314d24811595f8e46d012ca3f31a6",
+  "record_history.py": "8fbcf061fcdfc3699c120ae2f0dd89bb804fac8bdd40948defe2a38327da74e9",
+  "replay_day.py": "e29d8e413c389ee5c3357708a3925da212a6446b13e8a959f6c57cfc0b65b8a9",
+  "scalp_control.py": "827b2b2aa49f27f21743ff1f242ec89b2752f2989905adeac2d0c9334ef84ad6",
+  "scan.py": "d1b54b74d8bcca41488a2a1d30636d4a27a6bdfe827802ab09067c6e5a169b45",
+  "status.py": "e1d4761054f8b42d1f251d2a06b1b59d788865519ca3a9f53929fe728ffc6f9a",
+  "wick15.py": "0c48c432bb73aa152595d9e55909805b0a550457fac7bbf5996e656926215b27"
+ },
+ "status": "research; never place an order or modify the installer"
+}

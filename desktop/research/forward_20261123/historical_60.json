@@ -831,5 +831,50 @@
    "wins_reduced_baseline": 2,
    "wins_changed_exits": 6
   }
+ },
+ "separate_compound_control": {
+  "source": "29c11795b3a37daf7df846c00b92deaee083e120",
+  "ledger_groups": {
+   "chronological31": {
+    "fills": 13,
+    "net": -3.220963876422375,
+    "winning_fills": 3
+   },
+   "continuous61": {
+    "fills": 39,
+    "net": 2.214118981805917,
+    "winning_fills": 19
+   },
+   "latest60": {
+    "fills": 35,
+    "net": 3.0788299084699324,
+    "winning_fills": 17
+   }
+  },
+  "latest_60_days": {
+   "final": 153.07882990847,
+   "days": 60,
+   "inside": 0,
+   "below": 60,
+   "above": 0,
+   "positive": 11,
+   "flat": 38,
+   "filled": 35,
+   "locks": 0,
+   "max_slots": 1,
+   "worst": -1.4233626981516312,
+   "best": 1.7053119042531595,
+   "drawdown_pct": 3.108387213651498,
+   "gross": 10.606430999999986,
+   "fees": 3.7625899668922504,
+   "slip": 3.7625926184996037,
+   "carry": -0.002418506138128928,
+   "best_fill": 2.3278319149500235,
+   "first": "2026-09-23",
+   "last": "2026-11-21",
+   "pnl_without_best_fill": 0.7509979935199751,
+   "pnl_without_best_symbol": -0.050071445055046127
+  },
+  "label": "previously selected and inspected; never independent evidence"
  }
 }

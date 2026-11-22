@@ -1,0 +1,10 @@
+{
+  "journal": "../forward_20261123/20261122/run.json",
+  "protocol": "../forward_20261123/protocol.md",
+  "next_run_source": "../forward_20261123/README.md",
+  "first_closed_prospective_date_as_of_this_run": null,
+  "old_protocol_first_date": "2026-11-23",
+  "new_matched_registration_first_date": "2026-11-24",
+  "first_registered_commit": "ed435b117a4ab256576ec94e341f078bbeb2c5bc",
+  "release_qualified": false
+}

@@ -1,0 +1,157 @@
+{
+ "AAVE": {
+  "files": 81,
+  "bytes": 38144,
+  "sha256": "3c759eeb5e59e272e7f1b05362a51b87be6e70da8f9e82b547f3beb325a02366"
+ },
+ "ACT": {
+  "files": 57,
+  "bytes": 28528,
+  "sha256": "c1331c6233ca98d1153cb3856d008d5ae754b0e0091932d20ce119f31700feff"
+ },
+ "ADA": {
+  "files": 108,
+  "bytes": 40696,
+  "sha256": "78522b0dc66f84bae5a19a5658520dacc4744990942a04e9da8cdf13e1d0e3a5"
+ },
+ "APT": {
+  "files": 52,
+  "bytes": 21236,
+  "sha256": "3a6616c017efe301ead54f9f08714d331a913066d1d0e5f761e6cda42835a44e"
+ },
+ "ARB": {
+  "files": 127,
+  "bytes": 45356,
+  "sha256": "c66ee9ad6105a17b27a42e87d34a7e7280ecef576f8ff53eb3a686a05e94637a"
+ },
+ "ATOM": {
+  "files": 14,
+  "bytes": 2260,
+  "sha256": "a9fdff876a7398739ed722faffa16d48792dbfaa42261501f15f6894bc8c6d02"
+ },
+ "AVAX": {
+  "files": 116,
+  "bytes": 51884,
+  "sha256": "dbd72b3bd31b629d9c4299d5969521f985a740d469e660924ad6c8b6f60dd439"
+ },
+ "BCH": {
+  "files": 92,
+  "bytes": 31088,
+  "sha256": "5aaadaf1b7b0fe50a1baaa748afd03853faefdc7a7500f839c4aa456631aec59"
+ },
+ "BONK": {
+  "files": 96,
+  "bytes": 19696,
+  "sha256": "ce2b811b091424578175c1cb1f38623342903bbb458c7f59f6706ab4ef9bf22e"
+ },
+ "BREV": {
+  "files": 39,
+  "bytes": 16672,
+  "sha256": "e046ad500fc5cb4eacdf6a1d5d2fd9776565ab5a7404ef3a2434f207225c0b62"
+ },
+ "CRV": {
+  "files": 59,
+  "bytes": 12616,
+  "sha256": "c21b9034c8362f2fc52de39c4b4320fb73d4f6c0c1141bcaa30a0b4ef1d03fe3"
+ },
+ "DOGE": {
+  "files": 145,
+  "bytes": 68712,
+  "sha256": "866e6c467a5ee45a91194fd17af0b60bbbe9711cfb91ed38bc915ad6c234ccc9"
+ },
+ "DOT": {
+  "files": 49,
+  "bytes": 13240,
+  "sha256": "8dff5d4dc67893d7d86abac098c498d8231b61121fbca113a3f0ad045b48057b"
+ },
+ "EDGE": {
+  "files": 107,
+  "bytes": 11268,
+  "sha256": "c9fd2c105bd0723bcdd42ea1518b0abc60f58e1f50ff1aced2b137af0c418e3a"
+ },
+ "ETC": {
+  "files": 86,
+  "bytes": 13704,
+  "sha256": "e2a455e51566912804fb430c449d141838334278e721c419bde2f9adf5d722d4"
+ },
+ "FIL": {
+  "files": 136,
+  "bytes": 49360,
+  "sha256": "818910efe26893564eba3884d5a520b50557679558670f494805e80cbb86c406"
+ },
+ "INIT": {
+  "files": 40,
+  "bytes": 38496,
+  "sha256": "9a1ed160f301ac16161c701c9a9ce6a228a11328ca51d2fbb2b7bd7b298e437d"
+ },
+ "INJ": {
+  "files": 103,
+  "bytes": 29756,
+  "sha256": "2ff27206cac97e3df0a28bb97e17c68829d84b9104de5c1c9072cd6e020b7e20"
+ },
+ "LDO": {
+  "files": 53,
+  "bytes": 6272,
+  "sha256": "9ef5a42f59d75b5e57f10bf5a0f139531edf70ce28648e81b2298688edd6d0bf"
+ },
+ "LINK": {
+  "files": 105,
+  "bytes": 39588,
+  "sha256": "8f52a5d6740f9e2595c0838982e378d7795b056259af452884aad59ca735c440"
+ },
+ "LTC": {
+  "files": 95,
+  "bytes": 21112,
+  "sha256": "bd2107e34007b1503439f2c80c0230d432e8f82fffc43f47d2db9399169eaefd"
+ },
+ "NEAR": {
+  "files": 123,
+  "bytes": 57476,
+  "sha256": "d0ba1c4858d61de6cb37afc766c6b5c234b4dcbedea8ee4794eaf2c0d29ad21d"
+ },
+ "OP": {
+  "files": 84,
+  "bytes": 21372,
+  "sha256": "6e810deec50c08069c9cadd47199acfb72143a675cac7935bd0840c7ce597302"
+ },
+ "PENDLE": {
+  "files": 26,
+  "bytes": 1968,
+  "sha256": "b7c6b0141006618ecee464daea4ffe5ce7cef2ce424d41f51de685f36f9c9d73"
+ },
+ "PEPE": {
+  "files": 72,
+  "bytes": 36136,
+  "sha256": "94c510113df000993689090f5d7a8ec1d6eb519641a79dcf28d6d4c374a3c933"
+ },
+ "SUI": {
+  "files": 127,
+  "bytes": 42220,
+  "sha256": "66153dff4f1b1bf756be83e4914fa16794e8578fdf1cb3989c8e22a7918ede53"
+ },
+ "TRX": {
+  "files": 48,
+  "bytes": 14196,
+  "sha256": "079fd9604477be82e7cef626fef3faa02970bde596b1fc253bf48b49c42b51cd"
+ },
+ "UNI": {
+  "files": 103,
+  "bytes": 30536,
+  "sha256": "7a013e5aa00e89817a4a230f753c0f76a71bdb661d75fb46480b727f619f86db"
+ },
+ "WIF": {
+  "files": 26,
+  "bytes": 6408,
+  "sha256": "183cfbe7214294ebf209da2157293ad8b3bf8b3cb515d38418e6c6734eedd49c"
+ },
+ "XRP": {
+  "files": 122,
+  "bytes": 73736,
+  "sha256": "eb5799c764d4722ec27ec9acff78dad1992c9acfa5fa4414055b1ee5d0e3e9f6"
+ },
+ "ZEC": {
+  "files": 72,
+  "bytes": 332648,
+  "sha256": "c5952f87e5ce9cf20ba6dbd15452e9690aab71b241f3555871ed547cb9dfd1bf"
+ }
+}

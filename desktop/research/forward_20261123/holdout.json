@@ -1,0 +1,44 @@
+{
+ "fixed_before_first_eligible_kst": "2026-11-24",
+ "hash_method": "first 6 of 31 by ascending SHA256 UTF-8 of forward_20261123_v1/ plus symbol",
+ "instrument_group": [
+  "LDO",
+  "UNI",
+  "PEPE",
+  "OP",
+  "XRP",
+  "INJ"
+ ],
+ "other_group": [
+  "NEAR",
+  "TRX",
+  "ARB",
+  "APT",
+  "CRV",
+  "ETC",
+  "DOGE",
+  "ADA",
+  "AVAX",
+  "BREV",
+  "ATOM",
+  "ZEC",
+  "WIF",
+  "BCH",
+  "EDGE",
+  "FIL",
+  "SUI",
+  "ACT",
+  "PENDLE",
+  "LINK",
+  "BONK",
+  "AAVE",
+  "LTC",
+  "DOT",
+  "INIT"
+ ],
+ "time_groups_utc_plus9": [
+  "2026-11-24..2026-12-23 inclusive",
+  "2026-12-24..2027-01-22 inclusive"
+ ],
+ "decision": "Every full calendar date in the main book must satisfy the inclusive daily goal. Require both chronological halves positive, at least 10 trades each and a positive after-cost total in the six-symbol fixed subgroup. Insufficient subgroup fills (fewer than 10) is inconclusive. All symbols appeared in historical development; the forward subgroup is a robustness test and not an entirely new instrument sample. Do not retune on this subgroup."
+}

@@ -1,0 +1,50 @@
+{
+ "calendar_role": "2026-11-22 KST: already inspected development day",
+ "first_complete_eligible_for_current_registration": "2026-11-24",
+ "matched_AB_n": 196,
+ "A_minus_B_total": 0.4270550692717911,
+ "A_minus_B_mean": 0.0021788523942438322,
+ "A_improves": 94,
+ "A_worsens": 101,
+ "B_D_comparable": 191,
+ "loss_both_sides": 116,
+ "positive_gross_but_negative_after_costs_B": 25,
+ "same_quantity_cost_gate_diagnostics": {
+  "aligned_and_breadth": {
+   "pass": {
+    "n": 0,
+    "A_sum_net": 0,
+    "B_sum_net": 0
+   },
+   "fail": {
+    "n": 25,
+    "A_sum_net": -3.5626983621353556,
+    "B_sum_net": -2.617641296742481
+   },
+   "unverified": {
+    "n": 171,
+    "A_sum_net": -13.794318150720796,
+    "B_sum_net": -15.166430285385463
+   }
+  },
+  "absorption_then_turn": {
+   "pass": {
+    "n": 0,
+    "A_sum_net": 0,
+    "B_sum_net": 0
+   },
+   "fail": {
+    "n": 29,
+    "A_sum_net": -3.7014136270814086,
+    "B_sum_net": -3.0341672861527402
+   },
+   "unverified": {
+    "n": 167,
+    "A_sum_net": -13.655602885774744,
+    "B_sum_net": -14.749904295975202
+   }
+  }
+ },
+ "inference": "These are conditional differences on identical checked opportunity paths. They do not establish an indicator cause, prove a live fill or qualify a rule on independent dates.",
+ "next_test": "Apply the already frozen same-direction-share and peer-breadth gates to new prints, including the opposite-pressure/then-turn variant, holding entry, risk cap, and realized exit method fixed. Compare coverage and frequency of wins as well as costs, separately for fast and normal pace. Examine sample loss explicitly; no new threshold was selected from the day."
+}

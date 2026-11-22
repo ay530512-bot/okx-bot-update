@@ -5,7 +5,7 @@ from cache_day import SYMBOLS
 def pack(source,out):
     out.mkdir(parents=True,exist_ok=True);index={}
     for sym in SYMBOLS:
-        files=sorted({p for pat in (sym+'-*.json.gz','mark-'+sym+'-*.json.gz','boundary-'+sym+'-*.json.gz') for p in source.glob(pat)})
+        files=sorted({p for pat in (sym+'-*.json.gz','mark-'+sym+'-*.json.gz','boundary-'+sym+'-*.json.gz','seconds-'+sym+'-*.json.gz','secondtrades-'+sym+'-*.json.gz') for p in source.glob(pat)})
         values={p.name:json.loads(gzip.decompress(p.read_bytes())) for p in files}
         data=lzma.compress(json.dumps(values,separators=(',',':')).encode(),preset=4)
         path=out/(sym+'.json.xz');path.write_bytes(data)

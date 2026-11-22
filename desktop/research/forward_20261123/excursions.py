@@ -14,17 +14,23 @@ def enrich(root):
             p=e.get(arm,{})
             if 'net' not in p:continue
             et=p['exit_time'];end_id=p['exit_trade_id'];es=e['trend_side'] if arm=='C' else -e['side'] if arm=='D' else e['side']
-            pp=[entry,p['exit_raw']];unknown=False
+            pp=[entry,p['exit_raw']];outer=[];unbounded=False
             for t in range(ts//M*M,et//M*M+1,M):
                 if t>ts and t+M<=et:
-                    if t not in bars:unknown=True;continue
+                    if t not in bars:unbounded=True;continue
                     r=bars[t]
                     if float(r[5]):pp.extend([float(r[2]),float(r[3])])
                 else:
                     z=root/'ticks'/(sym+'-'+str(t)+'.json.gz')
-                    if not z.exists():unknown=True;continue
+                    if not z.exists():
+                        if t not in bars:unbounded=True
+                        else:outer.extend([float(bars[t][2]),float(bars[t][3])])
+                        continue
                     pp.extend(r[2] for r in json.load(gzip.open(z)) if (ts,i)<=(r[0],r[1])<=(et,end_id))
             v=[es*(x/entry-1) for x in pp]
-            p['excursion_observed']=dict(mfe=max(v),mae=min(v),exact=not unknown,basis='public last trade against raw entry; clipped by trade id; partial extrema are lower bounds on magnitude')
+            outer_v=v+[es*(x/entry-1) for x in outer]
+            mfe_exact=not unbounded and max(outer_v)==max(v)
+            mae_exact=not unbounded and min(outer_v)==min(v)
+            p['excursion_observed']=dict(mfe=max(v),mae=min(v),mfe_ceiling=None if unbounded else max(outer_v),mae_floor=None if unbounded else min(outer_v),mfe_exact=mfe_exact,mae_exact=mae_exact,exact=mfe_exact and mae_exact,basis='public last trade against raw entry, clipped by trade ID; unresolved partial minutes are bounded by their full high/low')
     f.write_text(json.dumps(events,separators=(',',':'),allow_nan=False))
 if __name__=='__main__':enrich(Path(sys.argv[1]))

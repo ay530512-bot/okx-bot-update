@@ -11,6 +11,9 @@ from paired import run as paired
 from finalize import summarize
 from excursions import enrich
 from charts import plot
+from pressure import run as pressure
+from assessment import make
+from scalp_control import control
 from check import test
 def run(day,root,package,previous=None):
     for n in ('work','cache','ticks','direct','wick15','joined','paired_all','result'):(root/n).mkdir(parents=True,exist_ok=True)
@@ -31,7 +34,7 @@ def run(day,root,package,previous=None):
             events=json.loads((root/'joined'/p.name).read_bytes())
             p.write_text(json.dumps(paired(sym,cache,tape,events,package),separators=(',',':')))
     with ThreadPoolExecutor(8) as pool:list(pool.map(run_pairs,SYMBOLS))
-    summarize(root,package,json.loads(previous.read_bytes()) if previous else None);enrich(root);plot(root)
+    summarize(root,package,json.loads(previous.read_bytes()) if previous else None);enrich(root);pressure(root);make(root);plot(root);control(root)
 if __name__=='__main__':
     p=argparse.ArgumentParser();p.add_argument('day');p.add_argument('root',type=Path);p.add_argument('package',type=Path);p.add_argument('--previous',type=Path)
     a=p.parse_args();run(a.day,a.root,a.package,a.previous)

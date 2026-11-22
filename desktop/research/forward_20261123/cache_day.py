@@ -5,6 +5,7 @@ from datetime import datetime,timedelta,timezone
 import gzip,hashlib,json,threading,time
 from pathlib import Path
 from urllib.request import Request,urlopen
+from urllib.error import HTTPError
 from urllib.parse import urlencode
 
 SYMBOLS="AAVE ACT ADA APT ARB ATOM AVAX BCH BONK BREV CRV DOGE DOT EDGE ETC FIL INIT INJ LDO LINK LTC NEAR OP PENDLE PEPE SUI TRX UNI WIF XRP ZEC".split()
@@ -19,8 +20,15 @@ def get(url):
                 time.sleep(max(0.,last+.12-time.monotonic()));last=time.monotonic()
             with urlopen(Request(url,headers={'User-Agent':'market-data-research'}),timeout=18) as resp:
                 return resp.read()
-        except Exception:
-            if attempt==2: raise
+        except HTTPError as exc:
+            if exc.code==429:
+                try:delay=max(10*(attempt+1),float(exc.headers.get('Retry-After',0)))
+                except (ValueError,TypeError):delay=15*(attempt+1)
+                with LOCK:last=max(last,time.monotonic()+delay)
+            if attempt==2 or exc.code not in (429,500,502,503,504):raise
+            time.sleep(attempt+1)
+        except OSError:
+            if attempt==2:raise
             time.sleep(attempt+1)
 def api(path,**params):
     payload=json.loads(get('https://www.okx.com/api/v5/'+path+'?'+urlencode(params)))

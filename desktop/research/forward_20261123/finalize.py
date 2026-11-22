@@ -11,6 +11,7 @@ from scan import native_pace
 def summarize(root,package,previous=None):
     sys.path.insert(0,str(package/'runtime'))
     from pc_symbol_flow import assess_market
+    from pc_sizing import ema,strength
     cache=root/'cache';scan=json.loads((root/'work/scan_day.json').read_bytes())
     cov=json.loads((cache/'coverage.json').read_bytes());summary={};all_events=[];info={};all_w=[];all_direct=[]
     complete={x:True for x in ['native_fast_direct','deployed_wick15']}
@@ -48,9 +49,28 @@ def summarize(root,package,previous=None):
             r['native_pace']=native_pace(z['5m'][max(0,i-40):i],t//300000*300000)
             dec=assess_market(hist('15m',t,900000),hist('5m',t,300000),hist('1H',t,3600000),t,s,hist('1m',t,60000))
             r.update(release_pace=dec['pace'],release_selected_side=dec['side'],release_reason=dec['reason'],prior_anchor_state='unknown' if r['anchor']<cov['start_ms'] else 'known')
+            r['pre_frames']={}
+            for frame,step in [('1m',60000),('5m',300000),('15m',900000),('1H',3600000)]:
+                hh=hist(frame,t,step)
+                if len(hh)<32 or hh[-1][0]!=t//step*step-step:continue
+                _,op,hi,lo,cl,vol=hh[-1];span=hi-lo;cc=[q[4] for q in hh]
+                avgvol=sum(q[5] for q in hh[-21:-1])/20
+                atr=sum(max(hh[j][2],hh[j-1][4])-min(hh[j][3],hh[j-1][4]) for j in range(len(hh)-14,len(hh)))/14
+                prev=hh[-13:-1];emin=ema(cc,20)
+                r['pre_frames'][frame]=dict(end_ms=hh[-1][0]+step,body_share=abs(cl-op)/span if span else 0,lower_share=(min(op,cl)-lo)/span if span else 0,upper_share=(hi-max(op,cl))/span if span else 0,close_location=(cl-lo)/span if span else .5,relative_volume=vol/avgvol if avgvol else None,atr_pct=100*atr/cl,ema20_distance_pct=100*(cl/emin-1),ema20_slope_pct=100*(emin/ema(cc[:-1],20)-1),rsi14=strength(cc),prior12_low=min(q[3] for q in prev),prior12_high=max(q[2] for q in prev))
             if r['prior_anchor_state']=='unknown':complete[r['source']]=False
             all_events.append(r)
         summary[sym]=dict(pace=x['counts'],fast_minute_windows=len(x['native_fast_tick_windows']),fast_status=dict(Counter(r['status'] for r in direct)),native_15m_first_wicks=len(x['fifteen_min_first_wicks']),signals_15m=len(wick) if w is not None else None,unverified_anchor_windows=(w or {}).get('unverified_anchor_windows'),paired_cases=len(e) if e is not None else None)
+        speed_counts={}
+        for ev in e or []:
+            key=ev.get('native_pace','unknown')
+            g=speed_counts.setdefault(key,Counter())
+            g['signals']+=1
+            if ev.get('skip'):g['skip_'+ev['skip']]+=1
+            elif 'net' in ev.get('A',{}):g['A_verified_event_paths']+=1
+            else:g['A_unverified']+=1
+            if ev.get('release_selected_side')!=ev.get('side'):g['release_wait_or_other_side']+=1
+        summary[sym]['by_signal_speed']={k:dict(v) for k,v in speed_counts.items()}
     def stats(events,k):
         paths=[(r,r[k]) for r in events if k in r and 'net' in r[k]]
         groups={}
@@ -60,6 +80,13 @@ def summarize(root,package,previous=None):
                 a=sorted(r['pre'][key] for r,_ in rr if r.get('pre') and key in r['pre'])
                 return dict(n=len(a),minimum=min(a),median=median(a),maximum=max(a)) if a else {'n':0}
             groups[name]=dict(n=len(rr),sum_net=sum(p['net'] for _,p in rr),sum_gross=sum(p['gross'] for _,p in rr),mean_net=sum(p['net'] for _,p in rr)/len(rr) if rr else None,features={k:dist(k) for k in ['rv','slope','stretch','location','atr_pct','rsi_direction']})
+            groups[name]['pre_frames']={}
+            for frame in ['1m','5m','15m','1H']:
+                metrics={}
+                for feature in ['body_share','lower_share','upper_share','close_location','relative_volume','atr_pct','ema20_distance_pct','ema20_slope_pct','rsi14']:
+                    vals=[r['pre_frames'][frame][feature] for r,_ in rr if r.get('pre_frames',{}).get(frame,{}).get(feature) is not None]
+                    metrics[feature]={'n':len(vals),'median':median(vals) if vals else None,'min':min(vals) if vals else None,'max':max(vals) if vals else None}
+                groups[name]['pre_frames'][frame]=metrics
         return dict(checked=len(paths),groups=groups,unverified=sum('unverified' in r.get(k,{}) for r in events),net_same_quantity=sum(p['net'] for _,p in paths),stress=sum(p['stressed_net_same_quantity'] for _,p in paths),net_without_best=sum(p['net'] for _,p in paths)-max([0]+[p['net'] for _,p in paths]))
     daily={}
     day=cov['day_kst']
@@ -71,10 +98,14 @@ def summarize(root,package,previous=None):
                 raise ValueError('previous book is from a different registration')
             return previous['books'][cohort][book][arm].get('closing_nav')
         return 150 if day in ('2026-11-22','2026-11-24') else None
-    for source in [*complete,None]:
-        cohort=[r for r in all_events if not source or r.get('source')==source]
-        all_known=complete[source] if source else all(complete.values())
-        daily[source or 'shared']=dict(complete_events=all_known,paired_stats={arm:stats(cohort,arm) for arm in 'ABCD'},both_sides_lost=sum(r['B']['net']<0 and r['D']['net']<0 for r in cohort if 'net' in r.get('B',{}) and 'net' in r.get('D',{})),accounts={arm:simulate(cohort,arm,source,opening(source or 'shared','accounts',arm),info,all_known) for arm in 'ABCDE'},locked_accounts={arm:simulate(cohort,arm,source,opening(source or 'shared','locked_accounts',arm),info,all_known,lock=True) for arm in 'ABCD'})
+    for source in [*complete,None,'speed_routed']:
+        if source=='speed_routed':
+            cohort=[r for r in all_events if (r['source']=='native_fast_direct' and r['native_pace']=='fast' or r['source']=='deployed_wick15' and r['native_pace']=='normal') and r['release_selected_side']==r['side']]
+        else:
+            cohort=[r for r in all_events if not source or r.get('source')==source]
+        all_known=complete[source] if source in complete else all(complete.values())
+        book_source=source if source in complete else None
+        daily[source or 'shared']=dict(complete_events=all_known,paired_stats={arm:stats(cohort,arm) for arm in 'ABCD'},both_sides_lost=sum(r['B']['net']<0 and r['D']['net']<0 for r in cohort if 'net' in r.get('B',{}) and 'net' in r.get('D',{})),accounts={arm:simulate(cohort,arm,book_source,opening(source or 'shared','accounts',arm),info,all_known) for arm in 'ABCDE'},locked_accounts={arm:simulate(cohort,arm,book_source,opening(source or 'shared','locked_accounts',arm),info,all_known,lock=True) for arm in 'ABCD'})
     save=root/'result';save.mkdir(exist_ok=True)
     def put(name,value):
         (save/name).write_text(json.dumps(value,separators=(',',':'),allow_nan=False))
