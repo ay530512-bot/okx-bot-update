@@ -7,6 +7,11 @@ def join(direct,wick,out):
         w=wick/p.name
         if not w.exists():continue
         rows=json.loads(p.read_bytes())
+        # A seed with no previous consumed-anchor ledger cannot establish eligibility of cross-midnight setups.
+        for r in rows:
+            if 'ts' in r and (r['anchor']+9*3600000)//86400000<(r['ts']+9*3600000)//86400000:
+                r['prior_anchor_state']='unknown'
+
         for e in json.loads(w.read_bytes())['events']:
             rows.append(dict(e,status='reaction',source='deployed_wick15',anchor=e['anchor_ms'],atr=e['anchor_atr']))
         (out/p.name).write_text(json.dumps(sorted(rows,key=lambda r:r.get('ts',r.get('window',0))),separators=(',',':')))

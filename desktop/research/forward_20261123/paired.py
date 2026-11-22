@@ -8,14 +8,16 @@ from cache_day import api
 from direct_ticks import minute,M,F
 def run(sym,cache,tape,results,package):
     sys.path.insert(0,str(package/'runtime'))
+    from pc_symbol_flow import assess_market
+    from scan import native_pace
     from pc_sizing import indicators,leverage_for,round_stop,ema
     data=json.load(gzip.open(cache/(sym+'.json.gz')))
-    frames={k:[(int(r[0]),*map(float,r[1:6])) for r in data[k]] for k in ['5m','15m','1H']}
+    frames={k:[(int(r[0]),*map(float,r[1:6])) for r in data[k]] for k in ['1m','5m','15m','1H']}
     times={k:[r[0] for r in v] for k,v in frames.items()}
     raw={int(r[0]):r for r in data['1m']}; mark={int(r[0]):list(map(float,r[1:5])) for r in data['mark1m']}
     deadline=max(mark);inst=data['instrument'][0];tick=float(inst['tickSz']);ct=float(inst['ctVal']);lot=float(inst['lotSz']);minq=float(inst['minSz'])
-    def hist(k,ts,step):
-        i=bisect_right(times[k],ts-step);return frames[k][max(0,i-160):i]
+    def hist(k,ts,step,n=160):
+        i=bisect_right(times[k],ts-step);return frames[k][max(0,i-n):i]
     def trend(ts):
         q=[r[4] for r in hist('15m',ts,15*M)];h=[r[4] for r in hist('1H',ts,60*M)]
         if len(q)<20 or len(h)<21:return 0
@@ -31,11 +33,23 @@ def run(sym,cache,tape,results,package):
             if sorted(int(r[0]) for r in a)!=list(range(m,m+M,1000)):raise ValueError('incomplete mark seconds')
             key.write_bytes(gzip.compress(json.dumps(a,separators=(',',':')).encode(),mtime=0))
         return sorted([(int(r[0]),*map(float,r[1:5])) for r in a])
+    @lru_cache(None)
     def next_print(ts):
-        for m in range(ts//M*M,deadline+1,M):
+        m=ts//M*M
+        if (tape/(sym+'-'+str(m)+'.json.gz')).exists():
             for r in minute(sym,m,raw,tape):
                 if r[0]>=ts:return r
-        raise ValueError('no verified executable exit by session end')
+        key=tape/('boundary-'+sym+'-'+str(ts)+'.json.gz')
+        if key.exists():return json.load(gzip.open(key))['next']
+        contract=sym+'-USDT-SWAP'
+        prev=api('market/history-trades',instId=contract,type=2,after=ts,limit=1)[0]
+        before=int(prev['tradeId'])
+        nxt=api('market/history-trades',instId=contract,type=1,after=before+2,limit=1)[0]
+        found=[int(nxt['ts']),int(nxt['tradeId']),float(nxt['px']),float(nxt['sz']),nxt['side']]
+        if int(prev['ts'])>=ts or found[0]<ts or found[1]!=before+1 or found[0]>=deadline+M:
+            raise ValueError('unverified boundary trade')
+        key.write_bytes(gzip.compress(json.dumps(dict(previous=prev,next=found)).encode(),mtime=0))
+        return found
     def path(ts,ref,s,stop,tp,qty):
         entry=ref*(1+s*.0005);risk=s*(entry-stop);active=stop
         if risk<=0:raise ValueError('invalid structural distance')
@@ -83,6 +97,10 @@ def run(sym,cache,tape,results,package):
                 out.append(dict(sym=sym,signal=r['ts'],side=r['side'],unverified=str(exc)));continue
         ts,_,ref=r['fill_ref'];s=r['side'];res=dict(sym=sym,source=r.get('source','native_fast_direct'),signal=r['ts'],side=s,fill_ref=r['fill_ref'],anchor=r['anchor'],first=r['first'],second=r['second'],no_entry_net=0)
         out.append(res)
+        t=r['ts'];i=bisect_right(times['5m'],t-F)
+        speed=native_pace(data['5m'][max(0,i-40):i],t//F*F)
+        dec=assess_market(hist('15m',t,15*M,260),hist('5m',t,F,260),hist('1H',t,60*M),t,s,hist('1m',t,M))
+        res.update(native_pace=speed,release_pace=dec['pace'],release_selected_side=dec['side'],release_decision_reason=dec['reason'],prior_anchor_state=r.get('prior_anchor_state','known'))
         res['closed_minute_diagnostics']={}
         for n in (5,15,30):
             mt=(ts+n*M)//M*M-M

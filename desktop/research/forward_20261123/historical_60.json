@@ -1,0 +1,835 @@
+{
+ "cohort": "historical diagnostic; not a new account session",
+ "current_package": "2.16.0",
+ "pc_215_shadow": "not_read",
+ "actual_account": "not_read",
+ "source": "OKX-60-Trade-Review / OKX-60-Trade-Data.zip; previously used 22-contract sample",
+ "features": {
+  "all": {
+   "n": 60,
+   "wins": 8,
+   "net": -23.012878229038673,
+   "gross": -5.421816000000006,
+   "cost": 17.545078383454,
+   "funding": -0.04598384558466506,
+   "gross_positive": 18,
+   "gross_flat": 0,
+   "mfe_cover_cost": 21,
+   "early60": 10,
+   "exits": {
+    "trail": 17,
+    "initial": 42,
+    "day": 1
+   },
+   "side": {
+    "-1": 29,
+    "1": 31
+   },
+   "median": {
+    "hold_minutes": 5.99249,
+    "mfe_pct": 0.13459,
+    "mae_pct": -0.18065,
+    "gross_usdt": -0.23856,
+    "fee_slip_usdt": 0.29288
+   },
+   "pre_each": {
+    "1m": {
+     "signed_body_pct": -0.06303,
+     "signed_ret3_pct": -0.11132,
+     "signed_ret8_pct": -0.1075,
+     "rsi_center_signed": -8.50453,
+     "rsi_delta_signed": -3.35892,
+     "volume_mult": 0.50518,
+     "bb_pos_signed": -0.48481,
+     "ema20_slope3_signed_pct": -0.02433,
+     "atr_pct": 0.11121
+    },
+    "5m": {
+     "signed_body_pct": -0.04773,
+     "signed_ret3_pct": -0.05197,
+     "signed_ret8_pct": -0.34513,
+     "rsi_center_signed": -15.83804,
+     "rsi_delta_signed": -0.878,
+     "volume_mult": 0.715,
+     "bb_pos_signed": -0.60866,
+     "ema20_slope3_signed_pct": -0.15261,
+     "atr_pct": 0.31387
+    },
+    "15m": {
+     "signed_body_pct": -0.09873,
+     "signed_ret3_pct": -0.36825,
+     "signed_ret8_pct": -1.23633,
+     "rsi_center_signed": -17.3737,
+     "rsi_delta_signed": -0.87004,
+     "volume_mult": 1.63848,
+     "bb_pos_signed": -0.92457,
+     "ema20_slope3_signed_pct": -0.28493,
+     "atr_pct": 0.50467
+    },
+    "1h": {
+     "signed_body_pct": -0.68824,
+     "signed_ret3_pct": -1.31912,
+     "signed_ret8_pct": -1.44295,
+     "rsi_center_signed": -6.28065,
+     "rsi_delta_signed": -4.0365,
+     "volume_mult": 1.23111,
+     "bb_pos_signed": -0.63987,
+     "ema20_slope3_signed_pct": -0.10418,
+     "atr_pct": 1.07563
+    }
+   },
+   "median_anchor": {
+    "wick_fraction": 0.59663,
+    "volume_mult": 2.01423
+   }
+  },
+  "win": {
+   "n": 8,
+   "wins": 8,
+   "net": 2.238989007315887,
+   "gross": 4.585263000000013,
+   "cost": 2.34627399268425,
+   "funding": 1.245115122117113e-13,
+   "gross_positive": 8,
+   "gross_flat": 0,
+   "mfe_cover_cost": 8,
+   "early60": 0,
+   "exits": {
+    "trail": 8
+   },
+   "side": {
+    "1": 5,
+    "-1": 3
+   },
+   "median": {
+    "hold_minutes": 16.11201,
+    "mfe_pct": 0.6319,
+    "mae_pct": -0.05414,
+    "gross_usdt": 0.55028,
+    "fee_slip_usdt": 0.29312
+   },
+   "pre_each": {
+    "1m": {
+     "signed_body_pct": -0.12903,
+     "signed_ret3_pct": -0.18131,
+     "signed_ret8_pct": -0.15696,
+     "rsi_center_signed": -8.95527,
+     "rsi_delta_signed": -4.58806,
+     "volume_mult": 0.43597,
+     "bb_pos_signed": -0.63691,
+     "ema20_slope3_signed_pct": -0.03238,
+     "atr_pct": 0.12734
+    },
+    "5m": {
+     "signed_body_pct": 0.03959,
+     "signed_ret3_pct": -0.06742,
+     "signed_ret8_pct": -0.59073,
+     "rsi_center_signed": -18.30522,
+     "rsi_delta_signed": 0.6694,
+     "volume_mult": 0.90712,
+     "bb_pos_signed": -0.62619,
+     "ema20_slope3_signed_pct": -0.18049,
+     "atr_pct": 0.33285
+    },
+    "15m": {
+     "signed_body_pct": -0.07787,
+     "signed_ret3_pct": -0.5467,
+     "signed_ret8_pct": -1.61434,
+     "rsi_center_signed": -18.07169,
+     "rsi_delta_signed": -0.97906,
+     "volume_mult": 1.72082,
+     "bb_pos_signed": -0.95605,
+     "ema20_slope3_signed_pct": -0.3345,
+     "atr_pct": 0.56402
+    },
+    "1h": {
+     "signed_body_pct": -0.6449,
+     "signed_ret3_pct": -1.49158,
+     "signed_ret8_pct": -0.83331,
+     "rsi_center_signed": -3.56529,
+     "rsi_delta_signed": -4.03823,
+     "volume_mult": 0.91348,
+     "bb_pos_signed": -0.22498,
+     "ema20_slope3_signed_pct": 0.03036,
+     "atr_pct": 1.21708
+    }
+   },
+   "median_anchor": {
+    "wick_fraction": 0.63025,
+    "volume_mult": 1.94158
+   }
+  },
+  "lose": {
+   "n": 52,
+   "wins": 0,
+   "net": -25.25186723635456,
+   "gross": -10.007079000000019,
+   "cost": 15.19880439076975,
+   "funding": -0.04598384558478957,
+   "gross_positive": 10,
+   "gross_flat": 0,
+   "mfe_cover_cost": 13,
+   "early60": 10,
+   "exits": {
+    "trail": 9,
+    "initial": 42,
+    "day": 1
+   },
+   "side": {
+    "-1": 26,
+    "1": 26
+   },
+   "median": {
+    "hold_minutes": 4.80798,
+    "mfe_pct": 0.1119,
+    "mae_pct": -0.19203,
+    "gross_usdt": -0.25515,
+    "fee_slip_usdt": 0.29282
+   },
+   "pre_each": {
+    "1m": {
+     "signed_body_pct": -0.06109,
+     "signed_ret3_pct": -0.10362,
+     "signed_ret8_pct": -0.10524,
+     "rsi_center_signed": -8.43691,
+     "rsi_delta_signed": -3.20978,
+     "volume_mult": 0.51528,
+     "bb_pos_signed": -0.45195,
+     "ema20_slope3_signed_pct": -0.02433,
+     "atr_pct": 0.10835
+    },
+    "5m": {
+     "signed_body_pct": -0.05829,
+     "signed_ret3_pct": -0.05197,
+     "signed_ret8_pct": -0.33157,
+     "rsi_center_signed": -15.41945,
+     "rsi_delta_signed": -0.97417,
+     "volume_mult": 0.71026,
+     "bb_pos_signed": -0.59747,
+     "ema20_slope3_signed_pct": -0.14548,
+     "atr_pct": 0.30584
+    },
+    "15m": {
+     "signed_body_pct": -0.09873,
+     "signed_ret3_pct": -0.36093,
+     "signed_ret8_pct": -1.21443,
+     "rsi_center_signed": -17.16694,
+     "rsi_delta_signed": -0.80054,
+     "volume_mult": 1.60685,
+     "bb_pos_signed": -0.9126,
+     "ema20_slope3_signed_pct": -0.27944,
+     "atr_pct": 0.49558
+    },
+    "1h": {
+     "signed_body_pct": -0.72074,
+     "signed_ret3_pct": -1.29793,
+     "signed_ret8_pct": -1.48263,
+     "rsi_center_signed": -7.50354,
+     "rsi_delta_signed": -4.0365,
+     "volume_mult": 1.26204,
+     "bb_pos_signed": -0.65407,
+     "ema20_slope3_signed_pct": -0.10948,
+     "atr_pct": 1.04605
+    }
+   },
+   "median_anchor": {
+    "wick_fraction": 0.58564,
+    "volume_mult": 2.01423
+   }
+  },
+  "periods": {
+   "10": {
+    "n": 46,
+    "wins": 8,
+    "net": -16.088398367263146
+   },
+   "11": {
+    "n": 14,
+    "wins": 0,
+    "net": -6.924479861775527
+   }
+  },
+  "anchor_match_counts": {
+   "1": 60
+  },
+  "subgroups": {
+   "1m_5m_both_3bar_return_aligned": {
+    "yes": {
+     "all": {
+      "n": 2,
+      "wins": 1,
+      "net": -0.5584725936499854
+     },
+     "10": {
+      "n": 1,
+      "wins": 1,
+      "net": 0.21446112674999218
+     },
+     "11": {
+      "n": 1,
+      "wins": 0,
+      "net": -0.7729337203999775
+     }
+    },
+    "no": {
+     "all": {
+      "n": 58,
+      "wins": 7,
+      "net": -22.454405635388685
+     },
+     "10": {
+      "n": 45,
+      "wins": 7,
+      "net": -16.302859494013138
+     },
+     "11": {
+      "n": 13,
+      "wins": 0,
+      "net": -6.151546141375549
+     }
+    }
+   },
+   "1m_5m_both_3bar_return_adverse": {
+    "yes": {
+     "all": {
+      "n": 30,
+      "wins": 5,
+      "net": -10.66101765793787
+     },
+     "10": {
+      "n": 26,
+      "wins": 5,
+      "net": -8.359477525575446
+     },
+     "11": {
+      "n": 4,
+      "wins": 0,
+      "net": -2.301540132362425
+     }
+    },
+    "no": {
+     "all": {
+      "n": 30,
+      "wins": 3,
+      "net": -12.3518605711008
+     },
+     "10": {
+      "n": 20,
+      "wins": 3,
+      "net": -7.728920841687699
+     },
+     "11": {
+      "n": 10,
+      "wins": 0,
+      "net": -4.622939729413101
+     }
+    }
+   },
+   "1m_5m_both_rsi_direction_aligned": {
+    "yes": {
+     "all": {
+      "n": 3,
+      "wins": 2,
+      "net": -0.27345057743171136
+     },
+     "10": {
+      "n": 3,
+      "wins": 2,
+      "net": -0.27345057743171136
+     },
+     "11": {
+      "n": 0,
+      "wins": 0,
+      "net": 0
+     }
+    },
+    "no": {
+     "all": {
+      "n": 57,
+      "wins": 6,
+      "net": -22.73942765160696
+     },
+     "10": {
+      "n": 43,
+      "wins": 6,
+      "net": -15.814947789831432
+     },
+     "11": {
+      "n": 14,
+      "wins": 0,
+      "net": -6.924479861775527
+     }
+    }
+   },
+   "15m_and_1h_ema20_slope_adverse": {
+    "yes": {
+     "all": {
+      "n": 42,
+      "wins": 4,
+      "net": -17.443430217713765
+     },
+     "10": {
+      "n": 28,
+      "wins": 4,
+      "net": -10.51895035593824
+     },
+     "11": {
+      "n": 14,
+      "wins": 0,
+      "net": -6.924479861775527
+     }
+    },
+    "no": {
+     "all": {
+      "n": 18,
+      "wins": 4,
+      "net": -5.569448011324905
+     },
+     "10": {
+      "n": 18,
+      "wins": 4,
+      "net": -5.569448011324905
+     },
+     "11": {
+      "n": 0,
+      "wins": 0,
+      "net": 0
+     }
+    }
+   },
+   "1h_cloud_opposes": {
+    "yes": {
+     "all": {
+      "n": 20,
+      "wins": 1,
+      "net": -8.789221040607845
+     },
+     "10": {
+      "n": 13,
+      "wins": 1,
+      "net": -5.875422558649718
+     },
+     "11": {
+      "n": 7,
+      "wins": 0,
+      "net": -2.9137984819581275
+     }
+    },
+    "no": {
+     "all": {
+      "n": 40,
+      "wins": 7,
+      "net": -14.223657188430826
+     },
+     "10": {
+      "n": 33,
+      "wins": 7,
+      "net": -10.212975808613427
+     },
+     "11": {
+      "n": 7,
+      "wins": 0,
+      "net": -4.010681379817399
+     }
+    }
+   },
+   "15m_rsi_exhaustion": {
+    "yes": {
+     "all": {
+      "n": 19,
+      "wins": 3,
+      "net": -7.315854768313429
+     },
+     "10": {
+      "n": 15,
+      "wins": 3,
+      "net": -5.265255762780224
+     },
+     "11": {
+      "n": 4,
+      "wins": 0,
+      "net": -2.050599005533205
+     }
+    },
+    "no": {
+     "all": {
+      "n": 41,
+      "wins": 5,
+      "net": -15.697023460725243
+     },
+     "10": {
+      "n": 31,
+      "wins": 5,
+      "net": -10.823142604482921
+     },
+     "11": {
+      "n": 10,
+      "wins": 0,
+      "net": -4.873880856242322
+     }
+    }
+   },
+   "anchor_vol_ge3": {
+    "yes": {
+     "all": {
+      "n": 8,
+      "wins": 1,
+      "net": -3.558730775782345
+     },
+     "10": {
+      "n": 6,
+      "wins": 1,
+      "net": -2.2940443959648933
+     },
+     "11": {
+      "n": 2,
+      "wins": 0,
+      "net": -1.264686379817452
+     }
+    },
+    "no": {
+     "all": {
+      "n": 52,
+      "wins": 7,
+      "net": -19.454147453256326
+     },
+     "10": {
+      "n": 40,
+      "wins": 7,
+      "net": -13.794353971298252
+     },
+     "11": {
+      "n": 12,
+      "wins": 0,
+      "net": -5.659793481958075
+     }
+    }
+   },
+   "1m_5m_15m_1h_3bar_return_all_adverse": {
+    "yes": {
+     "all": {
+      "n": 26,
+      "wins": 5,
+      "net": -8.605823135962947
+     },
+     "10": {
+      "n": 22,
+      "wins": 5,
+      "net": -6.3042830036005215
+     },
+     "11": {
+      "n": 4,
+      "wins": 0,
+      "net": -2.301540132362425
+     }
+    },
+    "no": {
+     "all": {
+      "n": 34,
+      "wins": 3,
+      "net": -14.407055093075725
+     },
+     "10": {
+      "n": 24,
+      "wins": 3,
+      "net": -9.784115363662623
+     },
+     "11": {
+      "n": 10,
+      "wins": 0,
+      "net": -4.622939729413101
+     }
+    }
+   }
+  }
+ },
+ "symmetric_direction_diagnostics": {
+  "all": {
+   "original": {
+    "count": 60,
+    "wins": 8,
+    "losses": 52,
+    "sum_net": -23.012878229038673,
+    "mean_net": -0.3835479704839779,
+    "mean_win": 0.2798736259144859,
+    "mean_loss": -0.48561283146835693,
+    "reasons": {
+     "trail": 17,
+     "initial": 42,
+     "day": 1
+    },
+    "gross_wins": 18,
+    "profitable_before_costs_but_net_loss": 10,
+    "sum_gross": -5.421816000000006,
+    "sum_fee": 8.772539869454,
+    "sum_slip": 8.772538514,
+    "sum_funding": -0.04598384558578276,
+    "early": 10
+   },
+   "reverse": {
+    "count": 60,
+    "wins": 12,
+    "losses": 48,
+    "sum_net": -17.398644921242933,
+    "mean_net": -0.2899774153540489,
+    "mean_win": 0.4357896584526213,
+    "mean_loss": -0.47141918380571646,
+    "reasons": {
+     "initial": 37,
+     "trail": 22,
+     "day": 1
+    },
+    "gross_wins": 22,
+    "profitable_before_costs_but_net_loss": 10,
+    "sum_gross": 0.15657700000005725,
+    "sum_fee": 8.77013690735575,
+    "sum_slip": 8.770136946500001,
+    "sum_funding": -0.014948067388233217,
+    "early": 7
+   }
+  },
+  "original_wins": {
+   "original": {
+    "count": 8,
+    "wins": 8,
+    "losses": 0,
+    "sum_net": 2.238989007315887,
+    "mean_net": 0.2798736259144859,
+    "mean_win": 0.2798736259144859,
+    "mean_loss": 0.0,
+    "reasons": {
+     "trail": 8
+    },
+    "gross_wins": 8,
+    "profitable_before_costs_but_net_loss": 0,
+    "sum_gross": 4.585263000000013,
+    "sum_fee": 1.17313642318425,
+    "sum_slip": 1.1731375695,
+    "sum_funding": 0,
+    "early": 0
+   },
+   "reverse": {
+    "count": 8,
+    "wins": 0,
+    "losses": 8,
+    "sum_net": -4.928235783660868,
+    "mean_net": -0.6160294729576085,
+    "mean_win": 0.0,
+    "mean_loss": -0.6160294729576085,
+    "reasons": {
+     "initial": 8
+    },
+    "gross_wins": 0,
+    "profitable_before_costs_but_net_loss": 0,
+    "sum_gross": -2.5826439999999606,
+    "sum_fee": 1.172796214661,
+    "sum_slip": 1.172795569,
+    "sum_funding": 0,
+    "early": 3
+   }
+  },
+  "original_losses": {
+   "original": {
+    "count": 52,
+    "wins": 0,
+    "losses": 52,
+    "sum_net": -25.25186723635456,
+    "mean_net": -0.48561283146835693,
+    "mean_win": 0.0,
+    "mean_loss": -0.48561283146835693,
+    "reasons": {
+     "trail": 9,
+     "initial": 42,
+     "day": 1
+    },
+    "gross_wins": 10,
+    "profitable_before_costs_but_net_loss": 10,
+    "sum_gross": -10.007079000000019,
+    "sum_fee": 7.59940344626975,
+    "sum_slip": 7.5994009445,
+    "sum_funding": -0.04598384558578276,
+    "early": 10
+   },
+   "reverse": {
+    "count": 52,
+    "wins": 12,
+    "losses": 40,
+    "sum_net": -12.470409137582067,
+    "mean_net": -0.23981556033811666,
+    "mean_win": 0.4357896584526213,
+    "mean_loss": -0.4424971259753381,
+    "reasons": {
+     "initial": 29,
+     "trail": 22,
+     "day": 1
+    },
+    "gross_wins": 22,
+    "profitable_before_costs_but_net_loss": 10,
+    "sum_gross": 2.739221000000018,
+    "sum_fee": 7.59734069269475,
+    "sum_slip": 7.5973413775,
+    "sum_funding": -0.014948067388233217,
+    "early": 4
+   }
+  },
+  "oct": {
+   "original": {
+    "count": 46,
+    "wins": 8,
+    "losses": 38,
+    "sum_net": -16.088398367263146,
+    "mean_net": -0.3497477905926771,
+    "mean_win": 0.2798736259144859,
+    "mean_loss": -0.48229966775207983,
+    "reasons": {
+     "trail": 15,
+     "initial": 30,
+     "day": 1
+    },
+    "gross_wins": 16,
+    "profitable_before_costs_but_net_loss": 8,
+    "sum_gross": -2.6370559999999896,
+    "sum_fee": 6.725671513264,
+    "sum_slip": 6.7256708540000005,
+    "sum_funding": 0,
+    "early": 7
+   },
+   "reverse": {
+    "count": 46,
+    "wins": 10,
+    "losses": 36,
+    "sum_net": -13.45107520775068,
+    "mean_net": -0.2924146784293626,
+    "mean_win": 0.41410103635314466,
+    "mean_loss": -0.48866904364672575,
+    "reasons": {
+     "initial": 29,
+     "trail": 16,
+     "day": 1
+    },
+    "gross_wins": 16,
+    "profitable_before_costs_but_net_loss": 6,
+    "sum_gross": 0.010547000000021359,
+    "sum_fee": 6.72333706886325,
+    "sum_slip": 6.7233370715000005,
+    "sum_funding": -0.014948067388233217,
+    "early": 5
+   }
+  },
+  "nov": {
+   "original": {
+    "count": 14,
+    "wins": 0,
+    "losses": 14,
+    "sum_net": -6.924479861775527,
+    "mean_net": -0.49460570441253765,
+    "mean_win": 0.0,
+    "mean_loss": -0.49460570441253765,
+    "reasons": {
+     "initial": 12,
+     "trail": 2
+    },
+    "gross_wins": 2,
+    "profitable_before_costs_but_net_loss": 2,
+    "sum_gross": -2.7847600000000163,
+    "sum_fee": 2.04686835619,
+    "sum_slip": 2.04686766,
+    "sum_funding": -0.04598384558578276,
+    "early": 3
+   },
+   "reverse": {
+    "count": 14,
+    "wins": 2,
+    "losses": 12,
+    "sum_net": -3.9475697134922534,
+    "mean_net": -0.28196926524944665,
+    "mean_win": 0.5442327689500048,
+    "mean_loss": -0.41966960428268857,
+    "reasons": {
+     "trail": 6,
+     "initial": 8
+    },
+    "gross_wins": 6,
+    "profitable_before_costs_but_net_loss": 4,
+    "sum_gross": 0.1460300000000359,
+    "sum_fee": 2.0467998384925,
+    "sum_slip": 2.046799875,
+    "sum_funding": 0,
+    "early": 2
+   }
+  }
+ },
+ "net_protection": {
+  "Oct": {
+   "n": 46,
+   "before_win": 8,
+   "after_win": 11,
+   "before": -16.088398367263146,
+   "after": -16.385486961643213,
+   "improved": 4,
+   "worsened": 4
+  },
+  "Nov": {
+   "n": 14,
+   "before_win": 0,
+   "after_win": 1,
+   "before": -6.924479861775527,
+   "after": -7.337867965275535,
+   "improved": 1,
+   "worsened": 1
+  },
+  "all": {
+   "n": 60,
+   "before_win": 8,
+   "after_win": 12,
+   "before": -23.012878229038673,
+   "after": -23.72335492691875,
+   "improved": 5,
+   "worsened": 5
+  }
+ },
+ "same_quantity_fixed_exit": {
+  "base_9": {
+   "n": 22,
+   "reduced_baseline": -2.859810614597393,
+   "changed_exits": -6.632662926884615,
+   "wins_reduced_baseline": 2,
+   "wins_changed_exits": 6
+  },
+  "base_10": {
+   "n": 46,
+   "reduced_baseline": -5.653591569370949,
+   "changed_exits": -2.487451561885133,
+   "wins_reduced_baseline": 8,
+   "wins_changed_exits": 22
+  },
+  "base_11": {
+   "n": 14,
+   "reduced_baseline": -2.4678435619129213,
+   "changed_exits": -0.9421411269609202,
+   "wins_reduced_baseline": 0,
+   "wins_changed_exits": 7
+  },
+  "alt_9": {
+   "n": 21,
+   "reduced_baseline": -0.5045293870373485,
+   "changed_exits": 2.815218521649875,
+   "wins_reduced_baseline": 7,
+   "wins_changed_exits": 14
+  },
+  "alt_10": {
+   "n": 39,
+   "reduced_baseline": -3.443313044242753,
+   "changed_exits": -6.947714354200345,
+   "wins_reduced_baseline": 10,
+   "wins_changed_exits": 13
+  },
+  "alt_11": {
+   "n": 14,
+   "reduced_baseline": -1.2718799023499154,
+   "changed_exits": -1.3300695692889197,
+   "wins_reduced_baseline": 2,
+   "wins_changed_exits": 6
+  }
+ }
+}
