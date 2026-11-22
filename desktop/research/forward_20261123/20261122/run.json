@@ -1,0 +1,309 @@
+{
+ "kst_day": "2026-11-22",
+ "recorded_kst": "2026-11-23T00:56:07.438820+09:00",
+ "end_exclusive": "2026-11-23T00:00:00+09:00",
+ "source": "publicly replayed development data",
+ "package": {
+  "version": "2.16.0",
+  "commit": "149e4fe69ee11e5c491894af1f28bb309b54668f",
+  "sha256": "89f32e493579cdfbc69d880a50f04ab27b50daa6ab69ec1f7ea8dceb2cf3d7e7"
+ },
+ "raw_candle_inputs": "31/31 native with complete confirmed 1m,5m,15m,1H,1m mark and funding history coverage; source manifests under 20261122/cache",
+ "archive_presence": {
+  "2026-11-21 HTTP 200": 31,
+  "2026-11-22 HTTP 404": 31
+ },
+ "pace_intervals": {
+  "normal": 7525,
+  "pace_disagrees": 2,
+  "fast": 1403,
+  "closed_setup": 39
+ },
+ "fast_raw_windows": 339,
+ "signals_15m_observed": 12,
+ "paired_events_in_snapshot": 107,
+ "cohorts": {
+  "native_fast_direct": {
+   "coverage_for_events": false,
+   "matched": {
+    "A": {
+     "checked": 81,
+     "missing_known_path": 0,
+     "net_on_checked_events": -8.919244443000114,
+     "stressed_net_on_checked_events": -12.632192846910113
+    },
+    "B": {
+     "checked": 79,
+     "missing_known_path": 2,
+     "net_on_checked_events": -7.204231054784046,
+     "stressed_net_on_checked_events": -10.828778576568046
+    },
+    "C": {
+     "checked": 57,
+     "missing_known_path": 0,
+     "net_on_checked_events": -5.166289685215982,
+     "stressed_net_on_checked_events": -7.844878624858731
+    },
+    "D": {
+     "checked": 79,
+     "missing_known_path": 2,
+     "net_on_checked_events": -8.127808991807257,
+     "stressed_net_on_checked_events": -11.770099093114506
+    }
+   },
+   "accounts": {
+    "A": {
+     "status": "missing",
+     "closing_nav": null,
+     "closed_trades": null,
+     "reason": "incomplete signal, price or preceding account history",
+     "day_return_pct": null
+    },
+    "B": {
+     "status": "missing",
+     "closing_nav": null,
+     "closed_trades": null,
+     "reason": "incomplete signal, price or preceding account history",
+     "day_return_pct": null
+    },
+    "C": {
+     "status": "missing",
+     "closing_nav": null,
+     "closed_trades": null,
+     "reason": "incomplete signal, price or preceding account history",
+     "day_return_pct": null
+    },
+    "D": {
+     "status": "missing",
+     "closing_nav": null,
+     "closed_trades": null,
+     "reason": "incomplete signal, price or preceding account history",
+     "day_return_pct": null
+    },
+    "E": {
+     "status": "missing",
+     "closing_nav": null,
+     "closed_trades": null,
+     "reason": "incomplete signal, price or preceding account history",
+     "day_return_pct": null
+    }
+   }
+  },
+  "deployed_wick15": {
+   "coverage_for_events": false,
+   "matched": {
+    "A": {
+     "checked": 3,
+     "missing_known_path": 0,
+     "net_on_checked_events": -1.7210957584500024,
+     "stressed_net_on_checked_events": -1.8647438169000026
+    },
+    "B": {
+     "checked": 3,
+     "missing_known_path": 0,
+     "net_on_checked_events": -0.320195908574996,
+     "stressed_net_on_checked_events": -0.46314386714999606
+    },
+    "C": {
+     "checked": 3,
+     "missing_known_path": 0,
+     "net_on_checked_events": 1.2592920866750013,
+     "stressed_net_on_checked_events": 1.1155883233500012
+    },
+    "D": {
+     "checked": 3,
+     "missing_known_path": 0,
+     "net_on_checked_events": -0.10843915559999515,
+     "stressed_net_on_checked_events": -0.25145871119999513
+    }
+   },
+   "accounts": {
+    "A": {
+     "status": "missing",
+     "closing_nav": null,
+     "closed_trades": null,
+     "reason": "incomplete signal, price or preceding account history",
+     "day_return_pct": null
+    },
+    "B": {
+     "status": "missing",
+     "closing_nav": null,
+     "closed_trades": null,
+     "reason": "incomplete signal, price or preceding account history",
+     "day_return_pct": null
+    },
+    "C": {
+     "status": "missing",
+     "closing_nav": null,
+     "closed_trades": null,
+     "reason": "incomplete signal, price or preceding account history",
+     "day_return_pct": null
+    },
+    "D": {
+     "status": "missing",
+     "closing_nav": null,
+     "closed_trades": null,
+     "reason": "incomplete signal, price or preceding account history",
+     "day_return_pct": null
+    },
+    "E": {
+     "status": "missing",
+     "closing_nav": null,
+     "closed_trades": null,
+     "reason": "incomplete signal, price or preceding account history",
+     "day_return_pct": null
+    }
+   }
+  },
+  "shared": {
+   "coverage_for_events": false,
+   "matched": {
+    "A": {
+     "checked": 84,
+     "missing_known_path": 0,
+     "net_on_checked_events": -10.640340201450115,
+     "stressed_net_on_checked_events": -14.496936663810116
+    },
+    "B": {
+     "checked": 82,
+     "missing_known_path": 2,
+     "net_on_checked_events": -7.524426963359042,
+     "stressed_net_on_checked_events": -11.291922443718041
+    },
+    "C": {
+     "checked": 60,
+     "missing_known_path": 0,
+     "net_on_checked_events": -3.9069975985409804,
+     "stressed_net_on_checked_events": -6.729290301508731
+    },
+    "D": {
+     "checked": 82,
+     "missing_known_path": 2,
+     "net_on_checked_events": -8.236248147407252,
+     "stressed_net_on_checked_events": -12.021557804314503
+    }
+   },
+   "accounts": {
+    "A": {
+     "status": "missing",
+     "closing_nav": null,
+     "closed_trades": null,
+     "reason": "incomplete signal, price or preceding account history",
+     "day_return_pct": null
+    },
+    "B": {
+     "status": "missing",
+     "closing_nav": null,
+     "closed_trades": null,
+     "reason": "incomplete signal, price or preceding account history",
+     "day_return_pct": null
+    },
+    "C": {
+     "status": "missing",
+     "closing_nav": null,
+     "closed_trades": null,
+     "reason": "incomplete signal, price or preceding account history",
+     "day_return_pct": null
+    },
+    "D": {
+     "status": "missing",
+     "closing_nav": null,
+     "closed_trades": null,
+     "reason": "incomplete signal, price or preceding account history",
+     "day_return_pct": null
+    },
+    "E": {
+     "status": "missing",
+     "closing_nav": null,
+     "closed_trades": null,
+     "reason": "incomplete signal, price or preceding account history",
+     "day_return_pct": null
+    }
+   }
+  },
+  "speed_routed": {
+   "coverage_for_events": false,
+   "matched": {
+    "A": {
+     "checked": 3,
+     "missing_known_path": 0,
+     "net_on_checked_events": -0.461212144153082,
+     "stressed_net_on_checked_events": -0.600980088703082
+    },
+    "B": {
+     "checked": 3,
+     "missing_known_path": 0,
+     "net_on_checked_events": -0.3099433071750033,
+     "stressed_net_on_checked_events": -0.4505649643500032
+    },
+    "C": {
+     "checked": 2,
+     "missing_known_path": 0,
+     "net_on_checked_events": -0.27286172039691753,
+     "stressed_net_on_checked_events": -0.3710307403969176
+    },
+    "D": {
+     "checked": 3,
+     "missing_known_path": 0,
+     "net_on_checked_events": -0.5123475578750075,
+     "stressed_net_on_checked_events": -0.6527713657500076
+    }
+   },
+   "accounts": {
+    "A": {
+     "status": "missing",
+     "closing_nav": null,
+     "closed_trades": null,
+     "reason": "incomplete signal, price or preceding account history",
+     "day_return_pct": null
+    },
+    "B": {
+     "status": "missing",
+     "closing_nav": null,
+     "closed_trades": null,
+     "reason": "incomplete signal, price or preceding account history",
+     "day_return_pct": null
+    },
+    "C": {
+     "status": "missing",
+     "closing_nav": null,
+     "closed_trades": null,
+     "reason": "incomplete signal, price or preceding account history",
+     "day_return_pct": null
+    },
+    "D": {
+     "status": "missing",
+     "closing_nav": null,
+     "closed_trades": null,
+     "reason": "incomplete signal, price or preceding account history",
+     "day_return_pct": null
+    },
+    "E": {
+     "status": "missing",
+     "closing_nav": null,
+     "closed_trades": null,
+     "reason": "incomplete signal, price or preceding account history",
+     "day_return_pct": null
+    }
+   }
+  }
+ },
+ "prior_full_day_registrations": {
+  "first_eligible_kst": "2026-11-23",
+  "closed_eligible_dates": 0,
+  "current_day": "in progress; no provisional return"
+ },
+ "new_registration": {
+  "commit": "ed435b117a4ab256576ec94e341f078bbeb2c5bc",
+  "first_full_kst": "2026-11-24",
+  "closed_eligible_dates": 0,
+  "day_band": "[+5%,+10%] after costs",
+  "required_consecutive_dates": 60
+ },
+ "deployment": {
+  "promoted": false,
+  "release_channel_modified": false
+ },
+ "pc215_shadow": "unobserved; separate local PC journal",
+ "real_fills": null
+}
