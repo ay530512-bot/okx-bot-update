@@ -1,9 +1,9 @@
 {
   "format": 1,
-  "bytes": 786822,
-  "sha256": "7a83232d40818a2a7ac2d124ef9f4ebea1fa7dbb0f6452fd9e56f7cd8ceb6af3",
-  "version": "2.18.0",
-  "revision": 21800,
-  "commit": "454992d65f5d038df21bb98b08cf86c2ae1c2a3e",
-  "notes": "진입 후보 7종 추가 · 활동·설정에서 각 전략의 신규 진입을 개별로 켜고 끌 수 있습니다."
+  "bytes": 786819,
+  "sha256": "74a40a824e0810f39cc8af20276b1a48d0c40a5c4ba161e3cd3a0519a7c0689d",
+  "version": "3.1.0",
+  "revision": 30100,
+  "commit": "4f8c5d097eeb63475298593039e8cbb3b3254227",
+  "notes": "PC 3.1.0 · 2.18.0 기능을 포함하며 2.10.0에서 바로 업데이트할 수 있습니다."
 }
