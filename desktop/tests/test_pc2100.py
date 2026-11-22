@@ -42,14 +42,15 @@ class WickTimingAndLiquidity(unittest.TestCase):
     def test_exact_caps_are_inclusive_and_scoped(self):
         new_route = {'pc_wick280':True}
         risk.check_liquidity(dict(spread='.0008',slippage='.0007'),new_route)
-        for spread, slippage, route in (('.000801','0',new_route),('0','.000701',new_route),
+        risk.check_liquidity(dict(spread='.0008',slippage='.05'),new_route)
+        for spread, slippage, route in (('.000801','0',new_route),
                                        ('.000501','0',{}),('0','.000501',None)):
             with self.subTest(spread=spread,slippage=slippage,route=route):
                 with self.assertRaises(BotError) as ctx:
                     risk.check_liquidity(dict(spread=spread,slippage=slippage),route)
                 detail = ctx.exception.phone_admission_detail
                 self.assertEqual(dec(detail['spread_limit_pct']),dec('.08' if route else '.05'))
-                self.assertEqual(dec(detail['slippage_limit_pct']),dec('.07' if route else '.05'))
+                self.assertEqual(detail['slippage_limit_pct'],None if route else str(dec('.0005')*100))
 
     def test_real_orderbook_pass_and_fresh_pre_submit_rejection(self):
         for mode in ('pass','spread','slippage','risk'):
@@ -68,7 +69,7 @@ class WickTimingAndLiquidity(unittest.TestCase):
                         book['asks'] = [['96.56','.02'],['96.62','500']]
                         if books and mode=='spread':
                             book['bids'] = [['96.45','500']]
-                        if books and mode=='slippage':
+                        if mode=='slippage':
                             book['asks'][1][0] = '96.64'
                         books.append(book)
                     return result
@@ -76,13 +77,13 @@ class WickTimingAndLiquidity(unittest.TestCase):
                 if mode=='risk':
                     e.cfg['risk']['max_position_loss_fraction'] = .0001
                 e.wick_entries.poll()
-                if mode=='pass':
+                if mode in ('pass','slippage'):
                     self.assertEqual(len(e.api.orders()),1,e.status())
                     owned = e.records()[0]
                     liq = owned['entry_liquidity']
                     self.assertGreater(liq['spread'],.0005)
-                    self.assertGreater(liq['slippage'],.0005)
-                    self.assertAlmostEqual(float(owned['cost_rate']),2*(.0005+liq['slippage']),places=9)
+                    self.assertGreater(liq['slippage'],.0007 if mode=='slippage' else .0005)
+                    self.assertAlmostEqual(float(owned['cost_rate']),.002,places=9)
                     self.assertLessEqual(dec(owned['estimated_loss']),dec(owned['original_risk_budget']))
                 else:
                     self.assertFalse(e.api.orders(),e.status())
