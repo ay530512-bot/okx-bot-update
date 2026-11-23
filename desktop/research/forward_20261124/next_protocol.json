@@ -1,0 +1,33 @@
+{
+ "id": "arrival_retest_20261124",
+ "recorded_utc": "2026-11-23T15:45:32.696601+00:00",
+ "first_eligible_kst": "2026-11-25",
+ "last_60th_kst": "2027-01-23",
+ "parent_protocol": "c8ff6c677bf9078045b0156eba7b5495252919f6/desktop/research/forward_20261123/protocol.md",
+ "code_sha256": "5888414437ad38118509e4dcef31a27cf137283460dcdee8990c13b1cae0f6fe",
+ "sources": [
+  "native_fast_direct(5m)",
+  "deployed_wick15(normal)"
+ ],
+ "source_policy": "Each existing direct reaction independently; native 5m requires fast and 15m requires normal. Keep matched skip plus ungated control in identical KST hours. Original signals from both directions are retained; no breakout or close confirmation for direct touch.",
+ "hours_kst": [
+  [
+   6,
+   10
+  ],
+  [
+   18,
+   22
+  ]
+ ],
+ "gate": "End at last fully completed 5s boundary. Count exchange trades in 18 consecutive nonoverlapping five-second buckets. Median count in first 15 buckets. In each of last three test count >= max(3,1.5 times median) AND side-aggressor quote notional >=60%. At least two qualifying buckets. Missing critical tick coverage is unverified.",
+ "exit": "Parent B initial structure and full trail, day close 23:59. Compare same quantity with parent A and C, at same admissible entry. A/C +/-1%; risk and simultaneous-holding caps from parent. Record actual costs and carry across KST dates.",
+ "accounts": "Each direction and source standalone plus shared 150. Same 3 slots, 3 USDT reserve, 3..5x, 0.5/2% risk, 5bp fee/side, 5bp slip/side actual funding; 10bp slip same quantity and separately resized. Preceding NAV carried, never reset. Idle included, no inferred PnL for missing.",
+ "promotion": "Parent full 60-day inclusive daily 5..10% gate, 30 fills / 10 active days / 10 per half in each candidate, positive excluding best trade and instrument and under fixed-size stress, matched holdout, production comparator and drawdown review. Internal simulation only. Failure is retained for every calendar date; no change to live activation.",
+ "history": "11/22 diagnostic paths already inspected and 11/23 had already closed. Neither date nor partial 11/24 is untouched evidence for the new gate. No fitting to forward observations.",
+ "native_high_low_sensitivity": {
+  "code_sha256": "6be93ebd90ba065e126508fd4d13ebf7e2f8579dc9452ef41ecc31fd8c93ee34",
+  "range": "(high-low)/previous confirmed close. Same 3 versus preceding 36, strict Q75 and median native quote turnover. Use this direct candle range for the new gate; previously frozen native true-range speed also reported separately. Infer no entry or PnL from the number of windows.",
+  "effective": "2026-11-25"
+ }
+}
