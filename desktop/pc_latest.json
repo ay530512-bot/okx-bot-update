@@ -1,9 +1,9 @@
 {
   "format": 1,
-  "bytes": 806871,
-  "sha256": "b2f72d8edd0fe6e08c6ae67182f7075aef2716eed2fba948e532aab4392205eb",
-  "version": "3.3.1",
-  "revision": 30301,
-  "commit": "5004368433f1312e2dd27de585eca422942597d7",
-  "notes": "텔레그램 체결 이미지에 롱·숏 표시, 청산 시 수익·손실 금액을 색상으로 표시"
+  "bytes": 806846,
+  "sha256": "46587e8e57a961ce10cee5cf6e8fced2709c3da7b241499e4af7221178e90163",
+  "version": "3.3.2",
+  "revision": 30302,
+  "commit": "161006a33a1cf8d83f8fec71db42673de4740edb",
+  "notes": "진입·청산 체결 알림에는 색상 카드 한 장, 두 꼬리 신호에는 타점 차트를 보냅니다."
 }
