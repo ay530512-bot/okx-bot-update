@@ -1,9 +1,9 @@
 {
   "format": 1,
-  "bytes": 786819,
-  "sha256": "74a40a824e0810f39cc8af20276b1a48d0c40a5c4ba161e3cd3a0519a7c0689d",
-  "version": "3.1.0",
-  "revision": 30100,
-  "commit": "4f8c5d097eeb63475298593039e8cbb3b3254227",
-  "notes": "PC 3.1.0 · 2.18.0 기능을 포함하며 2.10.0에서 바로 업데이트할 수 있습니다."
+  "bytes": 786232,
+  "sha256": "2508a5612951e81d439e722c020b4f0e70ee60fa247a6e44897c5c66262b4ebd",
+  "version": "3.2.0",
+  "revision": 30200,
+  "commit": "2dd0b6c5ffefb50090993e92dacd4c8e2eece775",
+  "notes": "두 타이밍 옵션 동시 사용 · 신규 진입 5배 고정 · 모든 전략 상시 활성화"
 }
