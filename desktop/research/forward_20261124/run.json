@@ -1,0 +1,2380 @@
+{
+ "session_kst": "2026-11-23",
+ "start_ms": 1795359600000,
+ "end_exclusive_ms": 1795446000000,
+ "registered_session_index": 1,
+ "record_utc": "2026-11-23T16:09:56.654234+00:00",
+ "data_kind": "OKX public, simulated same-venue swap execution. No private fills or PC 2.15 shadow database.",
+ "price_sources": [
+  "https://www.okx.com/api/v5/market/history-trades",
+  "https://www.okx.com/api/v5/market/history-candles",
+  "https://www.okx.com/api/v5/market/history-mark-price-candles",
+  "https://www.okx.com/api/v5/public/funding-rate-history",
+  "https://www.okx.com/api/v5/public/instruments"
+ ],
+ "market_coverage": {
+  "symbols": 31,
+  "bars_by_instrument": {
+   "1m": 1440,
+   "5m": 288,
+   "15m": 96,
+   "1H": 24,
+   "mark1m": 1440
+  },
+  "native_confirmed": true,
+  "funding_coverage": "Settled rates checked back to KST open, entries at timestamps of actual exposure only.",
+  "execution": "Fetched necessary trades ordered by timestamp and trade ID. Checked candle OHLCV; whole-minute safe skips only for unambiguous paths. The second UTC+8 daily archive for the session was unpublished at collection.",
+  "metadata_asof": "Query time after the KST close. No private order queue or historical L2 execution guarantee."
+ },
+ "research_registration_commit": "07b015f77e21d8c6564d03e03d015503e54cdabe",
+ "input_history_check": "45-hour warm-up versus all 89 cached hours, 2 EMA-stack sign differences on pre-08:00 completed contexts, outside the fixed EMA entry windows. Slope and above-EMA comparisons agreed. See input_checks.json.",
+ "release_registry_commit": "5db7882cbb75ab5560732026e8470cfd990b1831",
+ "current_release": {
+  "format": 1,
+  "bytes": 806871,
+  "sha256": "b2f72d8edd0fe6e08c6ae67182f7075aef2716eed2fba948e532aab4392205eb",
+  "version": "3.3.1",
+  "revision": 30301,
+  "commit": "5004368433f1312e2dd27de585eca422942597d7",
+  "notes": "텔레그램 체결 이미지에 롱·숏 표시, 청산 시 수익·손실 금액을 색상으로 표시"
+ },
+ "current_release_published_kst": "2026-11-23T23:43:45+09:00",
+ "closed_candle_comparator": {
+  "offers_by_rule": {
+   "pullback": 319,
+   "reclaim": 305,
+   "breakout": 295,
+   "retest": 107,
+   "cloud": 50,
+   "diamond": 23,
+   "shoulders": 5
+  },
+  "method": "Within this exact package replayed closed-candle detector at the appropriate product pace, at ideal coverage. Includes offers before registry publication as descriptive only. Intrabar/private order admission and actual historical returns not observed."
+ },
+ "registered_controls": {
+  "11_22_originals": {
+   "selected_short": {
+    "base": {
+     "opening": 150,
+     "closing": 149.81703444094003,
+     "net_pct": -0.12197703937331106,
+     "status": "below",
+     "opened": 2,
+     "closed": 2,
+     "carry_count": 0,
+     "fees_and_pnl": {
+      "gross": 0.16376000000000918,
+      "fee": 0.17336275906,
+      "slippage": 0.1733627999999821,
+      "funding": 0.0
+     },
+     "n_win": 1,
+     "n_loss": 1,
+     "win_frac": 0.5,
+     "mean_win": 0.4803583217200171,
+     "mean_loss": -0.6633238807799899,
+     "mean_pnl": -0.09148277952998643,
+     "realized_net_without_largest": -0.6633238807799899,
+     "realized_net_without_best_symbol": -0.18296555905997286,
+     "mdd_completed_minute_mark_pct": 0.9870604961377039,
+     "same_qty_same_exit_stress_net": -0.3563283181199908,
+     "same_qty_replayed_stress_net": -1.4776082779199862,
+     "admission_counts": {}
+    },
+    "stress": {
+     "opening": 150,
+     "closing": 148.74511663410001,
+     "net_pct": -0.8365889105999891,
+     "status": "below",
+     "opened": 2,
+     "closed": 2,
+     "carry_count": 0,
+     "fees_and_pnl": {
+      "gross": -0.8118000000000047,
+      "fee": 0.1476947259,
+      "slippage": 0.2953886399999833,
+      "funding": 0.0
+     },
+     "n_win": 0,
+     "n_loss": 2,
+     "win_frac": 0.0,
+     "mean_win": null,
+     "mean_loss": -0.627441682949994,
+     "mean_pnl": -0.627441682949994,
+     "realized_net_without_largest": -1.254883365899988,
+     "realized_net_without_best_symbol": -1.254883365899988,
+     "mdd_completed_minute_mark_pct": 1.180326631681361,
+     "same_qty_same_exit_stress_net": -1.254883365900005,
+     "same_qty_replayed_stress_net": -1.254883365899988,
+     "admission_counts": {}
+    },
+    "base_lock": {
+     "opening": 150,
+     "closing": 149.81703444094003,
+     "net_pct": -0.12197703937331106,
+     "status": "below",
+     "opened": 2,
+     "closed": 2,
+     "carry_count": 0,
+     "fees_and_pnl": {
+      "gross": 0.16376000000000918,
+      "fee": 0.17336275906,
+      "slippage": 0.1733627999999821,
+      "funding": 0.0
+     },
+     "n_win": 1,
+     "n_loss": 1,
+     "win_frac": 0.5,
+     "mean_win": 0.4803583217200171,
+     "mean_loss": -0.6633238807799899,
+     "mean_pnl": -0.09148277952998643,
+     "realized_net_without_largest": -0.6633238807799899,
+     "realized_net_without_best_symbol": -0.18296555905997286,
+     "mdd_completed_minute_mark_pct": 0.9870604961377039,
+     "same_qty_same_exit_stress_net": -0.3563283181199908,
+     "same_qty_replayed_stress_net": -1.4776082779199862,
+     "admission_counts": {}
+    },
+    "stress_lock": {
+     "opening": 150,
+     "closing": 148.74511663410001,
+     "net_pct": -0.8365889105999891,
+     "status": "below",
+     "opened": 2,
+     "closed": 2,
+     "carry_count": 0,
+     "fees_and_pnl": {
+      "gross": -0.8118000000000047,
+      "fee": 0.1476947259,
+      "slippage": 0.2953886399999833,
+      "funding": 0.0
+     },
+     "n_win": 0,
+     "n_loss": 2,
+     "win_frac": 0.0,
+     "mean_win": null,
+     "mean_loss": -0.627441682949994,
+     "mean_pnl": -0.627441682949994,
+     "realized_net_without_largest": -1.254883365899988,
+     "realized_net_without_best_symbol": -1.254883365899988,
+     "mdd_completed_minute_mark_pct": 1.180326631681361,
+     "same_qty_same_exit_stress_net": -1.254883365900005,
+     "same_qty_replayed_stress_net": -1.254883365899988,
+     "admission_counts": {}
+    },
+    "one_r": {
+     "opening": 150,
+     "closing": 150.8752821754725,
+     "net_pct": 0.5835214503149944,
+     "status": "below",
+     "opened": 2,
+     "closed": 2,
+     "carry_count": 0,
+     "fees_and_pnl": {
+      "gross": 1.221890000000004,
+      "fee": 0.1733037595275,
+      "slippage": 0.17330406499998527,
+      "funding": 0.0
+     },
+     "n_win": 2,
+     "n_loss": 0,
+     "win_frac": 1.0,
+     "mean_win": 0.4376410877362593,
+     "mean_loss": null,
+     "mean_pnl": 0.4376410877362593,
+     "realized_net_without_largest": 0.12924809716501617,
+     "realized_net_without_best_symbol": 0.0,
+     "mdd_completed_minute_mark_pct": 0.4615957196405618,
+     "same_qty_same_exit_stress_net": 0.7019784159450038,
+     "same_qty_replayed_stress_net": -1.481683259249986,
+     "admission_counts": {}
+    },
+    "full_slot": {
+     "opening": 150,
+     "closing": 150,
+     "net_pct": 0.0,
+     "status": "below",
+     "opened": 0,
+     "closed": 0,
+     "carry_count": 0,
+     "fees_and_pnl": {},
+     "n_win": 0,
+     "n_loss": 0,
+     "win_frac": null,
+     "mean_win": null,
+     "mean_loss": null,
+     "mean_pnl": null,
+     "realized_net_without_largest": 0,
+     "realized_net_without_best_symbol": 0,
+     "mdd_completed_minute_mark_pct": 0.0,
+     "same_qty_same_exit_stress_net": 0,
+     "same_qty_replayed_stress_net": 0,
+     "admission_counts": {
+      "full_slot_risk": 2
+     }
+    }
+   },
+   "selected_scalp": {
+    "base": {
+     "opening": 150,
+     "closing": 150,
+     "net_pct": 0.0,
+     "status": "below",
+     "opened": 0,
+     "closed": 0,
+     "carry_count": 0,
+     "fees_and_pnl": {},
+     "n_win": 0,
+     "n_loss": 0,
+     "win_frac": null,
+     "mean_win": null,
+     "mean_loss": null,
+     "mean_pnl": null,
+     "realized_net_without_largest": 0,
+     "realized_net_without_best_symbol": 0,
+     "mdd_completed_minute_mark_pct": 0.0,
+     "same_qty_same_exit_stress_net": 0,
+     "same_qty_replayed_stress_net": 0,
+     "admission_counts": {}
+    },
+    "stress": {
+     "opening": 150,
+     "closing": 150,
+     "net_pct": 0.0,
+     "status": "below",
+     "opened": 0,
+     "closed": 0,
+     "carry_count": 0,
+     "fees_and_pnl": {},
+     "n_win": 0,
+     "n_loss": 0,
+     "win_frac": null,
+     "mean_win": null,
+     "mean_loss": null,
+     "mean_pnl": null,
+     "realized_net_without_largest": 0,
+     "realized_net_without_best_symbol": 0,
+     "mdd_completed_minute_mark_pct": 0.0,
+     "same_qty_same_exit_stress_net": 0,
+     "same_qty_replayed_stress_net": 0,
+     "admission_counts": {}
+    },
+    "base_lock": {
+     "opening": 150,
+     "closing": 150,
+     "net_pct": 0.0,
+     "status": "below",
+     "opened": 0,
+     "closed": 0,
+     "carry_count": 0,
+     "fees_and_pnl": {},
+     "n_win": 0,
+     "n_loss": 0,
+     "win_frac": null,
+     "mean_win": null,
+     "mean_loss": null,
+     "mean_pnl": null,
+     "realized_net_without_largest": 0,
+     "realized_net_without_best_symbol": 0,
+     "mdd_completed_minute_mark_pct": 0.0,
+     "same_qty_same_exit_stress_net": 0,
+     "same_qty_replayed_stress_net": 0,
+     "admission_counts": {}
+    },
+    "stress_lock": {
+     "opening": 150,
+     "closing": 150,
+     "net_pct": 0.0,
+     "status": "below",
+     "opened": 0,
+     "closed": 0,
+     "carry_count": 0,
+     "fees_and_pnl": {},
+     "n_win": 0,
+     "n_loss": 0,
+     "win_frac": null,
+     "mean_win": null,
+     "mean_loss": null,
+     "mean_pnl": null,
+     "realized_net_without_largest": 0,
+     "realized_net_without_best_symbol": 0,
+     "mdd_completed_minute_mark_pct": 0.0,
+     "same_qty_same_exit_stress_net": 0,
+     "same_qty_replayed_stress_net": 0,
+     "admission_counts": {}
+    },
+    "one_r": {
+     "opening": 150,
+     "closing": 150,
+     "net_pct": 0.0,
+     "status": "below",
+     "opened": 0,
+     "closed": 0,
+     "carry_count": 0,
+     "fees_and_pnl": {},
+     "n_win": 0,
+     "n_loss": 0,
+     "win_frac": null,
+     "mean_win": null,
+     "mean_loss": null,
+     "mean_pnl": null,
+     "realized_net_without_largest": 0,
+     "realized_net_without_best_symbol": 0,
+     "mdd_completed_minute_mark_pct": 0.0,
+     "same_qty_same_exit_stress_net": 0,
+     "same_qty_replayed_stress_net": 0,
+     "admission_counts": {}
+    },
+    "full_slot": {
+     "opening": 150,
+     "closing": 150,
+     "net_pct": 0.0,
+     "status": "below",
+     "opened": 0,
+     "closed": 0,
+     "carry_count": 0,
+     "fees_and_pnl": {},
+     "n_win": 0,
+     "n_loss": 0,
+     "win_frac": null,
+     "mean_win": null,
+     "mean_loss": null,
+     "mean_pnl": null,
+     "realized_net_without_largest": 0,
+     "realized_net_without_best_symbol": 0,
+     "mdd_completed_minute_mark_pct": 0.0,
+     "same_qty_same_exit_stress_net": 0,
+     "same_qty_replayed_stress_net": 0,
+     "admission_counts": {}
+    }
+   },
+   "selected_shared": {
+    "base": {
+     "opening": 150,
+     "closing": 149.81703444094003,
+     "net_pct": -0.12197703937331106,
+     "status": "below",
+     "opened": 2,
+     "closed": 2,
+     "carry_count": 0,
+     "fees_and_pnl": {
+      "gross": 0.16376000000000918,
+      "fee": 0.17336275906,
+      "slippage": 0.1733627999999821,
+      "funding": 0.0
+     },
+     "n_win": 1,
+     "n_loss": 1,
+     "win_frac": 0.5,
+     "mean_win": 0.4803583217200171,
+     "mean_loss": -0.6633238807799899,
+     "mean_pnl": -0.09148277952998643,
+     "realized_net_without_largest": -0.6633238807799899,
+     "realized_net_without_best_symbol": -0.18296555905997286,
+     "mdd_completed_minute_mark_pct": 0.9870604961377039,
+     "same_qty_same_exit_stress_net": -0.3563283181199908,
+     "same_qty_replayed_stress_net": -1.4776082779199862,
+     "admission_counts": {}
+    },
+    "stress": {
+     "opening": 150,
+     "closing": 148.74511663410001,
+     "net_pct": -0.8365889105999891,
+     "status": "below",
+     "opened": 2,
+     "closed": 2,
+     "carry_count": 0,
+     "fees_and_pnl": {
+      "gross": -0.8118000000000047,
+      "fee": 0.1476947259,
+      "slippage": 0.2953886399999833,
+      "funding": 0.0
+     },
+     "n_win": 0,
+     "n_loss": 2,
+     "win_frac": 0.0,
+     "mean_win": null,
+     "mean_loss": -0.627441682949994,
+     "mean_pnl": -0.627441682949994,
+     "realized_net_without_largest": -1.254883365899988,
+     "realized_net_without_best_symbol": -1.254883365899988,
+     "mdd_completed_minute_mark_pct": 1.180326631681361,
+     "same_qty_same_exit_stress_net": -1.254883365900005,
+     "same_qty_replayed_stress_net": -1.254883365899988,
+     "admission_counts": {}
+    },
+    "base_lock": {
+     "opening": 150,
+     "closing": 149.81703444094003,
+     "net_pct": -0.12197703937331106,
+     "status": "below",
+     "opened": 2,
+     "closed": 2,
+     "carry_count": 0,
+     "fees_and_pnl": {
+      "gross": 0.16376000000000918,
+      "fee": 0.17336275906,
+      "slippage": 0.1733627999999821,
+      "funding": 0.0
+     },
+     "n_win": 1,
+     "n_loss": 1,
+     "win_frac": 0.5,
+     "mean_win": 0.4803583217200171,
+     "mean_loss": -0.6633238807799899,
+     "mean_pnl": -0.09148277952998643,
+     "realized_net_without_largest": -0.6633238807799899,
+     "realized_net_without_best_symbol": -0.18296555905997286,
+     "mdd_completed_minute_mark_pct": 0.9870604961377039,
+     "same_qty_same_exit_stress_net": -0.3563283181199908,
+     "same_qty_replayed_stress_net": -1.4776082779199862,
+     "admission_counts": {}
+    },
+    "stress_lock": {
+     "opening": 150,
+     "closing": 148.74511663410001,
+     "net_pct": -0.8365889105999891,
+     "status": "below",
+     "opened": 2,
+     "closed": 2,
+     "carry_count": 0,
+     "fees_and_pnl": {
+      "gross": -0.8118000000000047,
+      "fee": 0.1476947259,
+      "slippage": 0.2953886399999833,
+      "funding": 0.0
+     },
+     "n_win": 0,
+     "n_loss": 2,
+     "win_frac": 0.0,
+     "mean_win": null,
+     "mean_loss": -0.627441682949994,
+     "mean_pnl": -0.627441682949994,
+     "realized_net_without_largest": -1.254883365899988,
+     "realized_net_without_best_symbol": -1.254883365899988,
+     "mdd_completed_minute_mark_pct": 1.180326631681361,
+     "same_qty_same_exit_stress_net": -1.254883365900005,
+     "same_qty_replayed_stress_net": -1.254883365899988,
+     "admission_counts": {}
+    },
+    "one_r": {
+     "opening": 150,
+     "closing": 150.8752821754725,
+     "net_pct": 0.5835214503149944,
+     "status": "below",
+     "opened": 2,
+     "closed": 2,
+     "carry_count": 0,
+     "fees_and_pnl": {
+      "gross": 1.221890000000004,
+      "fee": 0.1733037595275,
+      "slippage": 0.17330406499998527,
+      "funding": 0.0
+     },
+     "n_win": 2,
+     "n_loss": 0,
+     "win_frac": 1.0,
+     "mean_win": 0.4376410877362593,
+     "mean_loss": null,
+     "mean_pnl": 0.4376410877362593,
+     "realized_net_without_largest": 0.12924809716501617,
+     "realized_net_without_best_symbol": 0.0,
+     "mdd_completed_minute_mark_pct": 0.4615957196405618,
+     "same_qty_same_exit_stress_net": 0.7019784159450038,
+     "same_qty_replayed_stress_net": -1.481683259249986,
+     "admission_counts": {}
+    },
+    "full_slot": {
+     "opening": 150,
+     "closing": 150,
+     "net_pct": 0.0,
+     "status": "below",
+     "opened": 0,
+     "closed": 0,
+     "carry_count": 0,
+     "fees_and_pnl": {},
+     "n_win": 0,
+     "n_loss": 0,
+     "win_frac": null,
+     "mean_win": null,
+     "mean_loss": null,
+     "mean_pnl": null,
+     "realized_net_without_largest": 0,
+     "realized_net_without_best_symbol": 0,
+     "mdd_completed_minute_mark_pct": 0.0,
+     "same_qty_same_exit_stress_net": 0,
+     "same_qty_replayed_stress_net": 0,
+     "admission_counts": {
+      "full_slot_risk": 2
+     }
+    }
+   },
+   "trend_long": {
+    "base": {
+     "opening": 150,
+     "closing": 148.1045322763551,
+     "net_pct": -1.2636451490966039,
+     "status": "below",
+     "opened": 4,
+     "closed": 4,
+     "carry_count": 0,
+     "fees_and_pnl": {
+      "gross": -0.7345799999999578,
+      "fee": 0.580443953645,
+      "slippage": 0.5804437699999472,
+      "funding": 0.0
+     },
+     "n_win": 0,
+     "n_loss": 4,
+     "win_frac": 0.0,
+     "mean_win": null,
+     "mean_loss": -0.4738669309112262,
+     "mean_pnl": -0.4738669309112262,
+     "realized_net_without_largest": -1.895467723644905,
+     "realized_net_without_best_symbol": -1.895467723644905,
+     "mdd_completed_minute_mark_pct": 1.2636451490966039,
+     "same_qty_same_exit_stress_net": -2.475911677289958,
+     "same_qty_replayed_stress_net": -2.4759116772899024,
+     "admission_counts": {
+      "risk_or_funds": 2,
+      "occupied": 3,
+      "daily_cap": 19
+     }
+    },
+    "stress": {
+     "opening": 150,
+     "closing": 147.67277385555008,
+     "net_pct": -1.5514840962999488,
+     "status": "below",
+     "opened": 4,
+     "closed": 4,
+     "carry_count": 0,
+     "fees_and_pnl": {
+      "gross": -0.5889000000000087,
+      "fee": 0.57944224445,
+      "slippage": 1.1588838999999296,
+      "funding": 0.0
+     },
+     "n_win": 0,
+     "n_loss": 4,
+     "win_frac": 0.0,
+     "mean_win": null,
+     "mean_loss": -0.5818065361124846,
+     "mean_pnl": -0.5818065361124846,
+     "realized_net_without_largest": -2.3272261444499382,
+     "realized_net_without_best_symbol": -2.3272261444499382,
+     "mdd_completed_minute_mark_pct": 1.5514840962999488,
+     "same_qty_same_exit_stress_net": -2.327226144450009,
+     "same_qty_replayed_stress_net": -2.3272261444499382,
+     "admission_counts": {
+      "risk_or_funds": 12,
+      "occupied": 2,
+      "daily_cap": 10
+     }
+    }
+   },
+   "trend_short": {
+    "base": {
+     "opening": 150,
+     "closing": 148.88652522378757,
+     "net_pct": -0.7423165174749502,
+     "status": "below",
+     "opened": 4,
+     "closed": 4,
+     "carry_count": 0,
+     "fees_and_pnl": {
+      "gross": 0.05515000000000156,
+      "fee": 0.5843123812125,
+      "slippage": 0.5843123949999445,
+      "funding": 0.0
+     },
+     "n_win": 0,
+     "n_loss": 4,
+     "win_frac": 0.0,
+     "mean_win": null,
+     "mean_loss": -0.2783686940531107,
+     "mean_pnl": -0.2783686940531107,
+     "realized_net_without_largest": -1.1134747762124428,
+     "realized_net_without_best_symbol": -1.1134747762124428,
+     "mdd_completed_minute_mark_pct": 0.9839993692659976,
+     "same_qty_same_exit_stress_net": -1.6977871574249983,
+     "same_qty_replayed_stress_net": -1.557787402529951,
+     "admission_counts": {
+      "occupied": 1
+     }
+    },
+    "stress": {
+     "opening": 150,
+     "closing": 150,
+     "net_pct": 0.0,
+     "status": "below",
+     "opened": 0,
+     "closed": 0,
+     "carry_count": 0,
+     "fees_and_pnl": {},
+     "n_win": 0,
+     "n_loss": 0,
+     "win_frac": null,
+     "mean_win": null,
+     "mean_loss": null,
+     "mean_pnl": null,
+     "realized_net_without_largest": 0,
+     "realized_net_without_best_symbol": 0,
+     "mdd_completed_minute_mark_pct": 0.0,
+     "same_qty_same_exit_stress_net": 0,
+     "same_qty_replayed_stress_net": 0,
+     "admission_counts": {
+      "risk_or_funds": 5
+     }
+    }
+   },
+   "five_families": {
+    "base": {
+     "opening": 150,
+     "closing": 144.19273043341278,
+     "net_pct": -3.8715130443914836,
+     "status": "below",
+     "opened": 16,
+     "closed": 16,
+     "carry_count": 0,
+     "fees_and_pnl": {
+      "gross": -1.1063499999999329,
+      "fee": 2.3504599215875,
+      "slippage": 2.350459644999771,
+      "funding": 0.0
+     },
+     "n_win": 0,
+     "n_loss": 16,
+     "win_frac": 0.0,
+     "mean_win": null,
+     "mean_loss": -0.3629543479117002,
+     "mean_pnl": -0.3629543479117002,
+     "realized_net_without_largest": -5.807269566587204,
+     "realized_net_without_best_symbol": -5.807269566587204,
+     "mdd_completed_minute_mark_pct": 4.00743871108914,
+     "same_qty_same_exit_stress_net": -8.157729488174933,
+     "same_qty_replayed_stress_net": -7.4395666447796955,
+     "admission_counts": {
+      "occupied": 8,
+      "risk_or_funds": 4,
+      "daily_cap": 43
+     }
+    },
+    "stress": {
+     "opening": 150,
+     "closing": 147.67277385555008,
+     "net_pct": -1.5514840962999488,
+     "status": "below",
+     "opened": 4,
+     "closed": 4,
+     "carry_count": 0,
+     "fees_and_pnl": {
+      "gross": -0.5889000000000087,
+      "fee": 0.57944224445,
+      "slippage": 1.1588838999999296,
+      "funding": 0.0
+     },
+     "n_win": 0,
+     "n_loss": 4,
+     "win_frac": 0.0,
+     "mean_win": null,
+     "mean_loss": -0.5818065361124846,
+     "mean_pnl": -0.5818065361124846,
+     "realized_net_without_largest": -2.3272261444499382,
+     "realized_net_without_best_symbol": -2.3272261444499382,
+     "mdd_completed_minute_mark_pct": 1.5514840962999488,
+     "same_qty_same_exit_stress_net": -2.327226144450009,
+     "same_qty_replayed_stress_net": -2.3272261444499382,
+     "admission_counts": {
+      "risk_or_funds": 55,
+      "occupied": 2,
+      "daily_cap": 10
+     }
+    }
+   },
+   "bb_long": {
+    "base": {
+     "opening": 150,
+     "closing": 150,
+     "net_pct": 0.0,
+     "status": "below",
+     "opened": 0,
+     "closed": 0,
+     "carry_count": 0,
+     "fees_and_pnl": {},
+     "n_win": 0,
+     "n_loss": 0,
+     "win_frac": null,
+     "mean_win": null,
+     "mean_loss": null,
+     "mean_pnl": null,
+     "realized_net_without_largest": 0,
+     "realized_net_without_best_symbol": 0,
+     "mdd_completed_minute_mark_pct": 0.0,
+     "same_qty_same_exit_stress_net": 0,
+     "same_qty_replayed_stress_net": 0,
+     "admission_counts": {}
+    },
+    "stress": {
+     "opening": 150,
+     "closing": 150,
+     "net_pct": 0.0,
+     "status": "below",
+     "opened": 0,
+     "closed": 0,
+     "carry_count": 0,
+     "fees_and_pnl": {},
+     "n_win": 0,
+     "n_loss": 0,
+     "win_frac": null,
+     "mean_win": null,
+     "mean_loss": null,
+     "mean_pnl": null,
+     "realized_net_without_largest": 0,
+     "realized_net_without_best_symbol": 0,
+     "mdd_completed_minute_mark_pct": 0.0,
+     "same_qty_same_exit_stress_net": 0,
+     "same_qty_replayed_stress_net": 0,
+     "admission_counts": {}
+    }
+   },
+   "bb_short": {
+    "base": {
+     "opening": 150,
+     "closing": 148.35222497925008,
+     "net_pct": -1.0985166804999502,
+     "status": "below",
+     "opened": 4,
+     "closed": 4,
+     "carry_count": 0,
+     "fees_and_pnl": {
+      "gross": -0.4829999999999992,
+      "fee": 0.58238757075,
+      "slippage": 0.5823874499999323,
+      "funding": 0.0
+     },
+     "n_win": 0,
+     "n_loss": 4,
+     "win_frac": 0.0,
+     "mean_win": null,
+     "mean_loss": -0.41194375518748294,
+     "mean_pnl": -0.41194375518748294,
+     "realized_net_without_largest": -1.6477750207499318,
+     "realized_net_without_best_symbol": -1.6477750207499318,
+     "mdd_completed_minute_mark_pct": 1.214365776099957,
+     "same_qty_same_exit_stress_net": -2.230162591499999,
+     "same_qty_replayed_stress_net": -1.5347206442999295,
+     "admission_counts": {
+      "risk_or_funds": 1,
+      "occupied": 2,
+      "daily_cap": 3
+     }
+    },
+    "stress": {
+     "opening": 150,
+     "closing": 150,
+     "net_pct": 0.0,
+     "status": "below",
+     "opened": 0,
+     "closed": 0,
+     "carry_count": 0,
+     "fees_and_pnl": {},
+     "n_win": 0,
+     "n_loss": 0,
+     "win_frac": null,
+     "mean_win": null,
+     "mean_loss": null,
+     "mean_pnl": null,
+     "realized_net_without_largest": 0,
+     "realized_net_without_best_symbol": 0,
+     "mdd_completed_minute_mark_pct": 0.0,
+     "same_qty_same_exit_stress_net": 0,
+     "same_qty_replayed_stress_net": 0,
+     "admission_counts": {
+      "risk_or_funds": 10
+     }
+    }
+   },
+   "bb_shared": {
+    "base": {
+     "opening": 150,
+     "closing": 148.35222497925008,
+     "net_pct": -1.0985166804999502,
+     "status": "below",
+     "opened": 4,
+     "closed": 4,
+     "carry_count": 0,
+     "fees_and_pnl": {
+      "gross": -0.4829999999999992,
+      "fee": 0.58238757075,
+      "slippage": 0.5823874499999323,
+      "funding": 0.0
+     },
+     "n_win": 0,
+     "n_loss": 4,
+     "win_frac": 0.0,
+     "mean_win": null,
+     "mean_loss": -0.41194375518748294,
+     "mean_pnl": -0.41194375518748294,
+     "realized_net_without_largest": -1.6477750207499318,
+     "realized_net_without_best_symbol": -1.6477750207499318,
+     "mdd_completed_minute_mark_pct": 1.214365776099957,
+     "same_qty_same_exit_stress_net": -2.230162591499999,
+     "same_qty_replayed_stress_net": -1.5347206442999295,
+     "admission_counts": {
+      "risk_or_funds": 1,
+      "occupied": 2,
+      "daily_cap": 3
+     }
+    },
+    "stress": {
+     "opening": 150,
+     "closing": 150,
+     "net_pct": 0.0,
+     "status": "below",
+     "opened": 0,
+     "closed": 0,
+     "carry_count": 0,
+     "fees_and_pnl": {},
+     "n_win": 0,
+     "n_loss": 0,
+     "win_frac": null,
+     "mean_win": null,
+     "mean_loss": null,
+     "mean_pnl": null,
+     "realized_net_without_largest": 0,
+     "realized_net_without_best_symbol": 0,
+     "mdd_completed_minute_mark_pct": 0.0,
+     "same_qty_same_exit_stress_net": 0,
+     "same_qty_replayed_stress_net": 0,
+     "admission_counts": {
+      "risk_or_funds": 10
+     }
+    }
+   },
+   "scalp_long": {
+    "base": {
+     "opening": 150,
+     "closing": 148.76985115853762,
+     "net_pct": -0.8200992276415908,
+     "status": "below",
+     "opened": 4,
+     "closed": 4,
+     "carry_count": 0,
+     "fees_and_pnl": {
+      "gross": 0.034150000000022884,
+      "fee": 0.6321494164625,
+      "slippage": 0.6321494249999434,
+      "funding": 0.0
+     },
+     "n_win": 0,
+     "n_loss": 4,
+     "win_frac": 0.0,
+     "mean_win": null,
+     "mean_loss": -0.30753721036560516,
+     "mean_pnl": -0.30753721036560516,
+     "realized_net_without_largest": -1.2301488414624207,
+     "realized_net_without_best_symbol": -1.2301488414624207,
+     "mdd_completed_minute_mark_pct": 1.1014176980416068,
+     "same_qty_same_exit_stress_net": -1.8622982579249772,
+     "same_qty_replayed_stress_net": -1.9619486078249098,
+     "admission_counts": {
+      "risk_or_funds": 1,
+      "occupied": 2,
+      "daily_cap": 21
+     }
+    },
+    "stress": {
+     "opening": 150,
+     "closing": 150,
+     "net_pct": 0.0,
+     "status": "below",
+     "opened": 0,
+     "closed": 0,
+     "carry_count": 0,
+     "fees_and_pnl": {},
+     "n_win": 0,
+     "n_loss": 0,
+     "win_frac": null,
+     "mean_win": null,
+     "mean_loss": null,
+     "mean_pnl": null,
+     "realized_net_without_largest": 0,
+     "realized_net_without_best_symbol": 0,
+     "mdd_completed_minute_mark_pct": 0.0,
+     "same_qty_same_exit_stress_net": 0,
+     "same_qty_replayed_stress_net": 0,
+     "admission_counts": {
+      "risk_or_funds": 28
+     }
+    }
+   },
+   "three_shared": {
+    "base": {
+     "opening": 150,
+     "closing": 147.1323814386127,
+     "net_pct": -1.911745707591539,
+     "status": "below",
+     "opened": 8,
+     "closed": 8,
+     "carry_count": 0,
+     "fees_and_pnl": {
+      "gross": -0.44554999999997624,
+      "fee": 1.2110343363875,
+      "slippage": 1.2110342249998762,
+      "funding": 0.0
+     },
+     "n_win": 0,
+     "n_loss": 8,
+     "win_frac": 0.0,
+     "mean_win": null,
+     "mean_loss": -0.3584523201734191,
+     "mean_pnl": -0.3584523201734191,
+     "realized_net_without_largest": -2.867618561387353,
+     "realized_net_without_best_symbol": -2.867618561387353,
+     "mdd_completed_minute_mark_pct": 2.0270609363915337,
+     "same_qty_same_exit_stress_net": -4.078652897774976,
+     "same_qty_replayed_stress_net": -3.48606610207484,
+     "admission_counts": {
+      "risk_or_funds": 2,
+      "occupied": 4,
+      "daily_cap": 24
+     }
+    },
+    "stress": {
+     "opening": 150,
+     "closing": 150,
+     "net_pct": 0.0,
+     "status": "below",
+     "opened": 0,
+     "closed": 0,
+     "carry_count": 0,
+     "fees_and_pnl": {},
+     "n_win": 0,
+     "n_loss": 0,
+     "win_frac": null,
+     "mean_win": null,
+     "mean_loss": null,
+     "mean_pnl": null,
+     "realized_net_without_largest": 0,
+     "realized_net_without_best_symbol": 0,
+     "mdd_completed_minute_mark_pct": 0.0,
+     "same_qty_same_exit_stress_net": 0,
+     "same_qty_replayed_stress_net": 0,
+     "admission_counts": {
+      "risk_or_funds": 38
+     }
+    }
+   },
+   "scalp_00": {
+    "base": {
+     "opening": 150,
+     "closing": 149.40448957173757,
+     "net_pct": -0.39700695217494975,
+     "status": "below",
+     "opened": 2,
+     "closed": 2,
+     "carry_count": 0,
+     "fees_and_pnl": {
+      "gross": 0.08695000000004438,
+      "fee": 0.3412302032625,
+      "slippage": 0.3412302249999915,
+      "funding": 0.0
+     },
+     "n_win": 0,
+     "n_loss": 2,
+     "win_frac": 0.0,
+     "mean_win": null,
+     "mean_loss": -0.2977552141312236,
+     "mean_pnl": -0.2977552141312236,
+     "realized_net_without_largest": -0.5955104282624472,
+     "realized_net_without_best_symbol": -0.5955104282624472,
+     "mdd_completed_minute_mark_pct": 0.7102934305749709,
+     "same_qty_same_exit_stress_net": -0.9367406315249557,
+     "same_qty_replayed_stress_net": -0.9660965462249183,
+     "admission_counts": {
+      "risk_or_funds": 1
+     }
+    },
+    "stress": {
+     "opening": 150,
+     "closing": 150,
+     "net_pct": 0.0,
+     "status": "below",
+     "opened": 0,
+     "closed": 0,
+     "carry_count": 0,
+     "fees_and_pnl": {},
+     "n_win": 0,
+     "n_loss": 0,
+     "win_frac": null,
+     "mean_win": null,
+     "mean_loss": null,
+     "mean_pnl": null,
+     "realized_net_without_largest": 0,
+     "realized_net_without_best_symbol": 0,
+     "mdd_completed_minute_mark_pct": 0.0,
+     "same_qty_same_exit_stress_net": 0,
+     "same_qty_replayed_stress_net": 0,
+     "admission_counts": {
+      "risk_or_funds": 3
+     }
+    }
+   },
+   "scalp_04": {
+    "base": {
+     "opening": 150,
+     "closing": 148.54565760861905,
+     "net_pct": -0.9695615942539648,
+     "status": "below",
+     "opened": 4,
+     "closed": 4,
+     "carry_count": 0,
+     "fees_and_pnl": {
+      "gross": -0.2855240000000393,
+      "fee": 0.584409231381,
+      "slippage": 0.5844091599999172,
+      "funding": 0.0
+     },
+     "n_win": 0,
+     "n_loss": 4,
+     "win_frac": 0.0,
+     "mean_win": null,
+     "mean_loss": -0.36358559784523914,
+     "mean_pnl": -0.36358559784523914,
+     "realized_net_without_largest": -1.4543423913809566,
+     "realized_net_without_best_symbol": -1.4543423913809566,
+     "mdd_completed_minute_mark_pct": 0.9695615942539648,
+     "same_qty_same_exit_stress_net": -2.0387516227620393,
+     "same_qty_replayed_stress_net": -1.6862559837494706,
+     "admission_counts": {
+      "risk_or_funds": 1,
+      "occupied": 3,
+      "daily_cap": 2
+     }
+    },
+    "stress": {
+     "opening": 150,
+     "closing": 150,
+     "net_pct": 0.0,
+     "status": "below",
+     "opened": 0,
+     "closed": 0,
+     "carry_count": 0,
+     "fees_and_pnl": {},
+     "n_win": 0,
+     "n_loss": 0,
+     "win_frac": null,
+     "mean_win": null,
+     "mean_loss": null,
+     "mean_pnl": null,
+     "realized_net_without_largest": 0,
+     "realized_net_without_best_symbol": 0,
+     "mdd_completed_minute_mark_pct": 0.0,
+     "same_qty_same_exit_stress_net": 0,
+     "same_qty_replayed_stress_net": 0,
+     "admission_counts": {
+      "risk_or_funds": 10
+     }
+    }
+   },
+   "scalp_08": {
+    "base": {
+     "opening": 150,
+     "closing": 149.37579594015003,
+     "net_pct": -0.4161360398999836,
+     "status": "below",
+     "opened": 1,
+     "closed": 1,
+     "carry_count": 0,
+     "fees_and_pnl": {
+      "gross": -0.23939999999999462,
+      "fee": 0.19240205985,
+      "slippage": 0.1924019999999721,
+      "funding": 0.0
+     },
+     "n_win": 0,
+     "n_loss": 1,
+     "win_frac": 0.0,
+     "mean_win": null,
+     "mean_loss": -0.6242040598499667,
+     "mean_pnl": -0.6242040598499667,
+     "realized_net_without_largest": -0.6242040598499667,
+     "realized_net_without_best_symbol": -0.6242040598499667,
+     "mdd_completed_minute_mark_pct": 0.4161360398999836,
+     "same_qty_same_exit_stress_net": -0.8166061196999945,
+     "same_qty_replayed_stress_net": -0.8166061196999738,
+     "admission_counts": {
+      "risk_or_funds": 3
+     }
+    },
+    "stress": {
+     "opening": 150,
+     "closing": 150,
+     "net_pct": 0.0,
+     "status": "below",
+     "opened": 0,
+     "closed": 0,
+     "carry_count": 0,
+     "fees_and_pnl": {},
+     "n_win": 0,
+     "n_loss": 0,
+     "win_frac": null,
+     "mean_win": null,
+     "mean_loss": null,
+     "mean_pnl": null,
+     "realized_net_without_largest": 0,
+     "realized_net_without_best_symbol": 0,
+     "mdd_completed_minute_mark_pct": 0.0,
+     "same_qty_same_exit_stress_net": 0,
+     "same_qty_replayed_stress_net": 0,
+     "admission_counts": {
+      "risk_or_funds": 4
+     }
+    }
+   },
+   "scalp_12": {
+    "base": {
+     "opening": 150,
+     "closing": 149.84557728021701,
+     "net_pct": -0.10294847985532485,
+     "status": "below",
+     "opened": 2,
+     "closed": 2,
+     "carry_count": 0,
+     "fees_and_pnl": {
+      "gross": 0.43286799999999115,
+      "fee": 0.293645305783,
+      "slippage": 0.2936454139999709,
+      "funding": 0.0
+     },
+     "n_win": 1,
+     "n_loss": 1,
+     "win_frac": 0.5,
+     "mean_win": 0.3229486262420155,
+     "mean_loss": -0.47737134602499537,
+     "mean_pnl": -0.07721135989148994,
+     "realized_net_without_largest": -0.47737134602499537,
+     "realized_net_without_best_symbol": -0.47737134602499537,
+     "mdd_completed_minute_mark_pct": 0.5780056924968302,
+     "same_qty_same_exit_stress_net": -0.44806802556600883,
+     "same_qty_replayed_stress_net": -0.5507418349799591,
+     "admission_counts": {}
+    },
+    "stress": {
+     "opening": 150,
+     "closing": 150,
+     "net_pct": 0.0,
+     "status": "below",
+     "opened": 0,
+     "closed": 0,
+     "carry_count": 0,
+     "fees_and_pnl": {},
+     "n_win": 0,
+     "n_loss": 0,
+     "win_frac": null,
+     "mean_win": null,
+     "mean_loss": null,
+     "mean_pnl": null,
+     "realized_net_without_largest": 0,
+     "realized_net_without_best_symbol": 0,
+     "mdd_completed_minute_mark_pct": 0.0,
+     "same_qty_same_exit_stress_net": 0,
+     "same_qty_replayed_stress_net": 0,
+     "admission_counts": {
+      "risk_or_funds": 2
+     }
+    }
+   },
+   "scalp_16": {
+    "base": {
+     "opening": 150,
+     "closing": 149.38715031970003,
+     "net_pct": -0.4085664535333211,
+     "status": "below",
+     "opened": 1,
+     "closed": 1,
+     "carry_count": 0,
+     "fees_and_pnl": {
+      "gross": -0.3211999999999984,
+      "fee": 0.14582488030000001,
+      "slippage": 0.1458247999999776,
+      "funding": 0.0
+     },
+     "n_win": 0,
+     "n_loss": 1,
+     "win_frac": 0.0,
+     "mean_win": null,
+     "mean_loss": -0.612849680299976,
+     "mean_pnl": -0.612849680299976,
+     "realized_net_without_largest": -0.612849680299976,
+     "realized_net_without_best_symbol": -0.612849680299976,
+     "mdd_completed_minute_mark_pct": 0.4085664535333211,
+     "same_qty_same_exit_stress_net": -0.7586745605999985,
+     "same_qty_replayed_stress_net": -0.758674560599995,
+     "admission_counts": {
+      "risk_or_funds": 1
+     }
+    },
+    "stress": {
+     "opening": 150,
+     "closing": 150,
+     "net_pct": 0.0,
+     "status": "below",
+     "opened": 0,
+     "closed": 0,
+     "carry_count": 0,
+     "fees_and_pnl": {},
+     "n_win": 0,
+     "n_loss": 0,
+     "win_frac": null,
+     "mean_win": null,
+     "mean_loss": null,
+     "mean_pnl": null,
+     "realized_net_without_largest": 0,
+     "realized_net_without_best_symbol": 0,
+     "mdd_completed_minute_mark_pct": 0.0,
+     "same_qty_same_exit_stress_net": 0,
+     "same_qty_replayed_stress_net": 0,
+     "admission_counts": {
+      "risk_or_funds": 2
+     }
+    }
+   },
+   "scalp_20": {
+    "base": {
+     "opening": 150,
+     "closing": 153.01546000092503,
+     "net_pct": 2.010306667283346,
+     "status": "below",
+     "opened": 2,
+     "closed": 2,
+     "carry_count": 0,
+     "fees_and_pnl": {
+      "gross": 3.60369999999999,
+      "fee": 0.294119549075,
+      "slippage": 0.2941204499999586,
+      "funding": 0.0
+     },
+     "n_win": 1,
+     "n_loss": 1,
+     "win_frac": 0.5,
+     "mean_win": 3.464999640225025,
+     "mean_loss": -0.44953963929999363,
+     "mean_pnl": 1.5077300004625158,
+     "realized_net_without_largest": -0.4495396392999935,
+     "realized_net_without_best_symbol": 0.0,
+     "mdd_completed_minute_mark_pct": 0.2996930928666597,
+     "same_qty_same_exit_stress_net": 2.7213404518499904,
+     "same_qty_replayed_stress_net": 2.6425587624000255,
+     "admission_counts": {
+      "risk_or_funds": 3,
+      "occupied": 2
+     }
+    },
+    "stress": {
+     "opening": 150,
+     "closing": 150,
+     "net_pct": 0.0,
+     "status": "below",
+     "opened": 0,
+     "closed": 0,
+     "carry_count": 0,
+     "fees_and_pnl": {},
+     "n_win": 0,
+     "n_loss": 0,
+     "win_frac": null,
+     "mean_win": null,
+     "mean_loss": null,
+     "mean_pnl": null,
+     "realized_net_without_largest": 0,
+     "realized_net_without_best_symbol": 0,
+     "mdd_completed_minute_mark_pct": 0.0,
+     "same_qty_same_exit_stress_net": 0,
+     "same_qty_replayed_stress_net": 0,
+     "admission_counts": {
+      "risk_or_funds": 7
+     }
+    }
+   }
+  },
+  "pc290": {
+   "long_immediate": {
+    "stats": {
+     "trades": 3,
+     "wins": 2,
+     "days": 1,
+     "equity": 151.9474285056,
+     "net": 1.9474285055999871,
+     "realized_mdd_pct": 0.36619644316666644,
+     "net_less_best": 0.6814065160499998,
+     "net_less_best_symbol": 0.6814065160499998,
+     "same_qty_stress": 1.509943111199998,
+     "target_days": 0,
+     "calendar_days": 1
+    },
+    "book": [
+     {
+      "symbol": "BCH",
+      "side": 1,
+      "signal": 1795400477088,
+      "fill": 1795400477089,
+      "exit": 1795400852457,
+      "units": 0.7400000000000001,
+      "contracts": 7.4,
+      "margin": 48.4498128,
+      "initial_risk": 0.6371372767999877,
+      "gross": -0.25899999999999584,
+      "fees": 0.14514736475,
+      "slippage": 0.1451473,
+      "funding": 0.0,
+      "net": -0.5492946647499959,
+      "stress": -0.6944420294999958,
+      "balance": 149.45070533525
+     },
+     {
+      "symbol": "DOT",
+      "side": 1,
+      "signal": 1795402236947,
+      "fill": 1795402238117,
+      "exit": 1795403753019,
+      "units": 224.0,
+      "contracts": 224.0,
+      "margin": 48.520248,
+      "initial_risk": 0.6550654879999893,
+      "gross": 1.5232000000000063,
+      "fees": 0.14624921919999997,
+      "slippage": 0.1462496,
+      "funding": 0.0,
+      "net": 1.2307011808000063,
+      "stress": 1.0844519616000063,
+      "balance": 150.68140651605
+     },
+     {
+      "symbol": "XRP",
+      "side": 1,
+      "signal": 1795402142545,
+      "fill": 1795402142577,
+      "exit": 1795403754357,
+      "units": 159.0,
+      "contracts": 1.59,
+      "margin": 48.46091834999999,
+      "initial_risk": 0.6814205600999844,
+      "gross": 1.5581999999999874,
+      "fees": 0.14608881045,
+      "slippage": 0.1460892,
+      "funding": 0.0,
+      "net": 1.2660219895499873,
+      "stress": 1.1199331790999874,
+      "balance": 151.9474285056
+     }
+    ],
+    "days": [
+     {
+      "day": "2026-11-23",
+      "net": 1.9474285055999978,
+      "equity": 151.9474285056,
+      "return_pct": 1.2982856703999985
+     }
+    ]
+   },
+   "short_immediate": {
+    "stats": {
+     "trades": 3,
+     "wins": 1,
+     "days": 1,
+     "equity": 149.245313128575,
+     "net": -0.7546868714250081,
+     "realized_mdd_pct": 0.5031245809500096,
+     "net_less_best": -0.8184569589249883,
+     "net_less_best_symbol": -0.8184569589249883,
+     "same_qty_stress": -1.1891802928500208,
+     "target_days": 0,
+     "calendar_days": 1
+    },
+    "book": [
+     {
+      "symbol": "APT",
+      "side": -1,
+      "signal": 1795411543268,
+      "fill": 1795411549595,
+      "exit": 1795412286400,
+      "units": 382.0,
+      "contracts": 382.0,
+      "margin": 48.88427896666667,
+      "initial_risk": 0.6722687738000085,
+      "gross": -0.34380000000000455,
+      "fees": 0.14689818595,
+      "slippage": 0.1468981,
+      "funding": 0.0,
+      "net": -0.6375962859500046,
+      "stress": -0.7844944719000045,
+      "balance": 149.36240371405
+     },
+     {
+      "symbol": "LTC",
+      "side": -1,
+      "signal": 1795436456931,
+      "fill": 1795436456932,
+      "exit": 1795437532279,
+      "units": 3.5,
+      "contracts": 3.5,
+      "margin": 47.73945166666667,
+      "initial_risk": 0.6380817100000049,
+      "gross": 0.3499999999999801,
+      "fees": 0.1431149125,
+      "slippage": 0.143115,
+      "funding": 0.0,
+      "net": 0.06377008749998012,
+      "stress": -0.07934482500001988,
+      "balance": 149.42617380155
+     },
+     {
+      "symbol": "TRX",
+      "side": -1,
+      "signal": 1795437078781,
+      "fill": 1795437078786,
+      "exit": 1795438765691,
+      "units": 470.00000000000006,
+      "contracts": 0.47000000000000003,
+      "margin": 48.15404426666668,
+      "initial_risk": 0.4363914655999983,
+      "gross": 0.10810000000000376,
+      "fees": 0.14448032297500002,
+      "slippage": 0.14448035000000004,
+      "funding": 0.0,
+      "net": -0.1808606729749963,
+      "stress": -0.3253409959499963,
+      "balance": 149.245313128575
+     }
+    ],
+    "days": [
+     {
+      "day": "2026-11-23",
+      "net": -0.7546868714250208,
+      "equity": 149.245313128575,
+      "return_pct": -0.5031245809500139
+     }
+    ]
+   },
+   "shared_immediate": {
+    "stats": {
+     "trades": 6,
+     "wins": 3,
+     "days": 1,
+     "equity": 151.18237003612495,
+     "net": 1.1823700361249507,
+     "realized_mdd_pct": 0.5035020842401705,
+     "net_less_best": -0.08365195342503662,
+     "net_less_best_symbol": -0.08365195342503662,
+     "same_qty_stress": 0.3013054222499766,
+     "target_days": 0,
+     "calendar_days": 1
+    },
+    "book": [
+     {
+      "symbol": "BCH",
+      "side": 1,
+      "signal": 1795400477088,
+      "fill": 1795400477089,
+      "exit": 1795400852457,
+      "units": 0.7400000000000001,
+      "contracts": 7.4,
+      "margin": 48.4498128,
+      "initial_risk": 0.6371372767999877,
+      "gross": -0.25899999999999584,
+      "fees": 0.14514736475,
+      "slippage": 0.1451473,
+      "funding": 0.0,
+      "net": -0.5492946647499959,
+      "stress": -0.6944420294999958,
+      "balance": 149.45070533525
+     },
+     {
+      "symbol": "DOT",
+      "side": 1,
+      "signal": 1795402236947,
+      "fill": 1795402238117,
+      "exit": 1795403753019,
+      "units": 224.0,
+      "contracts": 224.0,
+      "margin": 48.520248,
+      "initial_risk": 0.6550654879999893,
+      "gross": 1.5232000000000063,
+      "fees": 0.14624921919999997,
+      "slippage": 0.1462496,
+      "funding": 0.0,
+      "net": 1.2307011808000063,
+      "stress": 1.0844519616000063,
+      "balance": 150.68140651605
+     },
+     {
+      "symbol": "XRP",
+      "side": 1,
+      "signal": 1795402142545,
+      "fill": 1795402142577,
+      "exit": 1795403754357,
+      "units": 159.0,
+      "contracts": 1.59,
+      "margin": 48.46091834999999,
+      "initial_risk": 0.6814205600999844,
+      "gross": 1.5581999999999874,
+      "fees": 0.14608881045,
+      "slippage": 0.1460892,
+      "funding": 0.0,
+      "net": 1.2660219895499873,
+      "stress": 1.1199331790999874,
+      "balance": 151.9474285056
+     },
+     {
+      "symbol": "APT",
+      "side": -1,
+      "signal": 1795411543268,
+      "fill": 1795411549595,
+      "exit": 1795412286400,
+      "units": 387.0,
+      "contracts": 387.0,
+      "margin": 49.52412555,
+      "initial_risk": 0.6810681033000086,
+      "gross": -0.3483000000000046,
+      "fees": 0.14882093707500002,
+      "slippage": 0.14882085,
+      "funding": 0.0,
+      "net": -0.6459417870750046,
+      "stress": -0.7947627241500046,
+      "balance": 151.30148671852498
+     },
+     {
+      "symbol": "LTC",
+      "side": -1,
+      "signal": 1795436456931,
+      "fill": 1795436456932,
+      "exit": 1795437532279,
+      "units": 3.6,
+      "contracts": 3.6,
+      "margin": 49.10343600000001,
+      "initial_risk": 0.6563126160000051,
+      "gross": 0.35999999999997956,
+      "fees": 0.14720391000000002,
+      "slippage": 0.14720400000000003,
+      "funding": 0.0,
+      "net": 0.06559208999997951,
+      "stress": -0.08161182000002051,
+      "balance": 151.36707880852495
+     },
+     {
+      "symbol": "TRX",
+      "side": -1,
+      "signal": 1795437078781,
+      "fill": 1795437078786,
+      "exit": 1795438765691,
+      "units": 480.0,
+      "contracts": 0.48,
+      "margin": 49.1785984,
+      "initial_risk": 0.44567639039999823,
+      "gross": 0.11040000000000383,
+      "fees": 0.1475543724,
+      "slippage": 0.1475544,
+      "funding": 0.0,
+      "net": -0.18470877239999617,
+      "stress": -0.3322631447999962,
+      "balance": 151.18237003612495
+     }
+    ],
+    "days": [
+     {
+      "day": "2026-11-23",
+      "net": 1.1823700361249765,
+      "equity": 151.18237003612498,
+      "return_pct": 0.7882466907499843
+     }
+    ]
+   },
+   "long_room": {
+    "stats": {
+     "trades": 3,
+     "wins": 2,
+     "days": 1,
+     "equity": 151.9474285056,
+     "net": 1.9474285055999871,
+     "realized_mdd_pct": 0.36619644316666644,
+     "net_less_best": 0.6814065160499998,
+     "net_less_best_symbol": 0.6814065160499998,
+     "same_qty_stress": 1.509943111199998,
+     "target_days": 0,
+     "calendar_days": 1
+    },
+    "book": [
+     {
+      "symbol": "BCH",
+      "side": 1,
+      "signal": 1795400477088,
+      "fill": 1795400477089,
+      "exit": 1795400852457,
+      "units": 0.7400000000000001,
+      "contracts": 7.4,
+      "margin": 48.4498128,
+      "initial_risk": 0.6371372767999877,
+      "gross": -0.25899999999999584,
+      "fees": 0.14514736475,
+      "slippage": 0.1451473,
+      "funding": 0.0,
+      "net": -0.5492946647499959,
+      "stress": -0.6944420294999958,
+      "balance": 149.45070533525
+     },
+     {
+      "symbol": "DOT",
+      "side": 1,
+      "signal": 1795402236947,
+      "fill": 1795402238117,
+      "exit": 1795403753019,
+      "units": 224.0,
+      "contracts": 224.0,
+      "margin": 48.520248,
+      "initial_risk": 0.6550654879999893,
+      "gross": 1.5232000000000063,
+      "fees": 0.14624921919999997,
+      "slippage": 0.1462496,
+      "funding": 0.0,
+      "net": 1.2307011808000063,
+      "stress": 1.0844519616000063,
+      "balance": 150.68140651605
+     },
+     {
+      "symbol": "XRP",
+      "side": 1,
+      "signal": 1795402142545,
+      "fill": 1795402142577,
+      "exit": 1795403754357,
+      "units": 159.0,
+      "contracts": 1.59,
+      "margin": 48.46091834999999,
+      "initial_risk": 0.6814205600999844,
+      "gross": 1.5581999999999874,
+      "fees": 0.14608881045,
+      "slippage": 0.1460892,
+      "funding": 0.0,
+      "net": 1.2660219895499873,
+      "stress": 1.1199331790999874,
+      "balance": 151.9474285056
+     }
+    ],
+    "days": [
+     {
+      "day": "2026-11-23",
+      "net": 1.9474285055999978,
+      "equity": 151.9474285056,
+      "return_pct": 1.2982856703999985
+     }
+    ]
+   },
+   "short_room": {
+    "stats": {
+     "trades": 2,
+     "wins": 1,
+     "days": 1,
+     "equity": 149.42617380155,
+     "net": -0.573826198450007,
+     "realized_mdd_pct": 0.42506419063332856,
+     "net_less_best": -0.6375962859499872,
+     "net_less_best_symbol": -0.6375962859499872,
+     "same_qty_stress": -0.8638392969000244,
+     "target_days": 0,
+     "calendar_days": 1
+    },
+    "book": [
+     {
+      "symbol": "APT",
+      "side": -1,
+      "signal": 1795411543268,
+      "fill": 1795411549595,
+      "exit": 1795412286400,
+      "units": 382.0,
+      "contracts": 382.0,
+      "margin": 48.88427896666667,
+      "initial_risk": 0.6722687738000085,
+      "gross": -0.34380000000000455,
+      "fees": 0.14689818595,
+      "slippage": 0.1468981,
+      "funding": 0.0,
+      "net": -0.6375962859500046,
+      "stress": -0.7844944719000045,
+      "balance": 149.36240371405
+     },
+     {
+      "symbol": "LTC",
+      "side": -1,
+      "signal": 1795436456931,
+      "fill": 1795436456932,
+      "exit": 1795437532279,
+      "units": 3.5,
+      "contracts": 3.5,
+      "margin": 47.73945166666667,
+      "initial_risk": 0.6380817100000049,
+      "gross": 0.3499999999999801,
+      "fees": 0.1431149125,
+      "slippage": 0.143115,
+      "funding": 0.0,
+      "net": 0.06377008749998012,
+      "stress": -0.07934482500001988,
+      "balance": 149.42617380155
+     }
+    ],
+    "days": [
+     {
+      "day": "2026-11-23",
+      "net": -0.5738261984500245,
+      "equity": 149.42617380154996,
+      "return_pct": -0.382550798966683
+     }
+    ]
+   },
+   "shared_room": {
+    "stats": {
+     "trades": 5,
+     "wins": 3,
+     "days": 1,
+     "equity": 151.36707880852495,
+     "net": 1.3670788085249512,
+     "realized_mdd_pct": 0.4251087322949987,
+     "net_less_best": 0.10105681897496388,
+     "net_less_best_symbol": 0.10105681897496388,
+     "same_qty_stress": 0.6335685670499728,
+     "target_days": 0,
+     "calendar_days": 1
+    },
+    "book": [
+     {
+      "symbol": "BCH",
+      "side": 1,
+      "signal": 1795400477088,
+      "fill": 1795400477089,
+      "exit": 1795400852457,
+      "units": 0.7400000000000001,
+      "contracts": 7.4,
+      "margin": 48.4498128,
+      "initial_risk": 0.6371372767999877,
+      "gross": -0.25899999999999584,
+      "fees": 0.14514736475,
+      "slippage": 0.1451473,
+      "funding": 0.0,
+      "net": -0.5492946647499959,
+      "stress": -0.6944420294999958,
+      "balance": 149.45070533525
+     },
+     {
+      "symbol": "DOT",
+      "side": 1,
+      "signal": 1795402236947,
+      "fill": 1795402238117,
+      "exit": 1795403753019,
+      "units": 224.0,
+      "contracts": 224.0,
+      "margin": 48.520248,
+      "initial_risk": 0.6550654879999893,
+      "gross": 1.5232000000000063,
+      "fees": 0.14624921919999997,
+      "slippage": 0.1462496,
+      "funding": 0.0,
+      "net": 1.2307011808000063,
+      "stress": 1.0844519616000063,
+      "balance": 150.68140651605
+     },
+     {
+      "symbol": "XRP",
+      "side": 1,
+      "signal": 1795402142545,
+      "fill": 1795402142577,
+      "exit": 1795403754357,
+      "units": 159.0,
+      "contracts": 1.59,
+      "margin": 48.46091834999999,
+      "initial_risk": 0.6814205600999844,
+      "gross": 1.5581999999999874,
+      "fees": 0.14608881045,
+      "slippage": 0.1460892,
+      "funding": 0.0,
+      "net": 1.2660219895499873,
+      "stress": 1.1199331790999874,
+      "balance": 151.9474285056
+     },
+     {
+      "symbol": "APT",
+      "side": -1,
+      "signal": 1795411543268,
+      "fill": 1795411549595,
+      "exit": 1795412286400,
+      "units": 387.0,
+      "contracts": 387.0,
+      "margin": 49.52412555,
+      "initial_risk": 0.6810681033000086,
+      "gross": -0.3483000000000046,
+      "fees": 0.14882093707500002,
+      "slippage": 0.14882085,
+      "funding": 0.0,
+      "net": -0.6459417870750046,
+      "stress": -0.7947627241500046,
+      "balance": 151.30148671852498
+     },
+     {
+      "symbol": "LTC",
+      "side": -1,
+      "signal": 1795436456931,
+      "fill": 1795436456932,
+      "exit": 1795437532279,
+      "units": 3.6,
+      "contracts": 3.6,
+      "margin": 49.10343600000001,
+      "initial_risk": 0.6563126160000051,
+      "gross": 0.35999999999997956,
+      "fees": 0.14720391000000002,
+      "slippage": 0.14720400000000003,
+      "funding": 0.0,
+      "net": 0.06559208999997951,
+      "stress": -0.08161182000002051,
+      "balance": 151.36707880852495
+     }
+    ],
+    "days": [
+     {
+      "day": "2026-11-23",
+      "net": 1.3670788085249728,
+      "equity": 151.36707880852498,
+      "return_pct": 0.9113858723499819
+     }
+    ]
+   },
+   "long_room_cost_floor": {
+    "stats": {
+     "trades": 1,
+     "wins": 1,
+     "days": 1,
+     "equity": 151.273984392,
+     "net": 1.2739843919999885,
+     "realized_mdd_pct": 0,
+     "net_less_best": 1.3322676295501878e-15,
+     "net_less_best_symbol": 1.3322676295501878e-15,
+     "same_qty_stress": 1.1269767839999871,
+     "target_days": 0,
+     "calendar_days": 1
+    },
+    "book": [
+     {
+      "symbol": "XRP",
+      "side": 1,
+      "signal": 1795402142545,
+      "fill": 1795402142577,
+      "exit": 1795403754357,
+      "units": 160.0,
+      "contracts": 1.6,
+      "margin": 48.765704,
+      "initial_risk": 0.6857062239999844,
+      "gross": 1.5679999999999872,
+      "fees": 0.14700760799999998,
+      "slippage": 0.147008,
+      "funding": 0.0,
+      "net": 1.2739843919999871,
+      "stress": 1.1269767839999871,
+      "balance": 151.273984392
+     }
+    ],
+    "days": [
+     {
+      "day": "2026-11-23",
+      "net": 1.2739843919999871,
+      "equity": 151.273984392,
+      "return_pct": 0.8493229279999914
+     }
+    ]
+   },
+   "short_room_cost_floor": {
+    "stats": {
+     "trades": 1,
+     "wins": 0,
+     "days": 1,
+     "equity": 149.36240371405,
+     "net": -0.6375962859499964,
+     "realized_mdd_pct": 0.42506419063332856,
+     "net_less_best": -0.6375962859499964,
+     "net_less_best_symbol": -0.6375962859499964,
+     "same_qty_stress": -0.7844944719000045,
+     "target_days": 0,
+     "calendar_days": 1
+    },
+    "book": [
+     {
+      "symbol": "APT",
+      "side": -1,
+      "signal": 1795411543268,
+      "fill": 1795411549595,
+      "exit": 1795412286400,
+      "units": 382.0,
+      "contracts": 382.0,
+      "margin": 48.88427896666667,
+      "initial_risk": 0.6722687738000085,
+      "gross": -0.34380000000000455,
+      "fees": 0.14689818595,
+      "slippage": 0.1468981,
+      "funding": 0.0,
+      "net": -0.6375962859500046,
+      "stress": -0.7844944719000045,
+      "balance": 149.36240371405
+     }
+    ],
+    "days": [
+     {
+      "day": "2026-11-23",
+      "net": -0.6375962859500046,
+      "equity": 149.36240371405,
+      "return_pct": -0.42506419063333645
+     }
+    ]
+   },
+   "shared_room_cost_floor": {
+    "stats": {
+     "trades": 2,
+     "wins": 1,
+     "days": 1,
+     "equity": 150.631380805375,
+     "net": 0.6313808053749881,
+     "realized_mdd_pct": 0.42479451388006684,
+     "net_less_best": -0.6426035866249991,
+     "net_less_best_symbol": -0.6426035866249991,
+     "same_qty_stress": 0.33632136074998253,
+     "target_days": 0,
+     "calendar_days": 1
+    },
+    "book": [
+     {
+      "symbol": "XRP",
+      "side": 1,
+      "signal": 1795402142545,
+      "fill": 1795402142577,
+      "exit": 1795403754357,
+      "units": 160.0,
+      "contracts": 1.6,
+      "margin": 48.765704,
+      "initial_risk": 0.6857062239999844,
+      "gross": 1.5679999999999872,
+      "fees": 0.14700760799999998,
+      "slippage": 0.147008,
+      "funding": 0.0,
+      "net": 1.2739843919999871,
+      "stress": 1.1269767839999871,
+      "balance": 151.273984392
+     },
+     {
+      "symbol": "APT",
+      "side": -1,
+      "signal": 1795411543268,
+      "fill": 1795411549595,
+      "exit": 1795412286400,
+      "units": 385.0,
+      "contracts": 385.0,
+      "margin": 49.26818691666667,
+      "initial_risk": 0.6775483715000086,
+      "gross": -0.3465000000000046,
+      "fees": 0.14805183662500002,
+      "slippage": 0.14805175,
+      "funding": 0.0,
+      "net": -0.6426035866250046,
+      "stress": -0.7906554232500046,
+      "balance": 150.631380805375
+     }
+    ],
+    "days": [
+     {
+      "day": "2026-11-23",
+      "net": 0.6313808053749825,
+      "equity": 150.631380805375,
+      "return_pct": 0.42092053691665504
+     }
+    ]
+   },
+   "long_room_flow": {
+    "stats": {
+     "trades": 3,
+     "wins": 2,
+     "days": 1,
+     "equity": 151.9474285056,
+     "net": 1.9474285055999871,
+     "realized_mdd_pct": 0.36619644316666644,
+     "net_less_best": 0.6814065160499998,
+     "net_less_best_symbol": 0.6814065160499998,
+     "same_qty_stress": 1.509943111199998,
+     "target_days": 0,
+     "calendar_days": 1
+    },
+    "book": [
+     {
+      "symbol": "BCH",
+      "side": 1,
+      "signal": 1795400477088,
+      "fill": 1795400477089,
+      "exit": 1795400852457,
+      "units": 0.7400000000000001,
+      "contracts": 7.4,
+      "margin": 48.4498128,
+      "initial_risk": 0.6371372767999877,
+      "gross": -0.25899999999999584,
+      "fees": 0.14514736475,
+      "slippage": 0.1451473,
+      "funding": 0.0,
+      "net": -0.5492946647499959,
+      "stress": -0.6944420294999958,
+      "balance": 149.45070533525
+     },
+     {
+      "symbol": "DOT",
+      "side": 1,
+      "signal": 1795402236947,
+      "fill": 1795402238117,
+      "exit": 1795403753019,
+      "units": 224.0,
+      "contracts": 224.0,
+      "margin": 48.520248,
+      "initial_risk": 0.6550654879999893,
+      "gross": 1.5232000000000063,
+      "fees": 0.14624921919999997,
+      "slippage": 0.1462496,
+      "funding": 0.0,
+      "net": 1.2307011808000063,
+      "stress": 1.0844519616000063,
+      "balance": 150.68140651605
+     },
+     {
+      "symbol": "XRP",
+      "side": 1,
+      "signal": 1795402142545,
+      "fill": 1795402142577,
+      "exit": 1795403754357,
+      "units": 159.0,
+      "contracts": 1.59,
+      "margin": 48.46091834999999,
+      "initial_risk": 0.6814205600999844,
+      "gross": 1.5581999999999874,
+      "fees": 0.14608881045,
+      "slippage": 0.1460892,
+      "funding": 0.0,
+      "net": 1.2660219895499873,
+      "stress": 1.1199331790999874,
+      "balance": 151.9474285056
+     }
+    ],
+    "days": [
+     {
+      "day": "2026-11-23",
+      "net": 1.9474285055999978,
+      "equity": 151.9474285056,
+      "return_pct": 1.2982856703999985
+     }
+    ]
+   },
+   "short_room_flow": {
+    "stats": {
+     "trades": 1,
+     "wins": 0,
+     "days": 1,
+     "equity": 149.36240371405,
+     "net": -0.6375962859499964,
+     "realized_mdd_pct": 0.42506419063332856,
+     "net_less_best": -0.6375962859499964,
+     "net_less_best_symbol": -0.6375962859499964,
+     "same_qty_stress": -0.7844944719000045,
+     "target_days": 0,
+     "calendar_days": 1
+    },
+    "book": [
+     {
+      "symbol": "APT",
+      "side": -1,
+      "signal": 1795411543268,
+      "fill": 1795411549595,
+      "exit": 1795412286400,
+      "units": 382.0,
+      "contracts": 382.0,
+      "margin": 48.88427896666667,
+      "initial_risk": 0.6722687738000085,
+      "gross": -0.34380000000000455,
+      "fees": 0.14689818595,
+      "slippage": 0.1468981,
+      "funding": 0.0,
+      "net": -0.6375962859500046,
+      "stress": -0.7844944719000045,
+      "balance": 149.36240371405
+     }
+    ],
+    "days": [
+     {
+      "day": "2026-11-23",
+      "net": -0.6375962859500046,
+      "equity": 149.36240371405,
+      "return_pct": -0.42506419063333645
+     }
+    ]
+   },
+   "shared_room_flow": {
+    "stats": {
+     "trades": 4,
+     "wins": 2,
+     "days": 1,
+     "equity": 151.30148671852498,
+     "net": 1.301486718524984,
+     "realized_mdd_pct": 0.4251087322949987,
+     "net_less_best": 0.03546472897499675,
+     "net_less_best_symbol": 0.03546472897499675,
+     "same_qty_stress": 0.7151803870499933,
+     "target_days": 0,
+     "calendar_days": 1
+    },
+    "book": [
+     {
+      "symbol": "BCH",
+      "side": 1,
+      "signal": 1795400477088,
+      "fill": 1795400477089,
+      "exit": 1795400852457,
+      "units": 0.7400000000000001,
+      "contracts": 7.4,
+      "margin": 48.4498128,
+      "initial_risk": 0.6371372767999877,
+      "gross": -0.25899999999999584,
+      "fees": 0.14514736475,
+      "slippage": 0.1451473,
+      "funding": 0.0,
+      "net": -0.5492946647499959,
+      "stress": -0.6944420294999958,
+      "balance": 149.45070533525
+     },
+     {
+      "symbol": "DOT",
+      "side": 1,
+      "signal": 1795402236947,
+      "fill": 1795402238117,
+      "exit": 1795403753019,
+      "units": 224.0,
+      "contracts": 224.0,
+      "margin": 48.520248,
+      "initial_risk": 0.6550654879999893,
+      "gross": 1.5232000000000063,
+      "fees": 0.14624921919999997,
+      "slippage": 0.1462496,
+      "funding": 0.0,
+      "net": 1.2307011808000063,
+      "stress": 1.0844519616000063,
+      "balance": 150.68140651605
+     },
+     {
+      "symbol": "XRP",
+      "side": 1,
+      "signal": 1795402142545,
+      "fill": 1795402142577,
+      "exit": 1795403754357,
+      "units": 159.0,
+      "contracts": 1.59,
+      "margin": 48.46091834999999,
+      "initial_risk": 0.6814205600999844,
+      "gross": 1.5581999999999874,
+      "fees": 0.14608881045,
+      "slippage": 0.1460892,
+      "funding": 0.0,
+      "net": 1.2660219895499873,
+      "stress": 1.1199331790999874,
+      "balance": 151.9474285056
+     },
+     {
+      "symbol": "APT",
+      "side": -1,
+      "signal": 1795411543268,
+      "fill": 1795411549595,
+      "exit": 1795412286400,
+      "units": 387.0,
+      "contracts": 387.0,
+      "margin": 49.52412555,
+      "initial_risk": 0.6810681033000086,
+      "gross": -0.3483000000000046,
+      "fees": 0.14882093707500002,
+      "slippage": 0.14882085,
+      "funding": 0.0,
+      "net": -0.6459417870750046,
+      "stress": -0.7947627241500046,
+      "balance": 151.30148671852498
+     }
+    ],
+    "days": [
+     {
+      "day": "2026-11-23",
+      "net": 1.3014867185249932,
+      "equity": 151.30148671852498,
+      "return_pct": 0.8676578123499955
+     }
+    ]
+   },
+   "long_retest_room": {
+    "stats": {
+     "trades": 0,
+     "wins": 0,
+     "days": 0,
+     "equity": 150.0,
+     "net": 0.0,
+     "realized_mdd_pct": 0,
+     "net_less_best": 0.0,
+     "net_less_best_symbol": 0.0,
+     "same_qty_stress": 0,
+     "target_days": 0,
+     "calendar_days": 1
+    },
+    "book": [],
+    "days": [
+     {
+      "day": "2026-11-23",
+      "net": 0.0,
+      "equity": 150.0,
+      "return_pct": 0.0
+     }
+    ]
+   },
+   "short_retest_room": {
+    "stats": {
+     "trades": 1,
+     "wins": 0,
+     "days": 1,
+     "equity": 149.411939925,
+     "net": -0.5880600749999871,
+     "realized_mdd_pct": 0.39204004999998654,
+     "net_less_best": -0.5880600749999871,
+     "net_less_best_symbol": -0.5880600749999871,
+     "same_qty_stress": -0.7320901499999936,
+     "target_days": 0,
+     "calendar_days": 1
+    },
+    "book": [
+     {
+      "symbol": "UNI",
+      "side": -1,
+      "signal": 1795407673389,
+      "fill": 1795407675327,
+      "exit": 1795407706243,
+      "units": 30.0,
+      "contracts": 30.0,
+      "margin": 47.936020000000006,
+      "initial_risk": 0.5995561199999839,
+      "gross": -0.2999999999999936,
+      "fees": 0.14403007500000004,
+      "slippage": 0.14403,
+      "funding": 0.0,
+      "net": -0.5880600749999936,
+      "stress": -0.7320901499999936,
+      "balance": 149.411939925
+     }
+    ],
+    "days": [
+     {
+      "day": "2026-11-23",
+      "net": -0.5880600749999936,
+      "equity": 149.411939925,
+      "return_pct": -0.39204004999999575
+     }
+    ]
+   },
+   "shared_retest_room": {
+    "stats": {
+     "trades": 1,
+     "wins": 0,
+     "days": 1,
+     "equity": 149.411939925,
+     "net": -0.5880600749999871,
+     "realized_mdd_pct": 0.39204004999998654,
+     "net_less_best": -0.5880600749999871,
+     "net_less_best_symbol": -0.5880600749999871,
+     "same_qty_stress": -0.7320901499999936,
+     "target_days": 0,
+     "calendar_days": 1
+    },
+    "book": [
+     {
+      "symbol": "UNI",
+      "side": -1,
+      "signal": 1795407673389,
+      "fill": 1795407675327,
+      "exit": 1795407706243,
+      "units": 30.0,
+      "contracts": 30.0,
+      "margin": 47.936020000000006,
+      "initial_risk": 0.5995561199999839,
+      "gross": -0.2999999999999936,
+      "fees": 0.14403007500000004,
+      "slippage": 0.14403,
+      "funding": 0.0,
+      "net": -0.5880600749999936,
+      "stress": -0.7320901499999936,
+      "balance": 149.411939925
+     }
+    ],
+    "days": [
+     {
+      "day": "2026-11-23",
+      "net": -0.5880600749999936,
+      "equity": 149.411939925,
+      "return_pct": -0.39204004999999575
+     }
+    ]
+   }
+  }
+ },
+ "matched_counterfactuals": "evidence.zip day/diagnostics, day/timing, and day/pc290. Individual event outcomes are not a portfolio.",
+ "historical_60_event_diagnostic": "Separate previously inspected 22-instrument mock sample, 8 winners and 52 losers. Do not pool with current events.",
+ "historical_13_rule_timetable": "retired; no observation, nomination, promotion, deployment or restoration",
+ "pace_scan": {
+  "registered_true_range": {
+   "normal": 7337,
+   "pace_disagrees": 1,
+   "fast": 1591,
+   "closed_setup": 39
+  },
+  "range_only_fast_periods": 1603,
+  "independent_windows": 361,
+  "range_only_windows": 362,
+  "scope": "11/23 is an observation under the 11/23 registration, not an independent performance date. Window counts are not fills."
+ },
+ "first_whole_eligible": {
+  "nov22_frozen": "2026-11-23",
+  "matched_ABC_and_native_speed": "2026-11-24",
+  "cadence_and_direct_high_low_speed": "2026-11-25"
+ },
+ "decision": "Research only. 1 of 60 prospective days for November 22 protocols; no qualified change. Incomplete source-day outcomes are not zero or qualified.",
+ "next": "Continue each matched book from the preceding state. Evaluate November 24 only after the KST midnight close. Use the preregistered matched-speed code on that date; first eligible November 25 for next_protocol. Keep historical/retired routes and live alert/position management separate.",
+ "development_gate": {
+  "outside_hours": 129,
+  "wait": 87,
+  "other_speed": 7,
+  "pass": 1
+ },
+ "daily_gate_audit": {
+  "registered_primary_date": "2026-11-23",
+  "inside": [],
+  "below": [
+   "selected_short",
+   "selected_scalp",
+   "selected_shared",
+   "trend_long",
+   "trend_short",
+   "five_families",
+   "bb_long",
+   "bb_short",
+   "bb_shared",
+   "scalp_long",
+   "three_shared",
+   "scalp_00",
+   "scalp_04",
+   "scalp_08",
+   "scalp_12",
+   "scalp_16",
+   "scalp_20"
+  ],
+  "above": [],
+  "missing": [],
+  "meaning": "A verified miss on any date rules out satisfying every date in this specific fixed 60-day cohort. Keep accumulating the predeclared cohort without restarting its balance. Evaluate separately registered changes only from their own prospective start."
+ }
+}

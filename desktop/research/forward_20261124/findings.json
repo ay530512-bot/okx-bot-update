@@ -1,0 +1,42 @@
+{
+ "cohort": "November 22 frozen five-minute candidates and controls, first KST day, pre-account-admission opportunities, descriptive only",
+ "evidence": "day/diagnostics/summary.json; net_win.png, net_loss.png; identical symbol, direction and time may represent overlapping rules. No deployment selection or volume filter fitted from these groups.",
+ "positive": {
+  "opportunities": 11,
+  "exit_reasons": {
+   "trailing_stop": 11
+  },
+  "aligned_10s_and_breadth": {
+   "False": 11
+  },
+  "absorption": {
+   "False": 11
+  },
+  "flow_coverage_missing": 0
+ },
+ "negative": {
+  "opportunities": 62,
+  "exit_reasons": {
+   "initial_stop": 41,
+   "upper_band": 2,
+   "trailing_stop": 19
+  },
+  "aligned_10s_and_breadth": {
+   "False": 54,
+   "True": 8
+  },
+  "absorption": {
+   "False": 61,
+   "True": 1
+  },
+  "flow_coverage_missing": 0
+ },
+ "equal_quantity_matched": {
+  "opportunities": 73,
+  "matched_directions": 73,
+  "both_loss": 50,
+  "original_gross_positive_net_negative": 18
+ },
+ "interpretation": "Both directions lost after modeled costs in many matched opportunities. Some positive gross price moves became net losses. These are accounting facts within the simulation; the recorded differences in indicator distributions are observational and do not establish causes. The execution tape and each fee, slippage and funding contribution are archived.",
+ "next_experiment": "The already frozen cadence filter requires aligned aggressor notional and a faster recent print rate. Keep the ungated entry at the same hours and compare same-size paths and no entry. Its first independent date is November 25 KST."
+}
