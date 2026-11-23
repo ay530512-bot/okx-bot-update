@@ -1,9 +1,9 @@
 {
   "format": 1,
-  "bytes": 805838,
-  "sha256": "72965b623d804aa1a0d049a1f634a5cff45bb80afdd1dfa377c971d716a0fb92",
-  "version": "3.3.3",
-  "revision": 30303,
-  "commit": "08ba47a32f9846fcbc07029465193883b4066d82",
-  "notes": "텔레그램은 진입 체결·부분 청산·최종 청산만 발송합니다."
+  "bytes": 806508,
+  "sha256": "f127a2a46c7b5c118c609788ce377413faa168ac1b002009b71fe210eef0f831",
+  "version": "3.4.0",
+  "revision": 30400,
+  "commit": "45a0dc8bb691984e4b43b20fefff593679c53e95",
+  "notes": "총자산 1/8 고정 증거금 · 수동 사용분 반영 · 청산 알림 첫 줄과 이미지에 확정 손익 표시"
 }
