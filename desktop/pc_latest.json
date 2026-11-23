@@ -1,9 +1,9 @@
 {
   "format": 1,
-  "bytes": 806846,
-  "sha256": "46587e8e57a961ce10cee5cf6e8fced2709c3da7b241499e4af7221178e90163",
-  "version": "3.3.2",
-  "revision": 30302,
-  "commit": "161006a33a1cf8d83f8fec71db42673de4740edb",
-  "notes": "진입·청산 체결 알림에는 색상 카드 한 장, 두 꼬리 신호에는 타점 차트를 보냅니다."
+  "bytes": 805838,
+  "sha256": "72965b623d804aa1a0d049a1f634a5cff45bb80afdd1dfa377c971d716a0fb92",
+  "version": "3.3.3",
+  "revision": 30303,
+  "commit": "08ba47a32f9846fcbc07029465193883b4066d82",
+  "notes": "텔레그램은 진입 체결·부분 청산·최종 청산만 발송합니다."
 }
