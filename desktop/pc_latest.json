@@ -1,9 +1,9 @@
 {
   "format": 1,
-  "bytes": 786232,
-  "sha256": "2508a5612951e81d439e722c020b4f0e70ee60fa247a6e44897c5c66262b4ebd",
-  "version": "3.2.0",
-  "revision": 30200,
-  "commit": "2dd0b6c5ffefb50090993e92dacd4c8e2eece775",
-  "notes": "두 타이밍 옵션 동시 사용 · 신규 진입 5배 고정 · 모든 전략 상시 활성화"
+  "bytes": 786406,
+  "sha256": "66f138705c23734226dae4f7f9e06e7ae8894dab98fce5511d7623fa649bd6bd",
+  "version": "3.2.1",
+  "revision": 30201,
+  "commit": "3233782745ef3ff84e3cd5cea5a545a89d729858",
+  "notes": "봉 마감 전략 7종의 검토·미진입·주문 접수 알림은 최근 활동에 기록합니다. 두 꼬리 신호와 체결·청산·보호 알림은 유지합니다."
 }
