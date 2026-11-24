@@ -1,9 +1,9 @@
 {
   "format": 1,
-  "bytes": 810325,
-  "sha256": "6069baabb555d0eb71272fbc548157255a25f1799f6b8517b0ead75ccd87c0fc",
-  "version": "3.5.1",
-  "revision": 30501,
-  "commit": "f9fd28302f9766e6cd8a8f79e28760263a98cdca",
-  "notes": "보유분 인계 · 별도 종목 수동 지정가 유지 · 일시적 주문 처리 시 자동 재확인"
+  "bytes": 811049,
+  "sha256": "3bae835406982708ee568e3c81e9e866c79d4532a9fa0275b125cb61b24fc9b4",
+  "version": "3.5.2",
+  "revision": 30502,
+  "commit": "178502d73b86a6c1836828a294648fde8eb2c852",
+  "notes": "자동 진입조건표에 5개 전략 조건과 롱·숏 차트 예시 10개 상시 표시"
 }
