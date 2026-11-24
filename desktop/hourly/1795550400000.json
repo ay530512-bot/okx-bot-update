@@ -1,0 +1,13 @@
+{
+  "v": 1,
+  "hour": 1795550400000,
+  "issued": 1795550772446,
+  "symbol": "MMT-USDT-SWAP",
+  "side": "LONG",
+  "low": "0.2213",
+  "high": "0.2217",
+  "stop": "0.2201",
+  "target": "0.2268",
+  "mode": "enter",
+  "steps": []
+}
