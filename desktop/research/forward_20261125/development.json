@@ -1,0 +1,76 @@
+{
+ "date": "2026-11-23",
+ "role": "already inspected, preadmitted PC290 direction matches, not independent",
+ "rows": [
+  {
+   "symbol": "UNI",
+   "signal": 1795407662770,
+   "side": -1,
+   "status": "wait",
+   "vwap": 4.768831081657441,
+   "room": 0.022168918342559074,
+   "required": 0.0225819999999999,
+   "baseline_net": -0.25957803850000255
+  },
+  {
+   "symbol": "TRX",
+   "signal": 1795437078781,
+   "side": -1,
+   "status": "wait",
+   "vwap": 0.3072945716771138,
+   "room": 0.00022542832288618975,
+   "required": 0.0012300800000000001,
+   "baseline_net": -0.038480994249999206
+  },
+  {
+   "symbol": "LTC",
+   "signal": 1795436456931,
+   "side": -1,
+   "status": "wait",
+   "vwap": 40.8807994626846,
+   "room": 0.06920053731540321,
+   "required": 0.1638,
+   "baseline_net": 0.021864029999993186
+  },
+  {
+   "symbol": "DOT",
+   "signal": 1795402236947,
+   "side": 1,
+   "status": "pass",
+   "vwap": 0.6521455584997626,
+   "room": 0.002845558499762646,
+   "required": 0.0025972,
+   "baseline_net": 0.42854773260000223
+  },
+  {
+   "symbol": "BCH",
+   "signal": 1795400477088,
+   "side": 1,
+   "status": "wait",
+   "vwap": 196.86074449875767,
+   "room": 0.5407444987576753,
+   "required": 0.78528,
+   "baseline_net": -0.18557252187499856
+  },
+  {
+   "symbol": "XRP",
+   "signal": 1795402142545,
+   "side": 1,
+   "status": "wait",
+   "vwap": 0.916751826841149,
+   "room": 0.00285182684114893,
+   "required": 0.003827800000000002,
+   "baseline_net": 0.46181934209999526
+  },
+  {
+   "symbol": "APT",
+   "signal": 1795411543268,
+   "side": -1,
+   "status": "wait",
+   "vwap": 0.3826542336274666,
+   "room": 0.001345766372533419,
+   "required": 0.001668000000000012,
+   "baseline_net": -0.22365943015000161
+  }
+ ]
+}

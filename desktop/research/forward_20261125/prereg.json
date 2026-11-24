@@ -1,0 +1,12 @@
+{
+ "recorded_utc": "2026-11-24T15:33:22.742038+00:00",
+ "first_kst_day": "2026-11-26",
+ "last_kst_day": "2027-01-24",
+ "code_sha256": "29fbe28aae43a219a3978ae6e4fd1384c4a9529cc64fd6805e3d5bdbf50f8610",
+ "source": "fixed deployed_wick15 direct reaction in normal flow, both sides, all KST hours, same immediate tick signal, newly gated versus identical eligible ungated sample",
+ "stop": "Before fill use original initial structure stop rounded to tick, signal raw price; no signal if missing. One-minute native volCcy is base and volCcyQuote USDT for swaps. Last 60 completed native 1m; favorable distance to trailing VWAP >= max(2 times round-trip estimated cost, original stop distance plus cost), round-trip cost = 0.20% of signal price. Condition in vwap_room.py",
+ "controls": "Parent B original structural trailing, matched A fixed +-1%, C unanimous trend, D symmetric stop and E skip, same quantity and same risk; prospective continuous individual long, short and shared 150 USDT account from 11/26. Preserve old studies and frozen cadence branch. No live activation.",
+ "costs": "Same parent protocol.md, 5bps each side fee and slippage, 10bps each side slippage stress, actual funding; reserve 3, 3 slots, risk 0.5% and portfolio 2%, 3-5x, same-symbol and first-anchor dedup",
+ "decision": "Entire parent 60-calendar-day inclusive daily 5%-10% gate, complete data, each standalone and shared, 30 fills across 10 dates and 10 per half. Other dependency, holdout and cost stress tests inherited verbatim.",
+ "history": "November 23 development only. November 24 already closed; November 25 started before registration. Neither is independent for this hypothesis."
+}
