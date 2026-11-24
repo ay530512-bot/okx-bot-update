@@ -1,9 +1,9 @@
 {
   "format": 1,
-  "version": "4.1",
-  "revision": 40100,
-  "commit": "179381a889b9035ae2bf008c29597c2a1e52f1c9",
-  "bytes": 826229,
-  "sha256": "3e5fbce75f0aff8a212a001116153be3618b3e7c23ce5da7266e615e1b1db6da",
-  "notes": "PC 버전명을 4.1로 변경"
+  "version": "4.1.1",
+  "revision": 40101,
+  "commit": "cc7b37cd37281276de2ae888a0aa20fd8bc39d18",
+  "bytes": 821305,
+  "sha256": "a12777ed7753aced1c4c52dea59d9bed7955019c92c503769fb01fbc8a3d22c4",
+  "notes": "정각·15분·활성 5개 규칙 신호 즉시 시장가 주문. 스프레드·예상 슬리피지·예상 손실·모의 성적 추가 차단 해제. 메인 진입조건표 갱신."
 }
