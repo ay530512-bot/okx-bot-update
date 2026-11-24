@@ -1,9 +1,9 @@
 {
   "format": 1,
-  "bytes": 817546,
-  "sha256": "05f8478dcde5f84abffd13c9803253cd63cfa35b87180bc7edc27ff673d452f4",
-  "version": "3.6.3",
-  "revision": 30603,
-  "commit": "1c1b09a348c658f3b76bebc330f1e12be83d3013",
-  "notes": "13번 반전 돌파 롱·숏은 다음 5분봉 마감 전까지 최신 호가로 진입 재평가"
+  "revision": 30604,
+  "version": "3.6.4",
+  "bytes": 820522,
+  "sha256": "8bcbdefe5113b5b27248817932b6574b6e70a89e07f9c9b04120b0a37585b8ea",
+  "commit": "928e44899d0d4caabb5fb0958d0d641f8de65b0d",
+  "notes": "15분마다 OKX 등락률 상·하위 10종목 중 롱·숏 후보 한 종목을 기존 텔레그램으로 전송"
 }
