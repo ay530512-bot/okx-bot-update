@@ -1,0 +1,1046 @@
+{
+ "day_kst": "2026-11-24",
+ "window_ms": [
+  1795446000000,
+  1795532400000
+ ],
+ "release": {
+  "format": 1,
+  "revision": 30604,
+  "version": "3.6.4",
+  "bytes": 820522,
+  "sha256": "8bcbdefe5113b5b27248817932b6574b6e70a89e07f9c9b04120b0a37585b8ea",
+  "commit": "928e44899d0d4caabb5fb0958d0d641f8de65b0d",
+  "notes": "15\ubd84\ub9c8\ub2e4 OKX \ub4f1\ub77d\ub960 \uc0c1\u00b7\ud558\uc704 10\uc885\ubaa9 \uc911 \ub871\u00b7\uc20f \ud6c4\ubcf4 \ud55c \uc885\ubaa9\uc744 \uae30\uc874 \ud154\ub808\uadf8\ub7a8\uc73c\ub85c \uc804\uc1a1"
+ },
+ "release_registry": "d05836f9f10225066aa03becd3cec99daa413d47",
+ "pinned_comparator": {
+  "public_closed_offers": {
+   "window30_reversal": 1300,
+   "retest": 117,
+   "pullback": 184,
+   "breakout": 141
+  },
+  "scope": "Ideal closed-candle functions for ACTIVE rules; no private fills, actual order-book depth or historical activation data. Package published 22:36 KST. Prepublication replay illustrative."
+ },
+ "quotes": "https://www.okx.com/api/v5/market/history-trades",
+ "candles": "https://www.okx.com/api/v5/market/history-candles",
+ "archive_status": "day/archive_status.json",
+ "prior_ledger": "04eb16fdee6a9a9896d5e5a9b4aaac9bf7c21068",
+ "type": "OKX public simulation only. No PC2.15 shadow or verified private account inputs.",
+ "originals": {
+  "selected_short": {
+   "base": {
+    "status": "below",
+    "opening": 149.81703444094003,
+    "closing": 152.03220273430006,
+    "pct": 1.478582393268013,
+    "admissions": 1,
+    "max_drawdown_minute_pct": 0.0
+   },
+   "stress": {
+    "status": "below",
+    "opening": 148.74511663410001,
+    "closing": 150.34278136033504,
+    "pct": 1.0740955820184306,
+    "admissions": 1,
+    "max_drawdown_minute_pct": 0.0
+   },
+   "base_lock": {
+    "status": "below",
+    "opening": 149.81703444094003,
+    "closing": 152.03220273430006,
+    "pct": 1.478582393268013,
+    "admissions": 1,
+    "max_drawdown_minute_pct": 0.0
+   },
+   "stress_lock": {
+    "status": "below",
+    "opening": 148.74511663410001,
+    "closing": 150.34278136033504,
+    "pct": 1.0740955820184306,
+    "admissions": 1,
+    "max_drawdown_minute_pct": 0.0
+   },
+   "one_r": {
+    "status": "below",
+    "opening": 150.8752821754725,
+    "closing": 153.41561240047503,
+    "pct": 1.6837285659873968,
+    "admissions": 1,
+    "max_drawdown_minute_pct": 0.0
+   },
+   "full_slot": {
+    "status": "below",
+    "opening": 150,
+    "closing": 150,
+    "pct": 0.0,
+    "admissions": 0,
+    "max_drawdown_minute_pct": 0.0
+   }
+  },
+  "selected_scalp": {
+   "base": {
+    "status": "below",
+    "opening": 150,
+    "closing": 150,
+    "pct": 0.0,
+    "admissions": 0,
+    "max_drawdown_minute_pct": 0.0
+   },
+   "stress": {
+    "status": "below",
+    "opening": 150,
+    "closing": 150,
+    "pct": 0.0,
+    "admissions": 0,
+    "max_drawdown_minute_pct": 0.0
+   },
+   "base_lock": {
+    "status": "below",
+    "opening": 150,
+    "closing": 150,
+    "pct": 0.0,
+    "admissions": 0,
+    "max_drawdown_minute_pct": 0.0
+   },
+   "stress_lock": {
+    "status": "below",
+    "opening": 150,
+    "closing": 150,
+    "pct": 0.0,
+    "admissions": 0,
+    "max_drawdown_minute_pct": 0.0
+   },
+   "one_r": {
+    "status": "below",
+    "opening": 150,
+    "closing": 150,
+    "pct": 0.0,
+    "admissions": 0,
+    "max_drawdown_minute_pct": 0.0
+   },
+   "full_slot": {
+    "status": "below",
+    "opening": 150,
+    "closing": 150,
+    "pct": 0.0,
+    "admissions": 0,
+    "max_drawdown_minute_pct": 0.0
+   }
+  },
+  "selected_shared": {
+   "base": {
+    "status": "below",
+    "opening": 149.81703444094003,
+    "closing": 152.03220273430006,
+    "pct": 1.478582393268013,
+    "admissions": 1,
+    "max_drawdown_minute_pct": 0.0
+   },
+   "stress": {
+    "status": "below",
+    "opening": 148.74511663410001,
+    "closing": 150.34278136033504,
+    "pct": 1.0740955820184306,
+    "admissions": 1,
+    "max_drawdown_minute_pct": 0.0
+   },
+   "base_lock": {
+    "status": "below",
+    "opening": 149.81703444094003,
+    "closing": 152.03220273430006,
+    "pct": 1.478582393268013,
+    "admissions": 1,
+    "max_drawdown_minute_pct": 0.0
+   },
+   "stress_lock": {
+    "status": "below",
+    "opening": 148.74511663410001,
+    "closing": 150.34278136033504,
+    "pct": 1.0740955820184306,
+    "admissions": 1,
+    "max_drawdown_minute_pct": 0.0
+   },
+   "one_r": {
+    "status": "below",
+    "opening": 150.8752821754725,
+    "closing": 153.41561240047503,
+    "pct": 1.6837285659873968,
+    "admissions": 1,
+    "max_drawdown_minute_pct": 0.0
+   },
+   "full_slot": {
+    "status": "below",
+    "opening": 150,
+    "closing": 150,
+    "pct": 0.0,
+    "admissions": 0,
+    "max_drawdown_minute_pct": 0.0
+   }
+  },
+  "trend_long": {
+   "base": {
+    "status": "below",
+    "opening": 148.1045322763551,
+    "closing": 146.77795215608015,
+    "pct": -0.8957052832114676,
+    "admissions": 4,
+    "max_drawdown_minute_pct": 1.144158031785636
+   },
+   "stress": {
+    "status": "below",
+    "opening": 147.67277385555008,
+    "closing": 147.67277385555008,
+    "pct": 0.0,
+    "admissions": 0,
+    "max_drawdown_minute_pct": 0.0
+   }
+  },
+  "trend_short": {
+   "base": {
+    "status": "below",
+    "opening": 148.88652522378757,
+    "closing": 148.88652522378757,
+    "pct": 0.0,
+    "admissions": 0,
+    "max_drawdown_minute_pct": 0.0
+   },
+   "stress": {
+    "status": "below",
+    "opening": 150,
+    "closing": 150,
+    "pct": 0.0,
+    "admissions": 0,
+    "max_drawdown_minute_pct": 0.0
+   }
+  },
+  "five_families": {
+   "base": {
+    "status": "below",
+    "opening": 144.19273043341278,
+    "closing": 141.46801822271294,
+    "pct": -1.889632162807331,
+    "admissions": 9,
+    "max_drawdown_minute_pct": 2.5145584144924737
+   },
+   "stress": {
+    "status": "below",
+    "opening": 147.67277385555008,
+    "closing": 147.67277385555008,
+    "pct": 0.0,
+    "admissions": 0,
+    "max_drawdown_minute_pct": 0.0
+   }
+  },
+  "bb_long": {
+   "base": {
+    "status": "below",
+    "opening": 150,
+    "closing": 149.32152327542502,
+    "pct": -0.4523178163833186,
+    "admissions": 2,
+    "max_drawdown_minute_pct": 0.5222478338833048
+   },
+   "stress": {
+    "status": "below",
+    "opening": 150,
+    "closing": 150,
+    "pct": 0.0,
+    "admissions": 0,
+    "max_drawdown_minute_pct": 0.0
+   }
+  },
+  "bb_short": {
+   "base": {
+    "status": "below",
+    "opening": 148.35222497925008,
+    "closing": 148.35222497925008,
+    "pct": 0.0,
+    "admissions": 0,
+    "max_drawdown_minute_pct": 0.0
+   },
+   "stress": {
+    "status": "below",
+    "opening": 150,
+    "closing": 150,
+    "pct": 0.0,
+    "admissions": 0,
+    "max_drawdown_minute_pct": 0.0
+   }
+  },
+  "bb_shared": {
+   "base": {
+    "status": "below",
+    "opening": 148.35222497925008,
+    "closing": 147.6797760552251,
+    "pct": -0.45327862397684937,
+    "admissions": 2,
+    "max_drawdown_minute_pct": 0.5239853668414396
+   },
+   "stress": {
+    "status": "below",
+    "opening": 150,
+    "closing": 150,
+    "pct": 0.0,
+    "admissions": 0,
+    "max_drawdown_minute_pct": 0.0
+   }
+  },
+  "scalp_long": {
+   "base": {
+    "status": "below",
+    "opening": 148.76985115853762,
+    "closing": 147.94674479413771,
+    "pct": -0.5532749801051784,
+    "admissions": 3,
+    "max_drawdown_minute_pct": 1.1885207837007639
+   },
+   "stress": {
+    "status": "below",
+    "opening": 150,
+    "closing": 150,
+    "pct": 0.0,
+    "admissions": 0,
+    "max_drawdown_minute_pct": 0.0
+   }
+  },
+  "three_shared": {
+   "base": {
+    "status": "below",
+    "opening": 147.1323814386127,
+    "closing": 145.66015974908782,
+    "pct": -1.0006102498511638,
+    "admissions": 5,
+    "max_drawdown_minute_pct": 1.6309757907548628
+   },
+   "stress": {
+    "status": "below",
+    "opening": 150,
+    "closing": 150,
+    "pct": 0.0,
+    "admissions": 0,
+    "max_drawdown_minute_pct": 0.0
+   }
+  },
+  "scalp_00": {
+   "base": {
+    "status": "below",
+    "opening": 149.40448957173757,
+    "closing": 148.8126809205876,
+    "pct": -0.396111691721146,
+    "admissions": 1,
+    "max_drawdown_minute_pct": 0.396111691721146
+   },
+   "stress": {
+    "status": "below",
+    "opening": 150,
+    "closing": 150,
+    "pct": 0.0,
+    "admissions": 0,
+    "max_drawdown_minute_pct": 0.0
+   }
+  },
+  "scalp_04": {
+   "base": {
+    "status": "below",
+    "opening": 148.54565760861905,
+    "closing": 147.93666922874408,
+    "pct": -0.40996713716096034,
+    "admissions": 1,
+    "max_drawdown_minute_pct": 0.40996713716096034
+   },
+   "stress": {
+    "status": "below",
+    "opening": 150,
+    "closing": 150,
+    "pct": 0.0,
+    "admissions": 0,
+    "max_drawdown_minute_pct": 0.0
+   }
+  },
+  "scalp_08": {
+   "base": {
+    "status": "below",
+    "opening": 149.37579594015003,
+    "closing": 149.37579594015003,
+    "pct": 0.0,
+    "admissions": 0,
+    "max_drawdown_minute_pct": 0.0
+   },
+   "stress": {
+    "status": "below",
+    "opening": 150,
+    "closing": 150,
+    "pct": 0.0,
+    "admissions": 0,
+    "max_drawdown_minute_pct": 0.0
+   }
+  },
+  "scalp_12": {
+   "base": {
+    "status": "below",
+    "opening": 149.84557728021701,
+    "closing": 149.84557728021701,
+    "pct": 0.0,
+    "admissions": 0,
+    "max_drawdown_minute_pct": 0.0
+   },
+   "stress": {
+    "status": "below",
+    "opening": 150,
+    "closing": 150,
+    "pct": 0.0,
+    "admissions": 0,
+    "max_drawdown_minute_pct": 0.0
+   }
+  },
+  "scalp_16": {
+   "base": {
+    "status": "below",
+    "opening": 149.38715031970003,
+    "closing": 149.38715031970003,
+    "pct": 0.0,
+    "admissions": 0,
+    "max_drawdown_minute_pct": 0.0
+   },
+   "stress": {
+    "status": "below",
+    "opening": 150,
+    "closing": 150,
+    "pct": 0.0,
+    "admissions": 0,
+    "max_drawdown_minute_pct": 0.0
+   }
+  },
+  "scalp_20": {
+   "base": {
+    "status": "below",
+    "opening": 153.01546000092503,
+    "closing": 153.40720427375007,
+    "pct": 0.2560161390376292,
+    "admissions": 1,
+    "max_drawdown_minute_pct": 0.3845851735971073
+   },
+   "stress": {
+    "status": "below",
+    "opening": 150,
+    "closing": 150,
+    "pct": 0.0,
+    "admissions": 0,
+    "max_drawdown_minute_pct": 0.0
+   }
+  }
+ },
+ "matched": {
+  "native_fast_direct": {
+   "A": {
+    "status": "below",
+    "profit_lock": false,
+    "lock_triggered": false,
+    "opening_nav": 150,
+    "closing_nav": 147.28789308619918,
+    "day_return_pct": -1.808071275867218,
+    "closed_trades": 39,
+    "counts": {
+     "original_risk_admission": 32,
+     "three_slots": 75,
+     "duplicate_symbol": 11
+    },
+    "zero_trades": false,
+    "net": -2.712106913800824,
+    "largest_winner": 0.4839644096405547,
+    "best_symbol": 1.5729672417500051,
+    "net_stress_same_contracts": -4.604506188993793,
+    "drawdown_sampled_pct": 2.916371756997682
+   },
+   "B": {
+    "status": "missing",
+    "reason": "unverified exit or decision",
+    "closing_nav": null,
+    "day_return_pct": null,
+    "partial_verified_exits": 16,
+    "counts": {
+     "original_risk_admission": 19
+    }
+   },
+   "C": {
+    "status": "below",
+    "profit_lock": false,
+    "lock_triggered": false,
+    "opening_nav": 150,
+    "closing_nav": 140.0458738839412,
+    "day_return_pct": -6.636084077372539,
+    "closed_trades": 40,
+    "counts": {
+     "original_risk_admission": 31,
+     "three_slots": 66,
+     "duplicate_symbol": 8,
+     "trend_wait": 12
+    },
+    "zero_trades": false,
+    "net": -9.954126116058802,
+    "largest_winner": 0.45465089455874913,
+    "best_symbol": 0.3917401199999971,
+    "net_stress_same_contracts": -11.78967506898501,
+    "drawdown_sampled_pct": 6.86343125415253
+   },
+   "D": {
+    "status": "missing",
+    "reason": "unverified exit or decision",
+    "closing_nav": null,
+    "day_return_pct": null,
+    "partial_verified_exits": 16,
+    "counts": {
+     "original_risk_admission": 19
+    }
+   },
+   "E": {
+    "status": "below",
+    "profit_lock": false,
+    "lock_triggered": false,
+    "opening_nav": 150,
+    "closing_nav": 150,
+    "day_return_pct": 0.0,
+    "closed_trades": 0,
+    "counts": {
+     "intentional_skip": 157
+    },
+    "zero_trades": true,
+    "net": 0,
+    "largest_winner": 0,
+    "best_symbol": 0,
+    "net_stress_same_contracts": 0,
+    "drawdown_sampled_pct": 0
+   }
+  },
+  "deployed_wick15": {
+   "A": {
+    "status": "below",
+    "profit_lock": false,
+    "lock_triggered": false,
+    "opening_nav": 150,
+    "closing_nav": 150.84668326655,
+    "day_return_pct": 0.5644555110333238,
+    "closed_trades": 2,
+    "counts": {
+     "original_risk_admission": 2
+    },
+    "zero_trades": false,
+    "net": 0.8466832665500021,
+    "largest_winner": 0.4529271455500018,
+    "best_symbol": 0.4529271455500018,
+    "net_stress_same_contracts": 0.7369250331000072,
+    "drawdown_sampled_pct": 0.4202075145308126
+   },
+   "B": {
+    "status": "below",
+    "profit_lock": false,
+    "lock_triggered": false,
+    "opening_nav": 150,
+    "closing_nav": 149.67022877009998,
+    "day_return_pct": -0.21984748660001108,
+    "closed_trades": 2,
+    "counts": {
+     "original_risk_admission": 2
+    },
+    "zero_trades": false,
+    "net": -0.32977122990001817,
+    "largest_winner": 0.02829002749999945,
+    "best_symbol": 0.02829002749999945,
+    "net_stress_same_contracts": -0.43485685980000255,
+    "drawdown_sampled_pct": 0.3787335927067925
+   },
+   "C": {
+    "status": "below",
+    "profit_lock": false,
+    "lock_triggered": false,
+    "opening_nav": 150,
+    "closing_nav": 148.75087114055,
+    "day_return_pct": -0.8327525729666663,
+    "closed_trades": 2,
+    "counts": {
+     "original_risk_admission": 2
+    },
+    "zero_trades": false,
+    "net": -1.2491288594499963,
+    "largest_winner": 0,
+    "best_symbol": 0,
+    "net_stress_same_contracts": -1.3547934189,
+    "drawdown_sampled_pct": 1.0078386218500213
+   },
+   "D": {
+    "status": "below",
+    "profit_lock": false,
+    "lock_triggered": false,
+    "opening_nav": 150,
+    "closing_nav": 149.48800772464998,
+    "day_return_pct": -0.3413281835666804,
+    "closed_trades": 2,
+    "counts": {
+     "original_risk_admission": 2
+    },
+    "zero_trades": false,
+    "net": -0.5119922753500248,
+    "largest_winner": 0,
+    "best_symbol": 0,
+    "net_stress_same_contracts": -0.6172884507000107,
+    "drawdown_sampled_pct": 0.3413281835666804
+   },
+   "E": {
+    "status": "below",
+    "profit_lock": false,
+    "lock_triggered": false,
+    "opening_nav": 150,
+    "closing_nav": 150,
+    "day_return_pct": 0.0,
+    "closed_trades": 0,
+    "counts": {
+     "intentional_skip": 4
+    },
+    "zero_trades": true,
+    "net": 0,
+    "largest_winner": 0,
+    "best_symbol": 0,
+    "net_stress_same_contracts": 0,
+    "drawdown_sampled_pct": 0
+   }
+  },
+  "shared": {
+   "A": {
+    "status": "below",
+    "profit_lock": false,
+    "lock_triggered": false,
+    "opening_nav": 150,
+    "closing_nav": 147.2082583241789,
+    "day_return_pct": -1.8611611172140718,
+    "closed_trades": 39,
+    "counts": {
+     "original_risk_admission": 34,
+     "three_slots": 77,
+     "duplicate_symbol": 11
+    },
+    "zero_trades": false,
+    "net": -2.7917416758211004,
+    "largest_winner": 0.4839644096405547,
+    "best_symbol": 1.135401106749998,
+    "net_stress_same_contracts": -4.672604844534296,
+    "drawdown_sampled_pct": 2.9689952699350375
+   },
+   "B": {
+    "status": "missing",
+    "reason": "unverified exit or decision",
+    "closing_nav": null,
+    "day_return_pct": null,
+    "partial_verified_exits": 16,
+    "counts": {
+     "original_risk_admission": 20
+    }
+   },
+   "C": {
+    "status": "below",
+    "profit_lock": false,
+    "lock_triggered": false,
+    "opening_nav": 150,
+    "closing_nav": 140.22648084608971,
+    "day_return_pct": -6.515679435940191,
+    "closed_trades": 40,
+    "counts": {
+     "original_risk_admission": 33,
+     "three_slots": 68,
+     "duplicate_symbol": 8,
+     "trend_wait": 12
+    },
+    "zero_trades": false,
+    "net": -9.773519153910286,
+    "largest_winner": 0.45465089455874913,
+    "best_symbol": 0.3917401199999971,
+    "net_stress_same_contracts": -11.600308955688009,
+    "drawdown_sampled_pct": 6.743229482104174
+   },
+   "D": {
+    "status": "missing",
+    "reason": "unverified exit or decision",
+    "closing_nav": null,
+    "day_return_pct": null,
+    "partial_verified_exits": 16,
+    "counts": {
+     "original_risk_admission": 20
+    }
+   },
+   "E": {
+    "status": "below",
+    "profit_lock": false,
+    "lock_triggered": false,
+    "opening_nav": 150,
+    "closing_nav": 150,
+    "day_return_pct": 0.0,
+    "closed_trades": 0,
+    "counts": {
+     "intentional_skip": 161
+    },
+    "zero_trades": true,
+    "net": 0,
+    "largest_winner": 0,
+    "best_symbol": 0,
+    "net_stress_same_contracts": 0,
+    "drawdown_sampled_pct": 0
+   }
+  },
+  "speed_routed": {
+   "A": {
+    "status": "below",
+    "profit_lock": false,
+    "lock_triggered": false,
+    "opening_nav": 150,
+    "closing_nav": 149.970975039,
+    "day_return_pct": -0.01934997400000471,
+    "closed_trades": 2,
+    "counts": {
+     "original_risk_admission": 2
+    },
+    "zero_trades": false,
+    "net": -0.029024961000004623,
+    "largest_winner": 0.4313086338749989,
+    "best_symbol": 0.4313086338749989,
+    "net_stress_same_contracts": -0.12153742199999912,
+    "drawdown_sampled_pct": 0.5455819843282472
+   },
+   "B": {
+    "status": "below",
+    "profit_lock": false,
+    "lock_triggered": false,
+    "opening_nav": 150,
+    "closing_nav": 150.15801528775,
+    "day_return_pct": 0.1053435251666679,
+    "closed_trades": 2,
+    "counts": {
+     "original_risk_admission": 2
+    },
+    "zero_trades": false,
+    "net": 0.15801528775000406,
+    "largest_winner": 0.1255800517500017,
+    "best_symbol": 0.1255800517500017,
+    "net_stress_same_contracts": 0.06152297549999898,
+    "drawdown_sampled_pct": 0.16335787007264457
+   },
+   "C": {
+    "status": "below",
+    "profit_lock": false,
+    "lock_triggered": false,
+    "opening_nav": 150,
+    "closing_nav": 149.539666405125,
+    "day_return_pct": -0.3068890632500043,
+    "closed_trades": 1,
+    "counts": {
+     "original_risk_admission": 2,
+     "trend_wait": 1
+    },
+    "zero_trades": false,
+    "net": -0.46033359487501,
+    "largest_winner": 0,
+    "best_symbol": 0,
+    "net_stress_same_contracts": -0.500750439749998,
+    "drawdown_sampled_pct": 0.4268580145680767
+   },
+   "D": {
+    "status": "below",
+    "profit_lock": false,
+    "lock_triggered": false,
+    "opening_nav": 150,
+    "closing_nav": 149.6125373496,
+    "day_return_pct": -0.25830843360000744,
+    "closed_trades": 2,
+    "counts": {
+     "original_risk_admission": 2
+    },
+    "zero_trades": false,
+    "net": -0.3874626504000105,
+    "largest_winner": 0,
+    "best_symbol": 0,
+    "net_stress_same_contracts": -0.48039400080000333,
+    "drawdown_sampled_pct": 0.25830843360000744
+   },
+   "E": {
+    "status": "below",
+    "profit_lock": false,
+    "lock_triggered": false,
+    "opening_nav": 150,
+    "closing_nav": 150,
+    "day_return_pct": 0.0,
+    "closed_trades": 0,
+    "counts": {
+     "intentional_skip": 4
+    },
+    "zero_trades": true,
+    "net": 0,
+    "largest_winner": 0,
+    "best_symbol": 0,
+    "net_stress_same_contracts": 0,
+    "drawdown_sampled_pct": 0
+   }
+  }
+ },
+ "day1_AB_comparison": {
+  "calendar_role": "2026-11-24 KST: prospective day 1 of the Nov 23 registration",
+  "first_complete_eligible_for_current_registration": "2026-11-24",
+  "matched_AB_n": 125,
+  "A_minus_B_total": -8.882666787034072,
+  "A_minus_B_mean": -0.07106133429627258,
+  "A_improves": 50,
+  "A_worsens": 73,
+  "B_D_comparable": 125,
+  "loss_both_sides": 78,
+  "positive_gross_but_negative_after_costs_B": 28,
+  "same_quantity_cost_gate_diagnostics": {
+   "aligned_and_breadth": {
+    "pass": {
+     "n": 4,
+     "A_sum_net": -0.26683317609999724,
+     "B_sum_net": -0.004457910499992265
+    },
+    "fail": {
+     "n": 114,
+     "A_sum_net": -18.48126827373413,
+     "B_sum_net": -9.108042046648066
+    },
+    "unverified": {
+     "n": 7,
+     "A_sum_net": 1.8462432444420074,
+     "B_sum_net": 1.0933085387900097
+    }
+   },
+   "absorption_then_turn": {
+    "pass": {
+     "n": 1,
+     "A_sum_net": -0.5221441080000004,
+     "B_sum_net": -0.18648002400000008
+    },
+    "fail": {
+     "n": 124,
+     "A_sum_net": -16.37971409739212,
+     "B_sum_net": -7.832711394358048
+    },
+    "unverified": {
+     "n": 0,
+     "A_sum_net": 0,
+     "B_sum_net": 0
+    }
+   }
+  },
+  "inference": "These are conditional differences on identical checked opportunity paths. They do not establish an indicator cause, prove a live fill or qualify a rule on independent dates.",
+  "next_test": "Apply the already frozen same-direction-share and peer-breadth gates to new prints, including the opposite-pressure/then-turn variant, holding entry, risk cap, and realized exit method fixed. Compare coverage and frequency of wins as well as costs, separately for fast and normal pace. Examine sample loss explicitly; no new threshold was selected from the day."
+ },
+ "forward_counts": {
+  "nov22_controls": 2,
+  "nov23_matched": 1,
+  "nov24_cadence": 0,
+  "nov25_vwap_room": 0
+ },
+ "decision": "No promotion. Insufficient independent dates. Keep daily misses, missing paths and zero-trade days on their respective curves. Next day inherits closing NAV. Published PC version originates in separate work.",
+ "resized_stress_10bps_slippage": {
+  "native_fast_direct": {
+   "A": {
+    "status": "below",
+    "opening_nav": 150,
+    "closing_nav": 142.28053536325848,
+    "day_return_pct": -5.146309757827683,
+    "closed_trades": 38,
+    "reason": null
+   },
+   "B": {
+    "status": "missing",
+    "opening_nav": null,
+    "closing_nav": null,
+    "day_return_pct": null,
+    "closed_trades": null,
+    "reason": "unverified exit or decision"
+   },
+   "C": {
+    "status": "below",
+    "opening_nav": 150,
+    "closing_nav": 136.86462243445666,
+    "day_return_pct": -8.756918377028889,
+    "closed_trades": 40,
+    "reason": null
+   },
+   "D": {
+    "status": "missing",
+    "opening_nav": null,
+    "closing_nav": null,
+    "day_return_pct": null,
+    "closed_trades": null,
+    "reason": "unverified exit or decision"
+   },
+   "E": {
+    "status": "below",
+    "opening_nav": 150,
+    "closing_nav": 150,
+    "day_return_pct": 0.0,
+    "closed_trades": 0,
+    "reason": null
+   }
+  },
+  "deployed_wick15": {
+   "A": {
+    "status": "below",
+    "opening_nav": 150,
+    "closing_nav": 150.83178034545,
+    "day_return_pct": 0.5545202303000041,
+    "closed_trades": 2,
+    "reason": null
+   },
+   "B": {
+    "status": "below",
+    "opening_nav": 150,
+    "closing_nav": 149.52490133490002,
+    "day_return_pct": -0.31673244339998075,
+    "closed_trades": 2,
+    "reason": null
+   },
+   "C": {
+    "status": "below",
+    "opening_nav": 150,
+    "closing_nav": 148.57979531325,
+    "day_return_pct": -0.9468031244999953,
+    "closed_trades": 2,
+    "reason": null
+   },
+   "D": {
+    "status": "below",
+    "opening_nav": 150,
+    "closing_nav": 149.33712999135,
+    "day_return_pct": -0.4419133390999974,
+    "closed_trades": 2,
+    "reason": null
+   },
+   "E": {
+    "status": "below",
+    "opening_nav": 150,
+    "closing_nav": 150,
+    "day_return_pct": 0.0,
+    "closed_trades": 0,
+    "reason": null
+   }
+  },
+  "shared": {
+   "A": {
+    "status": "below",
+    "opening_nav": 150,
+    "closing_nav": 142.28053536325848,
+    "day_return_pct": -5.146309757827683,
+    "closed_trades": 38,
+    "reason": null
+   },
+   "B": {
+    "status": "missing",
+    "opening_nav": null,
+    "closing_nav": null,
+    "day_return_pct": null,
+    "closed_trades": null,
+    "reason": "unverified exit or decision"
+   },
+   "C": {
+    "status": "below",
+    "opening_nav": 150,
+    "closing_nav": 136.91696449342967,
+    "day_return_pct": -8.722023671046886,
+    "closed_trades": 40,
+    "reason": null
+   },
+   "D": {
+    "status": "missing",
+    "opening_nav": null,
+    "closing_nav": null,
+    "day_return_pct": null,
+    "closed_trades": null,
+    "reason": "unverified exit or decision"
+   },
+   "E": {
+    "status": "below",
+    "opening_nav": 150,
+    "closing_nav": 150,
+    "day_return_pct": 0.0,
+    "closed_trades": 0,
+    "reason": null
+   }
+  },
+  "speed_routed": {
+   "A": {
+    "status": "below",
+    "opening_nav": 150,
+    "closing_nav": 149.84917053255,
+    "day_return_pct": -0.10055297829999477,
+    "closed_trades": 2,
+    "reason": null
+   },
+   "B": {
+    "status": "below",
+    "opening_nav": 150,
+    "closing_nav": 150.08485145655,
+    "day_return_pct": 0.056567637700011275,
+    "closed_trades": 2,
+    "reason": null
+   },
+   "C": {
+    "status": "below",
+    "opening_nav": 150,
+    "closing_nav": 149.36615900775,
+    "day_return_pct": -0.4225606614999933,
+    "closed_trades": 1,
+    "reason": null
+   },
+   "D": {
+    "status": "below",
+    "opening_nav": 150,
+    "closing_nav": 149.45717763735,
+    "day_return_pct": -0.3618815751000093,
+    "closed_trades": 2,
+    "reason": null
+   },
+   "E": {
+    "status": "below",
+    "opening_nav": 150,
+    "closing_nav": 150,
+    "day_return_pct": 0.0,
+    "closed_trades": 0,
+    "reason": null
+   }
+  }
+ },
+ "midnight_anchor_resolution": {
+  "available": 15,
+  "consumed": 2
+ },
+ "matched_opportunities_after_dedup": 161,
+ "pressure_coverage": {
+  "covered": 161
+ },
+ "gaps_by_arm": {
+  "A": {},
+  "B": {
+   "entry-second order ambiguous": 2
+  },
+  "C": {},
+  "D": {
+   "entry-second order ambiguous": 2
+  }
+ },
+ "pc290_equity": {
+  "long_immediate": 152.0492726046,
+  "short_immediate": 149.245313128575,
+  "shared_immediate": 151.28421413512496,
+  "long_room": 152.0492726046,
+  "short_room": 149.42617380155,
+  "shared_room": 151.46892290752496,
+  "long_room_cost_floor": 151.273984392,
+  "short_room_cost_floor": 149.36240371405,
+  "shared_room_cost_floor": 150.631380805375,
+  "long_room_flow": 152.0492726046,
+  "short_room_flow": 149.36240371405,
+  "shared_room_flow": 151.403330817525,
+  "long_retest_room": 149.81936502625,
+  "short_retest_room": 149.411939925,
+  "shared_retest_room": 149.23130495125002
+ }
+}

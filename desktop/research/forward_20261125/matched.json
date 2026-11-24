@@ -1,0 +1,22 @@
+{
+ "files": 169,
+ "bytes": 592970,
+ "sha256": "ddfb81e4d3cf449de86aa60933e81703e1d53259d25cc7cdc81f72316db7b594",
+ "parts": [
+  {
+   "file": "matched.zip.part000",
+   "sha256": "bd34c5502ea13b1eaf73267eeee22cc8d3b03177e2c849bf2ebc0505a832ed6b",
+   "bytes": 216000
+  },
+  {
+   "file": "matched.zip.part001",
+   "sha256": "600a8c71114cdea1dd908b5a7b8321ea968a987ccd17002bf46f67d96cebe6f3",
+   "bytes": 216000
+  },
+  {
+   "file": "matched.zip.part002",
+   "sha256": "0b00937cd7ea9f2dc1188b93e06b571bf89c7537efd20d62a9eeb39cbaa25d4d",
+   "bytes": 160970
+  }
+ ]
+}
