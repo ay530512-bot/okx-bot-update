@@ -1,9 +1,9 @@
 {
   "format": 1,
-  "bytes": 809955,
-  "sha256": "7e2c3f2f5f3712b71b81d7296bc3d88e23c937d0379ce31748676bef3ad2a025",
-  "version": "3.5.0",
-  "revision": 30500,
-  "commit": "1dc55442a093163c927b4d37bea7e00bb6198483",
-  "notes": "자동 진입 1·6·7·8·13번 · 5분 15봉 반전 돌파 · 진입조건표에 롱·숏 예시"
+  "bytes": 810325,
+  "sha256": "6069baabb555d0eb71272fbc548157255a25f1799f6b8517b0ead75ccd87c0fc",
+  "version": "3.5.1",
+  "revision": 30501,
+  "commit": "f9fd28302f9766e6cd8a8f79e28760263a98cdca",
+  "notes": "보유분 인계 · 별도 종목 수동 지정가 유지 · 일시적 주문 처리 시 자동 재확인"
 }
