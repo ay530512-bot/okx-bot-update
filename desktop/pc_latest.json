@@ -1,9 +1,9 @@
 {
   "format": 1,
-  "version": "3.6.7",
-  "revision": 30607,
-  "commit": "491b1d8ed79516a06ae3a1a2d256eca3986bd895",
-  "bytes": 825704,
-  "sha256": "e855907fb08c792ffc36433e35265846909f11f210f4ba9cbf59de43c80b26d5",
-  "notes": "홈에 설치 버전별 진입 조건 및 정각 주문 설정 표시 · 자동매매 상태 문구 수정"
+  "version": "3.6.8",
+  "revision": 30608,
+  "commit": "d3903bc5a1f2f843b2019fef3030bcd5b41a0d97",
+  "bytes": 824997,
+  "sha256": "6a4024a28b63eefa00043a850f9940c84551210b045f5164aa52d4025238af1f",
+  "notes": "정각 신호 자동주문 항상 활성화 · 실거래 중지 및 계좌 보호 적용"
 }
