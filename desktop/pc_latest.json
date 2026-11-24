@@ -1,9 +1,9 @@
 {
   "format": 1,
-  "revision": 30604,
-  "version": "3.6.4",
-  "bytes": 820522,
-  "sha256": "8bcbdefe5113b5b27248817932b6574b6e70a89e07f9c9b04120b0a37585b8ea",
-  "commit": "928e44899d0d4caabb5fb0958d0d641f8de65b0d",
-  "notes": "15분마다 OKX 등락률 상·하위 10종목 중 롱·숏 후보 한 종목을 기존 텔레그램으로 전송"
+  "version": "3.6.5",
+  "revision": 30605,
+  "commit": "de8f76edbf470ce26b8e9137ba0a06252e7217ab",
+  "bytes": 821155,
+  "sha256": "3359029c9ce7cfdab78db84bcd586548f107fa9d69d4703b7dba11368ce1e559",
+  "notes": "15분 후보 분석에 다중 시간대 추세·지지저항·재시험·비용 반영"
 }
