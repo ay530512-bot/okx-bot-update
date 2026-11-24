@@ -1,9 +1,9 @@
 {
   "format": 1,
-  "version": "3.6.15",
-  "revision": 30615,
-  "commit": "5f5c67896b5793c71783d71b7fd12d66a2307cba",
-  "bytes": 826249,
-  "sha256": "656c7a19f5f120a94ef7681805a3e8ff695f0ff90cc2e6369ce11905d32e9fb9",
-  "notes": "15분·정각 신호의 개별·합산 예상 손실률 진입 차단 제거"
+  "version": "4.1",
+  "revision": 40100,
+  "commit": "179381a889b9035ae2bf008c29597c2a1e52f1c9",
+  "bytes": 826229,
+  "sha256": "3e5fbce75f0aff8a212a001116153be3618b3e7c23ce5da7266e615e1b1db6da",
+  "notes": "PC 버전명을 4.1로 변경"
 }
