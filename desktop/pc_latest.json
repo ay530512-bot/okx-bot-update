@@ -1,9 +1,9 @@
 {
   "format": 1,
-  "version": "3.6.5",
-  "revision": 30605,
-  "commit": "de8f76edbf470ce26b8e9137ba0a06252e7217ab",
-  "bytes": 821155,
-  "sha256": "3359029c9ce7cfdab78db84bcd586548f107fa9d69d4703b7dba11368ce1e559",
-  "notes": "15분 후보 분석에 다중 시간대 추세·지지저항·재시험·비용 반영"
+  "version": "3.6.6",
+  "revision": 30606,
+  "commit": "b78736c12a8053a82c63f05baa5753d09d829c63",
+  "bytes": 825126,
+  "sha256": "e03da0a3931f13020272083099b762f39ce226844f3c47e6a5e304b8c0973076",
+  "notes": "정각 채팅 신호 주문 연결 · PC에서 HOURLY_ON.bat로 활성화 · 기존 실거래 한도와 보호손절 적용"
 }
