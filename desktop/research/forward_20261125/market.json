@@ -1,0 +1,57 @@
+{
+ "files": 36,
+ "bytes": 2151546,
+ "sha256": "42393c87a31208e092205d2d1113fb20ca5dadc0b9ac27d5bd94869dbc45b7df",
+ "parts": [
+  {
+   "file": "market.zip.part000",
+   "sha256": "0b02658a9c46f35cf1827993b77d63dc15db2dd8f4c74e224e855e2c12d5b93c",
+   "bytes": 216000
+  },
+  {
+   "file": "market.zip.part001",
+   "sha256": "5482bacfe66677162caaa2e63eb8ac61b50c26d37f3ed7e2d96ccf817b1d052c",
+   "bytes": 216000
+  },
+  {
+   "file": "market.zip.part002",
+   "sha256": "a9e9419ee970159f3554f645b7b0ef5bac6bea819532fbcf83409eadda1b402b",
+   "bytes": 216000
+  },
+  {
+   "file": "market.zip.part003",
+   "sha256": "e6d96c91684396acd1cb372e293184fce9c46c060813666c74a95b06d5edd30c",
+   "bytes": 216000
+  },
+  {
+   "file": "market.zip.part004",
+   "sha256": "fc455162d672fa61fb31c409e1657d8abb45e8bbaae0999ad5cc5e5109021edb",
+   "bytes": 216000
+  },
+  {
+   "file": "market.zip.part005",
+   "sha256": "00e820344f3ce972166867ebc28f35452e167f31afb811ac1e03acdeba9e2060",
+   "bytes": 216000
+  },
+  {
+   "file": "market.zip.part006",
+   "sha256": "7545f19fdf971951eb60b4d05e9447760559fca2be031014e5215ddc9c690352",
+   "bytes": 216000
+  },
+  {
+   "file": "market.zip.part007",
+   "sha256": "b81b9faca6a271a358a3f443bda6eca1f47c6899c12b1d138eed0c579e9a2247",
+   "bytes": 216000
+  },
+  {
+   "file": "market.zip.part008",
+   "sha256": "a8f7db5faa2f46973742136e2afae1a5d83b1104578d6634a1b4d34af67b389d",
+   "bytes": 216000
+  },
+  {
+   "file": "market.zip.part009",
+   "sha256": "0f91491bafe0d4d5265e986557d06c3c886e42faa32dea93081a88dffc865941",
+   "bytes": 207546
+  }
+ ]
+}
