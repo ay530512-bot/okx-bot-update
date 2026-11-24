@@ -1,9 +1,9 @@
 {
   "format": 1,
-  "version": "3.6.10",
-  "revision": 30610,
-  "commit": "3061254e3aac93e1468cd2fa80347056b9f53296",
-  "bytes": 826077,
-  "sha256": "071815e429161a5de13e0c51a6dfd73b63d44b70be1444def4ba0bcbda847dcc",
-  "notes": "15분 텔레그램 종목·방향 신호를 PC 실거래 엔진에 즉시 전달"
+  "version": "3.6.11",
+  "revision": 30611,
+  "commit": "6250900b05c63cc96518beff12946b6b4a3fd02b",
+  "bytes": 825950,
+  "sha256": "77f0678a0e1b671b6a035d97f63dd0cacc3fe0d54383b353e065935f7712c663",
+  "notes": "3 USDT 유보 후 시드 3분의 1 증거금, 호가 잔량 20배 주문 상한 제거"
 }
