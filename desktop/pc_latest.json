@@ -1,9 +1,9 @@
 {
   "format": 1,
-  "version": "3.6.13",
-  "revision": 30613,
-  "commit": "bb104b60a18fce623e6ad2b96a4ae5807a8c1167",
-  "bytes": 826180,
-  "sha256": "2caf9065a291e455d85c171c5cfeffef32618d097fc7a12c1894a87258967f4d",
-  "notes": "15분 신호 가격을 거래소 호가 단위로 정규화하고 가격 형식 오류로 진입 처리가 중단되는 문제 수정"
+  "version": "3.6.14",
+  "revision": 30614,
+  "commit": "dff1626cadee3b8f57cb7ffba92d1e42a80372c7",
+  "bytes": 826295,
+  "sha256": "ae7dcb4c9d4ba6bb31d8d608030577df36ddb553bf75dd38e4a736adb948a84c",
+  "notes": "정각·15분 신호 개별 예상손실 0.5% 차단 제거, 계좌 전체 위험 한도 적용"
 }
