@@ -1,0 +1,418 @@
+{
+ "date": "2026-11-24",
+ "start_commit": "04eb16fdee6a9a9896d5e5a9b4aaac9bf7c21068",
+ "kind": "Independent date 2 for November 22 rules. Public simulation.",
+ "accounts": {
+  "selected_short": {
+   "base": {
+    "opening": 149.81703444094003,
+    "closing": 152.03220273430006,
+    "pct": 1.478582393268013,
+    "status": "below",
+    "admissions": 1,
+    "max_drawdown_minute_pct": 0.0
+   },
+   "stress": {
+    "opening": 148.74511663410001,
+    "closing": 150.34278136033504,
+    "pct": 1.0740955820184306,
+    "status": "below",
+    "admissions": 1,
+    "max_drawdown_minute_pct": 0.0
+   },
+   "base_lock": {
+    "opening": 149.81703444094003,
+    "closing": 152.03220273430006,
+    "pct": 1.478582393268013,
+    "status": "below",
+    "admissions": 1,
+    "max_drawdown_minute_pct": 0.0
+   },
+   "stress_lock": {
+    "opening": 148.74511663410001,
+    "closing": 150.34278136033504,
+    "pct": 1.0740955820184306,
+    "status": "below",
+    "admissions": 1,
+    "max_drawdown_minute_pct": 0.0
+   },
+   "one_r": {
+    "opening": 150.8752821754725,
+    "closing": 153.41561240047503,
+    "pct": 1.6837285659873968,
+    "status": "below",
+    "admissions": 1,
+    "max_drawdown_minute_pct": 0.0
+   },
+   "full_slot": {
+    "opening": 150,
+    "closing": 150,
+    "pct": 0.0,
+    "status": "below",
+    "admissions": 0,
+    "max_drawdown_minute_pct": 0.0
+   }
+  },
+  "selected_scalp": {
+   "base": {
+    "opening": 150,
+    "closing": 150,
+    "pct": 0.0,
+    "status": "below",
+    "admissions": 0,
+    "max_drawdown_minute_pct": 0.0
+   },
+   "stress": {
+    "opening": 150,
+    "closing": 150,
+    "pct": 0.0,
+    "status": "below",
+    "admissions": 0,
+    "max_drawdown_minute_pct": 0.0
+   },
+   "base_lock": {
+    "opening": 150,
+    "closing": 150,
+    "pct": 0.0,
+    "status": "below",
+    "admissions": 0,
+    "max_drawdown_minute_pct": 0.0
+   },
+   "stress_lock": {
+    "opening": 150,
+    "closing": 150,
+    "pct": 0.0,
+    "status": "below",
+    "admissions": 0,
+    "max_drawdown_minute_pct": 0.0
+   },
+   "one_r": {
+    "opening": 150,
+    "closing": 150,
+    "pct": 0.0,
+    "status": "below",
+    "admissions": 0,
+    "max_drawdown_minute_pct": 0.0
+   },
+   "full_slot": {
+    "opening": 150,
+    "closing": 150,
+    "pct": 0.0,
+    "status": "below",
+    "admissions": 0,
+    "max_drawdown_minute_pct": 0.0
+   }
+  },
+  "selected_shared": {
+   "base": {
+    "opening": 149.81703444094003,
+    "closing": 152.03220273430006,
+    "pct": 1.478582393268013,
+    "status": "below",
+    "admissions": 1,
+    "max_drawdown_minute_pct": 0.0
+   },
+   "stress": {
+    "opening": 148.74511663410001,
+    "closing": 150.34278136033504,
+    "pct": 1.0740955820184306,
+    "status": "below",
+    "admissions": 1,
+    "max_drawdown_minute_pct": 0.0
+   },
+   "base_lock": {
+    "opening": 149.81703444094003,
+    "closing": 152.03220273430006,
+    "pct": 1.478582393268013,
+    "status": "below",
+    "admissions": 1,
+    "max_drawdown_minute_pct": 0.0
+   },
+   "stress_lock": {
+    "opening": 148.74511663410001,
+    "closing": 150.34278136033504,
+    "pct": 1.0740955820184306,
+    "status": "below",
+    "admissions": 1,
+    "max_drawdown_minute_pct": 0.0
+   },
+   "one_r": {
+    "opening": 150.8752821754725,
+    "closing": 153.41561240047503,
+    "pct": 1.6837285659873968,
+    "status": "below",
+    "admissions": 1,
+    "max_drawdown_minute_pct": 0.0
+   },
+   "full_slot": {
+    "opening": 150,
+    "closing": 150,
+    "pct": 0.0,
+    "status": "below",
+    "admissions": 0,
+    "max_drawdown_minute_pct": 0.0
+   }
+  },
+  "trend_long": {
+   "base": {
+    "opening": 148.1045322763551,
+    "closing": 146.77795215608015,
+    "pct": -0.8957052832114676,
+    "status": "below",
+    "admissions": 4,
+    "max_drawdown_minute_pct": 1.144158031785636
+   },
+   "stress": {
+    "opening": 147.67277385555008,
+    "closing": 147.67277385555008,
+    "pct": 0.0,
+    "status": "below",
+    "admissions": 0,
+    "max_drawdown_minute_pct": 0.0
+   }
+  },
+  "trend_short": {
+   "base": {
+    "opening": 148.88652522378757,
+    "closing": 148.88652522378757,
+    "pct": 0.0,
+    "status": "below",
+    "admissions": 0,
+    "max_drawdown_minute_pct": 0.0
+   },
+   "stress": {
+    "opening": 150,
+    "closing": 150,
+    "pct": 0.0,
+    "status": "below",
+    "admissions": 0,
+    "max_drawdown_minute_pct": 0.0
+   }
+  },
+  "five_families": {
+   "base": {
+    "opening": 144.19273043341278,
+    "closing": 141.46801822271294,
+    "pct": -1.889632162807331,
+    "status": "below",
+    "admissions": 9,
+    "max_drawdown_minute_pct": 2.5145584144924737
+   },
+   "stress": {
+    "opening": 147.67277385555008,
+    "closing": 147.67277385555008,
+    "pct": 0.0,
+    "status": "below",
+    "admissions": 0,
+    "max_drawdown_minute_pct": 0.0
+   }
+  },
+  "bb_long": {
+   "base": {
+    "opening": 150,
+    "closing": 149.32152327542502,
+    "pct": -0.4523178163833186,
+    "status": "below",
+    "admissions": 2,
+    "max_drawdown_minute_pct": 0.5222478338833048
+   },
+   "stress": {
+    "opening": 150,
+    "closing": 150,
+    "pct": 0.0,
+    "status": "below",
+    "admissions": 0,
+    "max_drawdown_minute_pct": 0.0
+   }
+  },
+  "bb_short": {
+   "base": {
+    "opening": 148.35222497925008,
+    "closing": 148.35222497925008,
+    "pct": 0.0,
+    "status": "below",
+    "admissions": 0,
+    "max_drawdown_minute_pct": 0.0
+   },
+   "stress": {
+    "opening": 150,
+    "closing": 150,
+    "pct": 0.0,
+    "status": "below",
+    "admissions": 0,
+    "max_drawdown_minute_pct": 0.0
+   }
+  },
+  "bb_shared": {
+   "base": {
+    "opening": 148.35222497925008,
+    "closing": 147.6797760552251,
+    "pct": -0.45327862397684937,
+    "status": "below",
+    "admissions": 2,
+    "max_drawdown_minute_pct": 0.5239853668414396
+   },
+   "stress": {
+    "opening": 150,
+    "closing": 150,
+    "pct": 0.0,
+    "status": "below",
+    "admissions": 0,
+    "max_drawdown_minute_pct": 0.0
+   }
+  },
+  "scalp_long": {
+   "base": {
+    "opening": 148.76985115853762,
+    "closing": 147.94674479413771,
+    "pct": -0.5532749801051784,
+    "status": "below",
+    "admissions": 3,
+    "max_drawdown_minute_pct": 1.1885207837007639
+   },
+   "stress": {
+    "opening": 150,
+    "closing": 150,
+    "pct": 0.0,
+    "status": "below",
+    "admissions": 0,
+    "max_drawdown_minute_pct": 0.0
+   }
+  },
+  "three_shared": {
+   "base": {
+    "opening": 147.1323814386127,
+    "closing": 145.66015974908782,
+    "pct": -1.0006102498511638,
+    "status": "below",
+    "admissions": 5,
+    "max_drawdown_minute_pct": 1.6309757907548628
+   },
+   "stress": {
+    "opening": 150,
+    "closing": 150,
+    "pct": 0.0,
+    "status": "below",
+    "admissions": 0,
+    "max_drawdown_minute_pct": 0.0
+   }
+  },
+  "scalp_00": {
+   "base": {
+    "opening": 149.40448957173757,
+    "closing": 148.8126809205876,
+    "pct": -0.396111691721146,
+    "status": "below",
+    "admissions": 1,
+    "max_drawdown_minute_pct": 0.396111691721146
+   },
+   "stress": {
+    "opening": 150,
+    "closing": 150,
+    "pct": 0.0,
+    "status": "below",
+    "admissions": 0,
+    "max_drawdown_minute_pct": 0.0
+   }
+  },
+  "scalp_04": {
+   "base": {
+    "opening": 148.54565760861905,
+    "closing": 147.93666922874408,
+    "pct": -0.40996713716096034,
+    "status": "below",
+    "admissions": 1,
+    "max_drawdown_minute_pct": 0.40996713716096034
+   },
+   "stress": {
+    "opening": 150,
+    "closing": 150,
+    "pct": 0.0,
+    "status": "below",
+    "admissions": 0,
+    "max_drawdown_minute_pct": 0.0
+   }
+  },
+  "scalp_08": {
+   "base": {
+    "opening": 149.37579594015003,
+    "closing": 149.37579594015003,
+    "pct": 0.0,
+    "status": "below",
+    "admissions": 0,
+    "max_drawdown_minute_pct": 0.0
+   },
+   "stress": {
+    "opening": 150,
+    "closing": 150,
+    "pct": 0.0,
+    "status": "below",
+    "admissions": 0,
+    "max_drawdown_minute_pct": 0.0
+   }
+  },
+  "scalp_12": {
+   "base": {
+    "opening": 149.84557728021701,
+    "closing": 149.84557728021701,
+    "pct": 0.0,
+    "status": "below",
+    "admissions": 0,
+    "max_drawdown_minute_pct": 0.0
+   },
+   "stress": {
+    "opening": 150,
+    "closing": 150,
+    "pct": 0.0,
+    "status": "below",
+    "admissions": 0,
+    "max_drawdown_minute_pct": 0.0
+   }
+  },
+  "scalp_16": {
+   "base": {
+    "opening": 149.38715031970003,
+    "closing": 149.38715031970003,
+    "pct": 0.0,
+    "status": "below",
+    "admissions": 0,
+    "max_drawdown_minute_pct": 0.0
+   },
+   "stress": {
+    "opening": 150,
+    "closing": 150,
+    "pct": 0.0,
+    "status": "below",
+    "admissions": 0,
+    "max_drawdown_minute_pct": 0.0
+   }
+  },
+  "scalp_20": {
+   "base": {
+    "opening": 153.01546000092503,
+    "closing": 153.40720427375007,
+    "pct": 0.2560161390376292,
+    "status": "below",
+    "admissions": 1,
+    "max_drawdown_minute_pct": 0.3845851735971073
+   },
+   "stress": {
+    "opening": 150,
+    "closing": 150,
+    "pct": 0.0,
+    "status": "below",
+    "admissions": 0,
+    "max_drawdown_minute_pct": 0.0
+   }
+  }
+ },
+ "verification": {
+  "checks": {
+   "ordered_directional_costed_paths": 35,
+   "accounts_reconciled": 46,
+   "exact_horizon_trades": 51,
+   "cache_digests": 31
+  },
+  "unverified": {}
+ }
+}
