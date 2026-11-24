@@ -1,9 +1,9 @@
 {
   "format": 1,
-  "bytes": 814117,
-  "sha256": "55b3baf76acfa3ddb78d62d7132e65655aeb9d0d9f782badb42461d5c27ccd5c",
-  "version": "3.6.1",
-  "revision": 30601,
-  "commit": "9c1654fc1d28c925b0da9966c3db5b31051dac9c",
-  "notes": "13번 · 7시간 30분 안의 5분·15분 반전 돌파, 포지션 체결 후 15분 전량 청산, 새 규칙 모의 검증"
+  "bytes": 815643,
+  "sha256": "6355406620d80959b53ed0a789b0011d7ed62cbbfeb23fef6b1ef0f896d6c93a",
+  "version": "3.6.2",
+  "revision": 30602,
+  "commit": "2565adea84b365d16878e8fe3203cf775ae47f62",
+  "notes": "1·6·7·8번 구조 손절 거리 0.40%, 비용 차감 손익비 2:1, 6·7·8번 추적 손절 개선 · 별도 모의 검증"
 }
