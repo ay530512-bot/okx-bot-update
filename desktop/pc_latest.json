@@ -1,9 +1,9 @@
 {
   "format": 1,
-  "version": "3.6.6",
-  "revision": 30606,
-  "commit": "b78736c12a8053a82c63f05baa5753d09d829c63",
-  "bytes": 825126,
-  "sha256": "e03da0a3931f13020272083099b762f39ce226844f3c47e6a5e304b8c0973076",
-  "notes": "정각 채팅 신호 주문 연결 · PC에서 HOURLY_ON.bat로 활성화 · 기존 실거래 한도와 보호손절 적용"
+  "version": "3.6.7",
+  "revision": 30607,
+  "commit": "491b1d8ed79516a06ae3a1a2d256eca3986bd895",
+  "bytes": 825704,
+  "sha256": "e855907fb08c792ffc36433e35265846909f11f210f4ba9cbf59de43c80b26d5",
+  "notes": "홈에 설치 버전별 진입 조건 및 정각 주문 설정 표시 · 자동매매 상태 문구 수정"
 }
