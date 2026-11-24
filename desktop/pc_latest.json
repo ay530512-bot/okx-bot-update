@@ -1,9 +1,9 @@
 {
   "format": 1,
-  "version": "4.1.1",
-  "revision": 40101,
-  "commit": "cc7b37cd37281276de2ae888a0aa20fd8bc39d18",
-  "bytes": 821305,
-  "sha256": "a12777ed7753aced1c4c52dea59d9bed7955019c92c503769fb01fbc8a3d22c4",
-  "notes": "정각·15분·활성 5개 규칙 신호 즉시 시장가 주문. 스프레드·예상 슬리피지·예상 손실·모의 성적 추가 차단 해제. 메인 진입조건표 갱신."
+  "version": "4.2",
+  "revision": 40200,
+  "commit": "5ab1c6f5b0f61e56d662a9fef7486e174c04958c",
+  "bytes": 765174,
+  "sha256": "4cac637fd280d32d3f9f8804c957b7d5206938a09984bc25fbaaed69d8d5a14c",
+  "notes": "자동 진입 규칙 전체 삭제. 홈에 등록된 규칙 0개 표시. 수동 주문과 보유 포지션 보호 관리 유지."
 }
