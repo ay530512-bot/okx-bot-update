@@ -1,9 +1,9 @@
 {
   "format": 1,
-  "version": "3.6.14",
-  "revision": 30614,
-  "commit": "dff1626cadee3b8f57cb7ffba92d1e42a80372c7",
-  "bytes": 826295,
-  "sha256": "ae7dcb4c9d4ba6bb31d8d608030577df36ddb553bf75dd38e4a736adb948a84c",
-  "notes": "정각·15분 신호 개별 예상손실 0.5% 차단 제거, 계좌 전체 위험 한도 적용"
+  "version": "3.6.15",
+  "revision": 30615,
+  "commit": "5f5c67896b5793c71783d71b7fd12d66a2307cba",
+  "bytes": 826249,
+  "sha256": "656c7a19f5f120a94ef7681805a3e8ff695f0ff90cc2e6369ce11905d32e9fb9",
+  "notes": "15분·정각 신호의 개별·합산 예상 손실률 진입 차단 제거"
 }
