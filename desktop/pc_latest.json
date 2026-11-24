@@ -1,9 +1,9 @@
 {
   "format": 1,
-  "version": "3.6.9",
-  "revision": 30609,
-  "commit": "6b08f567fd7b8badf854a1758d5976a84d6b6f43",
-  "bytes": 825323,
-  "sha256": "376262488affb9940fed034a6060fac7b9e73a56677990a378a6fd73a6dc1c7d",
-  "notes": "15분 분석 확정봉 지연 재조회 및 종목별 누락 사유 표시"
+  "version": "3.6.10",
+  "revision": 30610,
+  "commit": "3061254e3aac93e1468cd2fa80347056b9f53296",
+  "bytes": 826077,
+  "sha256": "071815e429161a5de13e0c51a6dfd73b63d44b70be1444def4ba0bcbda847dcc",
+  "notes": "15분 텔레그램 종목·방향 신호를 PC 실거래 엔진에 즉시 전달"
 }
