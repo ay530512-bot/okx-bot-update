@@ -1,9 +1,9 @@
 {
   "format": 1,
-  "bytes": 815643,
-  "sha256": "6355406620d80959b53ed0a789b0011d7ed62cbbfeb23fef6b1ef0f896d6c93a",
-  "version": "3.6.2",
-  "revision": 30602,
-  "commit": "2565adea84b365d16878e8fe3203cf775ae47f62",
-  "notes": "1·6·7·8번 구조 손절 거리 0.40%, 비용 차감 손익비 2:1, 6·7·8번 추적 손절 개선 · 별도 모의 검증"
+  "bytes": 817546,
+  "sha256": "05f8478dcde5f84abffd13c9803253cd63cfa35b87180bc7edc27ff673d452f4",
+  "version": "3.6.3",
+  "revision": 30603,
+  "commit": "1c1b09a348c658f3b76bebc330f1e12be83d3013",
+  "notes": "13번 반전 돌파 롱·숏은 다음 5분봉 마감 전까지 최신 호가로 진입 재평가"
 }
