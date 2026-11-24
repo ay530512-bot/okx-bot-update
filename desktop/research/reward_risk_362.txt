@@ -1,0 +1,26 @@
+3.6.2 · 비용 포함 손익비와 구조 손절 비교
+
+12개 종목, 2026년 11월 1~17일과 18~23일(KST). 5분·15분 후보, 다음 5분봉 시가 진입, 5분봉 고저가로 손절 우선, 종가로 추적, 왕복 비용 0.20%. 종목·전략·시간봉별 동시 보유 한 건. 계좌 단위 수익률이나 실제 체결·펀딩을 재현한 결과는 아님.
+
+False=1~17일, True=18~23일. base=기존, filter=진입만 변경, new=진입·추적 변경. 열은 구간, 전략, 방식, 거래 수, 거래당 평균 순수익률(%), 거래별 순수익률 단순 합계. breakout=6번, retest=7번, pullback=8번.
+
+False breakout base 620 -0.202 -125.49
+False breakout filter 135 -0.197 -26.63
+False breakout new 132 -0.185 -24.43
+False pullback base 869 -0.204 -176.85
+False pullback filter 52 -0.178 -9.25
+False pullback new 51 -0.089 -4.54
+False retest base 379 -0.214 -81.14
+False retest filter 101 -0.193 -19.54
+False retest new 101 -0.162 -16.38
+True breakout base 185 -0.246 -45.47
+True breakout filter 43 -0.252 -10.85
+True breakout new 43 -0.244 -10.51
+True pullback base 288 -0.205 -58.95
+True pullback filter 31 -0.181 -5.62
+True pullback new 30 -0.18 -5.41
+True retest base 120 -0.146 -17.56
+True retest filter 36 -0.021 -0.76
+True retest new 36 -0.073 -2.61
+
+1번은 별도 기존 틱 재생 장부에서 같은 체결·청산 결과에 새 진입 조건만 적용. 두 자료에서 46→37건 및 14→12건. 모의 금액 합계 -16.088→-12.257 및 -6.924→-5.861 USDT. 현재 계좌 규모·수익률과 비교 불가.
