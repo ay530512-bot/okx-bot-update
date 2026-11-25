@@ -1,9 +1,9 @@
 {
   "format": 1,
-  "version": "4.2",
-  "revision": 40200,
-  "commit": "5ab1c6f5b0f61e56d662a9fef7486e174c04958c",
-  "bytes": 765174,
-  "sha256": "4cac637fd280d32d3f9f8804c957b7d5206938a09984bc25fbaaed69d8d5a14c",
-  "notes": "자동 진입 규칙 전체 삭제. 홈에 등록된 규칙 0개 표시. 수동 주문과 보유 포지션 보호 관리 유지."
+  "version": "4.3.1",
+  "revision": 40301,
+  "commit": "c0f4eef715b2ba32f79c0c3c24753a317da08b2f",
+  "bytes": 771514,
+  "sha256": "f93f994af3197f42fa74381ae60a5b681a52a885152384f1350d5410d5f9db33",
+  "notes": "전체 알트 USDT 무기한 선물 감시 · ZK형 롱 · 15분마다 거래 가능 종목 갱신"
 }
