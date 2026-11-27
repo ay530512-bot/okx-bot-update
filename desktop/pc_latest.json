@@ -1,9 +1,9 @@
 {
   "format": 1,
-  "version": "5.1.4",
-  "revision": 50104,
-  "commit": "aa4d2739d585245574095329555d1e5552f23971",
-  "bytes": 805752,
-  "sha256": "a5b860375bcfb4a5aea3ef3f47c4020f4480625f7c4d04ccc81f2202f932ad20",
-  "notes": "홈에 190 USDT 자동매매 전용 자금표시줄 추가. 현재 운용금과 한국시간 기준 오늘 확정 순손익을 계좌 전체 자산과 별도로 표시합니다."
+  "version": "5.1.5",
+  "revision": 50105,
+  "commit": "aac11026f6a0a9a1e1e4e99a8f361471ae66eb4a",
+  "bytes": 806083,
+  "sha256": "6f29b9e275b6b42b297a00200eaca3e48cac26e864d5948a2fbed8e34f792d1d",
+  "notes": "진입 직전 후보 한 줄 요약 및 글자 크기 조정"
 }
