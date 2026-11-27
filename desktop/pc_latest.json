@@ -1,9 +1,9 @@
 {
   "format": 1,
-  "version": "4.3.1",
-  "revision": 40301,
-  "commit": "c0f4eef715b2ba32f79c0c3c24753a317da08b2f",
-  "bytes": 771514,
-  "sha256": "f93f994af3197f42fa74381ae60a5b681a52a885152384f1350d5410d5f9db33",
-  "notes": "전체 알트 USDT 무기한 선물 감시 · ZK형 롱 · 15분마다 거래 가능 종목 갱신"
+  "version": "5.1.0",
+  "revision": 50100,
+  "commit": "94645adb80dfe3a6faf5a1ff552386674f3d4486",
+  "bytes": 787476,
+  "sha256": "10416961d160b6671e0f33f54e3eba1d004d92e666d96cef9ccc7385f3d33610",
+  "notes": "자동 진입 전략 5종 · 사례 수익률 순으로 동시 신호 우선 배정 · 홈에서 롱·숏 진입 조건, 예시와 청산 기준 확인"
 }
