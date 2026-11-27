@@ -1,9 +1,9 @@
 {
   "format": 1,
-  "version": "5.1.1",
-  "revision": 50101,
-  "commit": "8fdef38cb2bfebb277695167f271e7293705efec",
-  "bytes": 792600,
-  "sha256": "a3ef6d4bc58245c80118dc2da825d8897086f02f067fe7a0d807627eb1f2ce6b",
-  "notes": "5개 자동 전략의 손절거리·가용 자금·거래소 한도별 배율 및 증거금 계산 · 거래당 예상 손실 예산 0.25% · 홈에 금액 예시 표시"
+  "version": "5.1.2",
+  "revision": 50102,
+  "commit": "615df1bf4610ee50bad5a6270bf70c0c729e4dc9",
+  "bytes": 793939,
+  "sha256": "7b157bbf03ffe20071e2cbc559b6403b58e198c4d51ab6065822f934493c2e0f",
+  "notes": "자동매매 시작 자금 190 USDT · 자동 거래의 정산 순손익만 누적"
 }
