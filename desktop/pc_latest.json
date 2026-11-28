@@ -1,9 +1,9 @@
 {
   "format": 1,
-  "version": "5.1.6",
-  "revision": 50106,
-  "commit": "65e8f767e36241e3d88b9e213fcf07447139d8bf",
-  "bytes": 806379,
-  "sha256": "8c23cff45e67399652f44ec132f32e006bd55cb8a56476d4163352d777ebe3d0",
-  "notes": "11월 28일 이전 버전 자동매매 확정 순손익을 전용 운용금에 소급 반영"
+  "version": "5.1.7",
+  "revision": 50107,
+  "commit": "a772bda17b996980c73d1e642a36da2ee50ad414",
+  "bytes": 807180,
+  "sha256": "5b5ca152ec84a5bd27b648d13774a2298b3beeeb765eabfe696109555c5eb7c8",
+  "notes": "아이폰 12 Pro용 검정 대시보드 · 글씨·카드·탭 가독성 개선"
 }
