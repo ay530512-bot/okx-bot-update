@@ -1,9 +1,9 @@
 {
   "format": 1,
-  "version": "5.1.7",
-  "revision": 50107,
-  "commit": "a772bda17b996980c73d1e642a36da2ee50ad414",
-  "bytes": 807180,
-  "sha256": "5b5ca152ec84a5bd27b648d13774a2298b3beeeb765eabfe696109555c5eb7c8",
-  "notes": "아이폰 12 Pro용 검정 대시보드 · 글씨·카드·탭 가독성 개선"
+  "version": "5.1.8",
+  "revision": 50108,
+  "commit": "d4fad94d8d143ca546e20145ff10d27da2f8e457",
+  "bytes": 806714,
+  "sha256": "7c7019ddeeb6920f1c5cd2005a45d5ee853057a4d9d1603e67de82ba1640de13",
+  "notes": "자동 운용금 8분할 · 5배 · 진입 후보별 보류 사유"
 }
