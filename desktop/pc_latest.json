@@ -1,9 +1,9 @@
 {
   "format": 1,
-  "version": "5.1.9",
-  "revision": 50109,
-  "commit": "72cbbb1b3f3cdd1735078c87b81a70b38a08ae75",
-  "bytes": 807168,
-  "sha256": "00392c81acd6eadd61ea47d4610b5ad7b9a18b1e63ef77f906d5299aed31d19c",
-  "notes": "전체 자산·자동매매·나머지 자금 표시 및 차트 적합도순 진입"
+  "version": "5.1.10",
+  "revision": 50110,
+  "commit": "6780fd87e2519eb73bb6b6d12cbe0bfeec0b0c9d",
+  "bytes": 806953,
+  "sha256": "8916efbe32cfab4f532965bec552a51c8beb055d19ee0640acbb802fedb1d349",
+  "notes": "수동 증거금 크기에 따른 포지션 수 과다 계산 수정 · 보유 및 주문/대조 자리 표시"
 }
