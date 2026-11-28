@@ -1,9 +1,9 @@
 {
   "format": 1,
-  "version": "5.1.11",
-  "revision": 50111,
-  "commit": "2b3dc072d255e5b2ef2f1e35fc0f03c943bfeae6",
-  "bytes": 806954,
-  "sha256": "fb9c4da0cd0a7c23bfc7476405f78f7a906103a4a9f3b4d847a0963305da476f",
-  "notes": "자동매매 시작 원금 195 USDT로 정정 · 기존 확정 순손익 누적"
+  "version": "5.1.12",
+  "revision": 50112,
+  "commit": "47d34d65e68930b2e52e0a1c18f44b3d1f61ffa4",
+  "bytes": 809089,
+  "sha256": "3843203fc80f46a79e6b6c4716cb180e59fa4b52a431860392e60481a572cc5b",
+  "notes": "15분봉마다 차트 적합도 순으로 롱·숏 각 1종목 · 주문 직전 왕복 비용 점검 · 청산 거래별 손익 대조 및 모바일 진단 저장"
 }
