@@ -1,9 +1,9 @@
 {
   "format": 1,
-  "version": "5.1.13",
-  "revision": 50113,
-  "commit": "8e182f7604be1de99ef3eee208d475ad5aea9b50",
-  "bytes": 817825,
-  "sha256": "fdc9ef5a43d7a990d1c7222cb7b00ed6b7ed7130e3e12e759882fb52934a4bc4",
-  "notes": "홈에 모의매매 비교 추가 · 공개 시세에서 상대강도·패턴 원래 방향·반대 방향을 가상 195 USDT씩 비교 · 과거 검증과 최근 모의 청산 확인"
+  "version": "5.1.14",
+  "revision": 50114,
+  "commit": "b007551c2933aa8ad6b0ead77dbf4d4249c48dff",
+  "bytes": 843956,
+  "sha256": "4b85706074a6b5e5c41b48d306e8ec45a6ed8bd8850f53eb3c8472b23bf6129c",
+  "notes": "실거래 자동 진입에 다섯 패턴 롱·숏 예측 적용 · 다음 15분 마감 후 예상 순수익률이 +0.15%를 넘는 방향 · 3R 익절 지정가와 시장가 손절 · 11월 별도 모의 187건 −90.39 USDT"
 }
