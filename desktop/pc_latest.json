@@ -1,9 +1,9 @@
 {
   "format": 1,
-  "version": "5.1.8",
-  "revision": 50108,
-  "commit": "d4fad94d8d143ca546e20145ff10d27da2f8e457",
-  "bytes": 806714,
-  "sha256": "7c7019ddeeb6920f1c5cd2005a45d5ee853057a4d9d1603e67de82ba1640de13",
-  "notes": "자동 운용금 8분할 · 5배 · 진입 후보별 보류 사유"
+  "version": "5.1.9",
+  "revision": 50109,
+  "commit": "72cbbb1b3f3cdd1735078c87b81a70b38a08ae75",
+  "bytes": 807168,
+  "sha256": "00392c81acd6eadd61ea47d4610b5ad7b9a18b1e63ef77f906d5299aed31d19c",
+  "notes": "전체 자산·자동매매·나머지 자금 표시 및 차트 적합도순 진입"
 }
