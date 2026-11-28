@@ -1,9 +1,9 @@
 {
   "format": 1,
-  "version": "5.1.10",
-  "revision": 50110,
-  "commit": "6780fd87e2519eb73bb6b6d12cbe0bfeec0b0c9d",
-  "bytes": 806953,
-  "sha256": "8916efbe32cfab4f532965bec552a51c8beb055d19ee0640acbb802fedb1d349",
-  "notes": "수동 증거금 크기에 따른 포지션 수 과다 계산 수정 · 보유 및 주문/대조 자리 표시"
+  "version": "5.1.11",
+  "revision": 50111,
+  "commit": "2b3dc072d255e5b2ef2f1e35fc0f03c943bfeae6",
+  "bytes": 806954,
+  "sha256": "fb9c4da0cd0a7c23bfc7476405f78f7a906103a4a9f3b4d847a0963305da476f",
+  "notes": "자동매매 시작 원금 195 USDT로 정정 · 기존 확정 순손익 누적"
 }
