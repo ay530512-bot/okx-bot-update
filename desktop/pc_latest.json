@@ -1,9 +1,9 @@
 {
   "format": 1,
-  "version": "5.1.5",
-  "revision": 50105,
-  "commit": "aac11026f6a0a9a1e1e4e99a8f361471ae66eb4a",
-  "bytes": 806083,
-  "sha256": "6f29b9e275b6b42b297a00200eaca3e48cac26e864d5948a2fbed8e34f792d1d",
-  "notes": "진입 직전 후보 한 줄 요약 및 글자 크기 조정"
+  "version": "5.1.6",
+  "revision": 50106,
+  "commit": "65e8f767e36241e3d88b9e213fcf07447139d8bf",
+  "bytes": 806379,
+  "sha256": "8c23cff45e67399652f44ec132f32e006bd55cb8a56476d4163352d777ebe3d0",
+  "notes": "11월 28일 이전 버전 자동매매 확정 순손익을 전용 운용금에 소급 반영"
 }
